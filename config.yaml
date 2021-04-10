@@ -2,5 +2,7 @@ baseURL: http://merovex.com/
 disablePathToLower: true
 languageCode: en-us
 title: Ben Wilson
-subtitle: Writes
 theme: merovex-2021
+
+params:
+  subtitle: Writes
