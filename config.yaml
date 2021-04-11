@@ -3,6 +3,8 @@ disablePathToLower: true
 languageCode: en-us
 title: Ben Wilson
 theme: hugo-merovex-2021
+build:
+  writeStats: true
 
 params:
   cdn_url: https://d1czp97ry8if6j.cloudfront.net
