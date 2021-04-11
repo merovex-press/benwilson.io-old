@@ -16,7 +16,9 @@ tags:
 - Forbearance
 title: Murder on Gunio Prime
 ---
-
+On the live-fire training planet of Gunio, Keius Minjen witnesses the
+  murder of his friend. Prelude to the Forebearance Series.
+<!--more-->
 Bophendze felt nauseous not long after they landed on Gunio Prime. "Angel, how long does it take to contract a local disease?"
 
 "Why?"
