@@ -1,6 +1,3 @@
-[submodule "hugo-merovex-2021"]
-	path = hugo-merovex-2021
-	url = https://github.com/merovex-press/hugo-merovex-2021.git
 [submodule "themes/hugo-merovex-2021"]
 	path = themes/hugo-merovex-2021
 	url = https://github.com/merovex-press/hugo-merovex-2021.git
