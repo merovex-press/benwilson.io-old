@@ -5,6 +5,7 @@ title: Ben Wilson
 theme: merovex-2021
 
 params:
+  cdn_url: https://d1czp97ry8if6j.cloudfront.net
   subtitle: Writes
   venue: Virginia
   licenses:
