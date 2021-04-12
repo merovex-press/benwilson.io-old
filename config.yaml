@@ -1,10 +1,15 @@
-baseURL: http://merovex.com/
-disablePathToLower: true
+baseURL: https://bencwilson.com/
 languageCode: en-us
 title: Ben Wilson
 theme: hugo-merovex-2021
+permalinks:
+  post: "/post/:slug"
 build:
   writeStats: true
+taxonomies:
+  series: series
+  post: post
+
 
 params:
   cdn_url: https://d1czp97ry8if6j.cloudfront.net
