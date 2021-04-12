@@ -1,6 +1,6 @@
 baseURL: https://bencwilson.com/
 languageCode: en-us
-title: Ben Wilson
+title: Ben C Wilson
 theme: hugo-merovex-2021
 permalinks:
   post: "/post/:slug"
