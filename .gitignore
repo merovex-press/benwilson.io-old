@@ -2,4 +2,5 @@ themes/old-merovex-2021/
 /node_modules
 /themes
 /public
-/resources
+/resources/*
+/content/old_post
