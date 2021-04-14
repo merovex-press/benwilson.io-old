@@ -1,0 +1,5 @@
+---
+name: "Bellicose Excerpt"
+---
+
+EXCERPT
