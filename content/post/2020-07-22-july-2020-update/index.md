@@ -2,14 +2,12 @@
 author: Ben Wilson
 categories:
 - Diary
-created_at: "2019-09-11T06:33:50-04:00"
 date: "2020-07-22T07:33:47Z"
 description: Silence is not golden, but it is of the lambs. With a couple years of
   relative silence, I'm in motion again.
 draft: false
 photo:
-  caption: It puts the lanolin in the baa-baa-baa-basket, or it gets the hoo-hoo-hoo-hose
-    again.
+  caption: It puts the lanolin in the baa-baa-basket...
   creator: Erik Vinding
   creator_url: https://pixabay.com/users/vinding-11802576/
   image: sheep-5078377_1920.jpg
