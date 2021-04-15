@@ -148,7 +148,7 @@ The lead character's story should be two-thirds of the total section count divid
 
 We'll just adjust that so that each minor Viewpoint Character has 8 sections with the balance of that last third going to the Opposition.
 
-<table class="table table-sm text-center">
+<table class="table text-center table-sm">
   <caption>Eight-Segment Section Breakdown</caption>
   <thead>
     <tr>
