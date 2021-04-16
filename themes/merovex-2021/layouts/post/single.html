@@ -1,0 +1,55 @@
+{{ define "main" }}
+
+{{- $image := resources.GetMatch .Params.photo.image -}}
+{{- $photo := .Params.Photo }}
+{{- $license := .Site.Params.licenses.Get .Params.photo.license }}
+<article class='max-w-4xl px-4 mx-auto mt-4 md:mt-12 md:px-0'>
+  {{ partial "related-posts.html" . }}
+  <header>
+    <h1 itemprop="headline" class="mt-8 mb-4 text-3xl font-display md:text-6xl">
+      {{ .Title }}
+    </h1>
+    {{- with .Resources.GetMatch .Params.photo.image }}
+    {{- $low := .Resize "80x q10 Smart Gaussian" }}
+    <figure class='max-w-2xl mx-auto bg-cover rounded-lg max-h-96' style="background-image: url({{$low.RelPermalink}});">
+      {{ partial "picture.html" . }}
+      <figcaption class="px-2 text-white bg-black rounded-b-lg dark:bg-brand-100 dark:text-black">
+        <a class='block hover:underline sm:inline' href="{{$photo.source_url}}">
+          {{ $photo.caption }}
+        </a>
+        by
+        <a class='hover:underline' href="{{ $photo.creator_url }}">
+          {{ $photo.creator }}
+        </a>
+        is licensed under
+        {{ partial "license-link.html" $license }}
+      </figcaption>
+    </figure>
+    {{- end }}
+    
+    <div class="my-8 text-center text-gray-500">
+      {{ partial "icon.html" "fad fa-user-circle" }}
+      <span class="mr-4">Ben Wilson</span>
+      {{ partial "icon.html" "fad fa-calendar-day" }}
+      {{ partial "dtg.html" . }}
+      <span class="mr-4">
+        {{ partial "icon.html" "fad fa-popcorn" }}
+        {{ partial "read-time.html" . }}
+      </span>
+      <div class="tags">
+        {{ partial "icon.html" "fad fa-tags" }}
+          {{- range .Params.tags }}
+          <a class='tag hover:underline' href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+          {{- end }}
+      </div>
+    </div>
+  </header>
+  <div class="mx-auto mb-12 font-serif prose md:prose-xl dark:prose dark:md:prose-xl">
+    <p class='lead'>{{.Summary}}</p>
+    <!-- {% include historical-research-series.html %} -->
+    {{ .Content }}
+  </div>
+  {{ partial "related-posts.html" . }}
+  {{ partial "citation.html" . }}
+</article>
+{{ end }}

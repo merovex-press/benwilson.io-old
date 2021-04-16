@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class='mx-auto max-w-4xl mt-8 md:mt-12'>
+  <header>
+    <div class="hidden ghost">
+        {{ .File.UniqueID }}
+    </div>
+    <h1 itemprop="headline" class="font-display text-6xl mb-12">
+        {{ .Title }}
+    </h1>
+  </header>
+  <div class="prose md:prose-xl font-serif mx-auto">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

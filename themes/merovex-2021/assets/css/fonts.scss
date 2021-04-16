@@ -1,0 +1,20 @@
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file+'.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+@include font('IMFellEnglish',             './fonts/IMFellEnglish-Regular');
+@include font('IMFellEnglish-Italic',      './fonts/IMFellEnglish-Italic');
+
+@include font('MerovexSans',             './fonts/SourceSansPro-Regular');
+@include font('MerovexSans-Italic',      './fonts/SourceSansPro-Italic');
+@include font('MerovexSans-Bold',        './fonts/SourceSansPro-Bold');
+@include font('MerovexSans-BoldItalic',  './fonts/SourceSansPro-BoldItalic');
+
+@include font('MerovexSerif',            './fonts/SourceSerifPro-Regular');
+@include font('MerovexSerif-Italic',     './fonts/SourceSerifPro-Italic');
+@include font('MerovexSerif-Bold',       './fonts/SourceSerifPro-Bold');
+@include font('MerovexSerif-BoldItalic', './fonts/SourceSerifPro-BoldItalic');

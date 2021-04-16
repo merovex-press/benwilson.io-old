@@ -1,0 +1,13 @@
+<article class="my-8">
+  <h3 class='mb-3 text-2xl font-display md:text-3xl'><a class='text-blue-500 hover:underline' href="{{.Permalink }}">{{ .Title
+      }}</a></h3>
+  <p class='pb-1 italic text-gray-500'>Posted On {{ dateFormat "2 January 2006" .Date }}, {{ partial "read-time.html" .
+    | singularize}} read</p>
+  <div class="prose lg:prose-xl max-w-none">{{.Summary}}</div>
+  <div class="pt-1 italic text-gray-500">
+    {{- range .Params.tags }}
+    # <a class='hover:underline' href="{{ " /tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+    {{- end }}
+  </div>
+  
+</article>

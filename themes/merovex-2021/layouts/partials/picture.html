@@ -1,0 +1,43 @@
+  {{- $resizedsm := .Resize "640x" }}
+  {{- $resizedmd := .Resize "768x" }}
+  {{- $resizedlg := .Resize "1024x" }}
+  {{- $resizedxl := .Resize "2048x" }}
+<!--
+  https://gs.statcounter.com/screen-resolution-stats/all/united-states-of-america
+# 1920px (this covers FullHD screens and up)
+
+# 1600px (this will cover 1600px desktops and several tablets in portrait mode, for example iPads at 768px width, which will request a 2x image of 1536px and above)
+
+# 1366px (it is the most widespread desktop resolution)
+
+# 1024px (1024x768 screens, excluding iPads which are hi-density anyway, are rarer, but I think you need some image size in between, not to leave too big a gap between pixel sizes, in case the market changes)
+
+# 768px (useful for 2x 375px mobile screens, as well as any device that actually requests something close to 768px)
+
+# 640px (for smartphones)
+
+make_responsive(img_file,'mobile',768)
+make_responsive(img_file,'tablet',1366)
+make_responsive(img_file,'desktop',1920)
+-->
+  <picture>
+    <source media="(min-width: 1280px)" srcset="{{ $resizedlg.RelPermalink }} 1x,
+      {{ $resizedxl.RelPermalink }} 2x,
+      {{ $resizedxl.RelPermalink }} 3x">
+
+    <source media="(min-width: 1024px)" srcset="{{ $resizedlg.RelPermalink }} 1x,
+      {{ $resizedxl.RelPermalink }} 2x,
+      {{ $resizedxl.RelPermalink }} 3x">
+    
+    <source media="(min-width: 768px)" srcset="{{ $resizedmd.RelPermalink }} 1x,
+      {{ $resizedlg.RelPermalink }} 2x,
+      {{ $resizedxl.RelPermalink }} 3x">
+
+    <!-- Support Mobile -->
+    <source media="(min-width: 640px)" srcset="{{ $resizedsm.RelPermalink }} 1x,
+      {{ $resizedmd.RelPermalink }} 2x,
+      {{ $resizedlg.RelPermalink }} 3x">
+
+    <img alt="" src="{{ $resizedmd.RelPermalink }}" class='rounded-t-lg sm-rounded-t w-full max-h-96 h-1/3' >
+  </picture>
+

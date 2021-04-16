@@ -1,0 +1,9 @@
+{{- $buttons := .Site.Params.buttons }}
+{{- $icons := .Site.Params.icons }}
+{{- if .Params.cta }}
+{{- range $key, $val := .Params.cta}}
+<a class='{{$buttons.Get $key}} px-3 py-2 mx-1 rounded shadow-lg hover:shadow hover:bg-opacity-80' href="{{ $val }}">
+  <i class="{{$icons.Get $key}}" aria-hidden="true"></i> {{title $key }}
+</a>
+{{- end }}
+{{- end }}

@@ -1,0 +1,14 @@
+{{define "main" }}
+<div class="max-w-4xl px-4 mx-auto mt-8 lg:mt-12">
+  <h1 class="mb-12 text-4xl font-display lg:text-6xl">Books</h1>
+  <div class="mx-auto">
+    {{ range .Pages }}
+    <h2 class="mb-8 text-3xl border-b-4 border-gray-500 border-opacity-50 font-display">{{.Title}}</h2>
+    {{ range .Pages.ByWeight }}
+    {{ partial "book-summary.html" (dict "book" . "class" "text-blue-500 dark:text-blue-200") }}
+    <hr class="mb-12 md:hidden">
+    {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}

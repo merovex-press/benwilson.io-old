@@ -1,0 +1,52 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    {{ if .Params.seo.noindex}}
+    <meta name="robots" content="noindex">
+    {{ end }}
+
+    {{ $title := (cond (ne ($.Param "seo.title") nil) ($.Param "seo.title") ( printf "%s | %s" .Title .Site.Title) ) }}
+    {{ $description := (cond (ne ($.Param "seo.description") nil) ($.Param "seo.description") .Description ) }}
+    <title>{{$title}}</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="apple-mobile-web-app-title" content="{{ $title }}" />
+    <meta name="application-name" content="{{ $title }}" />
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
+    <meta name="theme-color" content="#234058" />
+    <meta name="description" content="{{ $description }} " />
+    
+    {{- if .Keywords }}
+    <meta name="keywords" content="{{ delimit .Keywords "," }}" />
+    {{ end -}}
+
+    {{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $title }}" />
+    <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $title }}" />
+    {{- end -}}
+    {{- if .Params.Author }}
+    <meta name="author" content="{{ .Params.Author}}" />
+    {{ end -}}
+    {{ hugo.Generator }}
+    {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
+    {{- if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    {{ else }}
+        {{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
+    {{ end -}}
+    {{- if .IsHome -}}
+    {{- range .Site.AllPages -}}
+    {{- $section := .Section -}}
+    {{- with .OutputFormats.Get "opensearch" -}}
+    <link rel="search" type="application/opensearchdescription+xml"
+        title="{{ $title }}{{ with $section }} {{ . }}{{ end }} search" href="{{ .RelPermalink | safeURL }}" />
+    {{- end -}}
+    {{- end -}}
+    {{- end -}}
+</head>

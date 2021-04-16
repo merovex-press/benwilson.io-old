@@ -1,0 +1,32 @@
+<style type="text/css">
+  input#nav-toggle:checked~#nav-menu {
+    display: block;
+  }
+</style>
+<header class="w-full px-4 font-sans shadow bg-brand-500 dark:bg-brand-300">
+  <div data-controller="reveal">
+    <div class="container mx-auto">
+      <div class="flex flex-wrap items-center justify-between py-4">
+        <div class="flex items-center">
+          <div class='text-white'> <!-- Logo & Title -->
+            {{ partial "merovex-logo.html" "w-5 h-5 text-white fill-current lg:h-8 lg:w-8 opacity-30"}}
+          </div>
+          
+          <div class="ml-2 text-xl text-white font-display lg:text-3xl">
+            {{ .Site.Title }}
+            <span class='text-white opacity-30'>{{ .Site.Params.Subtitle }}</span>
+          </div>
+        </div>
+        <input id="nav-toggle" type=checkbox class="hidden">
+        <label id="show-button" for="nav-toggle" class="flex items-center block text-gray-500 sm:hidden hover:text-blue-500">
+          {{ .Scratch.Set "klass" "text-white h-8 w-8" }}
+          {{ partial "site/svg-settings.html" . }}
+        </label>
+        <!-- Menu (SMALL) -->
+        <nav id="nav-menu" class="hidden w-full mt-2 sm:flex sm:w-auto sm:block sm:mt-0 sm:space-x-2">
+          {{ partial "site/navbar-menu.html" . }}
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
