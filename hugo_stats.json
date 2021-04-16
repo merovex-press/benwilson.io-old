@@ -1,8 +1,6 @@
 {
   "htmlElements": {
     "tags": [
-      "!--",
-      "!--end",
       "!doctype",
       "a",
       "article",
@@ -352,7 +350,6 @@
       "diceWords",
       "diceWordsCopyableContainer",
       "diceWordsCopyableDash",
-      "diceWordsCopyableNoGap",
       "diceWordsCopyableSpace",
       "displaying-content",
       "enter-the-dragondictate",
