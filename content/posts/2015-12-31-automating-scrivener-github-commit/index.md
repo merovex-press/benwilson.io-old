@@ -18,7 +18,7 @@ photo:
   url: https://en.wikipedia.org/wiki/The_Turk#/media/File:Kempelen_chess1.jpg
 sharing: true
 sidebar: true
-tags:
+tag:
 - Scrivener
 - GitHub as an Author
 title: 'Automating Scrivener: GitHub Commit'

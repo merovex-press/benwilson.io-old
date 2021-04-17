@@ -13,7 +13,7 @@ photo:
   image: sheep-5078377_1920.jpg
   license: CC0
   source_url: https://pixabay.com/photos/sheep-lamb-the-wadden-sea-national-5078377/
-tags:
+tag:
 - Writing Progress
 - Retrospective
 - Goals

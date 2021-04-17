@@ -15,7 +15,7 @@ photo:
   license: BY
   source_url: https://www.flickr.com/photos/29442760@N00/28385505785/
 published: true
-tags:
+tag:
 - GitHub as an Author
 - Publishing
 title: 'Writing on Github: Organizing the Series'

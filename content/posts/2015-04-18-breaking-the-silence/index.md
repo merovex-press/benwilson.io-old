@@ -13,7 +13,7 @@ photo:
   image: 3400504522_a4ddba3d3d_o.jpg
   license: BY-SA
   source_url: https://www.flickr.com/photos/12842055@N03/3400504522/
-tags:
+tag:
 - Writing Progress
 title: Breaking the Silence
 ---

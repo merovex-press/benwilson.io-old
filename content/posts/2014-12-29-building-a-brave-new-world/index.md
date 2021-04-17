@@ -16,7 +16,7 @@ photo:
   license: BY
   source_url: https://www.flickr.com/photos/gilraenm/15020291797/
 published_at: 2014-12-29 09:48
-tags:
+tag:
 - Ombrio
 - Shared World
 title: Building a Brave New World

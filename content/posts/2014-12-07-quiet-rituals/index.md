@@ -16,7 +16,7 @@ photo:
   license: BY
   source_url: https://www.flickr.com/photos/83394598@N00/288389345/
 published_at: 2014-12-07 08:08
-tags:
+tag:
 - Toolchain
 - Habits
 - Bad Advice

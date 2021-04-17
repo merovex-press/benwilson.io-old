@@ -18,7 +18,7 @@ photo:
   url: http://www.flickr.com/photos/tambako/8401726003/sizes/m/
 published_at: 2012-07-03 15:36
 sidebar: true
-tags:
+tag:
 - Plot Analysis
 title: It's Not Really Three Acts
 ---

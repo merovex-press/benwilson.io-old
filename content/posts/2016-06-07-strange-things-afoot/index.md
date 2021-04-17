@@ -18,7 +18,7 @@ photo:
   source_url: https://www.flickr.com/photos/76224602@N00/25073539962/
 sharing: true
 sidebar: true
-tags:
+tag:
 - Website
 title: Strange Things Afoot
 ---

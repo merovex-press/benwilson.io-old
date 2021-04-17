@@ -18,7 +18,7 @@ photo:
   source_url: https://www.youtube.com/watch?v=yaQZFhrW0fU
 sharing: true
 sidebar: true
-tags: []
+tag: []
 title: Life Lessons from a Seal
 ---
 

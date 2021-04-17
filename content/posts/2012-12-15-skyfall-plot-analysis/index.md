@@ -14,7 +14,7 @@ photo:
   image: skyfall.jpg
   license: RR
   url: http://sony.com
-tags:
+tag:
 - Review
 - Plot Analysis
 title: Skyfall Plot Analysis

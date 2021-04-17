@@ -3,7 +3,7 @@ author: Ben Wilson
 title: {{ replace .Name "-" " " | title }}
 categories:
 - Diary
-tags:
+tag:
 - Writing Progress
 - Retrospective
 - Goals

@@ -15,7 +15,7 @@ photo:
   license: BY
   source_url: https://www.flickr.com/photos/aspis7/5060103696/
 published_at: 2014-07-05 10:29
-tags:
+tag:
 - Toolchain
 title: My Toolchain Using Bookmaker
 ---

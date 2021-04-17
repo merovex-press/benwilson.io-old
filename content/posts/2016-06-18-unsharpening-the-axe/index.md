@@ -15,7 +15,7 @@ photo:
   license: BY
   source_url: https://www.flickr.com/photos/37996646802@N01/27265564416/
 published: true
-tags:
+tag:
 - Scrivener
 - Toolchain
 - GitHub as an Author

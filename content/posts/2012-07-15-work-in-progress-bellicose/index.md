@@ -14,7 +14,7 @@ photo:
   image: bellicose-redo-wallpaper.jpg
   license: RR
   url: https://benwilsonwrites.com
-tags:
+tag:
 - Writing Progress
 - Postal Marines Series
 title: 'Work in Progress: Bellicose'

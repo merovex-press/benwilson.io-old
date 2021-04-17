@@ -12,7 +12,7 @@ photo:
   image: halloween-2905531_1920.jpg
   license: CC0
   source_url: https://pixabay.com/photos/halloween-spooky-jack-o-lantern-2905531/
-tags:
+tag:
 - Holiday
 - Humor
 title: Must Barney Die? A Legal Opinion

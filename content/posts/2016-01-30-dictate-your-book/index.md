@@ -15,7 +15,7 @@ photo:
   license: BY
   source_url: https://www.flickr.com/photos/40648743@N00/4125488159/
 published: true
-tags:
+tag:
 - Dragon NaturallySpeaking
 - Bad Advice
 title: Dictate Your Book

@@ -15,7 +15,7 @@ photo:
   image: bellicose-redo-wallpaper.jpg
   license: RR
   url: https://benwilsonwrites.com
-tags:
+tag:
 - Postal Marines Series
 title: Inspiration for the Postal Marines
 ---

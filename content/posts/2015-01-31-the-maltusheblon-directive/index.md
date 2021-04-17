@@ -16,7 +16,7 @@ photo:
   license: RR
   url: https://benwilsonwrites.com
 published_at: 2015-01-31 11:22
-tags:
+tag:
 - Postal Marines Series
 title: The Maltuŝeblon Directive
 ---

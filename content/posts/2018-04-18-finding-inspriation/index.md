@@ -12,7 +12,7 @@ photo:
   image: darth-support.jpg
   license: PD
   url: '#'
-tags:
+tag:
 - Humor
 title: Finding Inspiration
 ---

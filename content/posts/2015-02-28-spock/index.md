@@ -14,7 +14,7 @@ photo:
   image: spock.jpg
   license: RR
   url: http://www.paramount.com/
-tags:
+tag:
 - Retrospective
 title: Spock!
 ---

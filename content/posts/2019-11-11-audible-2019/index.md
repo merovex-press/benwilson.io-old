@@ -14,7 +14,7 @@ photo:
   image: abstract-2207_1920.jpg
   license: CC0
   source_url: https://pixabay.com/photos/abstract-background-black-design-2207/
-tags:
+tag:
 - Audible
 - Listening Experience
 - Retrospective

@@ -15,7 +15,7 @@ photo:
   license: BY
   source_url: https://www.flickr.com/photos/144965429@N03/27885942080/
 published: true
-tags:
+tag:
 - Worldbuilding
 - Shared World
 - Toolchain

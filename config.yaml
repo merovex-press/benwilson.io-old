@@ -8,8 +8,10 @@ build:
   writeStats: true
 taxonomies:
   series: series
-  post: post
-
+  book: book
+  tag: tag
+  category: category
+paginate: 7
 
 params:
   cdn_url: https://d1czp97ry8if6j.cloudfront.net

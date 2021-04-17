@@ -14,7 +14,7 @@ photo:
   image: 503020765_94aa31f8aa_o.jpg
   license: BY
   url: http://www.flickr.com/photos/49512158@N00/503020765/
-tags:
+tag:
 - Writing
 - Postal Marines Series
 title: When Friends Take a Turn for the Worse

@@ -19,7 +19,7 @@ photo:
   url: http://www.flickr.com/photos/69275268@N00/5705122218/
 published_at: 2011-09-17 14:51
 sidebar: true
-tags:
+tag:
 - Writing
 - Technique
 title: Heroes for More than One Season

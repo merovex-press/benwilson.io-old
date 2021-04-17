@@ -15,7 +15,7 @@ photo:
   license: RR
   url: https://benwilsonwrites.com
 published: true
-tags:
+tag:
 - GitHub as an Author
 - Jekyll
 - Publishing

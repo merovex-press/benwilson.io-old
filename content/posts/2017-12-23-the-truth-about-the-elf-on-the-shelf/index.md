@@ -11,7 +11,7 @@ photo:
   image: 23872259931_bbc1ff5f9b_k.jpg
   license: BY
   source_url: https://www.flickr.com/photos/119886413@N05/23872259931
-tags:
+tag:
 - Truth
 - Christmas
 - Humor

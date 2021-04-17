@@ -12,7 +12,7 @@ photo:
   image: bellicose-redo-wallpaper.jpg
   license: RR
   url: https://benwilsonwrites.com
-tags:
+tag:
 - Postal Marines Series
 - Writing Progress
 title: Finished Bellicose Draft

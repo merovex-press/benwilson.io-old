@@ -18,7 +18,7 @@ photo:
   source_url: https://www.flickr.com/photos/31679616@N08/2959200147/
 sharing: true
 sidebar: true
-tags:
+tag:
 - Scrivener
 - GitHub as an Author
 title: GitHub to Work with Your Beta Readers

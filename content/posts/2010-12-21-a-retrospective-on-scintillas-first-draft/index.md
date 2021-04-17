@@ -13,7 +13,7 @@ photo:
   image: scintilla-wallpaper.jpg
   license: RR
   url: https://benwilsonwrites.com
-tags:
+tag:
 - AAR
 - Postal Marines Series
 title: After Action Review on Scintilla's First Draft

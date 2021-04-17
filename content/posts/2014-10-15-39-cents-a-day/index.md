@@ -17,7 +17,7 @@ photo:
   license: RR
   url: https://nbc.com
 published_at: 2014-10-15 17:36
-tags:
+tag:
 - Humor
 title: 39 Cents a Day
 ---

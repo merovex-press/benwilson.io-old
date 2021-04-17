@@ -13,7 +13,7 @@ photo:
   image: 2017-09-11-06-30-53.jpg
   license: PD
   source_url: https://pixnio.com/nature-landscapes/snow/frost-snow-dusk-winter-nature-snow-snowflake-atmosphere-sky
-tags:
+tag:
 - Technique
 title: Eight-Pointed Snowflake
 ---

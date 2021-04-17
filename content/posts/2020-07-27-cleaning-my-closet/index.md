@@ -16,7 +16,7 @@ photo:
   license: CC0
   source_url: https://pixabay.com/photos/office-space-desk-business-room-4598772/
 published_at: "2020-07-27T11:55:00-04:00"
-tags:
+tag:
 - Writing
 - Habits
 - GitHub as an Author

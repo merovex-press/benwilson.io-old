@@ -12,7 +12,7 @@ photo:
   image: blade-2328705_1920.jpg
   license: CC0
   source_url: https://pixabay.com/photos/blade-shaving-foam-brush-shave-2328705/
-tags:
+tag:
 - Life Hacks
 - Bad Advice
 title: A Decade of Decadent Shaving

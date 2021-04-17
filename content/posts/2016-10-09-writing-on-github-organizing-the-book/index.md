@@ -14,7 +14,7 @@ photo:
   license: PD
   source_url: https://en.wikipedia.org/wiki/Nikolai_Rimsky-Korsakov#/media/File:Rimsky-Korsakov_Serow_crop.png
 published: true
-tags:
+tag:
 - NaNoWriMo
 - GitHub as an Author
 - Publishing

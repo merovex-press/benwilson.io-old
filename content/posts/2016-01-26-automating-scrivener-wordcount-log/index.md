@@ -18,7 +18,7 @@ photo:
   source_url: https://www.flickr.com/photos/97522422@N00/5171765778/
 sharing: true
 sidebar: true
-tags:
+tag:
 - Scrivener
 - GitHub as an Author
 title: 'Automating Scrivener: Wordcount Log'

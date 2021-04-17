@@ -14,7 +14,7 @@ photo:
   image: scintilla-wallpaper.jpg
   license: RR
   url: https://benwilsonwrites.com
-tags:
+tag:
 - Postal Marines Series
 title: A Little About the Core Series
 ---

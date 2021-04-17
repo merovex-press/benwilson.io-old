@@ -15,7 +15,7 @@ photo:
   image: luctation.jpg
   license: RR
   url: https://benwilsonwrites.com
-tags:
+tag:
 - Postal Marines Series
 - Writing Progress
 title: Jonaldy Ammonett

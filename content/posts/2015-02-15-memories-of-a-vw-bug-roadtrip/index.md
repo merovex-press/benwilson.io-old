@@ -15,7 +15,7 @@ photo:
   image: 10311138444_c61af6d054.jpg
   license: BY-ND
   source_url: https://www.flickr.com/photos/9783357@N08/10311138444/
-tags:
+tag:
 - Beetle
 title: Memories of a VW Bug Roadtrip
 ---

@@ -15,7 +15,7 @@ photo:
   image: 29044558485_9a62351d12_o.jpg
   license: BY
   source_url: https://www.flickr.com/photos/144590555@N07/29044558485/
-tags:
+tag:
 - Review
 title: 'Review: Guide to Writing Fantasy and Science Fiction'
 ---

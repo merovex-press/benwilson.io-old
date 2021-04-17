@@ -14,7 +14,7 @@ photo:
   image: 25920352670_031a14c13b_b.jpg
   license: BY
   url: https://www.flickr.com/photos/7609887@N08/25920352670/
-tags:
+tag:
 - Audible
 - Listening Experience
 - Retrospective

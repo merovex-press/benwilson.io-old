@@ -17,7 +17,7 @@ photo:
   license: BY
   source_url: https://www.flickr.com/photos/17513020@N00/164361902/
 published_at: 2014-08-17 08:28
-tags:
+tag:
 - Dragon NaturallySpeaking
 - National Disability Awareness Month
 - Toolchain

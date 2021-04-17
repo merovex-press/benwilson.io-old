@@ -15,7 +15,7 @@ photo:
   license: RR
   source_url: https://en.wikipedia.org/wiki/Eon_Productions
 published: true
-tags:
+tag:
 - Review
 title: Analyzing Spectre
 ---

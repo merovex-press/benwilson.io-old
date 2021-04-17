@@ -12,7 +12,7 @@ photo:
   image: luctation.jpg
   license: RR
   url: https://benwilsonwrites.com
-tags:
+tag:
 - Forbearance
 title: Murder on Gunio Prime
 ---

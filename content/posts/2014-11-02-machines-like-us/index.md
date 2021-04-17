@@ -14,7 +14,7 @@ photo:
   image: 3318600273_4ba2ef83e3_o.jpg
   license: BY
   source_url: https://www.flickr.com/photos/93452909@N00/3318600273/
-tags:
+tag:
 - goals
 title: Machines Like Us
 ---

@@ -14,7 +14,7 @@ photo:
   image: 11384364343_b000dbdb8b_k.jpg
   license: BY-SA
   source_url: https://www.flickr.com/photos/42096237@N00/11384364343/
-tags: []
+tag: []
 title: Discipline Verses Self-Discipline
 ---
 
