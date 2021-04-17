@@ -11,7 +11,7 @@ taxonomies:
   book: book
   tag: tag
   category: category
-paginate: 7
+  posts: posts
 
 params:
   cdn_url: https://d1czp97ry8if6j.cloudfront.net
