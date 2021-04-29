@@ -1,6 +1,6 @@
 baseURL: https://www.benwilsonwrites.com/
 languageCode: en-us
-title: Ben C Wilson
+title: Ben
 theme: hugo-merovex-2021
 permalinks:
   post: "/post/:slug"
@@ -14,7 +14,7 @@ taxonomies:
 
 params:
   cdn_url: https://d1czp97ry8if6j.cloudfront.net
-  subtitle: Writes
+  xsubtitle: Writes
   venue: Virginia
   icons:
     kindle: fas fa-tablet-alt
