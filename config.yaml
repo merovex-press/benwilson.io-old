@@ -10,7 +10,7 @@ taxonomies:
   series: series
   book: book
   tag: tag
-  category: category
+  categories: categories
 
 params:
   cdn_url: https://d1czp97ry8if6j.cloudfront.net
