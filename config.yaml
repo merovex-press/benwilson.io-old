@@ -1,6 +1,6 @@
 baseURL: https://www.benwilsonwrites.com/
 languageCode: en-us
-title: Ben
+title: Ben Wilson
 theme: hugo-merovex-2021
 permalinks:
   post: "/post/:slug"
