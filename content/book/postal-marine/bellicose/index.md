@@ -4,8 +4,8 @@ weight: 1
 summary: The orphaned Danel Bophendze struggles to find his way as a new marine in the Core Postal Service. He embedded Smee, an ancient artificial intelligence, in his brain hoping it will give him the edge he needs. Aristocratic Ambrose Litovio left a promising career in the Navy to join the Postal Service. He is called upon to assist the only admiral as war looms between the Postal Service and the Navy. Bophendze and Litovio struggle to survive the epic Battle of Tanhuŝio Gate. But for Bophendze, the real fight is in his head.
 date: 2021-04-12T06:57:43+05:00
 cta:
-  kindle: http://amzn.to/1PpTfSi
-  paperback: http://amzn.to/1K4jaYV
+  amazon: http://amzn.to/1PpTfSi
+  noble: http://amzn.to/1K4jaYV
 series:
   - Postal Marines
 praise:

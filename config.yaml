@@ -17,15 +17,10 @@ params:
   xsubtitle: Writes
   venue: Virginia
   icons:
-    kindle: fas fa-tablet-alt
+    amazon: fas fa-tablet-alt
     audible: fab fa-audible
     paperback: far fa-book
-    nobel: fas fa-typewriter
-  buttons:
-    kindle: bg-blue-600 text-white
-    audible: bg-yellow-600 text-white
-    paperback: bg-black text-white
-    nobel: bg-green-600 text-white
+    noble: fas fa-typewriter
   licenses:
     CC0:
       tag: "CC0"

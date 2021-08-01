@@ -1,5 +1,5 @@
 ---
-title: Discovery
+title: Discovery 2
 series:
   - Strand
 weight: 2

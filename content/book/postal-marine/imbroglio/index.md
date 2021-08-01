@@ -8,8 +8,8 @@ summary: This is a summary. Lorem ipsum dolor sit amet, consectetur adipiscing e
 tagline: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet venenatis dolor.
 date: 2021-04-12T06:58:06+05:00
 cta:
-  kindle: http://amzn.to/1PpTfSi
-  paperback: http://amzn.to/1K4jaYV
+  amazon: http://amzn.to/1PpTfSi
+  noble: http://amzn.to/1K4jaYV
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet venenatis dolor. Suspendisse eu justo elit.
