@@ -5,7 +5,7 @@ categories:
 date: "2020-07-22T07:33:47Z"
 description: Silence is not golden, but it is of the lambs. With a couple years of
   relative silence, I'm in motion again.
-draft: false
+draft: true
 photo:
   caption: It puts the lanolin in the baa-baa-basket...
   creator: Erik Vinding

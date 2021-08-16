@@ -22,6 +22,7 @@ tag:
 - GitHub as an Author
 - Authoring Business
 title: Cleaning my Closet
+draft: true
 ---
 
 <!-- git commit --amend --no-edit -->
