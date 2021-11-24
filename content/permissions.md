@@ -14,9 +14,7 @@ You are free to do the following without my permission:
    * Link to my site or any specific post on my site.
    * Extract and re-post less than 200 words on any other site, provided you link back to my original post.
    * Print off my posts and photocopy up to 50 copies for internal distribution within your own company or organization.
-   * Print my posts in any non-commercial publication (e.g., company newsletter, church newsletter, class syllabus, etc.), provided you include the following copyright notice.
-
-> “Copyright © {{ site.time | date: '%Y' }}, Benjamin C. Wilson. All rights reserved. Originally published at {{site.url}}.”
+   * Print my posts in any non-commercial publication (e.g., company newsletter, church newsletter, class syllabus, etc.), provided you include the copyright notice provided at the bottom of the article.
 
 ## Not Without My Permission
 
