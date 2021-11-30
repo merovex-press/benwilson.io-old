@@ -26,6 +26,7 @@ Plotting writers are always looking for the right structure to frame their book.
 
 Randy Ingermanson is known for the [Snowflake Method](https://www.advancedfictionwriting.com/articles/snowflake-method/). This method starts a story idea with the logline and expands the plot from sentence to paragraph, sentence to paragraph; while simultaneously expanding the story (i.e., character development) in the same way:
 
+{{<rawhtml>}}
 <table class='table table-striped table-sm'>
   <caption>Randy's Snowflake Method Summarized</caption>
   <thead>
@@ -61,6 +62,7 @@ Randy Ingermanson is known for the [Snowflake Method](https://www.advancedfictio
     </tr>
   </tbody>
 </table>
+{{</rawhtml>}}
 
 Susan May Warren's *The Story Equation* explores the character's growth by asserting that in the beginning the hero believes in a lie due to a Dark Moment Event, which wounds and flaws the character. Through the novel, the hero goes from being a firm believer in the Lie to a firm believer in the Truth. In this context, the Truth is the novel's underlying theme. She has a variation of the three-act formula that mixes her Lie-Truth discovery mixed with plot.
 
@@ -68,9 +70,9 @@ David Lean was a prolific screenplay writer, known for such movies as *Lawrence 
 
 ## Applying Snowflake & Story Equation to Segments
 
-A few years ago I wrote that a story is
-[not three acts but four]({% post_url 2012-07-03-its-not-really-three-acts %}), in part because there's always that "sagging middle" that punctuates the middle of the second act, which is itself twice as long as the first or last act. The problem is the three verses four acts is not sufficiently informative. It also ignores the lower-level structure. Lean's Eight Segments gets down to a sufficiently atomic level that helps sustain both plot and story.
+A few years ago I wrote that a story is not three acts but four, in part because there's always that "sagging middle" that punctuates the middle of the second act, which is itself twice as long as the first or last act. The problem is the three verses four acts is not sufficiently informative. It also ignores the lower-level structure. Lean's Eight Segments gets down to a sufficiently atomic level that helps sustain both plot and story.
 
+{{<rawhtml>}}
 <table class='table table-striped table-sm'>
   <caption>Lean's Eight Segments Mashed with Randy's Snowflake and Susie May's Story Equation</caption>
 <thead>
@@ -132,6 +134,7 @@ A few years ago I wrote that a story is
   </tr>
 </tbody>
 </table>
+{{</rawhtml>}}
 
 **Randy's Snowflake doubles in size.** Randy's second step in *Snowflake Method* is to write a Summary paragraph where the first sentence sets up the story and the four that follow speak to the three surprises/disasters and the final victory. If we mash Randy's Snowflake with Lean's Segments, then the Summary should comprise eight sentences; one per segment.
 Snowflake expands the Summary sentences to paragraphs, then expands those paragraphs to pages. Mashing with Segments means we will have an 8-paragraph Synopsis, and 8-page Treatment. Snowflake 8 would then list each sentence in the Treatment as a Scene. Then it is up to you whether you want to expand each scene into a paragraph which would give you a fully developed story.
@@ -148,6 +151,7 @@ The lead character's story should be two-thirds of the total section count divid
 
 We'll just adjust that so that each minor Viewpoint Character has 8 sections with the balance of that last third going to the Opposition.
 
+{{<rawhtml>}}
 <table class="table text-center table-sm">
   <caption>Eight-Segment Section Breakdown</caption>
   <thead>
@@ -176,3 +180,4 @@ We'll just adjust that so that each minor Viewpoint Character has 8 sections wit
     $('[data-toggle="tooltip"]').tooltip()
   })
 </script>
+{{</rawhtml>}}
