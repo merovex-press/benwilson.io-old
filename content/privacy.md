@@ -6,7 +6,7 @@ toc: true
 layout: page
 ---
 
-<div class='alert'>Updated: 20 May 2018</div>
+{{<alert>}}Updated: 30 November 2021{{</alert>}}
 
 ## Overview
 
@@ -14,7 +14,11 @@ We are committed to safeguarding the privacy of our Website Guests and community
 
 Merovex ("we", "us" and "our") respect your privacy and are committed to protecting it through our compliance with this policy. For more information about Merovex, see [Contact Us](#contact-us) below.
 
-This Privacy Policy (our "Privacy Policy") describes the types of information we may collect from you or that you may provide when you visit the websites with the top-level domain names of [http://dausha.net](http://dausha.net) [http://merovex.com](http://merovex.com) (each a "Website" and collectively, the "Websites") and our practices for collecting, using, maintaining, protecting, and disclosing that information.
+This Privacy Policy (our "Privacy Policy") describes the types of information we may collect from you or that you may provide when you visit the websites with the top-level domain names listed below (each a "Website" and collectively, the "Websites") and our practices for collecting, using, maintaining, protecting, and disclosing that information.
+
+* [https://dausha.net](https://dausha.net)
+* [https://merovex.com](https://merovex.com)
+* [https://benwilsonwrites.com](https://benwilsonwrites.com)
 
 We use third-party cookies on our website. Insofar as those cookies are not strictly necessary for the provision of Websites, we will ask you to consent to our use of cookies when you first visit our website.
 
@@ -25,41 +29,18 @@ We use your data to support understanding how you use the Website, support our d
 There are five areas where personal data may be collected and used, detailed below:
 
 * Commercial Affiliation
-* Displaying Content from External Platforms
 * Hosting & Backend Infrastructure
 * Notification Data
 * Usage Data
 
 ### Commercial Affiliation
 
-Commercial affiliation allows this Website to display advertisements for third-party products or services. Ads can be displayed either as advertising links or as banners using various kinds of graphics.
-Clicks on the icon or banner posted on the Website are tracked by the third-party services listed below, and are shared with this Website.
-The legal basis for this processing is your consent by continuing to use our Website.
+Commercial affiliation allows this Website to display advertisements for third-party products or services. Ads can be displayed either as advertising links or as banners using various kinds of graphics. Links from this site to Amazon include an Amazon affiliation tag.
 
 [Amazon Affiliation][amazon affiliation] is a commercial affiliation service provided by Amazon.com Inc.
 
 * Personal Data collected: Cookies, and Usage & Other Data.
 * Place of processing: United States
-
-### Displaying Content
-
-Displaying Content from External Platforms allows our Website to distribute our content using servers located across different countries and to optimize our performance. What Personal Data are processed depends on the characteristics and the way these services are implemented. These services filter communications between our Website and the User's browser. Considering the widespread distribution of this system, it is difficult to determine the locations to which the contents that may contain Personal Information User are transferred. The legal basis for this processing is your consent by continuing to use our Website.
-
-[Cloudfare][cloudfare]: CloudFlare is a traffic optimization and distribution service provided by CloudFlare Inc. CloudFlare filters all the traffic through our Website, i.e., communication between our Website and the User's browser, while also allowing analytical data from our Website to be collected.
-
-* Personal Data collected: Cookies and Other Data
-* Place of processing: United States
-
-[Font Awesome Fonts][font awesome] is a typeface visualization service provided by Fonticons, Inc. that allows our Website to incorporate content of this kind on its pages
-
-* Personal Data: Usage and Other Data
-* Place of processing: United States
-
-[Google Fonts][google fonts] is a typeface visualization service provided by Google Inc. that allows our Website to incorporate content of this kind on its pages.
-
-* Personal Data: Usage and Other Data
-* Place of processing: United States
-* Privacy Shield participant
 
 ### Hosting and Backend Infrastructure
 
@@ -69,12 +50,6 @@ Hosting and Backend Infrastructure allows the Website to run and be distributed 
 
 * Personal Data collected: Other Data.
 * Place of processing: United States
-
-[Google Cloud Storage][google cloud] is a hosting service provided by Google Inc.
-
-* Personal Data collected: Other Data
-* Place of processing: United States
-* Privacy Shield participant
 
 ### Notification Data
 
@@ -110,7 +85,7 @@ Google may use the Data collected to contextualize and personalize the ads of it
 
 We may process any of your personal data identified in this policy where necessary for the establishment, exercise or defense of legal claims, whether in court proceedings or in an administrative or out-of-court procedure. The legal basis for this processing is our legitimate interests, namely the protection and assertion of our legal rights, your legal rights and the legal rights of others.
 
-We may process any of your personal data identified in this policy where necessary for the purposes of obtaining or maintaining insurance coverage, managing risks, or obtaining professional advice]. The legal basis for this processing is our legitimate interests, namely the proper protection of our business against risks.
+We may process any of your personal data identified in this policy where necessary for the purposes of obtaining or maintaining insurance coverage, managing risks, or obtaining professional advice. The legal basis for this processing is our legitimate interests, namely the proper protection of our business against risks.
 
 In addition to the specific purposes for which we may process your personal data set out in this Section, we may also process any of your personal data where such processing is necessary for compliance with a legal obligation, or in order to protect your vital interests or the vital interests of another person.
 
@@ -188,9 +163,10 @@ This website is owned and operated by Ben Wilson.
 
 Our principal place of business is at [address].
 
-You can contact us by email via [hello@merovex.com](mailto:hello@merovex.com)
+You can contact us by email via {{<email-obfuscation email="hello@merovex.com" subject="Hello">}}
 
 ## Contact Us
 
-Our data protection officer's contact details are: `ben at merovex.com`.
-
+Our data protection officer's contact details: 
+
+* {{<email-obfuscation email="ben@merovex.com" subject="Website">}}

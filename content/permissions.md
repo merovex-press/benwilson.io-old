@@ -4,6 +4,7 @@ date: 2012-07-15 19:49
 permalink: /permissions/
 layout: page
 ---
+{{<alert>}}Updated: 30 November 2021{{</alert>}}
 
 With the exception of "guest posts" written by others (see the bottom of this page) and content of other authors duly credited, I own the content on this Web site. It is copyrighted in my name. I want to strike the appropriate balance between getting my content widely distributed while at the same time protecting my intellectual property rights. Thanks in advance for your cooperation.
 
@@ -33,7 +34,7 @@ In addition, I don’t allow the translation and publication of my work in other
 
 Guest bloggers retain the copyright to the posts they write. The above permission guidelines do not apply to their work. If you are interested in re-posting or publishing their content, you must contact them directly. I cannot serve as a broker, agent, or contact point.
 
-If you have some use for my content that is not covered here, please email me at [ben@merovex.com](mailto:ben@merovex.com?subject=Site%20Content%20Use).
+If you have some use for my content that is not covered here, please email me at {{<email-obfuscation email="legal@merovex.com" subject="Site Content Use">}}.
 
 <p>The above text of this page is <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</a></p>
 
@@ -52,7 +53,7 @@ I rely on Creative Commons licensed images because of their irrevocability. See 
 > Once you apply a CC license to your material, anyone who receives it may rely on that license for as long as the material is protected by copyright and similar rights, even if you later stop distributing it.
 > <cite><a href="https://wiki.creativecommons.org/wiki/Considerations_for_licensors_and_licensees#Remember_the_license_may_not_be_revoked.">Creative Commons</a></cite>
 
-As may be expected on the Internet, the original source and creator of some images will disappear over time. I try to leave the original link to expedite identification. However, if you are an owner of one of the images and want me to remove it, please email me at [ben@merovex.com](mailto:ben@merovex.com?subject=Image%20Credits). Despite the irrevocability, I will consider the request.
+As may be expected on the Internet, the original source and creator of some images will disappear over time. I try to leave the original link to expedite identification. However, if you are an owner of one of the images and want me to remove it, please email me at {{<email-obfuscation email="legal@merovex.com" subject="Image Credits">}}. Despite the irrevocability, I will consider the request.
 
 Licenses used by images used on the site:
 

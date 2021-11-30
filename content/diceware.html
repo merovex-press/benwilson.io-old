@@ -5,26 +5,30 @@ diceware: true
 permalink: /diceware/
 ---
 
-<p><a href="https://web.archive.org/web/20161025134230/http://world.std.com/~reinhold/diceware.html">Diceware</a> is used
-to create cryptographically strong passphrases. It is based on the principle that the truly random selection, based on
-rolls of dice, of words in a <a
-  href="https://web.archive.org/web/20161025134230/http://world.std.com/~reinhold/diceware.wordlist.asc">wordlist</a>
-can result in easily memorable passwords that are also extremely resistant to attack by even the most powerful
-adversaries. Passwords that are <a
-  href="https://web.archive.org/web/20161025134230/http://world.std.com/~reinhold/dicewarefaq.html#howlong">six
-  words</a> or longer are thought to be safe for high security applications.</p>
+<p><a href="https://web.archive.org/web/20161025134230/http://world.std.com/~reinhold/diceware.html">Diceware</a> is
+  used
+  to create cryptographically strong passphrases. It is based on the principle that the truly random selection, based on
+  rolls of dice, of words in a <a
+    href="https://web.archive.org/web/20161025134230/http://world.std.com/~reinhold/diceware.wordlist.asc">wordlist</a>
+  can result in easily memorable passwords that are also extremely resistant to attack by even the most powerful
+  adversaries. Passwords that are <a
+    href="https://web.archive.org/web/20161025134230/http://world.std.com/~reinhold/dicewarefaq.html#howlong">six
+    words</a> or longer are thought to be safe for high security applications.</p>
 
 <h2>Manually Rolled Words</h2>
 
-<p>If you don't trust the Javascript randomization, you can roll your own. Just roll 5d6 to arrive at a number in the range
-of 11111 to 66666. Type that number into the text field below and hit enter.</p>
+<p>If you don't trust the Javascript randomization, you can roll your own. Just roll 5d6 to arrive at a number in the
+  range
+  of 11111 to 66666. Type that number into the text field below and hit enter.</p>
 
 <form id='addFiveDieRollWordForm' class='form-inline' data-toggle='validator'>
   <div class='form-group'>
     <label class='sr-only' for='addFiveDieRollWord'>Add Two or Five Die Roll</label>
     <div class='input-group'>
       <div class='input-group-addon'>#</div>
-      <input type='text' class='w-full px-3 py-2 mb-3 leading-tight text-gray-700 border border-gray-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline' id='addFiveDieRollWord' placeholder='+ 2 or 5 die roll word' maxlength='5' pattern='^[1-6]{2,5}$'>
+      <input type='text'
+        class='w-full px-3 py-2 mb-3 leading-tight text-gray-700 border border-gray-500 rounded shadow appearance-none hover:text-shade-light focus:outline-none focus:shadow-outline'
+        id='addFiveDieRollWord' placeholder='+ 2 or 5 die roll word' maxlength='5' pattern='^[1-6]{2,5}$'>
     </div>
     <span class='help-block with-errors'></span>
   </div>
@@ -35,31 +39,49 @@ of 11111 to 66666. Type that number into the text field below and hit enter.</p>
 <p>Selecting one of these buttons will automatically generate the number of words selected.</p>
 
 <div class='font-sans btn-group' role='group' aria-label='Add random words group'>
-  <button type='button' class='px-2 py-1 text-sm font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline genWordsButton' data-words='4' data-rolls='5' data-reset='1'>
+  <button type='button'
+    class='px-2 py-1 text-sm font-bold text-white border rounded hover:text-shade-light border-brand hover:bg-brand focus:outline-none focus:shadow-outline genWordsButton'
+    data-words='4' data-rolls='5' data-reset='1'>
     <span class='fa fa-random' aria-hidden='true'></span> 4 Words
   </button>
-  <button type='button' class='px-2 py-1 text-sm font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline genWordsButton' data-words='5' data-rolls='5' data-reset='1'>
+  <button type='button'
+    class='px-2 py-1 text-sm font-bold text-white border rounded hover:text-shade-light border-brand hover:bg-brand focus:outline-none focus:shadow-outline genWordsButton'
+    data-words='5' data-rolls='5' data-reset='1'>
     <span class='fa fa-random' aria-hidden='true'></span> 5 Words
   </button>
-  <button type='button' class='px-2 py-1 text-sm font-bold text-white bg-green-500 rounded hover:bg-green-700 focus:outline-none focus:shadow-outline genWordsButton' data-words='6' data-rolls='5' data-reset='1'>
+  <button type='button'
+    class='px-2 py-1 text-sm font-bold text-white border rounded hover:text-shade-light border-accent-light hover:bg-success-light focus:outline-none focus:shadow-outline genWordsButton'
+    data-words='6' data-rolls='5' data-reset='1'>
     <span class='fa fa-random' aria-hidden='true'></span> 6 Words
   </button>
-  <button type='button' class='px-2 py-1 text-sm font-bold text-white bg-green-500 rounded hover:bg-green-700 focus:outline-none focus:shadow-outline genWordsButton' data-words='7' data-rolls='5' data-reset='1'>
+  <button type='button'
+    class='px-2 py-1 text-sm font-bold text-white border rounded hover:text-shade-light border-accent-light hover:bg-success-light focus:outline-none focus:shadow-outline genWordsButton'
+    data-words='7' data-rolls='5' data-reset='1'>
     <span class='fa fa-random' aria-hidden='true'></span> 7 Words
   </button>
-  <button type='button' class='px-2 py-1 text-sm font-bold text-white bg-green-500 rounded hover:bg-green-700 focus:outline-none focus:shadow-outline genWordsButton' data-words='8' data-rolls='5' data-reset='1'>
+  <button type='button'
+    class='px-2 py-1 text-sm font-bold text-white border rounded hover:text-shade-light border-accent-light hover:bg-success-light focus:outline-none focus:shadow-outline genWordsButton'
+    data-words='8' data-rolls='5' data-reset='1'>
     <span class='fa fa-random' aria-hidden='true'></span> 8 Words
   </button>
-  <button type='button' class='px-2 py-1 text-sm font-bold text-white bg-green-500 rounded hover:bg-green-700 focus:outline-none focus:shadow-outline genWordsButton' data-words='9' data-rolls='5' data-reset='1'>
+  <button type='button'
+    class='px-2 py-1 text-sm font-bold text-white border rounded hover:text-shade-light border-accent-light hover:bg-success-light focus:outline-none focus:shadow-outline genWordsButton'
+    data-words='9' data-rolls='5' data-reset='1'>
     <span class='fa fa-random' aria-hidden='true'></span> 9 Words
   </button>
-  <button type='button' class='px-2 py-1 text-sm font-bold text-white bg-green-500 rounded hover:bg-green-700 focus:outline-none focus:shadow-outline genWordsButton' data-words='10' data-rolls='5' data-reset='1'>
+  <button type='button'
+    class='px-2 py-1 text-sm font-bold text-white border rounded hover:text-shade-light border-accent-light hover:bg-success-light focus:outline-none focus:shadow-outline genWordsButton'
+    data-words='10' data-rolls='5' data-reset='1'>
     <span class='fa fa-random' aria-hidden='true'></span> 10 Words
   </button>
-  <button type='button' class='px-2 py-1 text-sm font-bold text-white bg-orange-500 rounded hover:bg-orange-700 focus:outline-none focus:shadow-outline genWordsButton' data-words='1' data-rolls='5' data-reset='0'>
+  <button type='button'
+    class='px-2 py-1 text-sm font-bold text-white bg-orange-500 border rounded hover:text-shade-light border-warning hover:bg-warning focus:outline-none focus:shadow-outline genWordsButton'
+    data-words='1' data-rolls='5' data-reset='0'>
     <span class='fa fa-plus' aria-hidden='true'></span> Word
   </button>
-  <button type='button' class='px-2 py-1 text-sm font-bold text-white bg-orange-500 rounded hover:bg-orange-700 focus:outline-none focus:shadow-outline genWordsButton' data-words='1' data-rolls='2' data-reset='0'>
+  <button type='button'
+    class='px-2 py-1 text-sm font-bold text-white bg-orange-500 border rounded hover:text-shade-light border-warning hover:bg-warning focus:outline-none focus:shadow-outline genWordsButton'
+    data-words='1' data-rolls='2' data-reset='0'>
     <span class='fa fa-plus' aria-hidden='true'></span> Symbol
   </button>
 </div>
@@ -67,34 +89,41 @@ of 11111 to 66666. Type that number into the text field below and hit enter.</p>
 <h2>Copyable Text Variations</h2>
 
 <div class='row'>
-<div id='diceWordsCopyableContainer'>
-  <ul>
-  <li><code id='diceWordsCopyableSpace'></code></li>
-  <li><code id='diceWordsCopyableDash'></code></li>
-  <!-- <li><code id='diceWordsCopyableNoGap'></code></li> -->
-  </ul>
-</div>
-<div class='col'>
-<ul id='diceWords' class='list-inline'></ul>
-</div>
+  <div id='diceWordsCopyableContainer'>
+    <ul>
+      <li>
+        <code id='diceWordsCopyableSpace' class='dark:text-shade-lighter text-shade-light'></code>
+      </li>
+      <li>
+        <code id='diceWordsCopyableDash' class='dark:text-shade-lighter text-shade-light'></code>
+      </li>
+      <!-- <li><code id='diceWordsCopyableNoGap'></code></li> -->
+    </ul>
+  </div>
+  <div class='col'>
+    <ul id='diceWords' class='list-inline'></ul>
+  </div>
 </div>
 
 <h2>Entropy</h2>
 
-<div id='entropyEstimateContainer' class='card card-block'>
+<div id='entropyEstimateContainer' class=''>
 
   <p class='card-text'>There are <code id='totalWords'></code> words in your password, which is
-  ~<code id='totalEntropy'></code>
-  bits of entropy
-  (<code>~12.92 bits/word</code>
-  and
-  <code>~5.16/symbol</code>).
-  That many words equates to an  effective keyspace of
-  ~<code id='crackTimeResultsHalfKeySpace'></code>
-  possible keys (
-  <code>(7776^words)/2</code>
-  which is 50% of the total key space since on average a key will be found in that reduced keyspace). Conservatively assuming an adversary can guess passwords at the rate of a trillion
-  (<code id='crackTimeResultsGuessesPerSecond'></code>) keys/second. An exhaustive brute-force search on half the total keyspace might take:</p>
+    ~<code id='totalEntropy'></code>
+    bits of entropy
+    (<code>~12.92 bits/word</code>
+    and
+    <code>~5.16/symbol</code>).
+    That many words equates to an effective keyspace of
+    ~<code id='crackTimeResultsHalfKeySpace'></code>
+    possible keys (
+    <code>(7776^words)/2</code>
+    which is 50% of the total key space since on average a key will be found in that reduced keyspace). Conservatively
+    assuming an adversary can guess passwords at the rate of a trillion
+    (<code id='crackTimeResultsGuessesPerSecond'></code>) keys/second. An exhaustive brute-force search on half the
+    total keyspace might take:
+  </p>
 
   <ul>
     <li>~<code id='crackTimeResultsSeconds'></code> seconds</li>
@@ -106,7 +135,8 @@ of 11111 to 66666. Type that number into the text field below and hit enter.</p>
     <li>~<code id='crackTimeResultsMillenia'></code> millenia</li>
     <li>~<code id='crackTimeResultsUniverseLifetimes'></code> x age Universe</li>
   </ul>
-  <a href='https://web.archive.org/web/20161025134230/http://world.std.com/~reinhold/dicewarefaq.html#calculatingentropy' target='_blank'>Learn more about calculating entropy</a>
+  <a href='https://web.archive.org/web/20161025134230/http://world.std.com/~reinhold/dicewarefaq.html#calculatingentropy'
+    target='_blank'>Learn more about calculating entropy</a>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
