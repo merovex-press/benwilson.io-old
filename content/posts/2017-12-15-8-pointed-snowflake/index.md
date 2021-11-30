@@ -27,7 +27,7 @@ Plotting writers are always looking for the right structure to frame their book.
 Randy Ingermanson is known for the [Snowflake Method](https://www.advancedfictionwriting.com/articles/snowflake-method/). This method starts a story idea with the logline and expands the plot from sentence to paragraph, sentence to paragraph; while simultaneously expanding the story (i.e., character development) in the same way:
 
 {{<rawhtml>}}
-<table class='table table-striped table-sm'>
+<table class='font-sans text-sm shadow-md table-auto'>
   <caption>Randy's Snowflake Method Summarized</caption>
   <thead>
     <tr>
@@ -73,7 +73,7 @@ David Lean was a prolific screenplay writer, known for such movies as *Lawrence 
 A few years ago I wrote that a story is not three acts but four, in part because there's always that "sagging middle" that punctuates the middle of the second act, which is itself twice as long as the first or last act. The problem is the three verses four acts is not sufficiently informative. It also ignores the lower-level structure. Lean's Eight Segments gets down to a sufficiently atomic level that helps sustain both plot and story.
 
 {{<rawhtml>}}
-<table class='table table-striped table-sm'>
+<table class='font-sans text-sm shadow-md table-auto'>
   <caption>Lean's Eight Segments Mashed with Randy's Snowflake and Susie May's Story Equation</caption>
 <thead>
   <tr>
@@ -152,7 +152,7 @@ The lead character's story should be two-thirds of the total section count divid
 We'll just adjust that so that each minor Viewpoint Character has 8 sections with the balance of that last third going to the Opposition.
 
 {{<rawhtml>}}
-<table class="table text-center table-sm">
+<table class="font-sans text-sm shadow-md table-auto">
   <caption>Eight-Segment Section Breakdown</caption>
   <thead>
     <tr>
