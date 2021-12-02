@@ -8,6 +8,10 @@ cta:
   noble: http://amzn.to/1K4jaYV
 series:
   - Postal Marines
+characters:
+  - 
+    url: /danel-bophendze/
+    name: Danel Bophendze
 praise:
   - text: Awesome
     person: Fred
