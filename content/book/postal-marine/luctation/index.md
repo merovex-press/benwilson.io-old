@@ -1,5 +1,7 @@
 ---
 title: Luctation
+seo:
+  title: "Postal Marines: Luctation"
 weight: 2
 series:
   - Postal Marines

@@ -1,5 +1,7 @@
 ---
 title: Imbroglio
+seo:
+  title: "Postal Marines: Imbroglio"
 weight: 3
 featured: false
 series:
