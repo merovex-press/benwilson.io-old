@@ -10,7 +10,7 @@ tag:
 date: 2021-12-05T08:26:29-05:00
 draft: false
 description: Sometimes, you need to spend a little time away from what you enjoy. I'm coming back to the Postal Marines with a goal of releasing the first four books by November 2022.
-
+images: [bright-sun-768939.jpg]
 photo:
   caption: Future Like an Ocean
   creator: Solart
