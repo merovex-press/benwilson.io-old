@@ -14,22 +14,4 @@ cta:
   noble: http://amzn.to/1K4jaYV
 ---
 
-Bophendze stopped for a second, wondering if he could get away with it. He decided to give it a shot, and shuffled the deck inverted, looking at the cards as they fanned by.
-
-“Hold it. I said nothing fancy. You can’t shuffle that way. Pass the cards to the next dealer. Your deal’s done,” Sablaroki said.
-
-Bophendze held up his hands in defense. “Sorry. Where I come from that’s normal.” He passed the cards over.
-
-$- Don't worry. This hand we'll win big.
-
-The cards were dealt out, then traded around. Bophendze’s hand looked terrible. I’m going to fold this hand.
-
-$- Don't. Mister overconfident over there is going for a power play. The other two have decent hands, but he'll weed them out. The hand you have will thump him soundly.
-
-You sure?
-
-$- If I don't win this hand for you, you can walk away.
-
-Bophendze looked at each of the players. As he did, Smee superimposed cards, as if to tell Bophendze what hand each player was going to play. Bophendze realized the display was based on Smee’s having read the cards.
-
-$- It doesn't matter that passed the deck. Shuffling is not that random.
+Enim ira Dei de caelo super omnem impietatem et iniustitiam hominum eorum qui veritatem in iniustitiam detinent quia quod notum est Dei manifestum est in illis Deus enim illis manifestavit invisibilia enim ipsius a creatura mundi per ea quae facta sunt intellecta conspiciuntur sempiterna quoque eius virtus et divinitas ut sint inexcusabiles quia cum cognovissent Deum non sicut Deum glorificaverunt aut gratias egerunt sed evanuerunt in cogitationibus suis et obscuratum est insipiens cor eorum dicentes enim se esse sapientes stulti facti sunt et mutaverunt gloriam incorruptibilis Dei in similitudinem imaginis corruptibilis hominis et volucrum et quadrupedum et serp
