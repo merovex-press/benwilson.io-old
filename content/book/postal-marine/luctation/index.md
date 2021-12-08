@@ -63,7 +63,7 @@ The office door opened. A well-dressed man walked out. The trappings indicated a
 
 “Let her know she is welcome to visit the surface. If not, he’ll come to her.”
 
-That’s a little disdainful of her station.
+*That’s a little disdainful of her station.*
 
 Amzi followed the man out. “I’ll tell her. She’s keen on waiting for her yacht and moving on. Better come to her.”
 
@@ -159,7 +159,7 @@ Amzi’s emphasis on all surprised Bophendze.
 
 `$- He means the other matter, too, puppet.`
 
-I know. He lost quite a bit when that happened. My compliance is valuable to him.
+*I know. He lost quite a bit when that happened. My compliance is valuable to him.*
 
 `$- What are you thinking?`
 
