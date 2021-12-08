@@ -27,10 +27,7 @@ praise:
     url: http://example.org
 ---
 
-Bophendze - Guna Prime
-Bophendze felt nauseous not long after they landed on Guna Prime. “Angel, how long does it take to contract a local disease?”
-
-“Why?”
+Bophendze felt nauseous not long after they landed on Guna Prime. “Angel, how long does it take to contract a local dise
 
 “I feel like I’m going to puke.”
 
