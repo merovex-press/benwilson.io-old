@@ -1,8 +1,10 @@
 ---
-title: Luctation
+title: "Maltuŝeblon Gambit"
 seo:
-  title: "Postal Marines: Luctation"
+  title: "Postal Marines: Maltuŝeblon Gambit"
 weight: 2
+hook-1: Maltuŝeblon agent gets involved in the Imperial Election while struggling his past failures.
+hook: Would you use your least effective agent on a critical mission? When Jonaldy Ammonett is its last choice, that's just what the Maltuŝeblon does.
 series:
   - Postal Marines
 summary: This is a summary Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet venenatis dolor. Suspendisse eu justo elit. Cras lacinia turpis nulla, nec lobortis sem varius eu. Sed viverra turpis malesuada est aliquet, ac laoreet Leo convallis. Vivamus pretium aliquam finibus. Mauris dictum, eros eu malesuada imperdiet, nisl mauris scelerisque diam, nec fringilla nisl libero in nulla. Mauris eget massa lacinia sapien faucibus consequat.

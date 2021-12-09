@@ -1,10 +1,15 @@
 ---
-title: Bellicose
+title: "Postal Armada"
 seo:
-  title: "Postal Marines: Bellicose"
+  title: "Postal Marines: Armada"
 weight: 1
 featured: true
-summary: The orphaned Danel Bophendze struggles to find his way as a new marine in the Core Postal Service. He embedded Smee, an ancient artificial intelligence, in his brain hoping it will give him the edge he needs. Aristocratic Ambrose Litovio left a promising career in the Navy to join the Postal Service. He is called upon to assist the only admiral as war looms between the Postal Service and the Navy. Bophendze and Litovio struggle to survive the epic Battle of Tanhuŝio Gate. But for Bophendze, the real fight is in his head.
+hook-1: Novice Postal Marine gets into a battle of wits with the AI embedded in his brain on the eve of the largest Postal Service battle in history.
+hook-2: Never fight a battle of wits with an AI embedded in your brain. That's what Postal Marine Bophendze must do to keep sane.
+hook: Could you win a battle of wits with the AI wired into your brain? That's what Core Postal Service Marine Danel Bophendze must do to keep sane.
+summary: Fresh from boot camp, Core Postal Service Marine Danel Bophendze struggles to cope in his first assignment. He embeds Smee, an artificial intelligence, into his brain to fix his shortcomings. When fighting in the battle of Tanhusio Gate, 
+
+ He embedded Smee, an ancient artificial intelligence, in his brain hoping it will give him the edge he needs. Aristocratic Ambrose Litovio left a promising career in the Navy to join the Postal Service. He is called upon to assist the only admiral as war looms between the Postal Service and the Navy. Bophendze and Litovio struggle to survive the epic Battle of Tanhuŝio Gate. But for Bophendze, the real fight is in his head.
 date: 2021-04-12T06:57:43+05:00
 cta:
   amazon: http://amzn.to/1PpTfSi
