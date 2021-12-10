@@ -2,6 +2,7 @@ baseURL: https://www.benwilsonwrites.com/
 languageCode: en-us
 title: Ben Wilson
 theme: hugo-merovex-2021
+
 paginate: 20
 permalinks:
   post: "/post/:slug"
@@ -17,6 +18,7 @@ params:
   cdn_url: https://d1czp97ry8if6j.cloudfront.net
   xsubtitle: Writes
   venue: Virginia
+  photo: ben-wilson-2021-square.jpg
   
   icons:
     amazon: fas fa-tablet-alt
