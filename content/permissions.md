@@ -62,3 +62,5 @@ Licenses used by images used on the site:
 * [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)
 * [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)
 * [CC BY-ND 2.0](https://creativecommons.org/licenses/by-nd/2.0/)
+
+Author Photo credit ([Arpit Mehta](https://visualsbyarpit.com) / IG @arpitmehta).
