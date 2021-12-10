@@ -24,7 +24,7 @@ The Postal Marine Series is set nearly two millenia in the future. When I concei
 
 <!--more-->
 
-In an earlier article, I mention the [Maltuŝeblon]({%post_url 2015-01-31-the-maltusheblon-directive %}), one of the most secretive organizations in the Core. This organization thinks *it* is the Invisible Hand, while in reality it is more like the hand slipping into your pocket looking for loose change. Admiral Bence in *Bellicose* was a senior member, though not a capo. In *Lucatation*, we are introduced to Jonaldy Ammonett, a low-ranked somewhat inept operative.
+In an earlier article, I mention the [Netuŝeblon ]({%post_url 2015-01-31-the-maltusheblon-directive %}), one of the most secretive organizations in the Core. This organization thinks *it* is the Invisible Hand, while in reality it is more like the hand slipping into your pocket looking for loose change. Admiral Bence in *Bellicose* was a senior member, though not a capo. In *Lucatation*, we are introduced to Jonaldy Ammonett, a low-ranked somewhat inept operative.
 
 There are some parallels between the two books. Both reveal the earlier careers of young men. Bophendze had to overcome legitimate incompetence, and did so only with Smee. Jonaldy is competent, he just lacks confidence. Through the story, other characters give it to him. He is otherwise a very cautious, and eventually very manipulative man.
 

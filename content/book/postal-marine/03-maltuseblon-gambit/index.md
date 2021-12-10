@@ -1,15 +1,17 @@
 ---
-title: "Maltuŝeblon Gambit"
+title: "Netuŝeblon Gambit"
 seo:
-  title: "Postal Marines: Maltuŝeblon Gambit"
+  title: "Postal Marines: Netuŝeblon Gambit"
 weight: 2
-hook-1: Maltuŝeblon agent gets involved in the Imperial Election while struggling his past failures.
-hook: Would you use your least effective agent on a critical mission? When Jonaldy Ammonett is its last choice, that's just what the Maltuŝeblon does.
+hook-1: Netuŝeblon agent gets involved in the Imperial Election while struggling his past failures.
+hook: Would you use your least effective agent on a critical mission? When Jonaldy Ammonett is its last choice, that's just what the Netuŝeblon does.
 series:
   - Postal Marines
 summary: This is a summary Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet venenatis dolor. Suspendisse eu justo elit. Cras lacinia turpis nulla, nec lobortis sem varius eu. Sed viverra turpis malesuada est aliquet, ac laoreet Leo convallis. Vivamus pretium aliquam finibus. Mauris dictum, eros eu malesuada imperdiet, nisl mauris scelerisque diam, nec fringilla nisl libero in nulla. Mauris eget massa lacinia sapien faucibus consequat.
 date: 2021-04-12T06:58:06+05:00
 ---
+
+[ne‧tuʃˈ‧e‧blon]
 
 “Why am I finding myself in postal brigs?” Jonaldy lay on his back on the top bunk, staring at the annoyingly bland paint.
 
