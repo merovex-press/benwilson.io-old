@@ -4,6 +4,16 @@
     "description": "that is my-site",
     "repository": "https://github.com/you/my-site",
     "license": "MIT",
+    "scripts": {
+        "clean": "rimraf public && rimraf ./assets/css/theme/css",
+        "start": "TAILWIND_MODE=watch NODE_ENV=development npm-run-all --parallel dev:*",
+        "build": "NODE_ENV=production npm-run-all clean setup prod:*",
+        "setup": "NODE_ENV=development postcss ./themes/hugo-merovex-2021/assets/css/tw.css -c ./themes/hugo-merovex-2021/assets/css/tailwind.config.js -o ./themes/hugo-merovex-2021/assets/css/theme.css",
+        "dev:hugo": "hugo server",
+        "dev:twcssw": "TAILWIND_MODE=watch NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js build ./themes/hugo-merovex-2021/assets/css/tailwind.css -o ./themes/hugo-merovex-2021/assets/css/theme.css -c ./themes/hugo-merovex-2021/assets/css/tailwind.config.js --jit --watch",
+        "prod:twcss": "./node_modules/tailwindcss/lib/cli.js build ./themes/hugo-merovex-2021/assets/css/tailwind.css -o ./assets/css/theme.css --minify",
+        "prod:hugo": "hugo --gc --minify"
+    },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^4.0.3",
         "@tailwindcss/typography": "^0.4.0",
@@ -18,5 +28,9 @@
         "> 1%",
         "maintained node versions",
         "not dead"
-    ]
+    ],
+    "dependencies": {
+        "npm-run-all": "^4.1.5",
+        "rimraf": "^3.0.2"
+    }
 }
