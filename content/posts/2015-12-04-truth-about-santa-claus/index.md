@@ -1,4 +1,5 @@
 ---
+aliases: ['/6d9ecd8f']
 author: Ben Wilson
 categories:
 - humor

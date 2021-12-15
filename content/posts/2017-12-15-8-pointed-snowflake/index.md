@@ -1,4 +1,5 @@
 ---
+aliases: ['/c0573913']
 author: Ben Wilson
 categories:
 - Writing

@@ -1,4 +1,5 @@
 ---
+aliases: ['/a8a0c99c']
 categories:
 - postal marine series
 created_at: 2014-01-21 19:21

@@ -1,4 +1,5 @@
 ---
+aliases: ['/39538f69']
 author: Ben Wilson
 categories:
 - Audible

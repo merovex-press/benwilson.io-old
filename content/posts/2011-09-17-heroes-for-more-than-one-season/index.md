@@ -1,4 +1,5 @@
 ---
+aliases: ['/bec4079c']
 author: Ben Wilson
 draft: true
 categories:

@@ -1,4 +1,5 @@
 ---
+aliases: ['/684447a2']
 author: Ben Wilson
 categories:
 - Philosophy

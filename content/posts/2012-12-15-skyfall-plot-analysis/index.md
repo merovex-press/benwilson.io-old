@@ -1,4 +1,6 @@
 ---
+aliases: ['/2cd16e37']
+aliases: ['/35290c42']
 categories:
 - writing
 created_at: 2012-12-15 18:49
