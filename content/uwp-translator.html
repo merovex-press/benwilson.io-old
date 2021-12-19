@@ -11,7 +11,7 @@ permalink: /uwp-translator/
       <label for="n">System Name:</label>
     </div>
     <div class='flex-initial w-2/3'>
-      <input type="text" class="px-2 py-1 rounded text-shade-darker" id="n"
+      <input type="text" class="px-2 py-1 border rounded border-shade text-shade-darker" id="n"
         placeholder="Enter System Name (e.g. Regina)">
     </div>
   </div>
@@ -21,16 +21,17 @@ permalink: /uwp-translator/
       <label for="uwp">Universal World Profile:</label>
     </div>
     <div class='flex-initial w-2/3'>
-      <input type="text" class="px-2 py-1 rounded text-shade-darker" id="uwp" placeholder="Enter UWP (e.g. C739689-7)">
+      <input type="text" class="px-2 py-1 border rounded border-shade text-shade-darker" id="uwp"
+        placeholder="Enter UWP (e.g. C739689-7)">
       <p class="text-sm text-opacity-80">The UWP follows the standard 8-character definition (B937411-B), more
         information
         provided <a href='http://wiki.travellerrpg.com/Universal_World_Profile'>on the Traveller RPG Wiki</a>.</p>
     </div>
   </div>
-  <div>
+  <section class='prose-sans'>
     <h3>UWP <span id='uwp-code'></span> Defined:</h3>
-    <p id='uwp-output'>Here...</p>
-  </div>
+    <p id='uwp-output'>Translation will be generated here...</p>
+  </section>
 </form>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
