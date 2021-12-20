@@ -1,7 +1,7 @@
 ---
 author: Ben Wilson
 title: Danel Bophendze
-date: 2021-04-29T04:47:33-04:00
+date: "2021-04-29T04:47:33-04:00"
 books:
   - 
     url: "postal-marine/bellicose"
