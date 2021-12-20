@@ -1,5 +1,5 @@
 ---
-aliases: ['/223fe4c7']
+aliases: ['/p/223fe4c7']
 author: Ben Wilson
 title: "Hiatus: a Pause or Gap in a Series"
 categories:

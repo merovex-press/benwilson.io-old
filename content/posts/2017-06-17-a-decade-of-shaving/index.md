@@ -1,5 +1,5 @@
 ---
-aliases: ['/282579b8']
+aliases: ['/p/282579b8']
 author: Ben Wilson
 categories:
 - Diary

@@ -1,5 +1,5 @@
 ---
-aliases: ['/c67b3695']
+aliases: ['/p/c67b3695']
 author: Ben Wilson
 categories:
 - humor

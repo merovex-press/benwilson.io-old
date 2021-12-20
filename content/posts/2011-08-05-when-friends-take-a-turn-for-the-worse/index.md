@@ -1,5 +1,5 @@
 ---
-aliases: ['/1eb19c93']
+aliases: ['/p/1eb19c93']
 author: Ben Wilson
 categories:
 - postal marine series

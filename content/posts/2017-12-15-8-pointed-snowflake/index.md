@@ -1,5 +1,5 @@
 ---
-aliases: ['/c0573913']
+aliases: ['/p/c0573913']
 author: Ben Wilson
 categories:
 - Writing

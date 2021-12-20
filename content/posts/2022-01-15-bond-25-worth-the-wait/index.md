@@ -1,5 +1,5 @@
 ---
-aliases: ['/ea99531f']
+aliases: ['/p/ea99531f']
 author: Ben Wilson
 title: "Bond 25: Worth the Wait"
 categories:

@@ -4,9 +4,9 @@ require 'securerandom'
 puts SecureRandom.uuid.split('-').first
 
 Dir.glob("content/posts/**/index.md").each do |post|
-  a = "aliases: ['/#{SecureRandom.uuid.split('-').first}']"
+  a = "aliases: ['/p/#{SecureRandom.uuid.split('-').first}']"
   f = File.open(post,'r')
-  c = f.read().gsub(/\A---/, "---\naliases: ['/#{SecureRandom.uuid.split('-').first}']")
+  c = f.read().gsub(/\A---/, "---\naliases: ['/p/#{SecureRandom.uuid.split('-').first}']")
   f.close
   f = File.open(post, 'w')
   f.write(c)
