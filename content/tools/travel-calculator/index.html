@@ -1,0 +1,98 @@
+---
+layout: tools
+title: "Travel Time Calculator"
+date: 2021-12-21T05:47:27+05:00
+permalink: /tools/travel-calculator/
+summary: "Calculates travel time in space with a given distance and acceleration (in G)."
+---
+
+<section class='mb-12 prosaic-sans md:prose-xl'>
+  <p>
+    This calculator gives travel time (in human terms) with constant acceleration and deceleration.
+    Assumes the inital and final velocity is zero meters-per-second.
+  </p>
+</section>
+
+<section class="p-4 space-y-2 travel-calculator card">
+  <div class='flex space-y-2'>
+    <label for=" uwp">UWP:</label>
+    <input class='input-control' name="uwp" id="uwp" type="text" placeholder="B937411-A"
+      onchange="convertUWPtoDistance()" onkeyup="convertUWPtoDistance()">
+  </div>
+  </div>
+  <div class='flex space-y-2'>
+    <label for="distance">Distance (km):</label>
+    <input name="distance" id="distance" type="number" value="19000000" onchange="calculate()" onkeyup="calculate()">
+  </div>
+  <div class='flex space-y-2'>
+    <label for="acceleration">Accelleration (G's):</label>
+    <input name="acceleration" id="acceleration" type="number" value="1" min="1" max="9" onchange="calculate()"
+      onkeyup="calculate()">
+  </div>
+  <div class='flex space-y-2'>
+    <label for="spaceship_mass">Mass (tons):</label>
+    <input name="spaceship_mass" id="spaceship_mass" type="number" value="200" min="1" max="999999"
+      onchange="calculate()" onkeyup="calculate()">
+  </div>
+  <div class="flex space-y-2">
+    <label for="fuel_conversion_rate">Drive
+      Type:</label>
+    <select name="fuel_conversion_rate" id="fuel_conversion_rate"
+      class="flex-1 rounded-lg dark:text-shade-lighter text-shade-dark dark:bg-shade-dark" onchange="calculate()">
+      <option value="0.00125" selected="selected">HEPlaR</option>
+      <option value="0.0025">M-Drive / Thruster Plates</option>
+    </select>
+  </div>
+  <div class="flex justify-center hidden">
+    <label for="" for="noDeceleration" class="flex cursor-pointer items-right">
+      <div class="px-2">No Deceleration</div>
+      <!-- toggle -->
+      <div class="relative">
+        <input id="noDeceleration" type="checkbox" class="hidden" />
+        <!-- path -->
+        <div class="h-5 rounded-full shadow-inner bg-shade toggle-path w-9"></div>
+        <!-- crcle -->
+        <div class="absolute inset-y-0 left-0 w-3.5 h-3.5 rounded-full shadow toggle-circle bg-shade-dark"></div>
+      </div>
+    </label>
+  </div>
+</section>
+<div class="p-4 card">
+  <div>
+    <span class='md:inline-block w-44'>Travel time:</span>
+    <strong id='travelTimeDmhs'>...</strong>
+  </div>
+  <div>
+    <span class='md:inline-block w-44'>Maximum Velocity:</span>
+    <strong id='maxVelocity'>...</strong> km /sec<sup>2</sup>
+  </div>
+  <div>
+    <span class='md:inline-block w-44'>Fuel consumed:</span>
+    <strong id='fuelConsumed'>...</strong> kg
+  </div>
+  <div>
+    <span class='md:inline-block w-44'>Power Required:</span>
+    <strong id='mwConsumed'>...</strong> Megawatts
+  </div>
+</div>
+
+<script src="travel-calculator.js"></script>
+<style>
+  .toggle-path {
+    transition: background 0.3s ease-in-out;
+  }
+
+  .toggle-circle {
+    top: 0.2rem;
+    left: 0.25rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  input:checked~.toggle-circle {
+    transform: translateX(100%);
+  }
+
+  input:checked~.toggle-path {
+    background-color: #F55347;
+  }
+</style>

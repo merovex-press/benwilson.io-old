@@ -1,5 +1,5 @@
 var uData;
-$.getJSON("/assets/js/uwp-translator.json", function (data) { uData = data["data"]; });
+$.getJSON("uwp-translator.json", function (data) { uData = data["data"]; });
 
 $("#uwp").focus();
 $('#uwp').keyup(function (event) { translateUWP(); }); translateUWP();
@@ -11,7 +11,7 @@ function translateUWP() {
   var uwp = getSVal('uwp');
   var sname = getSVal('n');
   if (sname == '') { sname = uwp }
-  bits = uwp.split('');
+  bits = uwp.toUpperCase().split('');
 
   if (bits[7] == '-') {
 
