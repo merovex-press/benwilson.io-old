@@ -28,10 +28,12 @@ function acosh(arg) {
 }
 function setAU(km) {
   var au = km / KM_PER_AU
-  if (au < 0.01) { au = au.toFixed(3) }
-  else if (au < 1) { au = au.toFixed(2) }
-  else if (au < 10) { au = au.toFixed(1) }
-  else { au = au.toFixed(0) }
+  switch (true) {
+    case (au < 0.1): au = au.toFixed(3); break;
+    case (au < 1): au = au.toFixed(2); break;
+    case (au < 10): au = au.toFixed(1); break;
+    default: au = au.toFixed(0); break;
+  }
   document.getElementById("distanceAU").value = au
 }
 function setDistanceFromPlanetSize() {

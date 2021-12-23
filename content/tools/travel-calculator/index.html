@@ -18,7 +18,7 @@ summary: "Calculates travel time in space with a given distance and acceleration
     <label for="planet_size">Planet Size:</label>
     <div>
       <select name="planet_size" id="planet_size" onchange="setDistanceFromPlanetSize()"
-        class="flex-1 rounded-lg dark:text-shade-lighter text-shade-dark dark:bg-shade-dark">
+        class="flex-1 rounded-lg shade-text dark:bg-shade-dark">
         <option value="100">R - Planetary Ring</option>
         <option value="20000">D - Debris </option>
         <option value="50000">S - Very Small</option>
@@ -46,7 +46,7 @@ summary: "Calculates travel time in space with a given distance and acceleration
     <label for="star_size">Star Size:</label>
     <div>
       <select name="star_size" id="star_size" onchange="setDistanceFromStarSize()"
-        class="flex-1 rounded-lg dark:text-shade-lighter text-shade-dark dark:bg-shade-dark">
+        class="flex-1 rounded-lg shade-text dark:bg-shade-dark">
         <option value="5.70">B0 (e.g. Becrux)</option>
         <option value="5.10">B2 (e.g. Spica)</option>
         <option value="3.70">B5 (e.g. Achernar)</option>
@@ -98,7 +98,7 @@ summary: "Calculates travel time in space with a given distance and acceleration
     <label for="fuel_conversion_rate">Drive
       Type:</label>
     <select name="fuel_conversion_rate" id="fuel_conversion_rate"
-      class="flex-1 rounded-lg dark:text-shade-lighter text-shade-dark dark:bg-shade-dark" onchange="calculate()">
+      class="flex-1 rounded-lg shade-text dark:bg-shade-dark" onchange="calculate()">
       <option value="0.00125" selected="selected">HEPlaR</option>
       <option value="0.0025">M-Drive / Thruster Plates</option>
     </select>
