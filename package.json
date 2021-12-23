@@ -9,7 +9,7 @@
         "start": "TAILWIND_MODE=watch NODE_ENV=development npm-run-all --parallel dev:*",
         "build": "NODE_ENV=production npm-run-all clean setup prod:*",
         "setup": "NODE_ENV=development postcss ./themes/hugo-merovex-2021/assets/css/tw.css -c ./themes/hugo-merovex-2021/assets/css/tailwind.config.js -o ./themes/hugo-merovex-2021/assets/css/theme.css",
-        "dev:hugo": "hugo server",
+        "dev:hugo": "hugo server --buildFuture",
         "dev:twcssw": "TAILWIND_MODE=watch NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js build ./themes/hugo-merovex-2021/assets/css/tailwind.css -o ./themes/hugo-merovex-2021/assets/css/theme.css -c ./themes/hugo-merovex-2021/assets/css/tailwind.config.js --jit --watch",
         "prod:twcss": "./node_modules/tailwindcss/lib/cli.js build ./themes/hugo-merovex-2021/assets/css/tailwind.css -o ./assets/css/theme.css --minify",
         "prod:hugo": "hugo --gc --minify"

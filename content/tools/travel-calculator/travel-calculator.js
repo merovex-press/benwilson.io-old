@@ -4,6 +4,7 @@ SPEED_OF_LIGHT_SQUARED = 89875517873681760;
 SPEED_OF_LIGHT = 299792458;
 ACCELERATION_IN_G = 0.0098
 KM_PER_AU = 149597900
+SUN_DIAMETER = 1390000
 // Fuel Conversion Rate is HALF whatever is said in TNE: Fire, Fusion & Steel.
 // FUEL_CONVERSION_RATE = 0.00125; // HEPlaR 
 FUEL_CONVERSION_RATE = 0.0025; // M-Drive
@@ -25,20 +26,26 @@ function acceleration() {
 function acosh(arg) {
   return Math.log(arg + Math.sqrt(arg * arg - 1));
 }
-function convertUWPtoDistance() {
-  var distances = {
-    "R": 1, "0": 200, "D": 200, "S": 6000, "1": 7000,
-    "2": 8000, "3": 9000, "4": 9500, "5": 10500, "6": 11000,
-    "7": 12500, "8": 14500, "9": 16000, "A": 16800, "B": 20000
-  }
-  //UWP ~= B937411-B
-  var uwp = input('uwp');
-  if (uwp.length > 1) {
-    var bits = uwp.split('');
-    var distance = distances[bits[1].toUpperCase()] * 100;
-    document.getElementById("distance").value = distance
-    calculate();
-  }
+function setAU(km) {
+  var au = km / KM_PER_AU
+  if (au < 0.01) { au = au.toFixed(3) }
+  else if (au < 1) { au = au.toFixed(2) }
+  else if (au < 10) { au = au.toFixed(1) }
+  else { au = au.toFixed(0) }
+  document.getElementById("distanceAU").value = au
+}
+function setDistanceFromPlanetSize() {
+  var distance = document.getElementById("planet_size").value;
+  setAU(distance);
+  document.getElementById("distance").value = distance;
+  calculate()
+}
+function setDistanceFromStarSize() {
+  var stellar_size = document.getElementById("star_size").value;
+  var km = stellar_size * SUN_DIAMETER * 100
+  document.getElementById("distance").value = km;
+  setAU(km);
+  calculate()
 }
 function format(n) { return n.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }
 function input(id) { return document.getElementById(id).value }
@@ -109,6 +116,18 @@ function calcMaxVelocity(time_elapsed) {
   var result = acceleration() * (time_elapsed / 2); // * 1000;
   document.getElementById("maxVelocity").innerHTML = result.toFixed(0);
   return result;
+}
+function setDistanceFromKM() {
+  var km = document.getElementById("distance").value;
+  setAU(km);
+  calculate();
+}
+function setDistanceFromAU() {
+  var au = document.getElementById("distanceAU").value;
+  var distance = au * 149597900
+  console.log(distance, au);
+  document.getElementById("distance").value = distance;
+  calculate();
 }
 
 
