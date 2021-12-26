@@ -1,0 +1,41 @@
+---
+layout: tools
+title: "Postal Marines Volume Report"
+subtitle: "Karto Terradoma"
+date: 2021-12-21T05:47:27+05:00
+permalink: /tools/terradoma-map/
+summary: "Gives quick information on volumes from the Terradoma map."
+---
+
+<section>
+  <div class='flex space-y-2'>
+    <label for="coordinate">Coordinate:</label>
+    <input name="coordinate" id="coordinate" type="number" onkeyup="showVolumeDetails()">
+  </div>
+</section>
+
+<section class='p-3 card'>
+  <h2><span id="name">Name</span> - (<span id="location">1021</span>: <span id="uwp">C646345-8</span> )</h2>
+  <div class="flex"><span class="flex-1 px-2 font-bold">Star:</span><span id="star" class='flex-1'></span></div>
+  <div class="flex bg-shade/20"><span class="flex-1 px-2 font-bold">Orbits:</span><span id="orbits"
+      class='flex-1'></span>
+  </div>
+  <div class="flex"><span class="flex-1 px-2 font-bold">Mainworld Temperature:</span><span id="temp"
+      class='flex-1'></span></div>
+  <div class="flex bg-shade/20"><span class="flex-1 px-2 font-bold">Bases:</span><span id="bases" class='flex-1'></span>
+  </div>
+  <div class="flex "><span class="flex-1 px-2 font-bold">Factions:</span><span id="factions" class='flex-1'></span>
+  </div>
+  <div class="flex bg-shade/20">
+    <span class="flex-1 px-2 font-bold">Trade Codes:</span>
+    <span id="trade_codes" class='flex-1'></span>
+  </div>
+  <div class="flex"><span class="flex-1 px-2 font-bold">Travel Code:</span><span id="travel_code" class='flex-1'></span>
+  </div>
+</section>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="terradoma-map.js"></script>

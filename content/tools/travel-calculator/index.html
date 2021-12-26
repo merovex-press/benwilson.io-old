@@ -95,6 +95,11 @@ summary: "Calculates travel time in space with a given distance and acceleration
     <input name="distanceAU" id="distanceAU" type="number" value="0" onchange="setDistanceFromAU()"
       onkeyup="setDistanceFromAU()">
   </div>
+  <div class='flex hidden space-y-2'>
+    <label for="acceleration">Travel Time (minutes):</label>
+    <input name="travel_time" id="travel_time" type="number" value="1" min="1" max="9"
+      onkeyup="calcDistanceFromAcceleration()">
+  </div>
   <div class='flex space-y-2'>
     <label for="acceleration">Accelleration (G's):</label>
     <input name="acceleration" id="acceleration" type="number" value="1" min="1" max="9" onchange="calculate()"
@@ -144,6 +149,10 @@ summary: "Calculates travel time in space with a given distance and acceleration
   <div>
     <span class='md:inline-block w-44'>Power Required:</span>
     <strong class='inline-block w-32 text-right ' id='mwConsumed'>...</strong> Megawatts
+  </div>
+  <div>
+    <span class='md:inline-block w-44'>Gigameters:</span>
+    <strong class='inline-block w-32 text-right ' id='distanceGm'>...</strong> Gigameters
   </div>
 </div>
 

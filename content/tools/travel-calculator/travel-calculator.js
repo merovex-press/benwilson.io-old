@@ -20,12 +20,10 @@ FUEL_CONVERSION_RATE = 0.0025; // M-Drive
 
 // =================================================================================================
 // Utilities
-function acceleration() {
-  return input("acceleration") * ACCELERATION_IN_G
-}
-function acosh(arg) {
-  return Math.log(arg + Math.sqrt(arg * arg - 1));
-}
+function acceleration() { return input("acceleration") * ACCELERATION_IN_G }
+function acosh(arg) { return Math.log(arg + Math.sqrt(arg * arg - 1)); }
+function format(n) { return n.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }
+function input(id) { return document.getElementById(id).value }
 function setAU(km) {
   var au = km / KM_PER_AU
   switch (true) {
@@ -36,36 +34,34 @@ function setAU(km) {
   }
   document.getElementById("distanceAU").value = au
 }
+function setKM(km) { document.getElementById("distance").value = km }
+function setGM(km) { document.getElementById("distanceGm").innerHTML = (km / 1000000).toFixed(2); }
 function setDistanceFromPlanetSize() {
-  var distance = document.getElementById("planet_size").value;
-  setAU(distance);
-  document.getElementById("distance").value = distance;
+  var km = document.getElementById("planet_size").value;
+  setAU(km);
+  setGM(km);
+  setKM(km);
   calculate()
 }
 function setDistanceFromStarSize() {
   var stellar_size = document.getElementById("star_size").value;
   var km = stellar_size * SUN_DIAMETER * 100
-  document.getElementById("distance").value = km;
+  setKM(km);
+  setGM(km);
   setAU(km);
   calculate()
 }
-function format(n) { return n.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }
-function input(id) { return document.getElementById(id).value }
+
 function willDeclerate() {
   return !document.getElementById('noDeceleration').checked;
 }
-function fuel_conversion_rate() {
-  return document.getElementById("fuel_conversion_rate").value
-}
+function fuel_conversion_rate() { return document.getElementById("fuel_conversion_rate").value }
 // =================================================================================================
 // Calculations
 function calculate() {
   var ttSeconds = calcObserverTime()
   var mwh = calcMWHConsumed(ttSeconds)
-
-  // var checked = document.getElementById('noDeceleration').checked;
-  // document.getElementById("travelerTime").innerHTML = calcObserverTime()
-  document.getElementById("travelTimeDmhs").innerHTML = secondsToDhms(ttSeconds)
+  document.getElementById("travelTimeDmhs").innerHTML = secondsToDhms(ttSeconds) + secondsToCycles(ttSeconds);
   document.getElementById("fuelConsumed").innerHTML = format(calcFuelMass(ttSeconds))
   document.getElementById("mwConsumed").innerHTML = (mwh > 10) ? mwh.toFixed(0) : mwh.toFixed(2)
 }
@@ -103,6 +99,14 @@ function calcObserverTime() {
   return result;
 }
 
+function calcDistanceFromAcceleration() {
+  var time = input("travel_time") * 60
+  var speed = acceleration()
+  var km = 0.5 * speed * Math.pow(time, 2)
+  setKM(km);
+  setGM(km);
+  calcMaxVelocity(time * 2)
+}
 function calcDist(observerTime, velocity) {
   // Formula from:
   // http://www.mrelativity.net/MBriefs/Most%20Direct%20Derivation%20of%20Relativistic%20Constant%20Acceleration%20Distance%20Formula.htm
@@ -122,17 +126,25 @@ function calcMaxVelocity(time_elapsed) {
 function setDistanceFromKM() {
   var km = document.getElementById("distance").value;
   setAU(km);
+  setGM(km)
   calculate();
 }
 function setDistanceFromAU() {
   var au = document.getElementById("distanceAU").value;
-  var distance = au * 149597900
-  console.log(distance, au);
-  document.getElementById("distance").value = distance;
+  var km = au * 149597900
+  console.log(km, au);
+  setKM(km);
+  setGM(km)
   calculate();
 }
-
-
+function secondsToCycles(impSeconds) {
+  seconds = Math.ceil(Number(impSeconds) / 0.864);
+  var days = Math.floor(seconds / 100000)
+  var cycles = Math.floor((seconds % 100000) / 10000);
+  var beats = Math.floor(seconds % (10000) / 100);
+  result = " <span class='block text-sm opacity-60 hover:opacity-100'>(" + days + "." + cycles + "." + beats + " days.cycles.beats)</span>";
+  return result;
+}
 function secondsToDhms(seconds) {
   seconds = Number(seconds);
   var d = Math.floor(seconds / (3600 * 24));
@@ -146,4 +158,8 @@ function secondsToDhms(seconds) {
   var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
   var result = dDisplay + hDisplay + mDisplay + sDisplay;
   return result.replace(/, $/, "")
+}
+window.onload = function () {
+  calculate();
+  setDistanceFromKM();
 }

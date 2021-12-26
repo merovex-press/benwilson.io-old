@@ -7,7 +7,7 @@ volumes:
     temp: F
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " N,S      "
     star: M4V/DB/DB
     orbits: W.BBS....S
@@ -18,7 +18,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lt,NI           "
+    trade_codes: "Lt,NI           "
     factions: "          "
     star: F5IV/DB
     orbits: R..WGG..S
@@ -29,7 +29,7 @@ volumes:
     temp: H
     bases: "....."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: "          "
     star: M0V/DB
     orbits: W.RBS
@@ -40,7 +40,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: " NI,Ri           "
+    trade_codes: "NI,Ri           "
     factions: " F        "
     star: M2V
     orbits: WB
@@ -51,7 +51,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI,Po           "
+    trade_codes: "NI,Po           "
     factions: " O        "
     star: M6V
     orbits: WGG
@@ -62,7 +62,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: "          "
     star: F0III/DB
     orbits: HRHWG.S
@@ -73,7 +73,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Lt,NI           "
+    trade_codes: "Lt,NI           "
     factions: " O        "
     star: M4V/DB
     orbits: WG.R..S
@@ -84,7 +84,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " N,F      "
     star: M0V/DB
     orbits: W........S
@@ -95,7 +95,7 @@ volumes:
     temp: T
     bases: NS...
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " F        "
     star: F5V
     orbits: ".HRWRR"
@@ -106,7 +106,7 @@ volumes:
     temp: T
     bases: "..GC."
     travel_code: AZ
-    trade_codes: " Ag              "
+    trade_codes: "Ag              "
     factions: " O        "
     star: M4V
     orbits: WG
@@ -117,7 +117,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: " Hi,In           "
+    trade_codes: "Hi,In           "
     factions: " F,N      "
     star: K0IV/DB
     orbits: HHWB....S
@@ -128,7 +128,7 @@ volumes:
     temp: T
     bases: "....P"
     travel_code: ".."
-    trade_codes: " Na,Po           "
+    trade_codes: "Na,Po           "
     factions: " N        "
     star: M0V/DB
     orbits: W..S
@@ -139,7 +139,7 @@ volumes:
     temp: T
     bases: "..G.P"
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " F,M,N    "
     star: F5V/DB
     orbits: H..WG.S
@@ -150,7 +150,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " Hi              "
+    trade_codes: "Hi              "
     factions: "          "
     star: F0V
     orbits: RRWGB
@@ -161,7 +161,7 @@ volumes:
     temp: R
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: "          "
     star: G2V
     orbits: HHWGB
@@ -172,7 +172,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " N        "
     star: M2V
     orbits: W.BBBG
@@ -183,7 +183,7 @@ volumes:
     temp: T
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " M        "
     star: M0V/DB
     orbits: WB..S
@@ -194,7 +194,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " M        "
     star: M4V/DB
     orbits: W.B.G....S
@@ -205,7 +205,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " Ag              "
+    trade_codes: "Ag              "
     factions: " M,M,N,S  "
     star: M4V
     orbits: W.G.B
@@ -216,7 +216,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Ri              "
+    trade_codes: "Ri              "
     factions: "          "
     star: M0V/DB
     orbits: WGGGS
@@ -227,7 +227,7 @@ volumes:
     temp: H
     bases: ".S..."
     travel_code: AZ
-    trade_codes: " Hi              "
+    trade_codes: "Hi              "
     factions: " M        "
     star: M6II
     orbits: HHRHRHWRRR
@@ -238,7 +238,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: AZ
-    trade_codes: " Ri              "
+    trade_codes: "Ri              "
     factions: " N        "
     star: M4V
     orbits: WG
@@ -249,7 +249,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Ag,NI,Ri        "
+    trade_codes: "Ag,NI,Ri        "
     factions: " M        "
     star: F0III
     orbits: HRHWGRBGB
@@ -260,7 +260,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " Fl,NI           "
+    trade_codes: "Fl,NI           "
     factions: " M        "
     star: G5V
     orbits: RRWGRB
@@ -271,7 +271,7 @@ volumes:
     temp: F
     bases: "....P"
     travel_code: AZ
-    trade_codes: " IC,NI           "
+    trade_codes: "IC,NI           "
     factions: " F        "
     star: M6V
     orbits: W
@@ -282,7 +282,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: ".."
-    trade_codes: " Lo,Lt           "
+    trade_codes: "Lo,Lt           "
     factions: "          "
     star: F0V/DB
     orbits: H.RWRBS
@@ -293,7 +293,7 @@ volumes:
     temp: T
     bases: ".S..."
     travel_code: ".."
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " F        "
     star: M6V/DB
     orbits: WR..S
@@ -304,7 +304,7 @@ volumes:
     temp: C
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " O        "
     star: M0V/DB
     orbits: WGG.S
@@ -315,7 +315,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: "          "
     star: M4V/DB
     orbits: WBG....S
@@ -326,7 +326,7 @@ volumes:
     temp: T
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " Lt,NI           "
+    trade_codes: "Lt,NI           "
     factions: " S        "
     star: M4V/DB
     orbits: W.......S
@@ -337,7 +337,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " M        "
     star: M6V
     orbits: WBR
@@ -348,7 +348,7 @@ volumes:
     temp: T
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " O,N      "
     star: M2V
     orbits: W
@@ -359,7 +359,7 @@ volumes:
     temp: T
     bases: "..GC."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " F,M,F    "
     star: M4II
     orbits: RRRRBRWGRG
@@ -370,7 +370,7 @@ volumes:
     temp: F
     bases: "...C."
     travel_code: ".."
-    trade_codes: " IC,Lo,Va        "
+    trade_codes: "IC,Lo,Va        "
     factions: " N,M,M    "
     star: M6V/DB
     orbits: WR..S
@@ -381,7 +381,7 @@ volumes:
     temp: F
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Lo,Lt           "
+    trade_codes: "Lo,Lt           "
     factions: " F        "
     star: G0V
     orbits: RRWGBGB
@@ -392,7 +392,7 @@ volumes:
     temp: F
     bases: N....
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " M,M,O    "
     star: M4V
     orbits: W
@@ -403,7 +403,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " M        "
     star: M4V
     orbits: WBR
@@ -414,7 +414,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: ".."
-    trade_codes: " Lo,Lt           "
+    trade_codes: "Lo,Lt           "
     factions: " N        "
     star: F2V
     orbits: HBRWR
@@ -425,7 +425,7 @@ volumes:
     temp: C
     bases: ".SG.."
     travel_code: AZ
-    trade_codes: " Po              "
+    trade_codes: "Po              "
     factions: " M,O      "
     star: M2V/DB
     orbits: WRGGS
@@ -436,7 +436,7 @@ volumes:
     temp: T
     bases: ".S..P"
     travel_code: AZ
-    trade_codes: " Ag              "
+    trade_codes: "Ag              "
     factions: " N,N      "
     star: G5V
     orbits: RBRW
@@ -447,7 +447,7 @@ volumes:
     temp: T
     bases: ".S.C."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " M,N,F    "
     star: M0V
     orbits: W
@@ -458,7 +458,7 @@ volumes:
     temp: H
     bases: "..G.P"
     travel_code: AZ
-    trade_codes: " Fl,NI           "
+    trade_codes: "Fl,NI           "
     factions: " F        "
     star: M6V/M6V
     orbits: WGG....S
@@ -469,7 +469,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: AZ
-    trade_codes: " Ag,Lt,NI        "
+    trade_codes: "Ag,Lt,NI        "
     factions: " N        "
     star: F5V
     orbits: R.WGRGGG
@@ -480,7 +480,7 @@ volumes:
     temp: C
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " N,N      "
     star: M2V/DB
     orbits: WGR....S
@@ -491,7 +491,7 @@ volumes:
     temp: T
     bases: "..GC."
     travel_code: AZ
-    trade_codes: " Ba,Lt           "
+    trade_codes: "Ba,Lt           "
     factions: "          "
     star: F0V
     orbits: HBWGGR
@@ -502,7 +502,7 @@ volumes:
     temp: F
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " N,M,O    "
     star: M2V
     orbits: WG
@@ -513,7 +513,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Ag,Lt,NI        "
+    trade_codes: "Ag,Lt,NI        "
     factions: " M        "
     star: M0V
     orbits: WGRGGG
@@ -524,7 +524,7 @@ volumes:
     temp: H
     bases: ".SG.."
     travel_code: AZ
-    trade_codes: " Fl              "
+    trade_codes: "Fl              "
     factions: " O,O      "
     star: G2V/DB
     orbits: R.RWBGS
@@ -535,7 +535,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: "          "
     star: M4V
     orbits: WBGG
@@ -546,7 +546,7 @@ volumes:
     temp: F
     bases: NSGC.
     travel_code: AZ
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: "          "
     star: M6V
     orbits: WBR.GG
@@ -557,7 +557,7 @@ volumes:
     temp: T
     bases: N.G..
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " F        "
     star: M2III
     orbits: HHHRWBG
@@ -568,7 +568,7 @@ volumes:
     temp: T
     bases: ".SGC."
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " M        "
     star: F0V
     orbits: RRHWG.G
@@ -579,7 +579,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Ri              "
+    trade_codes: "Ri              "
     factions: " N,M      "
     star: G2V
     orbits: H.WG.GG
@@ -590,7 +590,7 @@ volumes:
     temp: F
     bases: ".S.C."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " N        "
     star: M0V
     orbits: W
@@ -601,7 +601,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: AZ
-    trade_codes: " Ba,Lt           "
+    trade_codes: "Ba,Lt           "
     factions: "          "
     star: M0V
     orbits: WRG
@@ -612,7 +612,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " N,O,F    "
     star: M0V/DB
     orbits: WG.......S
@@ -623,7 +623,7 @@ volumes:
     temp: C
     bases: "....."
     travel_code: AZ
-    trade_codes: " Hi              "
+    trade_codes: "Hi              "
     factions: " N        "
     star: G5V
     orbits: ".BHW"
@@ -634,7 +634,7 @@ volumes:
     temp: F
     bases: "....."
     travel_code: ".."
-    trade_codes: " IC,Na,NI        "
+    trade_codes: "IC,Na,NI        "
     factions: " N        "
     star: M2V/DB
     orbits: W...S
@@ -645,7 +645,7 @@ volumes:
     temp: F
     bases: "....."
     travel_code: ".."
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " N        "
     star: F0IV/DB
     orbits: RHBWB....S
@@ -656,7 +656,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " N        "
     star: M6V/DB
     orbits: WR.S
@@ -667,7 +667,7 @@ volumes:
     temp: F
     bases: "..GC."
     travel_code: AZ
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " S,F      "
     star: G5V
     orbits: BRW.G
@@ -678,7 +678,7 @@ volumes:
     temp: T
     bases: "..GC."
     travel_code: RZ
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " N,S      "
     star: M0III
     orbits: HHH.WG
@@ -689,7 +689,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " P,N,F    "
     star: M2V
     orbits: WGR.GB
@@ -700,7 +700,7 @@ volumes:
     temp: F
     bases: "....."
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " F        "
     star: F5V/DB
     orbits: "..RW.S"
@@ -711,7 +711,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " Fl              "
+    trade_codes: "Fl              "
     factions: " M,M      "
     star: M4V/DB
     orbits: WGB..S
@@ -722,7 +722,7 @@ volumes:
     temp: F
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " Ba,Lt           "
+    trade_codes: "Ba,Lt           "
     factions: "          "
     star: M0V/DB
     orbits: WGG.GB...S
@@ -733,7 +733,7 @@ volumes:
     temp: T
     bases: N.G..
     travel_code: AZ
-    trade_codes: " Ri              "
+    trade_codes: "Ri              "
     factions: " N,P,M    "
     star: M4V/DB
     orbits: W.RBG..S
@@ -744,7 +744,7 @@ volumes:
     temp: C
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo,Lt           "
+    trade_codes: "Lo,Lt           "
     factions: "          "
     star: M4V/DB
     orbits: WB..G.S
@@ -755,7 +755,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " De,Lo,Po        "
+    trade_codes: "De,Lo,Po        "
     factions: " O,F      "
     star: G8IV
     orbits: HRRWG.BG
@@ -766,7 +766,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " M,S      "
     star: M4V
     orbits: W.RG
@@ -777,7 +777,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: " Ba,Lt           "
+    trade_codes: "Ba,Lt           "
     factions: "          "
     star: M2V
     orbits: W
@@ -788,7 +788,7 @@ volumes:
     temp: T
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " N,S      "
     star: M6V
     orbits: W
@@ -799,7 +799,7 @@ volumes:
     temp: T
     bases: "....P"
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " F,S      "
     star: F5V/DB
     orbits: HBHW..S
@@ -810,7 +810,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " F,N,M    "
     star: M4V/DB
     orbits: WBGRBB...S
@@ -821,7 +821,7 @@ volumes:
     temp: C
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " Lo,Lt           "
+    trade_codes: "Lo,Lt           "
     factions: " S        "
     star: M2V
     orbits: WB
@@ -832,7 +832,7 @@ volumes:
     temp: T
     bases: NSG..
     travel_code: AZ
-    trade_codes: " Hi,In           "
+    trade_codes: "Hi,In           "
     factions: " S        "
     star: M2V/DB
     orbits: WG..S
@@ -843,7 +843,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " N,O      "
     star: K5III
     orbits: R.RHWBGGG
@@ -854,7 +854,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " F,S,F    "
     star: G0V/DB
     orbits: RRWS
@@ -865,7 +865,7 @@ volumes:
     temp: T
     bases: N....
     travel_code: ".."
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " F,M,N    "
     star: M2V
     orbits: W
@@ -876,7 +876,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Ri              "
+    trade_codes: "Ri              "
     factions: " M        "
     star: M2V
     orbits: WG
@@ -887,7 +887,7 @@ volumes:
     temp: T
     bases: "..GC."
     travel_code: ".."
-    trade_codes: " Lt,NI           "
+    trade_codes: "Lt,NI           "
     factions: " F        "
     star: M0V
     orbits: WBGGG
@@ -898,7 +898,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " F        "
     star: K5V
     orbits: ".WGGBGG"
@@ -909,7 +909,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: "          "
     star: F5V
     orbits: HHRWBGGB
@@ -920,7 +920,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: "          "
     star: M4V
     orbits: W
@@ -931,7 +931,7 @@ volumes:
     temp: T
     bases: "..GC."
     travel_code: AZ
-    trade_codes: " Ag,Ri           "
+    trade_codes: "Ag,Ri           "
     factions: "          "
     star: M4V/DB
     orbits: WG.S
@@ -942,7 +942,7 @@ volumes:
     temp: T
     bases: N.G..
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " S,S      "
     star: M4V
     orbits: WRGRG
@@ -953,7 +953,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " M        "
     star: M6V
     orbits: WGBG
@@ -964,7 +964,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " M        "
     star: M2V
     orbits: WGGG
@@ -975,7 +975,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " M,S,M    "
     star: M4V/DB
     orbits: W...S
@@ -986,7 +986,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: " Ag              "
+    trade_codes: "Ag              "
     factions: " F,M      "
     star: A5IV
     orbits: RHRBW
@@ -997,7 +997,7 @@ volumes:
     temp: F
     bases: NS...
     travel_code: ".."
-    trade_codes: " Hi,IC,In        "
+    trade_codes: "Hi,IC,In        "
     factions: "          "
     star: A0IV/G0V
     orbits: S...W
@@ -1008,7 +1008,7 @@ volumes:
     temp: F
     bases: NSGC.
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: "          "
     star: M0V
     orbits: WGRG
@@ -1019,7 +1019,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " N,N,S    "
     star: F5V/DB
     orbits: HRWG...S
@@ -1030,7 +1030,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: "          "
     star: M2V
     orbits: WRBR
@@ -1041,7 +1041,7 @@ volumes:
     temp: T
     bases: "...C."
     travel_code: ".."
-    trade_codes: " Hi              "
+    trade_codes: "Hi              "
     factions: " S        "
     star: F2V
     orbits: ".H.W"
@@ -1052,7 +1052,7 @@ volumes:
     temp: T
     bases: NSG..
     travel_code: ".."
-    trade_codes: " NI,Po           "
+    trade_codes: "NI,Po           "
     factions: " M        "
     star: G5V
     orbits: HBWGBBG
@@ -1063,7 +1063,7 @@ volumes:
     temp: F
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " IC,NI,Va        "
+    trade_codes: "IC,NI,Va        "
     factions: " N        "
     star: G0V/DB
     orbits: HHRWBS
@@ -1074,7 +1074,7 @@ volumes:
     temp: C
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " F,N,S    "
     star: K2V
     orbits: RWRGGGG
@@ -1085,7 +1085,7 @@ volumes:
     temp: F
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " IC,Lo,Va        "
+    trade_codes: "IC,Lo,Va        "
     factions: " N,N      "
     star: M6V
     orbits: WGG
@@ -1096,7 +1096,7 @@ volumes:
     temp: T
     bases: ".S.C."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " N,S,M    "
     star: M4V/G0VI
     orbits: WRB....S
@@ -1107,7 +1107,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " M,O,M    "
     star: G0V/DB
     orbits: GRWRGR..S
@@ -1118,7 +1118,7 @@ volumes:
     temp: F
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " IC,Na,NI,Va     "
+    trade_codes: "IC,Na,NI,Va     "
     factions: " N,M      "
     star: F0V
     orbits: BHWR.BG
@@ -1129,7 +1129,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " Ri              "
+    trade_codes: "Ri              "
     factions: " N        "
     star: F0V/DB
     orbits: RHRW.S
@@ -1140,7 +1140,7 @@ volumes:
     temp: C
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " De,NI,Po        "
+    trade_codes: "De,NI,Po        "
     factions: " M        "
     star: M4V
     orbits: WG
@@ -1151,7 +1151,7 @@ volumes:
     temp: F
     bases: N.G..
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " M,S      "
     star: M2V
     orbits: WGGGG
@@ -1162,7 +1162,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Ag,Ri           "
+    trade_codes: "Ag,Ri           "
     factions: " N,M,S    "
     star: F5V
     orbits: HR.WG
@@ -1173,7 +1173,7 @@ volumes:
     temp: F
     bases: "..GCP"
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " O        "
     star: M2V
     orbits: WGGG
@@ -1184,7 +1184,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Hi              "
+    trade_codes: "Hi              "
     factions: "          "
     star: M6V
     orbits: WGGG
@@ -1195,7 +1195,7 @@ volumes:
     temp: F
     bases: ".S.C."
     travel_code: ".."
-    trade_codes: " IC,Lo           "
+    trade_codes: "IC,Lo           "
     factions: " F,S,M    "
     star: M2V
     orbits: W
@@ -1206,7 +1206,7 @@ volumes:
     temp: T
     bases: ".S.C."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " M        "
     star: M4III/M2VI
     orbits: RBBRWS
@@ -1217,7 +1217,7 @@ volumes:
     temp: T
     bases: N....
     travel_code: AZ
-    trade_codes: " Hi,In           "
+    trade_codes: "Hi,In           "
     factions: " N        "
     star: M2V/DB
     orbits: W........S
@@ -1228,7 +1228,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI,Po           "
+    trade_codes: "NI,Po           "
     factions: " M,N,N    "
     star: M2V
     orbits: W.R.G
@@ -1239,7 +1239,7 @@ volumes:
     temp: C
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lt,NI           "
+    trade_codes: "Lt,NI           "
     factions: " N        "
     star: M2V
     orbits: WRGG
@@ -1250,7 +1250,7 @@ volumes:
     temp: C
     bases: "..GC."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " O        "
     star: F5V
     orbits: ".RWGG"
@@ -1261,7 +1261,7 @@ volumes:
     temp: F
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Hi,In           "
+    trade_codes: "Hi,In           "
     factions: "          "
     star: M6II
     orbits: HRRHRGWGRB
@@ -1272,7 +1272,7 @@ volumes:
     temp: T
     bases: NS...
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " M,F      "
     star: M4V/DB
     orbits: WR.S
@@ -1283,7 +1283,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " N,F      "
     star: F2III
     orbits: ".HBW.BGB"
@@ -1294,7 +1294,7 @@ volumes:
     temp: F
     bases: "..GC."
     travel_code: RZ
-    trade_codes: " IC,NI           "
+    trade_codes: "IC,NI           "
     factions: " N        "
     star: M6V/DB
     orbits: WG.RG..S
@@ -1305,7 +1305,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " M        "
     star: M0V
     orbits: WBGB
@@ -1316,7 +1316,7 @@ volumes:
     temp: T
     bases: ".S..."
     travel_code: ".."
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: "          "
     star: M6V
     orbits: W
@@ -1327,7 +1327,7 @@ volumes:
     temp: R
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " De,NI           "
+    trade_codes: "De,NI           "
     factions: " S,M,M    "
     star: F2V
     orbits: RRRW
@@ -1338,7 +1338,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo,Lt           "
+    trade_codes: "Lo,Lt           "
     factions: " S,F      "
     star: K5IV
     orbits: RRWGRGGGB
@@ -1349,7 +1349,7 @@ volumes:
     temp: C
     bases: "...C."
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " S,O      "
     star: F2V
     orbits: RBRWBRB
@@ -1360,7 +1360,7 @@ volumes:
     temp: F
     bases: "..GC."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " F,N,M    "
     star: F5IV
     orbits: HHBWRGB
@@ -1371,7 +1371,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " N,O,F    "
     star: M6II
     orbits: RRR.R.WGGGG
@@ -1382,7 +1382,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " S        "
     star: M2V
     orbits: WGGGGB
@@ -1393,7 +1393,7 @@ volumes:
     temp: H
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " Po              "
+    trade_codes: "Po              "
     factions: "          "
     star: M2V
     orbits: WB
@@ -1404,7 +1404,7 @@ volumes:
     temp: F
     bases: ".SG.P"
     travel_code: ".."
-    trade_codes: " IC              "
+    trade_codes: "IC              "
     factions: " S,O      "
     star: K5V/M0VI/M6V
     orbits: HWB.S....S
@@ -1415,7 +1415,7 @@ volumes:
     temp: T
     bases: "..GC."
     travel_code: AZ
-    trade_codes: " Hi              "
+    trade_codes: "Hi              "
     factions: " P,N      "
     star: M4V/DB
     orbits: WG.S
@@ -1426,7 +1426,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: "          "
     star: A5V
     orbits: R.HWGG.G
@@ -1437,7 +1437,7 @@ volumes:
     temp: T
     bases: "..G.P"
     travel_code: RZ
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: "          "
     star: F2II
     orbits: R..RHWG.GB
@@ -1448,7 +1448,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " M        "
     star: M2V
     orbits: WGR
@@ -1459,7 +1459,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Po              "
+    trade_codes: "Po              "
     factions: " P        "
     star: M2V/DB
     orbits: WG.G.....S
@@ -1470,7 +1470,7 @@ volumes:
     temp: T
     bases: ".SG.P"
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: "          "
     star: M6V
     orbits: WG
@@ -1481,7 +1481,7 @@ volumes:
     temp: F
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " IC,NI           "
+    trade_codes: "IC,NI           "
     factions: " O,F      "
     star: M0V
     orbits: WGRGBG
@@ -1492,7 +1492,7 @@ volumes:
     temp: T
     bases: N.GC.
     travel_code: ".."
-    trade_codes: " Ag,NI,Ri        "
+    trade_codes: "Ag,NI,Ri        "
     factions: " O        "
     star: M6V
     orbits: WGBRG
@@ -1503,7 +1503,7 @@ volumes:
     temp: T
     bases: "..G.P"
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: "          "
     star: M4V/DB
     orbits: WRBBGS
@@ -1514,7 +1514,7 @@ volumes:
     temp: F
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " IC,Lo           "
+    trade_codes: "IC,Lo           "
     factions: " N,N      "
     star: F0V/M2VI
     orbits: RH.WGS
@@ -1525,7 +1525,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: ".."
-    trade_codes: " Ag,Lt,NI        "
+    trade_codes: "Ag,Lt,NI        "
     factions: " O,N      "
     star: M4V
     orbits: WBB
@@ -1536,7 +1536,7 @@ volumes:
     temp: F
     bases: "..GC."
     travel_code: AZ
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " F,F      "
     star: G2V
     orbits: ".RWBG"
@@ -1547,7 +1547,7 @@ volumes:
     temp: T
     bases: "..GC."
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " M        "
     star: M6V/DB
     orbits: WGGG.....S
@@ -1558,7 +1558,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: "          "
     star: M4V
     orbits: WGRG
@@ -1569,7 +1569,7 @@ volumes:
     temp: C
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: "          "
     star: F2V
     orbits: HRBWBGRG
@@ -1580,7 +1580,7 @@ volumes:
     temp: C
     bases: "....."
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " N        "
     star: A2V/DB
     orbits: HRRW..S
@@ -1591,7 +1591,7 @@ volumes:
     temp: H
     bases: "..G.."
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " N,F      "
     star: M6V/DB
     orbits: WGGBG.S
@@ -1602,7 +1602,7 @@ volumes:
     temp: C
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: "          "
     star: M4V
     orbits: WGGBGB
@@ -1613,7 +1613,7 @@ volumes:
     temp: H
     bases: "....."
     travel_code: ".."
-    trade_codes: " NI,Po           "
+    trade_codes: "NI,Po           "
     factions: " F,M,M,F  "
     star: F5VI/DB
     orbits: RWB......S
@@ -1624,7 +1624,7 @@ volumes:
     temp: F
     bases: ".SG.."
     travel_code: AZ
-    trade_codes: " IC,NI           "
+    trade_codes: "IC,NI           "
     factions: " F        "
     star: K5V/DB
     orbits: RWRG..S
@@ -1635,18 +1635,18 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Lo,Lt           "
+    trade_codes: "Lo,Lt           "
     factions: "          "
     star: M0V/DB
     orbits: WBG.S
   '0524':
-    name: Ochven
+    name: Ochvenio
     location: '0524'
     uwp: D130668-6
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " De,Na,NI,Po     "
+    trade_codes: "De,Na,NI,Po     "
     factions: " F,N      "
     star: F0V
     orbits: HRWGGGBG
@@ -1657,7 +1657,7 @@ volumes:
     temp: T
     bases: "...C."
     travel_code: AZ
-    trade_codes: " Hi              "
+    trade_codes: "Hi              "
     factions: "          "
     star: K5V/DB
     orbits: RWB.S
@@ -1668,7 +1668,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: "          "
     star: M6V/DB
     orbits: W......S
@@ -1679,7 +1679,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: ".."
-    trade_codes: " Lo,Lt           "
+    trade_codes: "Lo,Lt           "
     factions: "          "
     star: M6V/DB
     orbits: W.......S
@@ -1690,7 +1690,7 @@ volumes:
     temp: H
     bases: N.GC.
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " N        "
     star: F0III
     orbits: ".GRWGGGG"
@@ -1701,7 +1701,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " M        "
     star: M6V
     orbits: WB.G
@@ -1712,7 +1712,7 @@ volumes:
     temp: F
     bases: NSG..
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " F,N      "
     star: M4V
     orbits: WBGBGG
@@ -1723,7 +1723,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " O        "
     star: M6V
     orbits: WB
@@ -1734,7 +1734,7 @@ volumes:
     temp: T
     bases: NSG..
     travel_code: AZ
-    trade_codes: " Hi              "
+    trade_codes: "Hi              "
     factions: "          "
     star: G2V/DB
     orbits: H.RW..S
@@ -1745,7 +1745,7 @@ volumes:
     temp: T
     bases: ".SGC."
     travel_code: ".."
-    trade_codes: " Ri              "
+    trade_codes: "Ri              "
     factions: " S,F,F    "
     star: M4V
     orbits: WBG
@@ -1756,7 +1756,7 @@ volumes:
     temp: F
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " Ba,IC,Lt,Va     "
+    trade_codes: "Ba,IC,Lt,Va     "
     factions: "          "
     star: M2V
     orbits: W.BGBG
@@ -1767,7 +1767,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI,Po           "
+    trade_codes: "NI,Po           "
     factions: " M,F      "
     star: M0V
     orbits: W.RGGG
@@ -1778,7 +1778,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: AZ
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " M,M      "
     star: K0V
     orbits: RW.B.G
@@ -1789,7 +1789,7 @@ volumes:
     temp: T
     bases: ".S..."
     travel_code: ".."
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " N,N      "
     star: F2V
     orbits: ".HRW"
@@ -1800,7 +1800,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: " Lt,NI           "
+    trade_codes: "Lt,NI           "
     factions: " N,M      "
     star: M4V
     orbits: W
@@ -1811,7 +1811,7 @@ volumes:
     temp: C
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Hi,In           "
+    trade_codes: "Hi,In           "
     factions: "          "
     star: M2V/DB
     orbits: WGGR....S
@@ -1822,7 +1822,7 @@ volumes:
     temp: C
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " F        "
     star: M4V/DB
     orbits: WGG...S
@@ -1833,7 +1833,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " M        "
     star: F0III
     orbits: RRHWB..G
@@ -1844,7 +1844,7 @@ volumes:
     temp: T
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " S,N,M    "
     star: M4V/DB/DB
     orbits: WB....S
@@ -1855,7 +1855,7 @@ volumes:
     temp: T
     bases: N.GC.
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " M,M,P,M  "
     star: K0V
     orbits: RWGGG
@@ -1866,7 +1866,7 @@ volumes:
     temp: T
     bases: "..G.P"
     travel_code: ".."
-    trade_codes: " NI,Po           "
+    trade_codes: "NI,Po           "
     factions: " M,N      "
     star: M0V/DB
     orbits: WRG.....S
@@ -1877,7 +1877,7 @@ volumes:
     temp: F
     bases: "..GC."
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " M,S      "
     star: M0V
     orbits: WRG
@@ -1888,7 +1888,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " Ag,Lt,NI        "
+    trade_codes: "Ag,Lt,NI        "
     factions: " O,M,M    "
     star: M4V/DB
     orbits: WGRBS
@@ -1899,7 +1899,7 @@ volumes:
     temp: T
     bases: "..GC."
     travel_code: AZ
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " N        "
     star: M4V/DB
     orbits: WRG....S
@@ -1910,7 +1910,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " M,O      "
     star: F2V/DB
     orbits: RRWGB.S
@@ -1921,7 +1921,7 @@ volumes:
     temp: T
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " S        "
     star: M6V/M4VI
     orbits: WBB..S
@@ -1932,7 +1932,7 @@ volumes:
     temp: T
     bases: "..GC."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " S        "
     star: M0V/DB
     orbits: WS...G
@@ -1943,7 +1943,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " Ag              "
+    trade_codes: "Ag              "
     factions: " M        "
     star: M6V
     orbits: WGGB
@@ -1954,7 +1954,7 @@ volumes:
     temp: C
     bases: ".SG.."
     travel_code: AZ
-    trade_codes: " De,NI,Po        "
+    trade_codes: "De,NI,Po        "
     factions: "          "
     star: M2V/DB
     orbits: WG..S
@@ -1965,7 +1965,7 @@ volumes:
     temp: F
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " N        "
     star: M0V/DB
     orbits: WG..S
@@ -1976,7 +1976,7 @@ volumes:
     temp: T
     bases: N.GC.
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " N,M,S    "
     star: M6III
     orbits: HRRRWG..G
@@ -1987,7 +1987,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " S,F      "
     star: M6V
     orbits: WBGG
@@ -1998,7 +1998,7 @@ volumes:
     temp: F
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Lo,Lt           "
+    trade_codes: "Lo,Lt           "
     factions: " F,F      "
     star: M0V/DB
     orbits: W..S
@@ -2009,7 +2009,7 @@ volumes:
     temp: T
     bases: NS...
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " M        "
     star: M4V
     orbits: W
@@ -2020,7 +2020,7 @@ volumes:
     temp: H
     bases: ".SGC."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " S        "
     star: M6V
     orbits: W.GGG
@@ -2031,7 +2031,7 @@ volumes:
     temp: C
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " S        "
     star: M4V
     orbits: W
@@ -2042,7 +2042,7 @@ volumes:
     temp: T
     bases: "..GC."
     travel_code: AZ
-    trade_codes: " Ag,NI,Ri        "
+    trade_codes: "Ag,NI,Ri        "
     factions: "          "
     star: M2V
     orbits: WRB.BG
@@ -2053,7 +2053,7 @@ volumes:
     temp: T
     bases: N.G..
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " N        "
     star: A5II
     orbits: ".HHGHHWG.R"
@@ -2064,7 +2064,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: AZ
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " F,O      "
     star: M0V
     orbits: W.R.GG
@@ -2075,7 +2075,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: AZ
-    trade_codes: " Hi              "
+    trade_codes: "Hi              "
     factions: " F,M      "
     star: K0V/DB
     orbits: HWG..S
@@ -2086,7 +2086,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " F,F,M    "
     star: G5V
     orbits: GHW.GBG
@@ -2097,7 +2097,7 @@ volumes:
     temp: T
     bases: "..G.P"
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " N,N,N    "
     star: M4V/DB
     orbits: WGGRG.S
@@ -2108,7 +2108,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: "          "
     star: M6V
     orbits: WGGR
@@ -2119,7 +2119,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: "          "
     star: M6V/DB
     orbits: WGGR.B...S
@@ -2130,7 +2130,7 @@ volumes:
     temp: T
     bases: NSGC.
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " S        "
     star: M0V
     orbits: W.GG
@@ -2141,7 +2141,7 @@ volumes:
     temp: T
     bases: ".S..."
     travel_code: AZ
-    trade_codes: " Hi              "
+    trade_codes: "Hi              "
     factions: " O        "
     star: M2V/DB
     orbits: W........S
@@ -2152,7 +2152,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " N        "
     star: K0V/DB
     orbits: HW.RRGS
@@ -2163,7 +2163,7 @@ volumes:
     temp: T
     bases: N.G..
     travel_code: AZ
-    trade_codes: " Fl,Lo           "
+    trade_codes: "Fl,Lo           "
     factions: " F,O      "
     star: F2V
     orbits: HRWRG
@@ -2174,7 +2174,7 @@ volumes:
     temp: T
     bases: "..G.P"
     travel_code: AZ
-    trade_codes: " Ag,Ri           "
+    trade_codes: "Ag,Ri           "
     factions: "          "
     star: K0IV
     orbits: ".HWGGGG.G"
@@ -2185,7 +2185,7 @@ volumes:
     temp: F
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " M,F,M,O  "
     star: M4II
     orbits: ".HBR.RWGG"
@@ -2196,7 +2196,7 @@ volumes:
     temp: C
     bases: ".SGC."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: "          "
     star: M4V
     orbits: WR.GG
@@ -2207,7 +2207,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " N,M      "
     star: M2V
     orbits: W.GBG
@@ -2218,7 +2218,7 @@ volumes:
     temp: H
     bases: "..GC."
     travel_code: AZ
-    trade_codes: " Fl              "
+    trade_codes: "Fl              "
     factions: " O        "
     star: M4V/DB
     orbits: WGGG.....S
@@ -2229,7 +2229,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: "          "
     star: M2V
     orbits: WBGR
@@ -2240,7 +2240,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: AZ
-    trade_codes: " NI,Po           "
+    trade_codes: "NI,Po           "
     factions: " F        "
     star: G5IV
     orbits: RHRWG
@@ -2251,7 +2251,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " Ba,Lt           "
+    trade_codes: "Ba,Lt           "
     factions: "          "
     star: K2V/DB
     orbits: RW..S
@@ -2262,7 +2262,7 @@ volumes:
     temp: F
     bases: "..GC."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " M,O      "
     star: M2V/DB
     orbits: WGR.G....S
@@ -2273,7 +2273,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " De,Lo           "
+    trade_codes: "De,Lo           "
     factions: " O        "
     star: K2V
     orbits: HWG..GG
@@ -2284,7 +2284,7 @@ volumes:
     temp: F
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " IC,Lo           "
+    trade_codes: "IC,Lo           "
     factions: " N,O      "
     star: M6V
     orbits: W.G
@@ -2295,7 +2295,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI,Ri           "
+    trade_codes: "NI,Ri           "
     factions: " M        "
     star: M4V/DB
     orbits: WGR.S
@@ -2306,7 +2306,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: "          "
     star: F0V
     orbits: B.W
@@ -2317,7 +2317,7 @@ volumes:
     temp: C
     bases: ".S.C."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " N        "
     star: M2III
     orbits: ".RR.W"
@@ -2328,7 +2328,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " F        "
     star: F2V/DB
     orbits: R.W.S
@@ -2339,7 +2339,7 @@ volumes:
     temp: T
     bases: "..G.P"
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " S,F      "
     star: M4II
     orbits: RRRBRRWGG
@@ -2350,7 +2350,7 @@ volumes:
     temp: H
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo,Lt           "
+    trade_codes: "Lo,Lt           "
     factions: "          "
     star: M2V/DB
     orbits: WG..S
@@ -2361,7 +2361,7 @@ volumes:
     temp: F
     bases: "..G.P"
     travel_code: ".."
-    trade_codes: " IC,Lo           "
+    trade_codes: "IC,Lo           "
     factions: " O        "
     star: G0V
     orbits: RGWGBRG
@@ -2372,7 +2372,7 @@ volumes:
     temp: F
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo,Lt           "
+    trade_codes: "Lo,Lt           "
     factions: "          "
     star: G0V/DB
     orbits: HHWGG.S
@@ -2383,7 +2383,7 @@ volumes:
     temp: H
     bases: "....."
     travel_code: AZ
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " S        "
     star: M0V/DB
     orbits: W.S
@@ -2394,7 +2394,7 @@ volumes:
     temp: R
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " De,Lt,NI        "
+    trade_codes: "De,Lt,NI        "
     factions: " N        "
     star: M0V/M4V
     orbits: WR.S
@@ -2405,7 +2405,7 @@ volumes:
     temp: F
     bases: "....."
     travel_code: AZ
-    trade_codes: " Hi,IC,In        "
+    trade_codes: "Hi,IC,In        "
     factions: "          "
     star: F5V
     orbits: RRWB
@@ -2416,7 +2416,7 @@ volumes:
     temp: C
     bases: "....."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " F,O,S    "
     star: M6V
     orbits: W
@@ -2427,7 +2427,7 @@ volumes:
     temp: T
     bases: "..GC."
     travel_code: AZ
-    trade_codes: " Ba,Lt           "
+    trade_codes: "Ba,Lt           "
     factions: "          "
     star: M4II/M4VI
     orbits: R.S...W.G
@@ -2438,7 +2438,7 @@ volumes:
     temp: F
     bases: "..G.."
     travel_code: AZ
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " F        "
     star: M0V
     orbits: WGG
@@ -2449,7 +2449,7 @@ volumes:
     temp: R
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo,Lt           "
+    trade_codes: "Lo,Lt           "
     factions: " M        "
     star: M0V/DB
     orbits: WG..S
@@ -2460,7 +2460,7 @@ volumes:
     temp: C
     bases: "....."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " O,F      "
     star: M6V/DB
     orbits: W.....S
@@ -2471,7 +2471,7 @@ volumes:
     temp: T
     bases: "..GC."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " M        "
     star: M6V/DB
     orbits: WB..S
@@ -2482,7 +2482,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: " Ag,Lt,NI        "
+    trade_codes: "Ag,Lt,NI        "
     factions: "          "
     star: M4V/DB
     orbits: W..S
@@ -2493,7 +2493,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Lo,Lt           "
+    trade_codes: "Lo,Lt           "
     factions: "          "
     star: F0V/DB
     orbits: BRW..S
@@ -2504,7 +2504,7 @@ volumes:
     temp: F
     bases: ".S.C."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " S        "
     star: G5IV/DB
     orbits: RH.WRS
@@ -2515,7 +2515,7 @@ volumes:
     temp: T
     bases: ".SG.P"
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " N,M      "
     star: M6V/DB
     orbits: WGGGB....S
@@ -2526,7 +2526,7 @@ volumes:
     temp: F
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: "          "
     star: M4V
     orbits: WGGG
@@ -2537,7 +2537,7 @@ volumes:
     temp: T
     bases: "..GC."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: " N,F,S    "
     star: M4V
     orbits: WGRG
@@ -2548,7 +2548,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: ".."
-    trade_codes: " Ag,NI           "
+    trade_codes: "Ag,NI           "
     factions: " M,M      "
     star: M2V/DB
     orbits: W....S
@@ -2559,7 +2559,7 @@ volumes:
     temp: F
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " N,S      "
     star: M0V/DB/DB
     orbits: W.BBS....S
@@ -2570,7 +2570,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lt,NI           "
+    trade_codes: "Lt,NI           "
     factions: "          "
     star: F5IV/DB
     orbits: R..WGG..S
@@ -2581,7 +2581,7 @@ volumes:
     temp: H
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: "          "
     star: M6V/DB
     orbits: W.RBS
@@ -2592,7 +2592,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: " NI,Ri           "
+    trade_codes: "NI,Ri           "
     factions: " F        "
     star: M0V
     orbits: WB
@@ -2603,7 +2603,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI,Po           "
+    trade_codes: "NI,Po           "
     factions: " O        "
     star: M0V
     orbits: WGG
@@ -2614,7 +2614,7 @@ volumes:
     temp: T
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: "          "
     star: F0III/DB
     orbits: HRHWG.S
@@ -2625,7 +2625,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Lt,NI           "
+    trade_codes: "Lt,NI           "
     factions: " O        "
     star: M6V/DB
     orbits: WG.R..S
@@ -2636,7 +2636,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: "                 "
+    trade_codes: "                "
     factions: " N,F      "
     star: M6V/DB
     orbits: W........S
@@ -2647,7 +2647,7 @@ volumes:
     temp: T
     bases: "...C."
     travel_code: AZ
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " F        "
     star: F2V
     orbits: ".HRWRR"
@@ -2658,7 +2658,7 @@ volumes:
     temp: T
     bases: N.GC.
     travel_code: AZ
-    trade_codes: " Ag              "
+    trade_codes: "Ag              "
     factions: " O        "
     star: M4V
     orbits: WG
@@ -2669,7 +2669,7 @@ volumes:
     temp: T
     bases: "....."
     travel_code: AZ
-    trade_codes: " Hi,In           "
+    trade_codes: "Hi,In           "
     factions: " F,N      "
     star: K0IV/DB
     orbits: HHWB....S
@@ -2680,7 +2680,7 @@ volumes:
     temp: T
     bases: ".S..."
     travel_code: ".."
-    trade_codes: " Na,Po           "
+    trade_codes: "Na,Po           "
     factions: " N        "
     star: M4V/DB
     orbits: W..S
@@ -2691,7 +2691,7 @@ volumes:
     temp: T
     bases: ".SG.."
     travel_code: ".."
-    trade_codes: " Lo              "
+    trade_codes: "Lo              "
     factions: " F,M,N    "
     star: F2V/DB
     orbits: H..WG.S
@@ -2702,7 +2702,7 @@ volumes:
     temp: T
     bases: ".SGC."
     travel_code: AZ
-    trade_codes: " Hi              "
+    trade_codes: "Hi              "
     factions: "          "
     star: F0V
     orbits: RRWGB
@@ -2713,7 +2713,7 @@ volumes:
     temp: R
     bases: "..G.."
     travel_code: ".."
-    trade_codes: " NI              "
+    trade_codes: "NI              "
     factions: "          "
     star: G0V
     orbits: HHWGB
