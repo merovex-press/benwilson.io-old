@@ -1753,11 +1753,11 @@
 <!-- Consulate --><text class='faction' x='433.3333333333333' y='767.08'>c</text>
     <text x='484.22' y='752.08'>G5</text>
 
-<!-- Volume: 1111 B546444-B T ..GC. RZ // NI              // N,S      // M0III             HHH.WG           // Tannenberg -->
+<!-- Volume: 1111 B546444-B T ..GC. RZ // NI              // N,S      // M0III             HHH.WG           // Tanhusio -->
     <circle cx='640.0' cy='727.44' r='5' />
     <text class='base-code' x='640.0' y='747.44'>B</text>
     <text x='640.0' y='758.21'>B546444-B</text>
-    <text x='640.0' y='708.39'>Tannenberg</text>
+    <text x='640.0' y='708.39'>Tanhusio</text>
     <path class="nullsec" d='M 630.0 713.1542857142857 a 20 20 0 1 0 20 0' />
     <g><!-- Has Gas Giant -->
       <ellipse stroke-width='1' cx='662.22' cy='740.44' rx='6.15' ry='0.9' />
