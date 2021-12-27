@@ -8,42 +8,56 @@ summary: "A comprehensive map of humanity in space during the period of the Post
 ---
 
 <section class='p-3 card'>
-  <div class='space-y-2 md:flex toolkit'>
+  <div class='space-y-2 text-center toolkit'>
     <label for="coordinate">Coordinate:</label>
-    <input name="coordinate" id="coordinate" type="number" onkeyup="showVolumeDetails()">
+    <input name="coordinate" id="coordinate" type="number" onkeyup="showVolumeDetails()" class='w-16'>
   </div>
   <h2><span id="name">Name</span><span class='hidden px-2 md:inline-block'>-</span><span
       class='block md:inline-block'>(<span id="location">0000</span>: <span id="uwp">X777777-7</span> )</span></h2>
-  <h3>Summary</h3>
-  <div class="flex"><span class="flex-1 px-2 font-bold">Star:</span><span id="star" class='flex-1'></span>
-  </div>
-  <div class="flex bg-shade/20"><span class="flex-1 px-2 font-bold">Orbits:</span><span id="orbits"
-      class='flex-1 font-code'></span>
-  </div>
-  <div class="flex"><span class="flex-1 px-2 font-bold">Mainworld Temperature:</span><span id="temp"
-      class='flex-1 font-code'></span></div>
-  <div class="flex bg-shade/20"><span class="flex-1 px-2 font-bold">Bases:</span><span id="bases"
-      class='flex-1 font-code'></span>
-  </div>
-  <div class="flex "><span class="flex-1 px-2 font-bold">Factions:</span><span id="factions"
-      class='flex-1 font-code'></span>
-  </div>
-  <div class="flex bg-shade/20">
-    <span class="flex-1 px-2 font-bold">Trade Codes:</span>
-    <span id="trade_codes" class='flex-1 font-code'></span>
-  </div>
-  <div class="flex"><span class="flex-1 px-2 font-bold">Travel Code:</span><span id="travel_code"
-      class='flex-1 font-code'></span>
-  </div>
-  <div>
-    <h3>Description</h3>
-    <p id="uwp-output">No description yet.</p>
+  <div class="">
+    <h3>Summary</h3>
+    <div class="flex"><span class="flex-1 px-2 font-bold">Star:</span><span id="star" class='flex-1'></span>
+    </div>
+    <div class="flex bg-shade/20"><span class="flex-1 px-2 font-bold">Orbits:</span><span id="orbits"
+        class='flex-1 font-code'></span>
+    </div>
+    <div class="flex"><span class="flex-1 px-2 font-bold">Mainworld Temperature:</span><span id="temp"
+        class='flex-1 font-code'></span></div>
+    <div class="flex bg-shade/20"><span class="flex-1 px-2 font-bold">Bases:</span><span id="bases"
+        class='flex-1 font-code'></span>
+    </div>
+    <div class="flex "><span class="flex-1 px-2 font-bold">Factions:</span><span id="factions"
+        class='flex-1 font-code'></span>
+    </div>
+    <div class="flex bg-shade/20">
+      <span class="flex-1 px-2 font-bold">Trade Codes:</span>
+      <span id="trade_codes" class='flex-1 font-code'></span>
+    </div>
+    <div class="flex"><span class="flex-1 px-2 font-bold">Travel Code:</span><span id="travel_code"
+        class='flex-1 font-code'></span>
+    </div>
+    <div>
+      <h3>Description</h3>
+      <p id="uwp-output">No description yet.</p>
+    </div>
   </div>
   <div class='mt-8 prose-sans'>
     <h3>Volumes within Jump-3 Range</h3>
-    <ul id='routable_volumes'>
-      <li>No routes yet.</li>
-    </ul>
+    <table class="">
+      <thead>
+        <tr class='text-base text-center'>
+          <th>Coord</th>
+          <th>UWP</th>
+          <th>Distance</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody id='routable_volumes'>
+        <tr>
+          <td colspan="4" class='text-center'>No routes yet.</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>
 <section>

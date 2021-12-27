@@ -1,4 +1,15 @@
-{ "data" : {
+{ 
+  "templates": {
+    "name": "{0} {1}.",
+    "size": "The main world is roughly {1} kilometers in diameter, and is <strong>{0}</strong>.",
+    "atmos": "{0}",
+    "hydro": "The surface is roughly {0} percent surface water (or similar fluid), which qualifies it as a <strong>{1}</strong> world.",
+    "pop": "The main world has a general population of {1} local residents, which qualifies it as a <strong>{0} population</strong> world.",
+    "govt": "The local government is characterized as <strong>{0}</strong>, with {1}.",
+    "law": "Visitors may find the law {0}restrictive as <strong>{1}</strong> are regulated or restricted by local authorities.",
+    "tech": "Technology is described as {0} (See <a href='http://wiki.travellerrpg.com/Tech_Level_Comparison_Chart'>TL chart</a>)."
+  },
+  "data" : {
   "port" : {
     "A" : "has an Excellent Starport with shipyards able of handling Starships up to the Overhaul level, and provides <b>Refined</b> fuel",
     "B" : "has a Good Starport with shipyards able of handling Spacecraft up to the Overhaul level, and provides <b>Refined</b> fuel",
