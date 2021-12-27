@@ -8,7 +8,7 @@ summary: "Gives quick information on volumes from the Terradoma map."
 ---
 
 <section>
-  <div class='flex space-y-2'>
+  <div class='flex space-y-2 toolkit'>
     <label for="coordinate">Coordinate:</label>
     <input name="coordinate" id="coordinate" type="number" onkeyup="showVolumeDetails()">
   </div>
@@ -16,6 +16,7 @@ summary: "Gives quick information on volumes from the Terradoma map."
 
 <section class='p-3 card'>
   <h2><span id="name">Name</span> - (<span id="location">1021</span>: <span id="uwp">C646345-8</span> )</h2>
+  <h3>Details</h3>
   <div class="flex"><span class="flex-1 px-2 font-bold">Star:</span><span id="star" class='flex-1'></span></div>
   <div class="flex bg-shade/20"><span class="flex-1 px-2 font-bold">Orbits:</span><span id="orbits"
       class='flex-1'></span>
@@ -32,8 +33,12 @@ summary: "Gives quick information on volumes from the Terradoma map."
   </div>
   <div class="flex"><span class="flex-1 px-2 font-bold">Travel Code:</span><span id="travel_code" class='flex-1'></span>
   </div>
+  <div class='mt-8 prose-sans'>
+    <h3>Volumes within Jump-3 Range</h3>
+    <ul id='routable_volumes'>
+    </ul>
+  </div>
 </section>
-
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"

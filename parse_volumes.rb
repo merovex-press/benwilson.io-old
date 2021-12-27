@@ -1,6 +1,10 @@
-require 'yaml'
-org = File.open("imperium-volume-list.txt",'r').readlines
-data = {}
+require 'json'
+org = File.open("static/assets/images/imperium-luctation.svg",'r').readlines.map do |line|
+  next unless line.include? "<!-- Volume:"
+  line
+end.compact
+# raise org.inspect
+data = { "volumes" => {}}
 def deconUwp(uwp)
   # [port,
   bits = uwp.split("")
@@ -13,7 +17,7 @@ def deconUwp(uwp)
   law: bits.shift,
   tek: bits.shift}
   
-  raise x.inspect
+  # raise x.inspect
 end
 org.each do |volume|
   volume.gsub!('<!-- ','')
@@ -35,8 +39,8 @@ org.each do |volume|
     orbits: raw[3].strip.split(' ').last,
     details: deconUwp(raw.first.split(' ')[2])
    }
-   data[raw.first.split(' ')[1]] = datum
+   data['volumes'][raw.first.split(' ')[1]] = datum
   # pp datum
   # exit
 end
-puts data.to_yaml
+puts data.to_json

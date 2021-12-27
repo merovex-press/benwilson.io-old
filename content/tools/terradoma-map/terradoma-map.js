@@ -21,4 +21,37 @@ function showVolumeDetails() {
     document.getElementById("travel_code").innerHTML = data["travel_code"]
     document.getElementById("uwp").innerHTML = data["uwp"]
   }
+  routableVolumes()
+}
+function routableVolumes() {
+  var key = input('coordinate');
+  if (key.length != 4) { return; }
+
+  var routable = ""
+  var x = parseInt(key.slice(0, 2))
+  var y = parseInt(key.slice(2))
+  var p = 0
+
+  for (var j = (y - 3); j <= (y + 3); j++) {
+    for (var i = (x - 3); i <= (x + 3); i++) {
+      var distance = Math.abs(x - i) + Math.abs(y - j)
+      if (distance > 4) { continue; }
+
+      var xkey = i.toString().padStart(2, '0') + j.toString().padStart(2, '0')
+      if (xkey == key) { continue; }
+      if (volumes[xkey] != undefined) {
+        var v = volumes[xkey]
+        var locx = "<a data-coordinate='" + xkey + "' onclick='setCoordinate(this)'>" + xkey + "</a> : " + v["uwp"] + " - " + v["name"]
+        routable += "<li>" + locx + "</li>\n"
+      }
+      p = p++
+      if (p > 100) { break; }
+    }
+  }
+  document.getElementById("routable_volumes").innerHTML = routable;
+}
+function setCoordinate(link) {
+  coordinate = link.getAttribute("data-coordinate");
+  document.getElementById('coordinate').value = coordinate
+  showVolumeDetails()
 }
