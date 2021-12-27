@@ -16,7 +16,7 @@
         fill: none; stroke: #dc322f; stroke-width: 4;
       }
       text {
-        font-family: '-apple-system', 'system-ui', "Segoe UI", 'Roboto', 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+        font-family: 'Merovex Sans', '-apple-system', 'system-ui', "Segoe UI", 'Roboto', 'Lato', 'Helvetica', 'Arial', 'sans-serif';
         fill: #586e75;
         font-size: 8px;
         text-anchor: middle;
