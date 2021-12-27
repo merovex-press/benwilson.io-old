@@ -79,7 +79,7 @@ function calcQuadrant(origin, point) {
 function routableVolumes(key) {
   if (key.length != 4) { return; }
   var routes = {}
-  var route = "<tr class='text-center bg-brand bg-opacity-20'><td><a data-coordinate='{0}' onclick='setCoordinate(this)'>{1}</a></td><td>{2}</td><td>{3}</td><td>{4}</td></tr>\n"
+  var route = "<tr class='text-center odd:bg-shade/20'><td><a data-coordinate='{0}' onclick='setCoordinate(this)'>{1}</a></td><td>{2}</td><td>{3}</td><td>{4}</td></tr>\n"
 
   var x = parseInt(key.slice(0, 2))
   var y = parseInt(key.slice(2))
