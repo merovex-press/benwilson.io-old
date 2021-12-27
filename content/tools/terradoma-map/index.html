@@ -40,8 +40,29 @@ summary: "Gives quick information on volumes from the Terradoma map."
     </ul>
   </div>
 </section>
-
+<section>
+  <h2>Terradoma Map</h2>
+  <div class="prose-sans">
+    <p>This is the comprehensive map of known humanity in Terradoma. You can pan and zoom. The volume report above
+      relies on the coordinates of this map.</p>
+  </div>
+  <div class="w-full border-2 border-brand-light" style="height: 800px">
+    {{< svg "content/tools/terradoma-map/imperium-luctation.svg">}}
+  </div>
+</section>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="terradoma-map.js"></script>
+<script src="svg-pan-zoom.js"></script>
+
+<script>
+  svgPanZoom('#map', {
+    zoomEnabled: true,
+    controlIconsEnabled: false,
+    fit: false,
+    center: false,
+    minZoom: 1,
+    maxZoom: 1.6,
+  });
+</script>
