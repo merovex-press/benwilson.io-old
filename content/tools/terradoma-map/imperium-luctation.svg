@@ -2606,11 +2606,11 @@
     <text x='124.22' y='1514.16'>M4</text>
     <text x='127.22' y='1521.16'>DB</text>
 
-<!-- Volume: 0422 B917111-B F ..G.. .. // IC,Lo           // N,N      // F0V/M2VI          RH.WGS           // Bija'dom -->
+<!-- Volume: 0422 B917111-B F ..G.. .. // IC,Lo           // N,N      // F0V/M2VI          RH.WGS           // Manjamio -->
     <circle cx='220.0' cy='1524.16' r='5' />
     <text class='base-code' x='220.0' y='1544.16'>B</text>
     <text x='220.0' y='1554.93'>B917111-B</text>
-    <text x='220.0' y='1505.11'>Bija'dom</text>
+    <text x='220.0' y='1505.11'>Manjamio</text>
     <g><!-- Has Gas Giant -->
       <ellipse stroke-width='1' cx='242.22' cy='1537.16' rx='6.15' ry='0.9' />
       <circle cx='242.22' cy='1537.16' r='2.56' />
@@ -2745,11 +2745,11 @@
     <text x='64.22' y='1618.08'>M0</text>
     <text x='67.22' y='1625.08'>DB</text>
 
-<!-- Volume: 0524 D130668-6 T .SG.. .. // De,Na,NI,Po     // F,N      // F0V               HRWGGGBG         // Ochven -->
+<!-- Volume: 0524 D130668-6 T .SG.. .. // De,Na,NI,Po     // F,N      // F0V               HRWGGGBG         // Ochvenio -->
     <circle cx='280.0' cy='1628.08' r='5' />
     <text class='base-code' x='280.0' y='1648.08'>D</text>
     <text x='280.0' y='1658.85'>D130668-6</text>
-    <text x='280.0' y='1609.03'>Ochven</text>
+    <text x='280.0' y='1609.03'>Ochvenio</text>
 <!-- Scout Base --><text class='faction' x='257.77777777777777' y='1644.7466666666667'>s</text>
     <g><!-- Has Gas Giant -->
       <ellipse stroke-width='1' cx='302.22' cy='1641.08' rx='6.15' ry='0.9' />
@@ -2821,11 +2821,11 @@
     </g>
     <text x='784.22' y='1687.36'>M4</text>
 
-<!-- Volume: 0726 C626446-9 T ..... .. // NI              // O        // M6V               WB               // Enesi -->
+<!-- Volume: 0726 C626446-9 T ..... .. // NI              // O        // M6V               WB               // Krinanio -->
     <circle cx='400.0' cy='1766.64' r='5' />
     <text class='base-code' x='400.0' y='1786.64'>C</text>
     <text x='400.0' y='1797.41'>C626446-9</text>
-    <text x='400.0' y='1747.59'>Enesi</text>
+    <text x='400.0' y='1747.59'>Krinanio</text>
     <text x='424.22' y='1756.64'>M6</text>
 
 <!-- Volume: 1226 B6669CC-9 T NSG.. AZ // Hi              //          // G2V/DB            H.RW..S          // Niami -->
