@@ -6,7 +6,7 @@ date: 2021-12-21T05:47:27+05:00
 permalink: /tools/terradoma-map/
 summary: "A comprehensive map of humanity in space during the period of the Postal Marines series, with volume catalog."
 ---
-
+<aside class="bg-brand-light bg-accent-lightest striped"></aside>
 <section class=''>
   <div class='space-y-2 text-center toolkit'>
     <label for="coordinate">Coordinate:</label>
@@ -16,28 +16,32 @@ summary: "A comprehensive map of humanity in space during the period of the Post
       class='block md:inline-block'>(<span id="location">0000</span>: <span id="uwp">X777777-7</span> )</span></h2>
   <div class="">
     <h3>Summary</h3>
-    <div class="flex"><span class="flex-1 px-2 font-bold">Star:</span><span id="star" class='flex-1'></span>
+    <div class="flex striped"><span class="flex-1 px-2 font-bold">Star:</span><span id="star" class='flex-1'></span>
     </div>
 
-    <div class="flex"><span class="flex-1 px-2 font-bold">Mainworld Temperature:</span><span id="temp"
-        class='flex-1 font-code'></span></div>
-    <div class="flex bg-shade/20"><span class="flex-1 px-2 font-bold">Bases:</span><span id="bases"
+    <div class="flex striped"><span class="flex-1 px-2 font-bold">Mainworld
+        Temperature:</span><span id="temp" class='flex-1 font-code'></span></div>
+    <div class="flex striped"><span class="flex-1 px-2 font-bold">Bases:</span><span id="bases"
         class='flex-1 font-code'></span>
     </div>
-    <div class="flex "><span class="flex-1 px-2 font-bold">Factions:</span><span id="factions"
+    <div class="flex striped"><span class="flex-1 px-2 font-bold">Factions:</span><span id="factions"
         class='flex-1 font-code'></span>
     </div>
-    <div class="flex bg-shade/20">
+    <div class="flex striped">
       <span class="flex-1 px-2 font-bold">Trade Codes:</span>
       <span id="trade_codes" class='flex-1 font-code'></span>
     </div>
     <div class="flex"><span class="flex-1 px-2 font-bold">Travel Code:</span><span id="travel_code"
         class='flex-1 font-code'></span>
     </div>
-    <div>
+    <div id='description-section'>
+      <h3>Description</h3>
+      <p id="uwp-output">No description yet.</p>
+    </div>
+    <div id='orbit-section'>
       <h3>Orbits</h3>
       <table>
-        <thead>
+        <thead class="">
           <tr>
             <th class="text-center">#</th>
             <th class="text-center">Type</th>
@@ -45,14 +49,10 @@ summary: "A comprehensive map of humanity in space during the period of the Post
             <th class="text-center">UWP</th>
           </tr>
         </thead>
-        <tbody id="orbits">
+        <tbody id="orbits" class='text-medium'>
 
         </tbody>
       </table>
-    </div>
-    <div>
-      <h3>Description</h3>
-      <p id="uwp-output">No description yet.</p>
     </div>
   </div>
   <div class='mt-8 prose-sans'>

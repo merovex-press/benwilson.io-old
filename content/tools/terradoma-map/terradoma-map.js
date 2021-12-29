@@ -34,9 +34,9 @@ function translateUWP(sname, uwp) {
   )
 }
 function showVolumeDetails() {
-  var orbit_template = "<tr class='{0}'><td class='text-center'>{1}</td><td class='text-center'>{2}</td><td class='text-center'>{4}</td><td class='text-center'>{3}</td></tr>"
-  var moon_template = "<tr><td colspan='2'></td><td class='text-right'>{0}.</td><td class='text-center'>{1}</td></tr>"
-  var empty_template = "<tr class='text-center text-shade text-sm'><td>{0}</td><td></td><td>{1}</td><td>&mdash; Empty &mdash;</td></tr>"
+  var orbit_template = "<tr class='striped {0}'><td class='text-center'>{1}</td><td class='text-center'>{2}</td><td class='text-center'>{4}</td><td class='text-center'>{3}</td></tr>"
+  var moon_template = "<tr class='striped'><td colspan='2'></td><td class='text-right'>{0}.</td><td class='text-center'>{1}</td></tr>"
+  var empty_template = "<tr class='striped text-center text-shade text-sm'><td>{0}</td><td></td><td>{1}</td><td>&mdash; Empty &mdash;</td></tr>"
   var key = getSVal('coordinate')
   if (key.length != 4 || volumes[key] == undefined) { return; }
 
@@ -46,16 +46,19 @@ function showVolumeDetails() {
   var klass = "";
   for (let orbit of data["orbits"]) {
     klass = ''
+
     orbit[0].unshift(onum++)
     if (orbit[0][1] == ".") {
       console.log("HERE", orbit[0], [orbit[0][0], orbit[0][3]])
       orbits += empty_template.format(...[orbit[0][0], orbit[0][3]])
       continue;
     }
+
     if (orbit[0][1] == "W") {
       orbit[0][0] = 'Mainworld'
-      klass = "bg-brand"
+      klass = "font-bold"
     }
+    // if (onum % 2 == 0) { klass = "" }
     orbit[0].unshift(klass)
     orbits += orbit_template.format(...orbit[0])
 
@@ -107,7 +110,7 @@ function calcQuadrant(origin, point) {
 function routableVolumes(key) {
   if (key.length != 4) { return; }
   var routes = {}
-  var route = "<tr class='text-center odd:bg-shade/20'><td><a data-coordinate='{0}' onclick='setCoordinate(this)'>{1}</a></td><td>{2}</td><td>{3}</td><td>{4}</td></tr>\n"
+  var route = "<tr class='text-center striped'><td><a data-coordinate='{0}' onclick='setCoordinate(this)'>{1}</a></td><td>{2}</td><td>{3}</td><td>{4}</td></tr>\n"
 
   var x = parseInt(key.slice(0, 2))
   var y = parseInt(key.slice(2))
