@@ -34,7 +34,8 @@ function translateUWP(sname, uwp) {
   )
 }
 function showVolumeDetails() {
-  var orbit_template = "<tr class='striped {0}'><td class='text-center'>{1}</td><td class='text-center'>{2}</td><td class='text-center'>{4}</td><td class='text-center'>{3}</td></tr>"
+  // var orbit_template = "<tr class='striped {0}'><td class='text-center'>{1}</td><td class='text-center'>{3}</td><td class='text-center'>{2}</td><td class='text-center'>{4}</td></tr>"
+  var orbit_template = "<tr class='striped text-center {0}'><td>{1}</td><td>{2}</td><td>{4}</td><td>{3}</td></tr>"
   var moon_template = "<tr class='striped'><td colspan='2'></td><td class='text-right'>{0}.</td><td class='text-center'>{1}</td></tr>"
   var empty_template = "<tr class='striped text-center text-shade text-sm'><td>{0}</td><td></td><td>{1}</td><td>&mdash; Empty &mdash;</td></tr>"
   var key = getSVal('coordinate')
@@ -49,16 +50,13 @@ function showVolumeDetails() {
 
     orbit[0].unshift(onum++)
     if (orbit[0][1] == ".") {
-      console.log("HERE", orbit[0], [orbit[0][0], orbit[0][3]])
       orbits += empty_template.format(...[orbit[0][0], orbit[0][3]])
       continue;
     }
-
     if (orbit[0][1] == "W") {
-      orbit[0][0] = 'Mainworld'
+      orbit[0][1] = 'Mainworld'
       klass = "font-bold"
     }
-    // if (onum % 2 == 0) { klass = "" }
     orbit[0].unshift(klass)
     orbits += orbit_template.format(...orbit[0])
 
