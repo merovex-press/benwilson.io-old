@@ -36,11 +36,19 @@ function setAU(km) {
 }
 function setKM(km) { document.getElementById("distance").value = km }
 function setGM(km) { document.getElementById("distanceGm").innerHTML = (km / 1000000).toFixed(2); }
+
+function setLightSeconds(km) {
+  var seconds = Math.round(km / 299792.558)
+  document.getElementById("distanceLs").innerHTML = seconds;
+  // mls
+  document.getElementById("mls").innerHTML = Math.round(seconds / 0.864);
+}
 function setDistanceFromPlanetSize() {
   var km = document.getElementById("planet_size").value;
   setAU(km);
   setGM(km);
   setKM(km);
+  setLightSeconds(km);
   calculate()
 }
 function setDistanceFromStarSize() {
@@ -49,6 +57,7 @@ function setDistanceFromStarSize() {
   setKM(km);
   setGM(km);
   setAU(km);
+  setLightSeconds(km);
   calculate()
 }
 
@@ -68,7 +77,7 @@ function calculate() {
 function calcMWHConsumed(ttSeconds) {
   var fc = 16000 * fuel_conversion_rate()
   var mass = input("spaceship_mass") / 200;
-  console.log(fc)
+  // console.log(fc)
   var result = input("acceleration") * (mass / fc) * (ttSeconds / 3600);
   return result;
 }
@@ -105,6 +114,7 @@ function calcDistanceFromAcceleration() {
   var km = 0.5 * speed * Math.pow(time, 2)
   setKM(km);
   setGM(km);
+  setLightSeconds(km);
   calcMaxVelocity(time * 2)
 }
 function calcDist(observerTime, velocity) {
@@ -127,14 +137,16 @@ function setDistanceFromKM() {
   var km = document.getElementById("distance").value;
   setAU(km);
   setGM(km)
+  setLightSeconds(km);
   calculate();
 }
 function setDistanceFromAU() {
   var au = document.getElementById("distanceAU").value;
   var km = au * 149597900
-  console.log(km, au);
+  // console.log(km, au);
   setKM(km);
   setGM(km)
+  setLightSeconds(km);
   calculate();
 }
 function secondsToCycles(impSeconds) {

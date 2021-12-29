@@ -34,15 +34,43 @@ function translateUWP(sname, uwp) {
   )
 }
 function showVolumeDetails() {
+  var orbit_template = "<tr class='{0}'><td class='text-center'>{1}</td><td class='text-center'>{2}</td><td class='text-center'>{4}</td><td class='text-center'>{3}</td></tr>"
+  var moon_template = "<tr><td colspan='2'></td><td class='text-right'>{0}.</td><td class='text-center'>{1}</td></tr>"
+  var empty_template = "<tr class='text-center text-shade text-sm'><td>{0}</td><td></td><td>{1}</td><td>&mdash; Empty &mdash;</td></tr>"
   var key = getSVal('coordinate')
   if (key.length != 4 || volumes[key] == undefined) { return; }
 
   var data = volumes[key];
+  var orbits = "";
+  var onum = 0;
+  var klass = "";
+  for (let orbit of data["orbits"]) {
+    klass = ''
+    orbit[0].unshift(onum++)
+    if (orbit[0][1] == ".") {
+      console.log("HERE", orbit[0], [orbit[0][0], orbit[0][3]])
+      orbits += empty_template.format(...[orbit[0][0], orbit[0][3]])
+      continue;
+    }
+    if (orbit[0][1] == "W") {
+      orbit[0][0] = 'Mainworld'
+      klass = "bg-brand"
+    }
+    orbit[0].unshift(klass)
+    orbits += orbit_template.format(...orbit[0])
+
+    if (orbit[1].length != 0) {
+      for (let moon of orbit[1]) {
+        orbits += moon_template.format(...moon.split("."))
+      }
+    }
+  }
   $("#bases").html(data["bases"])
   $("#factions").html(data["factions"])
   $("#location").html(data["location"])
   $("#name").html(data["name"])
-  $("#orbits").html(data["orbits"])
+  $("#orbits").html(orbits)
+  // var orbits = 
   $("#star").html(data["star"])
   $("#temp").html(data["temp"])
   $("#trade_codes").html(data["trade_codes"])

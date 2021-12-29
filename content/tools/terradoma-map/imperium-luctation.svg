@@ -3781,11 +3781,11 @@
     <text x='604.22' y='2691.92'>M6</text>
     <text x='607.22' y='2698.92'>DB</text>
 
-<!-- Volume: 1639 E679789-7 T ..... AZ //                 // N,F      // M6V/DB            W........S       // Kingdom -->
+<!-- Volume: 1639 E679789-7 T ..... AZ //                 // N,F      // M6V/DB            W........S       // Karesitio -->
     <circle cx='940.0' cy='2701.92' r='5' />
     <text class='base-code' x='940.0' y='2721.92'>E</text>
     <text x='940.0' y='2732.69'>E679789-7</text>
-    <text x='940.0' y='2682.87'>Kingdom</text>
+    <text x='940.0' y='2682.87'>Karesitio</text>
     <path class='lowsec' d='M 930.0 2687.634285714286 a 20 20 0 1 0 20 0' />
     <text x='964.22' y='2691.92'>M6</text>
     <text x='967.22' y='2698.92'>DB</text>

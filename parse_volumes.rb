@@ -1,5 +1,7 @@
 require 'json'
-org = File.open("static/assets/images/imperium-luctation.svg",'r').readlines.map do |line|
+require 'yaml'
+# require 'pp'
+org = File.open("content/tools/terradoma-map/imperium-luctation.svg",'r').readlines.map do |line|
   next unless line.include? "<!-- Volume:"
   line
 end.compact
@@ -8,14 +10,7 @@ data = { "volumes" => {}}
 def deconUwp(uwp)
   # [port,
   bits = uwp.split("")
-  x = {port: bits.shift,
-  size: bits.shift,
-  atmo: bits.shift,
-  h20: bits.shift,
-  popx: bits.shift,
-  govm: bits.shift,
-  law: bits.shift,
-  tek: bits.shift}
+  x = {port: bits.shift, size: bits.shift, atmo: bits.shift, h20: bits.shift, popx: bits.shift, govm: bits.shift, law: bits.shift, tek: bits.last}
   
   # raise x.inspect
 end
@@ -36,11 +31,36 @@ org.each do |volume|
     trade_codes: raw[1],
     factions: raw[2],
     star: raw[3].strip.split(' ').first,
-    orbits: raw[3].strip.split(' ').last,
-    details: deconUwp(raw.first.split(' ')[2])
+    details: deconUwp(raw.first.split(' ')[2]),
+    orbits: raw[3].strip.split(' ').last
    }
    data['volumes'][raw.first.split(' ')[1]] = datum
-  # pp datum
-  # exit
 end
-puts data.to_json
+
+# Add Orbit details
+
+File.read("imperium.sector.txt").split("\n\n").each do |volume|
+  key = volume.split("\n").first[0..3]
+  if data['volumes'][key].nil?
+    puts "You removed #{key}?"
+    next
+  end
+  data['volumes'][key][:orbits] = []
+  
+  volume.split("\n").drop(1).each do |orbit|
+    if orbit.include?("--") # is planet
+      details = orbit.split("//").map{|i| i.strip()}
+      details[0] = details[0][-1]
+      details[1] = data['volumes'][key][:uwp] if details[0] == "W" # Force my update
+      data['volumes'][key][:orbits] << [details, []]
+    else # is moon
+      data['volumes'][key][:orbits].last.last << orbit.gsub(/\s+\/\s+/,"")
+    end
+  end
+end
+File.open("content/tools/terradoma-map/terradoma-volume-data.json","w") do |f|
+  f.write(data.to_json)
+end
+File.open("content/tools/terradoma-map/terradoma-volume-data.yaml","w") do |f|
+  f.write(data.to_yaml)
+end
