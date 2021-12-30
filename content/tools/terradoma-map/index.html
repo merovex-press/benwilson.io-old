@@ -6,12 +6,21 @@ date: 2021-12-21T05:47:27+05:00
 permalink: /tools/terradoma-map/
 summary: "A comprehensive map of humanity in space during the period of the Postal Marines series, with volume catalog."
 ---
-<aside class="bg-brand-light bg-accent-lightest striped"></aside>
+
 <section class=''>
   <div class='space-y-2 text-center toolkit'>
     <label for="coordinate">Coordinate:</label>
     <input name="coordinate" id="coordinate" type="number" onkeyup="showVolumeDetails()" class='w-16'>
   </div>
+  <aside class="">
+    <h3>Contents</h3>
+    <ul>
+      <li><a href="#description-section">Description</a></li>
+      <li><a href="#orbits-section">Orbits</a></li>
+      <li><a href="#routes-section">Jumpable Routes</a></li>
+      <li><a href="#map-section">Map</a></li>
+    </ul>
+  </aside>
   <h2><span id="name">Name</span><span class='hidden px-2 md:inline-block'>-</span><span
       class='block md:inline-block'>(<span id="location">0000</span>: <span id="uwp">X777777-7</span> )</span></h2>
   <div class="">
@@ -38,8 +47,9 @@ summary: "A comprehensive map of humanity in space during the period of the Post
       <h3>Description</h3>
       <p id="uwp-output">No description yet.</p>
     </div>
-    <div id='orbit-section'>
+    <div id='orbits-section'>
       <h3>Orbits</h3>
+      <a href="#coordinate">back to top</a>
       <table>
         <thead class="">
           <tr>
@@ -55,8 +65,9 @@ summary: "A comprehensive map of humanity in space during the period of the Post
       </table>
     </div>
   </div>
-  <div class='mt-8 prose-sans'>
+  <div class='mt-8 prose-sans' id='routes-section'>
     <h3>Volumes within Jump-3 Range</h3>
+    <a href="#coordinate">back to top</a>
     <table class="">
       <thead>
         <tr class='text-base text-center'>
@@ -74,8 +85,9 @@ summary: "A comprehensive map of humanity in space during the period of the Post
     </table>
   </div>
 </section>
-<section>
+<section id='map-section'>
   <h2>Terradoma Map</h2>
+  <a href="#coordinate">back to top</a>
   <div class="prose-sans">
     <p>This is the comprehensive map of known humanity in Terradoma. You can pan and zoom. The volume report above
       relies on the coordinates of this map.</p>

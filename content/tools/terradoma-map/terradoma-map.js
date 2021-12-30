@@ -14,30 +14,31 @@ String.prototype.template = function (data) {
     }
   );
 }
-const empty_template = `
+
+const EMPTY_TEMPLATE = `
   <tr class='striped text-center text-shade text-sm'>
     <td>{orbit}</td>
-    <td>&nbsp;</td>
-    <td>{distance}</td>
     <td>&mdash; Empty &mdash;</td>
+    <td>{distance}</td>
+    <td>&nbsp;</td>
   </tr>
 `;
-const orbit_template = `
-  <tr class='striped text-center {klass}'>
+const ORBIT_TEMPLATE = `
+  <tr class='text-center{klass}'>
     <td>{orbit}</td>
     <td>{type}</td>
     <td>{distance}</td>
     <td>{uwp}</td>
   </tr>
 `;
-const moon_template = `
+const MOON_TEMPLATE = `
   <tr class='striped'>
     <td colspan='2'></td>
     <td class='text-right'>{distance}.</td>
     <td class='text-center'>{uwp}</td>
   </tr>
 `;
-const route_template = `
+const ROUTE_TEMPLATE = `
   <tr class='text-center striped'>
     <td><a data-coordinate='{coord}' onclick='setCoordinate(this)'>{coord}</a></td>
     <td>{uwp}</td>
@@ -45,6 +46,17 @@ const route_template = `
     <td>{name}</td>
   </tr>
 `;
+const PLANET_CLASSES = {
+  'W': " italic bg-accent-lightest dark:bg-accent-dark",
+  'S': " bg-warning dark:bg-warning-dark"
+}
+const PLANET_TYPES = {
+  'W': 'Mainworld',
+  'S': 'Companion Star',
+  'G': "Gas Giant",
+  'R': "Rockball",
+  'B': "Belt"
+}
 
 var volumes;
 $.getJSON("terradoma-volume-data.json", function (data) { volumes = data["volumes"]; });
@@ -52,6 +64,10 @@ $.getJSON("terradoma-volume-data.json", function (data) { volumes = data["volume
 var uData;
 var uTemplates;
 $.getJSON("../uwp-translator/uwp-translator.json", function (data) { uData = data["data"]; uTemplates = data["templates"]; });
+
+function ternary(source, key, alternate) {
+  return source.hasOwnProperty(key) ? source[key] : alternate
+}
 
 function getSVal(key) { return $("input[id^='" + key + "']").val(); }
 function setVal(key, value) { $("input[id=" + key + "]").val(value); }
@@ -85,25 +101,23 @@ function showVolumeDetails() {
   for (let orbit of data["orbits"]) {
     var d = {
       orbit: onum++,
-      klass: "",
       type: orbit[0][0],
       uwp: orbit[0][1],
       distance: orbit[0][2]
     }
     if (d['type'] == ".") { // Different rendering for empty orbits
-      result = empty_template.template(d)
+      result = EMPTY_TEMPLATE.template(d)
     }
     else {
-      if (d['type'] == "W") { // Different rendering for Mainworld
-        d['type'] = 'Mainworld'
-        d['klass'] = "font-bold"
-      }
-      result = orbit_template.template(d)
+      d['klass'] = ternary(PLANET_CLASSES, d['type'], " striped")
+      d['type'] = ternary(PLANET_TYPES, d['type'], d['type'])
 
-      if (orbit[1].length != 0) { // We have a moon
+      result = ORBIT_TEMPLATE.template(d)
+
+      if (orbit[1].length != 0) { // Add any moons to table
         for (let moon of orbit[1]) {
           var d = moon.split(".")
-          result += moon_template.template({
+          result += MOON_TEMPLATE.template({
             distance: d[0],
             uwp: d[1]
           })
@@ -162,7 +176,7 @@ function routableVolumes(key) {
   for (var j = (y - 3); j <= (y + 3); j++) {
     for (var i = (x - 3); i <= (x + 3); i++) {
 
-      var xkey = i.toString().padStart(2, '0') + j.toString().padStart(2, '0') // Printed coordinates
+      var coord = i.toString().padStart(2, '0') + j.toString().padStart(2, '0') // Printed coordinates
 
       var point = center_of(i, j)
       var distance = calcDistance([x, y], [i, j]) // We need unadjusted coordinates.
@@ -170,7 +184,7 @@ function routableVolumes(key) {
       var slope = calcSlope(origin, point)
 
       // Process routes to habited volumes if within Jump-3 (a bit of rounding required)
-      if (0 < distance && distance < 3.605 && volumes[xkey] != undefined) {
+      if (0 < distance && distance < 3.605 && volumes[coord] != undefined) {
         // Exclude the farther route of two candidate routes in the same direction.
         var direction = "{0}:{1}".format(quadrant, slope)
         if (direction in routes && distance > routes[direction][0]) {
@@ -180,12 +194,12 @@ function routableVolumes(key) {
         // Capture the route information
         routes[direction] = [
           distance,
-          xkey,
-          route_template.template({
-            coord: xkey,
+          coord,
+          ROUTE_TEMPLATE.template({
+            coord: coord,
             distance: Math.round(distance),
-            name: volumes[xkey]['name'],
-            uwp: volumes[xkey]['uwp']
+            name: volumes[coord]['name'],
+            uwp: volumes[coord]['uwp']
           })
         ]
       }
