@@ -5,6 +5,47 @@ String.prototype.format = function () {
   }
   return a
 }
+String.prototype.template = function (data) {
+  var a = this;
+  return a.replace(
+    /\{(\w*)\}/g,
+    function (m, key) {
+      return data.hasOwnProperty(key) ? data[key] : "";
+    }
+  );
+}
+const empty_template = `
+  <tr class='striped text-center text-shade text-sm'>
+    <td>{orbit}</td>
+    <td>&nbsp;</td>
+    <td>{distance}</td>
+    <td>&mdash; Empty &mdash;</td>
+  </tr>
+`;
+const orbit_template = `
+  <tr class='striped text-center {klass}'>
+    <td>{orbit}</td>
+    <td>{type}</td>
+    <td>{distance}</td>
+    <td>{uwp}</td>
+  </tr>
+`;
+const moon_template = `
+  <tr class='striped'>
+    <td colspan='2'></td>
+    <td class='text-right'>{distance}.</td>
+    <td class='text-center'>{uwp}</td>
+  </tr>
+`;
+const route_template = `
+  <tr class='text-center striped'>
+    <td><a data-coordinate='{coord}' onclick='setCoordinate(this)'>{coord}</a></td>
+    <td>{uwp}</td>
+    <td>{distance}</td>
+    <td>{name}</td>
+  </tr>
+`;
+
 var volumes;
 $.getJSON("terradoma-volume-data.json", function (data) { volumes = data["volumes"]; });
 
@@ -34,44 +75,48 @@ function translateUWP(sname, uwp) {
   )
 }
 function showVolumeDetails() {
-  // var orbit_template = "<tr class='striped {0}'><td class='text-center'>{1}</td><td class='text-center'>{3}</td><td class='text-center'>{2}</td><td class='text-center'>{4}</td></tr>"
-  var orbit_template = "<tr class='striped text-center {0}'><td>{1}</td><td>{2}</td><td>{4}</td><td>{3}</td></tr>"
-  var moon_template = "<tr class='striped'><td colspan='2'></td><td class='text-right'>{0}.</td><td class='text-center'>{1}</td></tr>"
-  var empty_template = "<tr class='striped text-center text-shade text-sm'><td>{0}</td><td></td><td>{1}</td><td>&mdash; Empty &mdash;</td></tr>"
+
   var key = getSVal('coordinate')
   if (key.length != 4 || volumes[key] == undefined) { return; }
 
   var data = volumes[key];
   var orbits = "";
   var onum = 0;
-  var klass = "";
   for (let orbit of data["orbits"]) {
-    klass = ''
-
-    orbit[0].unshift(onum++)
-    if (orbit[0][1] == ".") {
-      orbits += empty_template.format(...[orbit[0][0], orbit[0][3]])
-      continue;
+    var d = {
+      orbit: onum++,
+      klass: "",
+      type: orbit[0][0],
+      uwp: orbit[0][1],
+      distance: orbit[0][2]
     }
-    if (orbit[0][1] == "W") {
-      orbit[0][1] = 'Mainworld'
-      klass = "font-bold"
+    if (d['type'] == ".") { // Different rendering for empty orbits
+      result = empty_template.template(d)
     }
-    orbit[0].unshift(klass)
-    orbits += orbit_template.format(...orbit[0])
+    else {
+      if (d['type'] == "W") { // Different rendering for Mainworld
+        d['type'] = 'Mainworld'
+        d['klass'] = "font-bold"
+      }
+      result = orbit_template.template(d)
 
-    if (orbit[1].length != 0) {
-      for (let moon of orbit[1]) {
-        orbits += moon_template.format(...moon.split("."))
+      if (orbit[1].length != 0) { // We have a moon
+        for (let moon of orbit[1]) {
+          var d = moon.split(".")
+          result += moon_template.template({
+            distance: d[0],
+            uwp: d[1]
+          })
+        }
       }
     }
+    orbits += result
   }
   $("#bases").html(data["bases"])
   $("#factions").html(data["factions"])
   $("#location").html(data["location"])
   $("#name").html(data["name"])
   $("#orbits").html(orbits)
-  // var orbits = 
   $("#star").html(data["star"])
   $("#temp").html(data["temp"])
   $("#trade_codes").html(data["trade_codes"])
@@ -108,8 +153,6 @@ function calcQuadrant(origin, point) {
 function routableVolumes(key) {
   if (key.length != 4) { return; }
   var routes = {}
-  var route = "<tr class='text-center striped'><td><a data-coordinate='{0}' onclick='setCoordinate(this)'>{1}</a></td><td>{2}</td><td>{3}</td><td>{4}</td></tr>\n"
-
   var x = parseInt(key.slice(0, 2))
   var y = parseInt(key.slice(2))
   var origin = center_of(x, y)
@@ -135,12 +178,18 @@ function routableVolumes(key) {
         }
 
         // Capture the route information
-        routes[direction] = [distance, xkey, route.format(
-          xkey, xkey, volumes[xkey]['uwp'], Math.round(distance), volumes[xkey]['name']
-        )]
+        routes[direction] = [
+          distance,
+          xkey,
+          route_template.template({
+            coord: xkey,
+            distance: Math.round(distance),
+            name: volumes[xkey]['name'],
+            uwp: volumes[xkey]['uwp']
+          })
+        ]
       }
-
-      if (p++ > 100) { break; }
+      if (p++ > 1000) { break; } // failsafe
     }
   }
   var result = "";
