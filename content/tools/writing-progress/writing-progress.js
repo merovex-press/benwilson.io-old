@@ -1,20 +1,22 @@
 var uData;
 var words = {}
+var total = 0;
 
-$.getJSON("https://api.jsonbin.io/b/61c07f9a4359822986117df4", function (data) {
+$.getJSON("writing-progress.json", function (data) {
   uData = data["data"];
+  // console.log(uData);
   Object.keys(uData).map(function (key) {
     var date = new Date(key + 'T06:20:30Z')
     var label = date.getMonday().toISOString().split('T')[0]
     if (!(label in words)) { words[label] = 0 }
     words[label] = words[label] + uData[key]['daily'];
-    console.log('here', Object.keys(words), Object.values(words))
+    // console.log('here', Object.keys(words), Object.values(words))
   })
   var ctx = document.getElementById('weekly-progress').getContext('2d');
   var options = {
     options: {
       maintainAspectRatio: false,
-      scales: { yAxes: [{ ticks: { beginAtZero: true } }] }
+      scales: { y: { ticks: { beginAtZero: true } } }
     },
     data: {
       datasets: [{
