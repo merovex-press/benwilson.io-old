@@ -1,9 +1,10 @@
 ---
 aliases: ['/p/223fe4c7']
 author: Ben Wilson
-title: "Hiatus: a Pause or Gap in a Series"
+title: "Hiatus"
+subtitle: "A Pause or Gap in a Series"
 categories:
-- Diary
+- Heartbeat
 tag:
 - Writing Progress
 - Retrospective
