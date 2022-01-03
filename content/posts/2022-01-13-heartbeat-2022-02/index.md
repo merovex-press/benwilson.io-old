@@ -2,6 +2,8 @@
 author: Ben Wilson
 title: "Heartbeat: February 2022"
 subtitle: "Add subtitle"
+aliases: 
+- '/p/2a42a84a'
 categories:
 - Heartbeat
 tag:
