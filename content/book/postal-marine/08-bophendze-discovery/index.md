@@ -1,5 +1,6 @@
 ---
 title: "Bophendze's Discovery"
+homelink: "/series"
 seo:
   title: "Postal Marines: Discovery"
 weight: 3

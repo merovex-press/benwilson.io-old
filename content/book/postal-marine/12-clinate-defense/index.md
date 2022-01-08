@@ -1,5 +1,6 @@
 ---
 title: "Clinate Defense"
+homelink: "/series"
 seo:
   title: "Postal Marines: Clinate Defense"
 weight: 4
