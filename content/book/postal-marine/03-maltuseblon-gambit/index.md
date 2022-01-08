@@ -1,6 +1,6 @@
 ---
 title: "Maltuseblan Gambit"
-homelink: "/series"
+homelink: "/series/"
 seo:
   title: "Postal Marines: Maltuseblan Gambit"
 weight: 2

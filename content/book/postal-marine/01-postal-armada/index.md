@@ -1,6 +1,6 @@
 ---
 title: "Postal Armada"
-homelink: "/series"
+homelink: "/series/"
 seo:
   title: "Postal Marines: Armada"
 weight: 1
