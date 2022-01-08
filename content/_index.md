@@ -1,5 +1,5 @@
 ---
-title: "Volume"
+title: ""
 seo:
   title: Ben Wilson, Author
 ---
