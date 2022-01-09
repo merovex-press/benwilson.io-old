@@ -6,7 +6,7 @@ toc: true
 layout: page
 ---
 
-{{<alert>}}Updated: 30 November 2021{{</alert>}}
+{{<alert>}}Updated: 9 January 2022{{</alert>}}
 
 ## Overview
 
@@ -57,7 +57,7 @@ We may process information that you provide to us for the purpose of subscribing
 
 By registering on the mailing list or for the newsletter, the User’s email address will be added to the contact list of those who may receive email messages containing information of commercial or promotional nature concerning our Website. Your email address might also be added to this list as a result of signing up to our Website or after making a purchase.
 
-[MailChimp][mailchimp]: MailChimp is an email address management and message sending service provided by The Rocket Science Group, LLC.
+[MailerLite][mail service]: MailerLite is an email address management and message sending service provided by The Remote Company.
 * Personal Data collected: email address, first and last name.
 * Place of processing: United States
 * Privacy Shield participant
@@ -66,13 +66,13 @@ By registering on the mailing list or for the newsletter, the User’s email add
 
 We may process your website usage ("usage data"). The usage data may include your IP address, geographical location, browser type & version, operating system, referral source, length of visit, page views and website navigation paths, as well as information about the timing, frequency and pattern of your website use. This usage data may be processed for the purposes of better understanding our audience. The legal basis for this processing is your consent by continuing to use our Website.
 
-[Google Analytics (Google Inc.)][google analytics]
+<!-- [Google Analytics (Google Inc.)][google analytics]
 Google Analytics is a web analysis service provided by Google Inc. (“Google”). Google utilizes the Data collected to track and examine the use of our Website, to prepare reports on its activities and share them with other Google services.
 Google may use the Data collected to contextualize and personalize the ads of its own advertising network.
 
 * Personal Data collected: Cookies and Usage Data.
 * Place of processing: United States
-* [Opt Out](https://tools.google.com/dlpage/gaoptout)
+* [Opt Out](https://tools.google.com/dlpage/gaoptout) -->
 
 [aws]: https://aws.amazon.com/privacy/
 [amazon affiliation]: https://www.amazon.com/gp/help/customer/display.html?nodeId=468496
@@ -81,7 +81,9 @@ Google may use the Data collected to contextualize and personalize the ads of it
 [google analytics]: https://www.google.com/analytics/terms/us.html
 [google cloud]: https://cloud.google.com/security/privacy/
 [google fonts]: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
-[mailchimp]: https://mailchimp.com/legal/privacy/
+[mail service]: https://www.mailerlite.com/legal/privacy/
+
+## Legal Use
 
 We may process any of your personal data identified in this policy where necessary for the establishment, exercise or defense of legal claims, whether in court proceedings or in an administrative or out-of-court procedure. The legal basis for this processing is our legitimate interests, namely the protection and assertion of our legal rights, your legal rights and the legal rights of others.
 
