@@ -8,15 +8,16 @@ aliases:
 summary: "Calculates travel time in space with a given distance and acceleration (in G)."
 ---
 
-<section class='mb-12 prosaic-sans md:prose-xl'>
-  <p>
-    This calculator gives travel time (in human terms) with constant acceleration and deceleration.
-    Assumes the inital and final velocity is zero meters-per-second.
-  </p>
-  <p>Works well with <a href="/tools/terradoma-map/">Terradoma Map</a>.</p>
-</section>
+
 
 <section class="p-4 space-y-2 toolkit card">
+  <aside class='mb-4 prosaic-sans md:prose-lg'>
+    <p>
+      This calculator gives travel time (in human terms) with constant acceleration and deceleration.
+      Assumes the initial and final velocity is zero meters-per-second.
+    </p>
+    <p>Works well with <a href="/tools/terradoma-map/">Terradoma Map</a>.</p>
+  </aside>
   <div class="flex space-y-2">
     <label for="planet_size">Planet Size:</label>
     <div>
@@ -55,38 +56,6 @@ summary: "Calculates travel time in space with a given distance and acceleration
       <p class="text-sm opacity-50 help-text">For D100 calculations.</p>
     </div>
   </div>
-  </div>
-  <div class="flex hidden space-y-2">
-    <label for="star_size">Star Size:</label>
-    <div>
-      <select name="star_size" id="star_size" onchange="setDistanceFromStarSize()"
-        class="flex-1 rounded-lg shade-text dark:bg-shade-dark">
-        <option value="5.70">B0 (e.g. Becrux)</option>
-        <option value="5.10">B2 (e.g. Spica)</option>
-        <option value="3.70">B5 (e.g. Achernar)</option>
-        <option value="2.70">B8 (e.g. Rigel)</option>
-        <option value="2.30">A0 (e.g. Sirius A)</option>
-        <option value="2.00">A2 (e.g. Fomalhaut)</option>
-        <option value="1.80">A5 (e.g. Altair)</option>
-        <option value="1.50">F0 (e.g. Gamma Virginis)</option>
-        <option value="1.30">F2 (e.g. NONE)</option>
-        <option value="1.20">F5 (e.g. Procyon A)</option>
-        <option value="1.05">G0 (e.g. Alpha Centauri A)</option>
-        <option value="1.00">G2 (e.g. The Sun)</option>
-        <option value="0.91">G5 (e.g. Mu Cassiopeiae)</option>
-        <option value="0.87">G8 (e.g. Tau Ceti)</option>
-        <option value="0.83">K0 (e.g. Pollux)</option>
-        <option value="0.79">K2 (e.g. Epsilon Eridani)</option>
-        <option value="0.74">K5 (e.g. Alpha Centauri B)</option>
-        <option value="0.63">M0 (e.g. Gliese 185)</option>
-        <option value="0.36">M2 (e.g. Lalande 21185)</option>
-        <option value="0.21">M4 (e.g. Ross 128)</option>
-        <option value="0.12">M6 (e.g. Wolf 359)</option>
-      </select>
-      <p class="text-sm opacity-50 help-text">For D100 calculations.</p>
-    </div>
-  </div>
-  </div>
 
   <div class='flex space-y-2'>
     <label for="distance">Distance (km):</label>
@@ -122,6 +91,7 @@ summary: "Calculates travel time in space with a given distance and acceleration
       <option value="0.0025">M-Drive / Thruster Plates</option>
     </select>
   </div>
+
   <div class="flex justify-center hidden">
     <label for="" for="noDeceleration" class="flex cursor-pointer items-right">
       <div class="px-2">No Deceleration</div>
