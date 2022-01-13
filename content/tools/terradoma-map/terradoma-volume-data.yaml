@@ -6120,7 +6120,7 @@ volumes:
       :law: '5'
       :tek: '5'
   '1622':
-    :name: Elyssium
+    :name: 'Elyssio'
     :location: '1622'
     :uwp: C739689-7
     :temp: F
@@ -6145,7 +6145,7 @@ volumes:
       - - 8 rad. X600000
         - 9 rad. X501000
     - - - B
-        - XR00000-0
+        - C110564-0
         - 3.2 au
       - []
     - - - G

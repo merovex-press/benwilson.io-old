@@ -12,6 +12,76 @@ aliases:
   <canvas id="weekly-progress"></canvas>
 </div>
 
+<h2>Earned Value</h2>
+<table class='mx-auto '>
+  <tbody>
+    <tr>
+      <th scope="row" class='w-1/3'>Earned Value</th>
+      <td class='font-sans text-right'><span id="earned-value"></span> words</td>
+    </tr>
+    <tr>
+      <th scope="row" class='w-1/3'>Planned Value</th>
+      <td class='font-sans text-right'><span id="planned-value"></span> words</td>
+    </tr>
+    <tr>
+      <th scope="row" class='w-1/3'>Schedule Variance</th>
+      <td class='font-sans text-right'><span id="schedule-variance"></span> words</td>
+    </tr>
+    <tr>
+      <th scope="row" class='w-1/3'>Remaining Work</th>
+      <td class='font-sans text-right'><span id="remaining-work"></span> words</td>
+    </tr>
+    <tr>
+      <th scope="row" class='w-1/3'>Completion Target</th>
+      <td class='font-sans text-right'><span id="planned-date"></span></td>
+    </tr>
+    <tr>
+      <th scope="row" class='w-1/3'>Estimated Date at Completion</th>
+      <td id='tracking-state' class='font-sans text-right'>
+        <span id="tracking-late"></span>
+        <span id="tracking-date"></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2>Daily Writing Pace</h2>
+<table class='mx-auto '>
+  <tbody>
+
+    <tr>
+      <th scope="row" class='w-1/3'>Average (per effective day)</th>
+      <td class='font-sans text-right'><span id="average"></span> words</td>
+    </tr>
+    <tr>
+      <th scope="row" class='w-1/3'>Revised Pace<br><span class='text-sm'>(to hit planned date)</span></th>
+      <td class='font-sans text-right'><span id="revised-pace"></span> words</td>
+    </tr>
+    <tr>
+      <th scope="row" class='w-1/3'>Writing Days at Pace</th>
+      <td class='font-sans text-right'><span id="days-pace"></span> days</td>
+    </tr>
+    <tr>
+      <th scope="row" class='w-1/3'>Days Lapsed</th>
+      <td class='font-sans text-right'><span id="days-lapsed"></span> days</td>
+    </tr>
+    <tr>
+      <th scope="row" class='w-1/3'>Days Remaining</th>
+      <td class='font-sans text-right'><span id="days-remaining"></span> days</td>
+    </tr>
+    <tr>
+      <th scope="row" class='w-1/3'>Actual Days Writing</th>
+      <td class='font-sans text-right'><span id="days-writing"></span> days</td>
+    </tr>
+    <tr>
+      <th scope="row" class='w-1/3'>Days Writing Variance</th>
+      <td class='font-sans text-right'><span id="days-writing-variance"></span> days
+        (<span id="days-writing-variance-percent"></span>%)
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
