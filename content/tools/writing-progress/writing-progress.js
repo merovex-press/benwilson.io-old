@@ -3,7 +3,7 @@ var uData;
 
 const WRITING_DAYS = 6;
 const MAX_RANGE = 365;
-const VALUE_COMPLETION = 85000 * 2 - 24466;
+const VALUE_COMPLETION = 75000 * 2 - 24466;
 const PLANNED_COMPLETION = new Date(2022, 5, 30)
 
 var words = {}
