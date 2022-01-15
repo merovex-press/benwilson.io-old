@@ -14,6 +14,7 @@ date: 2021-04-12T06:57:43+05:00
 cta:
   amazon: http://amzn.to/1PpTfSi
   noble: http://amzn.to/1K4jaYV
+price: "$2.99"
 series:
   - Postal Marines
 characters:
@@ -21,13 +22,13 @@ characters:
     url: /danel-bophendze/
     name: Danel Bophendze
 praise:
-  - text: Awesome
+  - text: "Indicabo tibi, o homo, quid sit bonum, et quid Dominus requirat a te: utique facere judicium, et diligere misericordiam, et sollicitum ambulare cum Deo"
     person: Fred
     url: http://example.org
-  - text: Super
+  - text: "Indicabo tibi, o homo, quid sit bonum, et quid Dominus requirat a te: utique facere judicium, et diligere misericordiam, et sollicitum ambulare cum Deo"
     person: Fred
     url: http://example.org
-  - text: Great
+  - text: "Indicabo tibi, o homo, quid sit bonum, et quid Dominus requirat a te: utique facere judicium, et diligere misericordiam, et sollicitum ambulare cum Deo"
     person: Fred
     url: http://example.org
 ---

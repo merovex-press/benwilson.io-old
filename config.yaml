@@ -10,7 +10,7 @@ build:
   writeStats: true
 taxonomies:
   series: series
-  book: book
+  xbook: xbook
   tag: tag
   categories: categories
 
