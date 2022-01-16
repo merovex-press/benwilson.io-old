@@ -13,7 +13,7 @@ date: 2022-01-03T09:47:13+0400
 seo:
   title: "Heartbeat: January 2022"
 draft: false
-description: Sometimes, you need to spend a little time away from what you enjoy. I'm coming back to the Postal Marines with a goal of releasing the first four books by November 2022.
+description: This first heartbeat shares good progress toward finishing 4 books in 2022.
 # images: [first-aid-850489.jpg]
 photo:
   caption: First Aid Rescue

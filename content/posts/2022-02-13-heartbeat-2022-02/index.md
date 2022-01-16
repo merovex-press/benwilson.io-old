@@ -18,7 +18,7 @@ photo:
   caption: Electrocardiogram
   creator: Stux
   creator_url: https://pixabay.com/users/stux-12364/
-  image: ecg-2270728_1920.jpg
+  image: ecg-2270728_1920-feature.jpg
   license: CC0
   others:  PD RR BY BY-SA BY-ND
   source_url: https://pixabay.com/photos/ecg-electrocardiogram-medicine-2270728/
