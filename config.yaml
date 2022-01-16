@@ -10,7 +10,6 @@ build:
   writeStats: true
 taxonomies:
   series: series
-  xbook: xbook
   tag: tag
   categories: categories
 
@@ -25,7 +24,7 @@ params:
       facebook: true
       linkedin: false
       twitter: true
-      whatsapp: false
+      whatsapp: true
       email: true
   
   icons:

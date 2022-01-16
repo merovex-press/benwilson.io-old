@@ -11,6 +11,7 @@ hook: Could you win a battle of wits with the AI wired into your brain? That's j
 summary: Danel Bophendze is a freshly minted Postal Marine. Seeking success during his faltering first deployment, he installs an AI with a mind of its own into his brain. Aristocratic Ambrose Litovio abandoned a promising career in the Navy to join the Postal Service. He must serve the first-ever Postal admiral as open war looms between the Service and the Navy. Bophendze and Litovio struggle to survive the epic Battle of Tanhusio Gate. But for Bophendze, the real fight is in his head.
 
 date: 2021-04-12T06:57:43+05:00
+social-sharing: true
 cta:
   amazon: http://amzn.to/1PpTfSi
   noble: http://amzn.to/1K4jaYV
