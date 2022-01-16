@@ -38,6 +38,8 @@ There will always be [yak shaving](https://americanexpress.io/yak-shaving/). Wha
 
 Now that the yak is well groomed, what do I have to show for it?
 
+Over the past six weeks, I spent (HOURS) hours to write (WORDS), or about (WPH).
+
 **Baselining.** ;ipsuIndicabo tibi, o homo, quid sit bonum, et quid Dominus requirat a te: utique facere judicium, et diligere misericordiam, et sollicitum ambulare cum Deo
 
 **Drafting & Revising.** ;ipsuIndicabo tibi, o homo, quid sit bonum, et quid Dominus requirat a te: utique facere judicium, et diligere misericordiam, et sollicitum ambulare cum Deo

@@ -35,5 +35,5 @@ Carol and Chanda outed Reggie, which led to a change of tactics. Rather than hav
 
 Rather than believe this lie (remember, Santa doesn't need Reggie to know that you've been naughty), I encourage you to do until Reggie as one brave British mother did---melt the bugger.
 
-[f77bbe9c]: {{< ref "posts/2015-12-04-truth-about-santa-claus" >}} "The Truth about Santa article"
+[f77bbe9c]: {{< ref "posts/2010s/2015-12-04-truth-about-santa-claus" >}} "The Truth about Santa article"
 [9687ec2a]: https://en.wikipedia.org/wiki/The_Elf_on_the_Shelf "Wikipedia article, Elf on the Shelf"
