@@ -14,12 +14,12 @@ seo:
   title: "Heartbeat: January 2022"
 draft: false
 description: Sometimes, you need to spend a little time away from what you enjoy. I'm coming back to the Postal Marines with a goal of releasing the first four books by November 2022.
-images: [first-aid-850489.jpg]
+# images: [first-aid-850489.jpg]
 photo:
   caption: First Aid Rescue
   creator: succo
   creator_url: https://pixabay.com/users/succo-96729/
-  image: first-aid-850489.jpg
+  image: first-aid-850489-feature.jpg
   license: CC0
   others:  PD RR BY BY-SA BY-ND
   source_url: https://pixabay.com/photos/first-aid-rescue-victim-savior-850489/
