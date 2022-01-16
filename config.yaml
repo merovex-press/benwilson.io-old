@@ -19,6 +19,14 @@ params:
   xsubtitle: Writes
   venue: Virginia
   photo: ben-wilson-2021-square.jpg
+
+  social:
+    share:
+      facebook: true
+      linkedin: false
+      twitter: true
+      whatsapp: false
+      email: true
   
   icons:
     amazon: fas fa-tablet-alt
