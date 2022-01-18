@@ -39,50 +39,32 @@ permalink: /diceware/
 <p>Selecting one of these buttons will automatically generate the number of words selected.</p>
 
 <div class='font-sans btn-group' role='group' aria-label='Add random words group'>
-  <button type='button'
-    class='px-2 py-1 text-sm font-bold text-white border rounded hover:text-shade-light border-brand hover:bg-brand focus:outline-none focus:shadow-outline genWordsButton'
-    data-words='4' data-rolls='5' data-reset='1'>
-    <span class='fa fa-random' aria-hidden='true'></span> 4 Words
+  <button type='button' class='button genWordsButton' data-words='4' data-rolls='5' data-reset='1'>
+    {{<shuffle>}} 4 Words
   </button>
-  <button type='button'
-    class='px-2 py-1 text-sm font-bold text-white border rounded hover:text-shade-light border-brand hover:bg-brand focus:outline-none focus:shadow-outline genWordsButton'
-    data-words='5' data-rolls='5' data-reset='1'>
-    <span class='fa fa-random' aria-hidden='true'></span> 5 Words
+  <button type='button' class='button genWordsButton' data-words='5' data-rolls='5' data-reset='1'>
+    {{<shuffle>}} 5 Words
   </button>
-  <button type='button'
-    class='px-2 py-1 text-sm font-bold text-white border rounded hover:text-shade-light border-accent-light hover:bg-success-light focus:outline-none focus:shadow-outline genWordsButton'
-    data-words='6' data-rolls='5' data-reset='1'>
-    <span class='fa fa-random' aria-hidden='true'></span> 6 Words
+  <button type='button' class='button button-warning genWordsButton' data-words='6' data-rolls='5' data-reset='1'>
+    {{<shuffle>}} 6 Words
   </button>
-  <button type='button'
-    class='px-2 py-1 text-sm font-bold text-white border rounded hover:text-shade-light border-accent-light hover:bg-success-light focus:outline-none focus:shadow-outline genWordsButton'
-    data-words='7' data-rolls='5' data-reset='1'>
-    <span class='fa fa-random' aria-hidden='true'></span> 7 Words
+  <button type='button' class='button button-warning genWordsButton' data-words='7' data-rolls='5' data-reset='1'>
+    {{<shuffle>}} 7 Words
   </button>
-  <button type='button'
-    class='px-2 py-1 text-sm font-bold text-white border rounded hover:text-shade-light border-accent-light hover:bg-success-light focus:outline-none focus:shadow-outline genWordsButton'
-    data-words='8' data-rolls='5' data-reset='1'>
-    <span class='fa fa-random' aria-hidden='true'></span> 8 Words
+  <button type='button' class='button button-warning genWordsButton' data-words='8' data-rolls='5' data-reset='1'>
+    {{<shuffle>}} 8 Words
   </button>
-  <button type='button'
-    class='px-2 py-1 text-sm font-bold text-white border rounded hover:text-shade-light border-accent-light hover:bg-success-light focus:outline-none focus:shadow-outline genWordsButton'
-    data-words='9' data-rolls='5' data-reset='1'>
-    <span class='fa fa-random' aria-hidden='true'></span> 9 Words
+  <button type='button' class='button button-warning genWordsButton' data-words='9' data-rolls='5' data-reset='1'>
+    {{<shuffle>}} 9 Words
   </button>
-  <button type='button'
-    class='px-2 py-1 text-sm font-bold text-white border rounded hover:text-shade-light border-accent-light hover:bg-success-light focus:outline-none focus:shadow-outline genWordsButton'
-    data-words='10' data-rolls='5' data-reset='1'>
-    <span class='fa fa-random' aria-hidden='true'></span> 10 Words
+  <button type='button' class='button button-warning genWordsButton' data-words='10' data-rolls='5' data-reset='1'>
+    {{<shuffle>}} 10 Words
   </button>
-  <button type='button'
-    class='px-2 py-1 text-sm font-bold text-white bg-orange-500 border rounded hover:text-shade-light border-warning hover:bg-warning focus:outline-none focus:shadow-outline genWordsButton'
-    data-words='1' data-rolls='5' data-reset='0'>
-    <span class='fa fa-plus' aria-hidden='true'></span> Word
+  <button type='button' class='button genWordsButton' data-words='1' data-rolls='5' data-reset='0'>
+    {{<circle-plus>}} Word
   </button>
-  <button type='button'
-    class='px-2 py-1 text-sm font-bold text-white bg-orange-500 border rounded hover:text-shade-light border-warning hover:bg-warning focus:outline-none focus:shadow-outline genWordsButton'
-    data-words='1' data-rolls='2' data-reset='0'>
-    <span class='fa fa-plus' aria-hidden='true'></span> Symbol
+  <button type='button' class='button genWordsButton' data-words='1' data-rolls='2' data-reset='0'>
+    {{<circle-plus>}} Symbol
   </button>
 </div>
 
