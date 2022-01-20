@@ -5,18 +5,24 @@ subtitle: "Creating Names on the Fly for the Core"
 aliases: ["/tools/69939382"]
 date: 2021-12-21T05:47:27+05:00
 permalink: /tools/name-generator/
-summary: "A comprehensive map of humanity in space during the period of the Postal Marines series, with volume catalog."
+summary: "A haiku-based name generator in English and Esperanto."
 ---
 
-<p class="terms">
+<aside class="prosaic-sans">
+  <p>
+    This name generator uses the "haiku" approach popularized by Heroku. Because I wanted to create terms using
+    Esperanto, I included a translation. There are 98 adjectives and 103 nouns, creating more than 17 permutations; more
+    than 34 permutations when including the number range from 1000 to 9999.
+  </p>
+</aside>
+
+<p id="terms" class='p-4 card'>
   <span id="heroku" class='table mx-auto text-2xl font-code'></span>
   <br>
-  <span id="esperanto-heroku" class='table mx-auto text-2xl font-code'></span>
-  <span id="translation" class='table mx-auto text-2xl font-code'></span>
-  <br />
-  <input type="button" id="generate-button" class='button' value="generate another one"
-    onclick="updateTargetWithHaiku();" style="display:table; margin:0 auto;" />
+  <span id="heroko" class='table mx-auto text-2xl font-code'></span>
 </p>
+<input type="button" id="generate-button" class='button' value="generate another one" onclick="updateTargetWithHaiku();"
+  style="display:table; margin:0 auto;" />
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="generate-name.js"></script>

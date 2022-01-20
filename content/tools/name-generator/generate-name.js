@@ -209,7 +209,7 @@ var updateTargetWithHaiku = function () {
   $('#terms').fadeOut(0);
 
   $('#heroku').text(h[0]);
-  $('#translation').text(h[1]);
+  $('#heroko').text(h[1]);
   $('#terms').fadeIn(300);
 
 };
