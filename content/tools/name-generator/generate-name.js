@@ -1,6 +1,6 @@
 const adjectives = {
   absolute: "absoluta",
-  aged: "maljuna",
+  aged: "malyuna",
   ancient: "antikva",
   autumn: "autuno",
   beautiful: "bela",
@@ -97,7 +97,8 @@ const adjectives = {
   wispy: "maldika",
   withered: "velka",
   yellow: "flava",
-  young: "juna",
+  young: "yuna",
+  heedless: "senatenta",
 };
 const nouns = {
   amusement: "amuzo",
