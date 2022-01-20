@@ -184,16 +184,18 @@ const nouns = {
   wood: "ligno",
 };
 
-var getRandom = function (arr) {
+var getRandom = function (arr, myrng) {
   var keys = Object.keys(arr)
-  return keys[Math.floor(Math.random() * keys.length)]
+  return keys[Math.floor(myrng() * keys.length)]
 }
 
 var haiku = function () {
-  const number = Math.floor(Math.random() * ((9999 + 1) - 1000)) + 1000;
+  var myrng = new Math.seedrandom(Math.random().toString(36));
+  // var myrng = Math.random;
+  const number = Math.floor(myrng() * ((9999 + 1) - 1000)) + 1000;
 
-  const adj_en = getRandom(adjectives)
-  const noun_en = getRandom(nouns)
+  const adj_en = getRandom(adjectives, myrng);
+  const noun_en = getRandom(nouns, myrng);
 
   const adj_es = adjectives[adj_en]
   const noun_es = nouns[noun_en]
