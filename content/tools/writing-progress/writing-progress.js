@@ -18,8 +18,6 @@ function calculateProgress() {
   const prior_value = document.getElementById('prior_value').value
   const VALUE_COMPLETION = target_value - prior_value
   const PLANNED_COMPLETION = new Date(2022, 5, 30)
-  console.log("Calculating", VALUE_COMPLETION)
-
   const days_lapsed = today.between(start_date)
   const session_average = hours.reduce((a, b) => a + b) / hours.length
 
@@ -35,6 +33,8 @@ function calculateProgress() {
   const words_per_hour = earned_value / total_hours
 
   const hours_remaining = remaining_work / words_per_hour;
+  const wp_session = words_per_hour * session_average;
+  const relative_variance = schedule_variance / wp_session;
 
   // Am I at risk of missing my date?
   if (PLANNED_COMPLETION < target_date) {
@@ -43,6 +43,7 @@ function calculateProgress() {
   }
   // How fast do I need to write?
   var revised_pace = Math.round(remaining_work / days_remaining).formatted(); // words left / days left
+
 
   // Update the HTML
   // EVM Table
@@ -56,6 +57,7 @@ function calculateProgress() {
   document.getElementById("average-hours").innerHTML = session_average.rounded(1).toString()
   document.getElementById("wph").innerHTML = words_per_hour.rounded().toString();
   document.getElementById("hours-remaining").innerHTML = hours_remaining.rounded().toString();
+  document.getElementById("relative-schedule-variance").innerHTML = relative_variance.ceiling().toString();
 
   // Writing Pace
   document.getElementById("average").innerHTML = average.rounded().formatted();
@@ -149,4 +151,7 @@ Number.prototype.rounded = function (length = 0) {
 }
 Number.prototype.formatted = function () {
   return this.toLocaleString("en-US")
+}
+Number.prototype.ceiling = function () {
+  return Math.ceil(this)
 }

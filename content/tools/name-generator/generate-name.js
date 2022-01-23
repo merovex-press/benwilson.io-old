@@ -192,8 +192,8 @@ var getRandom = function (arr, myrng) {
 
 var haiku = function () {
   var myrng = new Math.seedrandom(Math.random().toString(36));
-  // var myrng = Math.random;
-  const number = Math.floor(myrng() * ((9999 + 1) - 1000)) + 1000;
+  // var myrng = Math.random; if you don't want to use the seedrandom
+  const token = Math.floor(myrng() * ((9999 + 1) - 1000)) + 1000;
 
   const adj_en = getRandom(adjectives, myrng);
   const noun_en = getRandom(nouns, myrng);
@@ -201,8 +201,8 @@ var haiku = function () {
   const adj_es = adjectives[adj_en]
   const noun_es = nouns[noun_en]
 
-  var esperanto = adj_es + '-' + noun_es + '-' + number
-  var english = adj_en + '-' + noun_en + '-' + number
+  var esperanto = adj_es + '-' + noun_es + '-' + token
+  var english = adj_en + '-' + noun_en + '-' + token
 
   return [english, esperanto];
 };
