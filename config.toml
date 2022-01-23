@@ -1,0 +1,59 @@
+baseURL = "https://www.benwilson.io/"
+languageCode = "en-us"
+title = "Ben Wilson"
+theme = "hugo-merovex-2021"
+paginate = 6
+
+[permalinks]
+post = "/post/:slug"
+
+[build]
+writeStats = true
+
+[taxonomies]
+series = "series"
+tag = "tag"
+categories = "categories"
+
+[params]
+cdn_url = "https://d1czp97ry8if6j.cloudfront.net"
+venue = "Virginia"
+photo = "ben-wilson-2021-square.jpg"
+
+[params.social.share]
+facebook = true
+linkedin = false
+twitter = true
+whatsapp = true
+email = true
+
+[params.icons]
+amazon = "fas fa-tablet-alt"
+audible = "fab fa-audible"
+paperback = "far fa-book"
+noble = "fas fa-typewriter"
+
+[params.licenses.CC0]
+tag = "CC0"
+url = "https://creativecommons.org/share-your-work/public-domain/cc0/"
+
+[params.licenses.PD]
+tag = "Public Domain"
+url = "https://creativecommons.org/share-your-work/public-domain/cc0/"
+
+[params.licenses.RR]
+tag = "Rights Reserved"
+url = "#"
+
+[params.licenses.BY]
+tag = "CC BY 2.0"
+url = "https://creativecommons.org/licenses/by/2.0/"
+
+[params.licenses.BY-SA]
+tag = "CC BY-SA 2.0"
+url = "https://creativecommons.org/licenses/by-sa/2.0/"
+
+[params.licenses.BY-ND]
+tag = "CC BY-ND 2.0"
+url = "https://creativecommons.org/licenses/by-nd/2.0/"
+
