@@ -1,0 +1,38 @@
+<div class="flex space-y-2">
+  <label for="planet_size">Planet Size:</label>
+  <div>
+    <select name="planet_size" id="planet_size" onchange="setDistanceFromPlanetSize()"
+      class="flex-1 rounded-lg shade-text dark:bg-shade-dark">
+      <option value="200">0 - Asteroid / Planetary Belt / Debris</option>
+      <option value="1600">1 - Small </option>
+      <option value="3200">2 - Small (e.g. Luna)</option>
+      <option value="4800">3 - Small (e.g. Mercury)</option>
+      <option value="6400">4 - Medium (e.g. Mars)</option>
+      <option value="8000">5 - Medium </option>
+      <option value="9600" selected="selected">6 - Medium </option>
+      <option value="12200">7 - Large </option>
+      <option value="13800">8 - Large (e.g Venus/Terra) </option>
+      <option value="14400">9 - Large </option>
+      <option value="16000">A - Huge </option>
+      <option value="17600">B - Huge </option>
+      <option value="19200">C - Huge </option>
+      <option value="20800">D - Huge </option>
+      <option value="22400">E - Huge </option>
+      <option value="24000">F - Huge </option>
+      <option disabled>──────────</option>
+      <option value="20000">L - Small Gas Giant</option>
+      <option value="30000">M - Small Gas Giant (e.g. Neptune)</option>
+      <option value="40000">N - Small Gas Giant</option>
+      <option value="50000">P - Small Gas Giant</option>
+      <option value="60000">R - Small Gas Giant</option>
+      <option value="70000">S - Small Gas Giant (e.g. Saturn)</option>
+      <option value="80000">T - Large Gas Giant</option>
+      <option value="90000">U - Large Gas Giant(e.g. Jupiter)</option>
+      <option value="125000">U - Large Gas Giant</option>
+      <option value="180000">V - Large Gas Giant</option>
+      <option value="220000">W - Large Gas Giant</option>
+      <option value="250000">X - Large Gas Giant</option>
+    </select>
+    <p class="text-sm opacity-50 help-text">Converts planet code to distance.</p>
+  </div>
+</div>

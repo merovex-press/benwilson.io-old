@@ -44,7 +44,7 @@ function setLightSeconds(km) {
   document.getElementById("mls").innerHTML = Math.round(seconds / 0.864);
 }
 function setDistanceFromPlanetSize() {
-  var km = document.getElementById("planet_size").value;
+  var km = document.getElementById("planet_size").value * 100;
   setAU(km);
   setGM(km);
   setKM(km);

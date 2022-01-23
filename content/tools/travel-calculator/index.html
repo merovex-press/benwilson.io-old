@@ -18,93 +18,56 @@ summary: "Calculates travel time in space with a given distance and acceleration
     </p>
     <p>Works well with <a href="/tools/terradoma-map/">Terradoma Map</a>.</p>
   </aside>
-  <div class="flex space-y-2">
-    <label for="planet_size">Planet Size:</label>
-    <div>
-      <select name="planet_size" id="planet_size" onchange="setDistanceFromPlanetSize()"
-        class="flex-1 rounded-lg shade-text dark:bg-shade-dark">
-        <option value="20000">0 - Asteroid / Planetary Belt / Debris</option>
-        <option value="160000">1 - Small </option>
-        <option value="320000">2 - Small (e.g. Luna)</option>
-        <option value="480000">3 - Small (e.g. Mercury)</option>
-        <option value="640000">4 - Medium (e.g. Mars)</option>
-        <option value="800000">5 - Medium </option>
-        <option value="960000" selected="selected">6 - Medium </option>
-        <option value="1220000">7 - Large </option>
-        <option value="1380000">8 - Large (e.g Venus/Terra) </option>
-        <option value="1440000">9 - Large </option>
-        <option value="1600000">A - Huge </option>
-        <option value="1760000">B - Huge </option>
-        <option value="1920000">C - Huge </option>
-        <option value="2080000">D - Huge </option>
-        <option value="2240000">E - Huge </option>
-        <option value="2400000">F - Huge </option>
-        <option disabled>──────────</option>
-        <option value="2000000">L - Small Gas Giant</option>
-        <option value="3000000">M - Small Gas Giant (e.g. Neptune)</option>
-        <option value="4000000">N - Small Gas Giant</option>
-        <option value="5000000">P - Small Gas Giant</option>
-        <option value="6000000">R - Small Gas Giant</option>
-        <option value="7000000">S - Small Gas Giant (e.g. Saturn)</option>
-        <option value="8000000">T - Large Gas Giant</option>
-        <option value="9000000">U - Large Gas Giant(e.g. Jupiter)</option>
-        <option value="12500000">U - Large Gas Giant</option>
-        <option value="18000000">V - Large Gas Giant</option>
-        <option value="22000000">W - Large Gas Giant</option>
-        <option value="25000000">X - Large Gas Giant</option>
-      </select>
-      <p class="text-sm opacity-50 help-text">For D100 calculations.</p>
+  {{<planetary-sizes>}}
+
+    <div class='flex space-y-2'>
+      <label for="distance">Distance (km):</label>
+      <input name="distance" id="distance" type="number" value="1000000" onchange="setDistanceFromKM()"
+        onkeyup="setDistanceFromKM()">
     </div>
-  </div>
+    <div class='flex space-y-2'>
+      <label for="distanceAU">Distance (AU):</label>
+      <input name="distanceAU" id="distanceAU" type="number" value="0" onchange="setDistanceFromAU()"
+        onkeyup="setDistanceFromAU()">
+    </div>
+    <div class='flex hidden space-y-2'>
+      <label for="acceleration">Travel Time (minutes):</label>
+      <input name="travel_time" id="travel_time" type="number" value="1" min="1" max="9"
+        onkeyup="calcDistanceFromAcceleration()">
+    </div>
+    <div class='flex space-y-2'>
+      <label for="acceleration">Accelleration (G's):</label>
+      <input name="acceleration" id="acceleration" type="number" value="1" min="1" max="9" onchange="calculate()"
+        onkeyup="calculate()">
+    </div>
+    <div class='flex space-y-2'>
+      <label for="spaceship_mass">Mass (tons):</label>
+      <input name="spaceship_mass" id="spaceship_mass" type="number" value="200" min="1" max="999999"
+        onchange="calculate()" onkeyup="calculate()">
+    </div>
+    <div class="flex space-y-2">
+      <label for="fuel_conversion_rate">Drive
+        Type:</label>
+      <select name="fuel_conversion_rate" id="fuel_conversion_rate"
+        class="flex-1 rounded-lg shade-text dark:bg-shade-dark" onchange="calculate()">
+        <option value="0.00125" selected="selected">HEPlaR</option>
+        <option value="0.0025">M-Drive / Thruster Plates</option>
+      </select>
+    </div>
 
-  <div class='flex space-y-2'>
-    <label for="distance">Distance (km):</label>
-    <input name="distance" id="distance" type="number" value="1000000" onchange="setDistanceFromKM()"
-      onkeyup="setDistanceFromKM()">
-  </div>
-  <div class='flex space-y-2'>
-    <label for="distanceAU">Distance (AU):</label>
-    <input name="distanceAU" id="distanceAU" type="number" value="0" onchange="setDistanceFromAU()"
-      onkeyup="setDistanceFromAU()">
-  </div>
-  <div class='flex hidden space-y-2'>
-    <label for="acceleration">Travel Time (minutes):</label>
-    <input name="travel_time" id="travel_time" type="number" value="1" min="1" max="9"
-      onkeyup="calcDistanceFromAcceleration()">
-  </div>
-  <div class='flex space-y-2'>
-    <label for="acceleration">Accelleration (G's):</label>
-    <input name="acceleration" id="acceleration" type="number" value="1" min="1" max="9" onchange="calculate()"
-      onkeyup="calculate()">
-  </div>
-  <div class='flex space-y-2'>
-    <label for="spaceship_mass">Mass (tons):</label>
-    <input name="spaceship_mass" id="spaceship_mass" type="number" value="200" min="1" max="999999"
-      onchange="calculate()" onkeyup="calculate()">
-  </div>
-  <div class="flex space-y-2">
-    <label for="fuel_conversion_rate">Drive
-      Type:</label>
-    <select name="fuel_conversion_rate" id="fuel_conversion_rate"
-      class="flex-1 rounded-lg shade-text dark:bg-shade-dark" onchange="calculate()">
-      <option value="0.00125" selected="selected">HEPlaR</option>
-      <option value="0.0025">M-Drive / Thruster Plates</option>
-    </select>
-  </div>
-
-  <div class="flex justify-center hidden">
-    <label for="" for="noDeceleration" class="flex cursor-pointer items-right">
-      <div class="px-2">No Deceleration</div>
-      <!-- toggle -->
-      <div class="relative">
-        <input id="noDeceleration" type="checkbox" class="hidden" />
-        <!-- path -->
-        <div class="h-5 rounded-full shadow-inner bg-shade toggle-path w-9"></div>
-        <!-- crcle -->
-        <div class="absolute inset-y-0 left-0 w-3.5 h-3.5 rounded-full shadow toggle-circle bg-shade-dark"></div>
-      </div>
-    </label>
-  </div>
+    <div class="flex justify-center hidden">
+      <label for="" for="noDeceleration" class="flex cursor-pointer items-right">
+        <div class="px-2">No Deceleration</div>
+        <!-- toggle -->
+        <div class="relative">
+          <input id="noDeceleration" type="checkbox" class="hidden" />
+          <!-- path -->
+          <div class="h-5 rounded-full shadow-inner bg-shade toggle-path w-9"></div>
+          <!-- crcle -->
+          <div class="absolute inset-y-0 left-0 w-3.5 h-3.5 rounded-full shadow toggle-circle bg-shade-dark"></div>
+        </div>
+      </label>
+    </div>
 </section>
 <div class="p-4 card">
   <div>
