@@ -13,7 +13,7 @@ function translateUWP() {
   if (sname == '') { sname = uwp }
   bits = uwp.toUpperCase().split('');
 
-  if (bits[7] == '-') {
+  if (bits.length >= 6) {
 
     uwpOutput = [];
     // alert( uwpStarport)
