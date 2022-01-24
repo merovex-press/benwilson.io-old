@@ -1,8 +1,13 @@
 ---
 title: Orbital Calculator
+layout: tools
+date: 2021-12-21T05:47:27+05:00
+permalink: /tools/travel-calculator/
+aliases:
+- '/tools/86aa8342'
+summary: "Calculates synchronous orbit of a planet."
 ---
 
-<code>r³ = G (m2) T² / 4π²</code>
 <section class="p-4 space-y-2 toolkit card">
   {{<planetary-sizes>}}
     <div class='flex space-y-2'>
@@ -31,138 +36,144 @@ title: Orbital Calculator
 </section>
 
 <p>
-  The synchronous orbit planets is calculated using the law of universal gravitation which boils down to:
-  h=√3(G &times; M &times; T<sup>2</sup>/4π<sup>2</sup>) - R</p>
+  The synchronous orbit planets is calculated using the law of universal gravitation becomes:
+  <code
+    class="block mx-auto text-center">height = √3(G &times; M &times; T<sup>2</sup> &#247; 4π<sup>2</sup>) - R</code>
+</p>
 
 <ul>
   <li>h = Height of the artificial satellite</li>
-  <li>G = Constant of gravitation (6.67 &times; 10<sup>-11</sup>) / 1 G</li>
+  <li>G = Constant of gravitation (6.67 &times; 10<sup>-11</sup>)</li>
   <li>M = Mass of the planet</li>
   <li>T = Rotational period of the planet</li>
-  <li>R = Radius of the planet</li>
+  <li>R = Radius of the planet (Uses the Planet Size dropdown)</li>
 </ul>
-<p>The geosynchronous orbit (synchronous orbit of the Earth) is at an altitude of 35,796 km (≈ 36,000 km) and has a
-  semi-major axis of 42,167 km.</p>
-
+<p>The geosynchronous orbit (synchronous orbit of the Earth) is
+  at an altitude of 35,796&nbsp;km (≈ 36,000&nbsp;km) and has a
+  semi-major axis of 42,167&nbsp;km.</p>
 <table>
-  <tr>
-    <th>Planets</th>
-    <th>Planets Mass (10<sup>24</sup> kg)</th>
-    <th>Volume (10<sup>12</sup> km<sup>3</sup>) </th>
-    <th>Radius (km) </th>
-    <th>Rotation period (s) </th>
-    <th>Synchronous orbit altitude (km) </th>
-    <th>Synchronous orbit Semi-major axis (km)</th>
-    <th>Satellite speed (km/s)</th>
-  </tr>
+  <thead>
+    <tr>
+      <th>Planets</th>
+      <th>Planets Mass (10<sup>24</sup> kg)</th>
+      <th>Volume (10<sup>12</sup> km<sup>3</sup>) </th>
+      <th>Radius (km) </th>
+      <th>Rotation period (d) </th>
+      <th>Synchronous orbit altitude (km) </th>
+      <th>Synchronous orbit Semi-major axis (km)</th>
+      <th>Satellite speed (km/s)</th>
+    </tr>
+  </thead>
 
-  <tr>
-    <th scope="row">Mercury</th>
-    <td class='text-right'>0.3302</td>
-    <td class='text-right'>0.06083</td>
-    <td class='text-right'>2439.74</td>
-    <td class='text-right'>5,053,137</td>
-    <td class='text-right'>240,025</td>
-    <td class='text-right'>242,464</td>
-    <td class='text-right'>0.30</td>
-  </tr>
-  <tr>
-    <th scope="row">Venus</th>
-    <td class='text-right'>4.8685</td>
-    <td class='text-right'>0.92843</td>
-    <td class='text-right'>6051.83</td>
-    <td class='text-right'>20,939,611</td>
-    <td class='text-right'>1,527,832</td>
-    <td class='text-right'>1,533,883</td>
-    <td class='text-right'>0.46</td>
-  </tr>
-  <tr>
-    <th scope="row">Earth</th>
-    <td class='text-right'>5.9736</td>
-    <td class='text-right'>1.08321</td>
-    <td class='text-right'>6371.01</td>
-    <td class='text-right'>86,163</td>
-    <td class='text-right'>35,796</td>
-    <td class='text-right'>42,167</td>
-    <td class='text-right'>3.07</td>
-  </tr>
-  <tr>
-    <th scope="row">Mars</th>
-    <td class='text-right'>0.64185</td>
-    <td class='text-right'>0.16318</td>
-    <td class='text-right'>3389.95</td>
-    <td class='text-right'>88,400</td>
-    <td class='text-right'>17,002</td>
-    <td class='text-right'>20,392</td>
-    <td class='text-right'>1.45</td>
-  </tr>
-  <tr>
-    <th scope="row">Jupiter</th>
-    <td class='text-right'>1898.6</td>
-    <td class='text-right'>1431.28</td>
-    <td class='text-right'>69910.97</td>
-    <td class='text-right'>35,629</td>
-    <td class='text-right'>89,811</td>
-    <td class='text-right'>159,722</td>
-    <td class='text-right'>28.17</td>
-  </tr>
-  <tr>
-    <th scope="row">Saturn</th>
-    <td class='text-right'>568.46</td>
-    <td class='text-right'>827.13</td>
-    <td class='text-right'>58232.00</td>
-    <td class='text-right'>38,256</td>
-    <td class='text-right'>53,811</td>
-    <td class='text-right'>112,043</td>
-    <td class='text-right'>18.40</td>
-  </tr>
-  <tr>
-    <th scope="row">Uranus</th>
-    <td class='text-right'>86.81</td>
-    <td class='text-right'>68.33</td>
-    <td class='text-right'>25361.46</td>
-    <td class='text-right'>61,894</td>
-    <td class='text-right'>57,173</td>
-    <td class='text-right'>82,534</td>
-    <td class='text-right'>8.38</td>
-  </tr>
-  <tr>
-    <th scope="row">Neptune</th>
-    <td class='text-right'>102.43</td>
-    <td class='text-right'>62.526</td>
-    <td class='text-right'>24622.04</td>
-    <td class='text-right'>57,837</td>
-    <td class='text-right'>58,739</td>
-    <td class='text-right'>83,361</td>
-    <td class='text-right'>9.06</td>
-  </tr>
-  <tr>
-    <th scope="row">Europa</th>
-    <td class='text-right'>0.048</td>
-    <td class='text-right'>0.01593</td>
-    <td class='text-right'>1560.90</td>
-    <td class='text-right'>306,822</td>
-    <td class='text-right'>18,134</td>
-    <td class='text-right'>19,694</td>
-    <td class='text-right'>0.40</td>
-  </tr>
+  <tbody>
+    <tr>
+      <th scope="row">Mercury</th>
+      <td class='text-right'>0.3302</td>
+      <td class='text-right'>0.06083</td>
+      <td class='text-right'>2439.74</td>
+      <td class='text-right'>1403</td>
+      <td class='text-right'>240,025</td>
+      <td class='text-right'>242,464</td>
+      <td class='text-right'>0.30</td>
+    </tr>
+    <tr>
+      <th scope="row">Venus</th>
+      <td class='text-right'>4.8685</td>
+      <td class='text-right'>0.92843</td>
+      <td class='text-right'>6051.83</td>
+      <td class='text-right'>5816</td>
+      <td class='text-right'>1,527,832</td>
+      <td class='text-right'>1,533,883</td>
+      <td class='text-right'>0.46</td>
+    </tr>
+    <tr>
+      <th scope="row">Earth</th>
+      <td class='text-right'>5.9736</td>
+      <td class='text-right'>1.08321</td>
+      <td class='text-right'>6371.01</td>
+      <td class='text-right'>24</td>
+      <td class='text-right'>35,796</td>
+      <td class='text-right'>42,167</td>
+      <td class='text-right'>3.07</td>
+    </tr>
+    <tr>
+      <th scope="row">Mars</th>
+      <td class='text-right'>0.64185</td>
+      <td class='text-right'>0.16318</td>
+      <td class='text-right'>3389.95</td>
+      <td class='text-right'>24.6</td>
+      <td class='text-right'>17,002</td>
+      <td class='text-right'>20,392</td>
+      <td class='text-right'>1.45</td>
+    </tr>
+    <tr>
+      <th scope="row">Jupiter</th>
+      <td class='text-right'>1898.6</td>
+      <td class='text-right'>1431.28</td>
+      <td class='text-right'>69910.97</td>
+      <td class='text-right'>10</td>
+      <td class='text-right'>89,811</td>
+      <td class='text-right'>159,722</td>
+      <td class='text-right'>28.17</td>
+    </tr>
+    <tr>
+      <th scope="row">Saturn</th>
+      <td class='text-right'>568.46</td>
+      <td class='text-right'>827.13</td>
+      <td class='text-right'>58232.00</td>
+      <td class='text-right'>10.6</td>
+      <td class='text-right'>53,811</td>
+      <td class='text-right'>112,043</td>
+      <td class='text-right'>18.40</td>
+    </tr>
+    <tr>
+      <th scope="row">Uranus</th>
+      <td class='text-right'>86.81</td>
+      <td class='text-right'>68.33</td>
+      <td class='text-right'>25361.46</td>
+      <td class='text-right'>17.2</td>
+      <td class='text-right'>57,173</td>
+      <td class='text-right'>82,534</td>
+      <td class='text-right'>8.38</td>
+    </tr>
+    <tr>
+      <th scope="row">Neptune</th>
+      <td class='text-right'>102.43</td>
+      <td class='text-right'>62.526</td>
+      <td class='text-right'>24622.04</td>
+      <td class='text-right'>16</td>
+      <td class='text-right'>58,739</td>
+      <td class='text-right'>83,361</td>
+      <td class='text-right'>9.06</td>
+    </tr>
+    <tr>
+      <th scope="row">Europa</th>
+      <td class='text-right'>0.048</td>
+      <td class='text-right'>0.01593</td>
+      <td class='text-right'>1560.90</td>
+      <td class='text-right'>85</td>
+      <td class='text-right'>18,134</td>
+      <td class='text-right'>19,694</td>
+      <td class='text-right'>0.40</td>
+    </tr>
+  </tbody>
 </table>
 
 <script>
-
-  const FOUR_PI_SQ = 39.4784176044 //4 * (Math.PI ** 2)
-  const earth_geoorbit = 42164; // 35786; // 42,164 - radius;
-  const EARTH_MASS = 5.9736;
-  const G_CONSTANT = 0.0000000000667430;
   function setDistanceFromPlanetSize() {
     calculateStationaryOrbit();
   }
   function calculateStationaryOrbit() {
-    var diameter = document.getElementById("planet_size").value;
+    const FOUR_PI_SQ = 39.4784176044
+    const G_CONSTANT = 6.67430 * Math.pow(10, -11)
+    
+    const diameter = document.getElementById("planet_size").value;
     const hours = document.getElementById("rotation_period").value;
-    const time = hours * 3600;
+    
+    const time = hours * 3600; // Calculation is in seconds
     const mass = document.getElementById("mass").value * 10.0 ** 24;
-    var height = Math.round(Math.cbrt(G_CONSTANT * mass * (time ** 2) / FOUR_PI_SQ) / 1000) - (diameter / 2.0);
+    const height = Math.round(Math.cbrt(G_CONSTANT * mass * (time ** 2) / FOUR_PI_SQ) / 1000) - (diameter / 2.0);
+    
     document.getElementById("altitude").value = height.toLocaleString('en-us');
   }
   calculateStationaryOrbit()
