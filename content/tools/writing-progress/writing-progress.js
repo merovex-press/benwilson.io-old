@@ -1,6 +1,6 @@
 var uData;
 // var cumulative 
-
+const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTLRpcIxa0g_05ihkg8dAa796YSqKW-hsIbj8KNyG-yveb7LMhKl-9NVivzPf64ejc7bRdnwwyLl-cx/pub?gid=0&single=true&output=csv"
 const WRITING_DAYS = 6;
 const MAX_RANGE = 366;
 const today = new Date();
@@ -11,6 +11,29 @@ var days_writing = 0;
 var total_hours = 0;
 
 var start_date = new Date();
+
+Papa.parse(SHEET_URL, {
+  download: true,
+  header: true,
+  complete: function (results) {
+    results.data.forEach(row => {
+      var date = new Date(row.date + 'T06:20:30Z')
+      if (date < start_date) { start_date = date; }
+      if (parseInt(row.words) > 0 && today.between(date) < MAX_RANGE) {
+        var label = date.getMonday().toISOString().split('T')[0]
+        if (!(label in words)) { words[label] = 0 }
+        words[label] = words[label] + parseInt(row.words);
+        earned_value = earned_value + parseInt(row.words);
+        total_hours = total_hours + parseFloat(row.hours);
+        hours.push(parseFloat(row.hours))
+        days_writing = days_writing + 1;
+      }
+      console.log(row)
+    })
+    calculateProgress()
+    generateChart()
+  }
+})
 
 function calculateProgress() {
 
@@ -93,25 +116,7 @@ function generateChart() {
   new Chart(ctx, options);
 }
 
-$.getJSON("writing-progress.json", function (data) {
-  uData = data["data"];
-  Object.keys(uData).map(function (key) {
-    var date = new Date(key + 'T06:20:30Z')
-    if (date < start_date) { start_date = date; }
 
-    if (uData[key]['wpd'] > 0 && today.between(date) < MAX_RANGE) {
-      var label = date.getMonday().toISOString().split('T')[0]
-      if (!(label in words)) { words[label] = 0 }
-      words[label] = words[label] + uData[key]['wpd'];
-      earned_value = earned_value + uData[key]['wpd'];
-      total_hours = total_hours + uData[key]['hours'];
-      hours.push(uData[key]['hours'])
-      days_writing = days_writing + 1;
-    }
-  })
-  calculateProgress()
-  generateChart()
-});
 
 Date.prototype.getWeek = function () {
   var onejan = new Date(this.getFullYear(), 0, 1);
