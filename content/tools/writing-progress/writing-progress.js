@@ -27,6 +27,7 @@ Papa.parse(SHEET_URL, {
         total_hours = total_hours + parseFloat(row.hours);
         hours.push(parseFloat(row.hours))
         days_writing = days_writing + 1;
+        document.getElementById('last_date').innerHTML = row.date
       }
       console.log(row)
     })
