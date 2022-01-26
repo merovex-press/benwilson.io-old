@@ -15,17 +15,17 @@ aliases:
 <div class="p-4 card">
   <div class='flex my-2'>
     <label class='flex-1' for="prior_value">Previously Completed Work</label>
-    <input class='text-right' onkeyup="calculateProgress()" type="number" id='prior_value' class="rounded"
-      value="24466" />
+    <input class='font-sans text-right dark:text-shade-darker' onkeyup="calculateProgress()" type="number"
+      id='prior_value' class="rounded" value="24466" />
   </div>
   <div class='flex'>
     <label class='flex-1' for="value_completion">Target for Completion</label>
-    <input class='text-right' onkeyup="calculateProgress()" type="number" id='value_completion' class="rounded"
-      value='150000' />
+    <input class='font-sans text-right dark:text-shade-darker' onkeyup="calculateProgress()" type="number"
+      id='value_completion' class="rounded" value='150000' />
   </div>
   <div class='flex'>
     <label class='flex-1' for="last_date">Last Date Logged</label>
-    <span id="last_date"></span>
+    <span id="last_date" class='font-sans'></span>
   </div>
 </div>
 
@@ -126,8 +126,6 @@ aliases:
   </tbody>
 </table>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
 <script src='papa-parse.min.js'></script>
 <script src='writing-progress.js'></script>

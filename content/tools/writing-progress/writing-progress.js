@@ -4,6 +4,7 @@ const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTLRpcIxa0g_0
 const WRITING_DAYS = 6;
 const MAX_RANGE = 366;
 const today = new Date();
+
 var words = {}
 var hours = []
 var earned_value = 0; // Words from the earlier draft
@@ -19,6 +20,7 @@ Papa.parse(SHEET_URL, {
     results.data.forEach(row => {
       var date = new Date(row.date + 'T06:20:30Z')
       if (date < start_date) { start_date = date; }
+
       if (parseInt(row.words) > 0 && today.between(date) < MAX_RANGE) {
         var label = date.getMonday().toISOString().split('T')[0]
         if (!(label in words)) { words[label] = 0 }
@@ -27,7 +29,8 @@ Papa.parse(SHEET_URL, {
         total_hours = total_hours + parseFloat(row.hours);
         hours.push(parseFloat(row.hours))
         days_writing = days_writing + 1;
-        document.getElementById('last_date').innerHTML = row.date
+        document.getElementById('last_date').innerHTML = date
+        row.monday = label
       }
       console.log(row)
     })
@@ -67,7 +70,6 @@ function calculateProgress() {
   }
   // How fast do I need to write?
   var revised_pace = Math.round(remaining_work / days_remaining).formatted(); // words left / days left
-
 
   // Update the HTML
   // EVM Table
