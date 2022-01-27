@@ -8,9 +8,18 @@ aliases:
 - "/tools/2a42a84a"
 ---
 <!-- https://jsonbin.io/61c07f9a4359822986117df4 -->
-<div style="width: 100%; height: 300px; margin: 0 auto">
-  <canvas id="weekly-progress"></canvas>
+
+<div class="flex items-center justify-center h-72">
+  <div class="flex items-center justify-center space-x-2 animate-pulse" id='spinner'>
+    <div class="w-8 h-8 rounded-full bg-brand"></div>
+    <div class="w-8 h-8 rounded-full bg-brand"></div>
+    <div class="w-8 h-8 rounded-full bg-brand"></div>
+  </div>
+  <div style="width: 100%; height: 300px; margin: 0 auto" id='canvas' class="hidden">
+    <canvas id="weekly-progress"></canvas>
+  </div>
 </div>
+
 
 <div class="p-4 card">
   <div class='flex my-2'>
