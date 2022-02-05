@@ -10,7 +10,7 @@ summary: "A clock"
 <div
   class='flex items-center justify-center h-screen dark:text-shade-darker dark:bg-warning-dark bg-shade-darker text-warning/50'>
   <div>
-    <p id="clock" class="mx-auto font-sans" style="font-size: 4in;"></p>
+    <p id="clock" class="mx-auto font-sans" style="font-size: 3in;"></p>
     <p id="metric" class='text-4xl text-center '></p>
   </div>
 </div>
@@ -49,13 +49,13 @@ summary: "A clock"
         time = hour + " o‘clock"
       }
       else if (min == 15) {
-        time = "Quarter past " + hour
+        time = "Qtr past " + hour
       }
       else if (min == 30) {
         time = "Half past " + hour
       }
       else if (min == 45) {
-        time = "Quarter ‘til " + (hour + 1)
+        time = "Qtr of " + (hour + 1)
       }
       document.getElementById("clock").innerHTML = time;
     }
