@@ -41,7 +41,7 @@ summary: "A clock"
     var sec = updateTime(date.getSeconds());
     metricTime(date);
     document.getElementById("clock").innerHTML = hour + ":" + min;// + " : " + sec;
-    var t = setTimeout(function () { currentTime() }, 1000); /* setting timer */
+    var t = setTimeout(function () { currentTime() }, 864); /* setting timer, every metric second */
   }
 
   currentTime();
