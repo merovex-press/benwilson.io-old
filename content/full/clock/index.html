@@ -7,10 +7,11 @@ permalink: /clock/
 summary: "A clock"
 ---
 
-<div class='flex items-center justify-center h-screen bg-shade-darker text-warning-dark'>
+<div
+  class='flex items-center justify-center h-screen dark:text-shade-darker dark:bg-warning-dark bg-shade-darker text-warning/50'>
   <div>
-    <p id="clock" class="mx-auto font-code" style="font-size: 4in;"></p>
-    <p id="metric" class='text-2xl text-center '></p>
+    <p id="clock" class="mx-auto font-sans" style="font-size: 4in;"></p>
+    <p id="metric" class='text-4xl text-center '></p>
   </div>
 </div>
 <script>
@@ -29,19 +30,24 @@ summary: "A clock"
 
     // Build output for metric clock
     daysecs = 3600 * hours + 60 * minutes + seconds;
-    metricsecs = daysecs * 100000 / 86400;
-    metrichours = (metricsecs / 10000).toFixed(4)
+    metrichours = ((daysecs * 100000 / 86400) / 10000).toFixed(4)
 
-    document.getElementById("metric").innerHTML = metrichours;// + " : " + sec;
+    document.getElementById("metric").innerHTML = metrichours;
   }
   function currentTime() {
     var date = new Date(); /* creating object of Date class */
     var hour = date.getHours();
     var min = updateTime(date.getMinutes());
     var sec = updateTime(date.getSeconds());
-    metricTime(date);
-    document.getElementById("clock").innerHTML = hour + ":" + min;// + " : " + sec;
-    var t = setTimeout(function () { currentTime() }, 864); /* setting timer, every metric second */
+    if (hour < 20 && hour > 4) {
+      metricTime(date);
+      document.getElementById("clock").innerHTML = hour + "." + min;
+    }
+    else {
+      document.getElementById("clock").innerHTML = "";
+      document.getElementById("metric").innerHTML = ""
+    }
+    var t = setTimeout(function () { currentTime() }, 1000); /* setting timer, every metric second */
   }
 
   currentTime();
