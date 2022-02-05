@@ -39,9 +39,25 @@ summary: "A clock"
     var hour = date.getHours();
     var min = updateTime(date.getMinutes());
     var sec = updateTime(date.getSeconds());
+    var time = hour + "." + min;
     if (hour < 20 && hour > 4) {
       metricTime(date);
-      document.getElementById("clock").innerHTML = hour + "." + min;
+      if (hour == 12 && min == 0) {
+        time = "Noon"
+      }
+      else if (min > 0) {
+        time = hour + " o‘clock"
+      }
+      else if (min == 15) {
+        time = "Quarter past " + hour
+      }
+      else if (min == 30) {
+        time = "Half past " + hour
+      }
+      else if (min == 45) {
+        time = "Quarter ‘til " + (hour + 1)
+      }
+      document.getElementById("clock").innerHTML = time;
     }
     else {
       document.getElementById("clock").innerHTML = "";
