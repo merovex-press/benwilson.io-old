@@ -47,8 +47,8 @@ Papa.parse(SHEET_URL, {
 
 function calculateProgress() {
 
-  const target_value = document.getElementById('value_completion').value
-  const prior_value = document.getElementById('prior_value').value
+  const target_value = parseInt(document.getElementById('value_completion').value)
+  const prior_value = parseInt(document.getElementById('prior_value').value)
   const VALUE_COMPLETION = target_value - prior_value
   const PLANNED_COMPLETION = new Date(2022, 5, 30)
   const days_lapsed = today.between(start_date)
