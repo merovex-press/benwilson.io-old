@@ -38,6 +38,7 @@ Papa.parse(SHEET_URL, {
       console.log(row)
     })
     console.log(monthly_words)
+
     calculateProgress()
     generateChart()
     document.getElementById("canvas-spinner").classList.toggle("hidden");
@@ -49,6 +50,8 @@ function calculateProgress() {
 
   const target_value = parseInt(document.getElementById('value_completion').value)
   const prior_value = parseInt(document.getElementById('prior_value').value)
+  const weekly_average = (earned_value / Object.keys(words).length).rounded();
+
   const VALUE_COMPLETION = target_value - prior_value
   const PLANNED_COMPLETION = new Date(2022, 5, 30)
   const days_lapsed = today.between(start_date)
@@ -81,6 +84,7 @@ function calculateProgress() {
   // EVM Table
   document.getElementById("earned-value").innerHTML = earned_value.formatted();
   document.getElementById("planned-value").innerHTML = planned_value.rounded().formatted();
+  document.getElementById("weekly-average").innerHTML = weekly_average.formatted();
   document.getElementById("schedule-variance").innerHTML = schedule_variance.rounded().formatted();
   document.getElementById("remaining-work").innerHTML = remaining_work.formatted();
   document.getElementById("planned-date").innerHTML = PLANNED_COMPLETION.toString()
