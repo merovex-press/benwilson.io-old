@@ -9,26 +9,28 @@ aliases:
 ---
 <!-- https://jsonbin.io/61c07f9a4359822986117df4 -->
 
-<div class="flex items-center justify-center h-72">
-  <div id='canvas-spinner' style="border-top-color:transparent"
-    class="w-16 h-16 border-4 border-solid rounded-full border-brand animate-spin"></div>
-  <div style="width: 100%; height: 300px; margin: 0 auto" id='canvas' class="hidden">
-    <canvas id="weekly-progress"></canvas>
-  </div>
+
+<div id="heatmap" class="mt-4">
+
 </div>
 
-<div class="p-4 card">
+<div class="p-4 font-sans card dark:text-shade-light">
   <div class='flex my-2'>
     <label class='flex-1' for="prior_value">Previously Completed Work</label>
-    <input class='font-sans text-right dark:text-shade-darker' onkeyup="calculateProgress()" type="number"
-      id='prior_value' class="rounded" value="25619" />
+    <input class='font-sans text-right rounded dark:text-shade-darker dark:bg-shade dark:text-shade-light'
+      onkeyup="calculateProgress()" type="number" id='prior_value' class="rounded" value="25619" />
   </div>
-  <div class='flex'>
+  <div class='flex my-2'>
     <label class='flex-1' for="value_completion">Target for Completion</label>
-    <input class='font-sans text-right dark:text-shade-darker' onkeyup="calculateProgress()" type="number"
-      id='value_completion' class="rounded" value='150000' />
+    <input class='font-sans text-right rounded dark:text-shade-darker dark:bg-shade dark:text-shade-light'
+      onkeyup="calculateProgress()" type="number" id='value_completion' class="rounded" value='150000' />
   </div>
-  <div class='flex'>
+  <div class='flex my-2'>
+    <label class='flex-1' for="daily_target">Daily Target</label>
+    <input class='font-sans text-right rounded dark:text-shade-darker dark:bg-shade dark:text-shade-light'
+      onkeyup="calculateProgress()" type="number" id='daily_target' class="rounded" value='1000' />
+  </div>
+  <div class='flex my-2'>
     <label class='flex-1' for="last_date">Last Date Logged</label>
     <span id="last_date" class='font-sans'>{{<spinner>}}</span>
   </div>
@@ -36,16 +38,11 @@ aliases:
 
 <div class="mt-12 font-sans" id="tabs">
   <nav class="flex flex-col justify-between sm:flex-row js-tabs__header">
-    <button class="js-tabs__title">
-      Value
-    </button><button class="js-tabs__title">
-      Level of Effort
-    </button><button class="js-tabs__title">
-      Daily Writing Pace
-    </button>
-    </button><button class="js-tabs__title">
-      Table
-    </button>
+    <button class="js-tabs__title"> Value </button>
+    <button class="js-tabs__title"> Chart </button>
+    <button class="js-tabs__title"> Level of Effort </button>
+    <button class="js-tabs__title"> Daily Writing Pace </button>
+    <button class="js-tabs__title"> Table </button>
   </nav>
 
 
@@ -160,8 +157,18 @@ aliases:
     <p>Not implemented yet.</p>
   </section>
 </div>
+<section id="chart" class="js-tabs_content">
+  <div class="flex items-center justify-center h-72">
+    <div id='canvas-spinner' style="border-top-color:transparent"
+      class="w-16 h-16 border-4 border-solid rounded-full border-brand animate-spin"></div>
+    <div style="width: 100%; height: 300px; margin: 0 auto" id='canvas' class="hidden">
+      <canvas id="weekly-progress"></canvas>
+    </div>
+  </div>
+</section>
 <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
 <script src='papa-parse.min.js'></script>
+<script src='writing-heatmap.js'></script>
 <script src='writing-progress.js'></script>
 <script src='vanilla-tabs.js'></script>
 <script>

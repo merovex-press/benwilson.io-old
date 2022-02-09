@@ -6,6 +6,7 @@ const MAX_RANGE = 366;
 const today = new Date();
 
 var words = {}
+var heatmap = {}
 var hours = []
 var earned_value = 0; // Words from the earlier draft
 var days_writing = 0;
@@ -28,6 +29,7 @@ Papa.parse(SHEET_URL, {
         monthly_words[month_ixs] += parseInt(row.words)
         if (!(label in words)) { words[label] = 0 }
         words[label] = words[label] + parseInt(row.words);
+        heatmap[date.toISOString().split('T')[0]] = parseInt(row.words)
         earned_value = earned_value + parseInt(row.words);
         total_hours = total_hours + parseFloat(row.hours);
         hours.push(parseFloat(row.hours))
@@ -35,12 +37,12 @@ Papa.parse(SHEET_URL, {
         document.getElementById('last_date').innerHTML = date
         row.monday = label
       }
-      console.log(row)
     })
     console.log(monthly_words)
 
     calculateProgress()
     generateChart()
+    processHeatmap(heatmap)
     document.getElementById("canvas-spinner").classList.toggle("hidden");
     document.getElementById("canvas").classList.toggle("hidden");
   }
@@ -104,6 +106,7 @@ function calculateProgress() {
   document.getElementById("days-remaining").innerHTML = PLANNED_COMPLETION.between(today).rounded().formatted();
   document.getElementById("days-writing").innerHTML = days_writing.formatted();
   document.getElementById("days-writing-variance-percent").innerHTML = ((days_lapsed - days_writing) * 100 / days_lapsed).rounded();
+
 }
 
 
@@ -129,13 +132,32 @@ function generateChart() {
   new Chart(ctx, options);
 }
 
+Date.prototype.getWeek = function (dowOffset) {
+  /*getWeek() was developed by Nick Baicoianu at MeanFreePath: http://www.meanfreepath.com */
 
-
-Date.prototype.getWeek = function () {
-  var onejan = new Date(this.getFullYear(), 0, 1);
-  var today = new Date(this.getFullYear(), this.getMonth(), this.getDate());
-  var dayOfYear = ((today - onejan + 86400000) / 86400000);
-  return Math.ceil(dayOfYear / 7)
+  dowOffset = typeof (dowOffset) == 'number' ? dowOffset : 0; //default dowOffset to zero
+  var newYear = new Date(this.getFullYear(), 0, 1);
+  var day = newYear.getDay() - dowOffset; //the day of week the year begins on
+  day = (day >= 0 ? day : day + 7);
+  var daynum = Math.floor((this.getTime() - newYear.getTime() -
+    (this.getTimezoneOffset() - newYear.getTimezoneOffset()) * 60000) / 86400000) + 1;
+  var weeknum;
+  //if the year starts before the middle of a week
+  if (day < 4) {
+    weeknum = Math.floor((daynum + day - 1) / 7) + 1;
+    if (weeknum > 52) {
+      nYear = new Date(this.getFullYear() + 1, 0, 1);
+      nday = nYear.getDay() - dowOffset;
+      nday = nday >= 0 ? nday : nday + 7;
+      /*if the next year starts before the middle of
+        the week, it is week #1 of that year*/
+      weeknum = nday < 4 ? 1 : 53;
+    }
+  }
+  else {
+    weeknum = Math.floor((daynum + day - 1) / 7);
+  }
+  return weeknum;
 };
 Date.prototype.addDays = function (days) {
   let date = new Date(this.valueOf());
@@ -144,6 +166,11 @@ Date.prototype.addDays = function (days) {
 }
 Date.prototype.getMonday = function () {
   var mDifference = this.getDay() - 1;
+  if (mDifference < 0) { mDifference += 7; }
+  return new Date(this.addDays(mDifference * -1));
+}
+Date.prototype.getThursday = function () {
+  var mDifference = this.getDay() - 4;
   if (mDifference < 0) { mDifference += 7; }
   return new Date(this.addDays(mDifference * -1));
 }
