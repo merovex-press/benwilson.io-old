@@ -14,6 +14,8 @@ function drawDay(ns, date, value) {
   var y = ((day_of_week + 2) * size) + padding
   var x = week * size + padding + 30
   var hw = size - padding
+  var value = parseInt(value)
+  if (isNaN(value)) { value = 0 }
 
   var css_class; var level;
   switch (true) {
@@ -96,4 +98,35 @@ function processHeatmap(data) {
     svg.appendChild(newText)
   }
   div.appendChild(svg)
+  document.querySelectorAll('.heatmap-day').forEach(function (day) {
+    if (day.dataset.count > 0) {
+
+      day.addEventListener('mouseover', createTip);
+      day.addEventListener('mouseout', cancelTip);
+    }
+  });
+}
+function createTip(ev) {
+  const msg = "Wrote " + this.dataset.count + " words on " + this.dataset.date
+  const tooltip = document.createElement("div"); //creates div
+  tooltip.className = 'tooltip'; //adds class
+  tooltip.appendChild(document.createTextNode(msg)); //add the text node to the newly created div.
+
+  const child = document.body.firstChild
+  child.parentNode.insertBefore(tooltip, child)
+
+  const padding = 6;
+  const linkProps = this.getBoundingClientRect();
+
+  const tooltipProps = tooltip.getBoundingClientRect();
+  const topPos = linkProps.top - (tooltipProps.height + padding - 25);
+  const leftPos = linkProps.left - (tooltipProps.width / 2);
+
+  tooltip.setAttribute('style', 'top:' + topPos + 'px;' + 'left:' + leftPos + 'px;')
+}
+function cancelTip(ev) {
+  var title = this.getAttribute("tooltip");
+  this.title = title;
+  this.removeAttribute("tooltip");
+  document.querySelector(".tooltip").remove();
 }

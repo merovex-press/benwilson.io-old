@@ -5264,7 +5264,7 @@ volumes:
   '2219':
     :name: Merovinghio
     :location: '2219'
-    :uwp: X767235-2
+    :uwp: A76793B-C
     :temp: T
     :bases: "..G.."
     :travel_code: ".."
