@@ -9,12 +9,67 @@ aliases:
 ---
 <!-- https://jsonbin.io/61c07f9a4359822986117df4 -->
 
-<div class="mt-4 has-tooltip">
-  <div id="heatmap"></div>
-  <div id="tip"></div>
+<section>
+  <div class="p-2 card">
+    <div class="w-full border rounded-full border-brand dark:bg-shade-dark bg-shade-light dark:border-brand-light">
+      <div
+        class="p-1 font-sans text-xs leading-none text-center rounded-l-full bg-brand dark:bg-brand-light dark:text-shade-darker text-shade-light"
+        id="progress-bar">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="flex gap-3 font-sans text-sm">
+  <div class="flex-1 py-4 text-center card">
+    <span id="earned-value" class="block text-2xl">88,888</span>
+    Words Drafted
+  </div>
+  <div class="flex-1 py-4 text-center card">
+    <span id="total-days" class="block text-2xl">88</span>
+    Days Done
+  </div>
+  <div class="flex-1 py-4 text-center card">
+    <span id="days-remaining" class="block text-2xl">88</span>
+    Days Remain
+  </div>
+  <div class="flex-1 py-4 text-center card">
+    <span id="tracking-date" class="block text-2xl">Oct 1</span>
+    Expected Completion
+  </div>
+</section>
+<div class='flex my-2 font-sans text-xs text-right'>
+  <span class='flex-1' for="last_date">As of&nbsp;</span>
+  <span id="last_date" class='font-sans'>{{<spinner>}}</span>
 </div>
 
-<div class="p-4 font-sans card dark:text-shade-light">
+<div class="mt-4 shadow bordered has-tooltip bg-shade-lighter dark:bg-shade-dark">
+  <div id="heatmap"></div>
+  <div id="tip"></div>
+  <div class="px-2 font-sans text-xs text-right"
+    title="A summary of pull requests, issues opened, and commits to the default and gh-pages branches.">
+    Less
+    <svg width="10" height="10" class="inline-block">
+      <rect width="10" height="10" class="heatmap-1 heatmap-day" rx="2" ry="2" data-level="0"></rect>
+    </svg>
+    <svg width="10" height="10" class="inline-block">
+      <rect width="10" height="10" class="heatmap-2 heatmap-day" rx="2" ry="2" data-level="1"></rect>
+    </svg>
+    <svg width="10" height="10" class="inline-block">
+      <rect width="10" height="10" class="heatmap-3 heatmap-day" rx="2" ry="2" data-level="2"></rect>
+    </svg>
+    <svg width="10" height="10" class="inline-block">
+      <rect width="10" height="10" class="heatmap-4 heatmap-day" rx="2" ry="2" data-level="3"></rect>
+    </svg>
+    <svg width="10" height="10" class="inline-block">
+      <rect width="10" height="10" class="heatmap-5 heatmap-day" rx="2" ry="2" data-level="4"></rect>
+    </svg>
+    More
+  </div>
+</div>
+
+
+
+<div class="hidden p-4 font-sans card dark:text-shade-light">
   <div class='flex my-2'>
     <label class='flex-1' for="prior_value">Previously Completed Work</label>
     <input class='font-sans text-right rounded dark:text-shade-darker dark:bg-shade dark:text-shade-light'
@@ -30,150 +85,25 @@ aliases:
     <input class='font-sans text-right rounded dark:text-shade-darker dark:bg-shade dark:text-shade-light'
       onkeyup="calculateProgress()" type="number" id='daily_target' class="rounded" value='1000' />
   </div>
-  <div class='flex my-2'>
-    <label class='flex-1' for="last_date">Last Date Logged</label>
-    <span id="last_date" class='font-sans'>{{<spinner>}}</span>
+
+</div>
+<section class="flex gap-3">
+  <div class="grid w-36 card place-items-center">
+    <div>
+      <div class="font-sans text-2xl text-center" id="session-average"></div>
+      <canvas id="gauge" class="mx-auto w-28"></canvas>
+      <div class="font-sans text-sm text-center">Words per Day</div>
+      <div class="font-sans text-xs text-center">(rolling 10-day average)</div>
+    </div>
   </div>
-</div>
-
-<div class="mt-12 font-sans" id="tabs">
-  <nav class="flex flex-col justify-between sm:flex-row js-tabs__header">
-    <button class="js-tabs__title"> Value </button>
-    <button class="js-tabs__title"> Chart </button>
-    <button class="js-tabs__title"> Level of Effort </button>
-    <button class="js-tabs__title"> Daily Writing Pace </button>
-    <button class="js-tabs__title"> Table </button>
-  </nav>
-
-
-  <section id="value" class="js-tabs__content">
-    <h2>Value</h2>
-    <table class='mx-auto '>
-      <tbody>
-        <tr>
-          <th scope="row" class='w-1/3'>Words Completed (EV)</th>
-          <td class='font-sans text-right'><span id="earned-value">{{<spinner>}}</span> words</td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Planned Completed (PV)</th>
-          <td class='font-sans text-right'><span id="planned-value">{{<spinner>}}</span> words</td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Weekly Average</th>
-          <td class='font-sans text-right'><span id="weekly-average">{{<spinner>}}</span> words</td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Delta (SV)</th>
-          <td class='font-sans text-right'><span id="schedule-variance">{{<spinner>}}</span> words</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class='w-1/3'>Remaining Work</th>
-          <td class='font-sans text-right'><span id="remaining-work">{{<spinner>}}</span> words</td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Ahead/Behind</th>
-          <td class='font-sans text-right'><span id="relative-schedule-variance">{{<spinner>}}</span> days</td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Completion Target</th>
-          <td class='font-sans text-right'><span id="planned-date">{{<spinner>}}</span></td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Estimated Date at Completion</th>
-          <td id='tracking-state' class='font-sans text-right'>
-            <span id="tracking-late"></span>
-            <span id="tracking-date">{{<spinner>}}</span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="level-of-effort" class="js-tabs__content">
-    <h2>Level of Effort</h2>
-    <table class='mx-auto '>
-      <tbody>
-        <tr>
-          <th scope="row" class='w-1/3'>Total Hours (AC)</th>
-          <td class='font-sans text-right'><span id="total-hours">{{<spinner>}}</span> hours</td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Est. Hours Left</th>
-          <td class='font-sans text-right'><span id="hours-remaining">{{<spinner>}}</span> hours</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  <section id="daily-writing-pace" class="js-tabs__content">
-
-    <h2>Daily Writing Pace</h2>
-    <table class='mx-auto '>
-      <tbody>
-
-        <tr>
-          <th scope="row" class='w-1/3'>Average (per effective day)</th>
-          <td class='font-sans text-right'><span id="average">{{<spinner>}}</span> words</td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Revised Pace<br><span class='text-sm'>(to hit planned date)</span></th>
-          <td class='font-sans text-right'><span id="revised-pace">{{<spinner>}}</span> words</td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Average Hours per Session</th>
-          <td class='font-sans text-right'><span id="average-hours">{{<spinner>}}</span> hours</td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Words per Hour</th>
-          <td class='font-sans text-right'><span id="wph">{{<spinner>}}</span> words</td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Writing Days at Pace</th>
-          <td class='font-sans text-right'><span id="days-pace">{{<spinner>}}</span> days</td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Days Lapsed</th>
-          <td class='font-sans text-right'><span id="days-lapsed">{{<spinner>}}</span> days</td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Days Remaining</th>
-          <td class='font-sans text-right'><span id="days-remaining">{{<spinner>}}</span> days</td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Actual Days Writing</th>
-          <td class='font-sans text-right'><span id="days-writing">{{<spinner>}}</span> days</td>
-        </tr>
-        <tr>
-          <th scope="row" class='w-1/3'>Days Writing Variance</th>
-          <td class='font-sans text-right'><span id="days-writing-variance">{{<spinner>}}</span> days
-            (<span id="days-writing-variance-percent">{{<spinner>}}</span>%)
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  <section id="level-of-effort" class="js-tabs__content">
-    <h2>Table</h2>
-    <p>Not implemented yet.</p>
-  </section>
-</div>
-<section id="chart" class="js-tabs_content">
-  <div class="flex items-center justify-center h-72">
-    <div id='canvas-spinner' style="border-top-color:transparent"
-      class="w-16 h-16 border-4 border-solid rounded-full border-brand animate-spin"></div>
-    <div style="width: 100%; height: 300px; margin: 0 auto" id='canvas' class="hidden">
+  <div class="flex items-center justify-center flex-1 w-2/3 h-48 p-4 card">
+    <div style="width: 100%; height: 100%; margin: 0 auto" id='canvas'>
       <canvas id="weekly-progress"></canvas>
     </div>
   </div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
 <script src='papa-parse.min.js'></script>
+<script src='gauge.min.js'></script>
 <script src='writing-heatmap.js'></script>
 <script src='writing-progress.js'></script>
-<script src='vanilla-tabs.js'></script>
-<script>
-  var tabs = new Tabs({
-    elem: "tabs",
-    open: 0
-  });
-</script>

@@ -5,13 +5,19 @@ const WRITING_DAYS = 6;
 const MAX_RANGE = 366;
 const today = new Date();
 
-var words = {}
+var weekly = {}
 var heatmap = {}
 var hours = []
 var earned_value = 0; // Words from the earlier draft
 var days_writing = 0;
 var total_hours = 0;
 var monthly_words = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var progress = 0;
+var percent_complete = 0;
+
+var target_length = 0;
+var remaining = 0;
+var days_writing = 1;
 
 var start_date = new Date();
 
@@ -21,96 +27,115 @@ Papa.parse(SHEET_URL, {
   complete: function (results) {
     results.data.forEach(row => {
       var date = new Date(row.date + 'T06:20:30Z')
+      var day_label = date.toISOString().split('T')[0]
+      var week_label = date.getMonday().toISOString().split('T')[0]
+
       if (date < start_date) { start_date = date; }
 
       if (parseInt(row.words) > 0 && today.between(date) < MAX_RANGE) {
-        var label = date.getMonday().toISOString().split('T')[0]
+
+        // Build monthly report
         var month_ixs = date.getMonth();
         monthly_words[month_ixs] += parseInt(row.words)
-        if (!(label in words)) { words[label] = 0 }
-        words[label] = words[label] + parseInt(row.words);
-        heatmap[date.toISOString().split('T')[0]] = parseInt(row.words)
-        earned_value = earned_value + parseInt(row.words);
+
+        // Build weekly chart data
+        if (!(week_label in weekly)) { weekly[week_label] = 0 }
+        weekly[week_label] = weekly[week_label] + parseInt(row.words);
+
+        // Build Heatmap data
+        heatmap[day_label] = { 'words': parseInt(row.words) }
+
+        earned_value = parseInt(row.cumulative);
         total_hours = total_hours + parseFloat(row.hours);
         hours.push(parseFloat(row.hours))
-        days_writing = days_writing + 1;
+
         document.getElementById('last_date').innerHTML = date
-        row.monday = label
+        target_length = parseInt(row.target)
+        remaining = parseInt(row.remaining)
+        row.monday = week_label
+
+        percent_complete = parseFloat(row.percentComplete) * 100
       }
     })
-    console.log(monthly_words)
+    days_writing = Object.values(heatmap).length
+    // console.log(days_writing)
 
-    calculateProgress()
-    generateChart()
+    setProgressBar(percent_complete)
+
+    generateChart(weekly)
     processHeatmap(heatmap)
-    document.getElementById("canvas-spinner").classList.toggle("hidden");
-    document.getElementById("canvas").classList.toggle("hidden");
+
+    var session_average = 0;
+    if (Object.keys(heatmap).length > 10) {
+      var slice = Object.values(heatmap).splice(-10, 10)
+    }
+    else {
+      var slice = Object.values(heatmap)
+    }
+    slice.forEach(value => {
+      session_average += parseInt(value['words'])
+    })
+    session_average = parseInt(session_average / slice.length)
+
+    document.getElementById('session-average').innerHTML = session_average.formatted()
+    generateGauge(session_average)
+    calculateProgress({
+      average: session_average,
+      remaining: remaining,
+      count: days_writing,
+      words: earned_value
+    })
   }
 })
+function generateGauge(words) {
+  var opts = {
+    angle: 0.15, // The span of the gauge arc
+    lineWidth: 0.44, // The line thickness
+    radiusScale: 1, // Relative radius
+    pointer: {
+      length: 0.6, // // Relative to gauge radius
+      strokeWidth: 0.035, // The thickness
+      color: '#000000' // Fill color
+    },
+    staticZones: [
+      { strokeStyle: "#f97316", min: 0, max: 1000 }, // Red from 100 to 130
+      { strokeStyle: "#10b981", min: 1000, max: 1250 }, // Green
+      { strokeStyle: "#3b82f6", min: 1250, max: 3000 }, // Yellow
+    ],
+    limitMax: false,     // If false, max value increases automatically if value > maxValue
+    limitMin: false,     // If true, the min value of the gauge will be fixed
+    // colorStart: '#6FADCF',   // Colors
+    // colorStop: '#8FC0DA',    // just experiment with them
+    strokeColor: '#E0E0E0',  // to see which ones work best for you
+    generateGradient: true,
+    highDpiSupport: true,     // High resolution support
 
-function calculateProgress() {
+  };
+  var target = document.getElementById('gauge'); // your canvas element
+  var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
+  gauge.maxValue = 3000; // set max gauge value
+  gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
+  gauge.animationSpeed = 32; // set animation speed (32 is default value)
+  gauge.set(words); // set actual value
+}
+function setProgressBar(percent) {
+  var bar = document.getElementById("progress-bar")
+  bar.innerHTML = percent + "%"
+  bar.setAttribute('style', 'width: ' + percent + '%;')
+}
+function calculateProgress(data) {
+  const days_pace = Math.ceil(data.remaining / data.average); // At current writing pace, how many days will it take?
+  const target_date = today.addDays(days_pace) // Based on this, when will I likely finish?
+  const words_per_hour = parseInt(data.words / data.count)
+  const days_remaining = data.remaining / words_per_hour;
 
-  const target_value = parseInt(document.getElementById('value_completion').value)
-  const prior_value = parseInt(document.getElementById('prior_value').value)
-  const weekly_average = (earned_value / Object.keys(words).length).rounded();
-
-  const VALUE_COMPLETION = target_value - prior_value
-  const PLANNED_COMPLETION = new Date(2022, 5, 30)
-  const days_lapsed = today.between(start_date)
-  const session_average = hours.reduce((a, b) => a + b) / hours.length
-
-  // Convert this to Earned Value terminology
-  const planned_value = (VALUE_COMPLETION / PLANNED_COMPLETION.between(start_date)) * today.between(start_date)
-  const schedule_variance = earned_value - planned_value
-  const remaining_work = (VALUE_COMPLETION - earned_value) // How many words to I need to write to finish?
-  const average = earned_value / days_writing; // What is my current daily average?
-  const days_pace = Math.round(remaining_work / average); // At current writing pace, how many days will it take?
-  const target_date = today.addDays(days_pace)// Based on this, when will I likely finish?
-  const days_remaining = PLANNED_COMPLETION.between(today).formatted(); // How many actual days remain?
-
-  const words_per_hour = earned_value / total_hours
-
-  const hours_remaining = remaining_work / words_per_hour;
-  const wp_session = words_per_hour * session_average;
-  const relative_variance = schedule_variance / wp_session;
-
-  // Am I at risk of missing my date?
-  if (PLANNED_COMPLETION < target_date) {
-    document.getElementById("tracking-late").innerHTML = "Late:"
-    document.getElementById("tracking-state").classList.add('bg-warning-light')
-  }
-  // How fast do I need to write?
-  var revised_pace = Math.round(remaining_work / days_remaining).formatted(); // words left / days left
-
-  // Update the HTML
-  // EVM Table
-  document.getElementById("earned-value").innerHTML = earned_value.formatted();
-  document.getElementById("planned-value").innerHTML = planned_value.rounded().formatted();
-  document.getElementById("weekly-average").innerHTML = weekly_average.formatted();
-  document.getElementById("schedule-variance").innerHTML = schedule_variance.rounded().formatted();
-  document.getElementById("remaining-work").innerHTML = remaining_work.formatted();
-  document.getElementById("planned-date").innerHTML = PLANNED_COMPLETION.toString()
-  document.getElementById("tracking-date").innerHTML = target_date.toString()
-  document.getElementById("total-hours").innerHTML = total_hours.rounded().toString()
-  document.getElementById("average-hours").innerHTML = session_average.rounded(1).toString()
-  document.getElementById("wph").innerHTML = words_per_hour.rounded().toString();
-  document.getElementById("hours-remaining").innerHTML = hours_remaining.rounded().toString();
-  document.getElementById("relative-schedule-variance").innerHTML = relative_variance.ceiling().toString();
-
-  // Writing Pace
-  document.getElementById("average").innerHTML = average.rounded().formatted();
-  document.getElementById("revised-pace").innerHTML = revised_pace;
-  document.getElementById("days-writing-variance").innerHTML = days_lapsed - days_writing;
-  document.getElementById("days-pace").innerHTML = days_pace;
-  document.getElementById("days-lapsed").innerHTML = days_lapsed.formatted();
-  document.getElementById("days-remaining").innerHTML = PLANNED_COMPLETION.between(today).rounded().formatted();
-  document.getElementById("days-writing").innerHTML = days_writing.formatted();
-  document.getElementById("days-writing-variance-percent").innerHTML = ((days_lapsed - days_writing) * 100 / days_lapsed).rounded();
-
+  document.getElementById("earned-value").innerHTML = data.words.formatted();
+  document.getElementById("tracking-date").innerHTML = target_date.toLocaleDateString('en-us', { month: "short", day: "numeric" });
+  document.getElementById("total-days").innerHTML = data.count.rounded().toString()
+  document.getElementById("days-remaining").innerHTML = days_remaining.rounded().toString();
 }
 
-
-function generateChart() {
+function generateChart(data) {
   const ctx = document.getElementById('weekly-progress').getContext('2d');
   const options = {
     options: {
@@ -124,11 +149,20 @@ function generateChart() {
         borderWidth: 3,
         borderColor: ['RGBA(64, 110, 166, 1)'],
         backgroundColor: ['RGBA(64, 110, 166, 0.7)'],
-        data: Object.values(words)
+        data: Object.values(data),
+
       }],
-      labels: Object.keys(words)
+      options: {
+        plugins: {
+          legend: {
+            display: false,
+          }
+        }
+      },
+      labels: Object.keys(data)
     }
   }
+  console.log(options);
   new Chart(ctx, options);
 }
 
@@ -185,9 +219,12 @@ Date.prototype.addDays = function (days) {
   date.setDate(date.getDate() + days);
   return date;
 }
-Date.prototype.toString = function (days) {
+Date.prototype.toString = function () {
   return this.toLocaleDateString('en-us', { weekday: "long", year: "numeric", month: "short", day: "numeric" });
 }
+// Date.prototype.shortDate = function () {
+//   this.toLocaleDateString('en-us', { month: "short", day: "numeric" });
+// }
 Number.prototype.rounded = function (length = 0) {
   if (length > 0) {
     return this.valueOf().toFixed(length);

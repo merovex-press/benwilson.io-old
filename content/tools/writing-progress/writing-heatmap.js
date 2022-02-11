@@ -1,21 +1,29 @@
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 const word_days = ['Tue', 'Thu', 'Sat']
 const target = parseInt(document.getElementById('daily_target').value)
-const padding = 3
+const padding = 4
 const size = 12
 const height = 10 * size
 const width = 53 * size + 30
 var last_week = 0;
 
 // Vanilla js
-function drawDay(ns, date, value) {
+function drawDay(ns, date, data) {
   var day_of_week = (date.getDay() || 7) - 1; // Moves Sunday to bottom; week start Monday
   var week = date.getWeek(1) + 1
   var y = ((day_of_week + 2) * size) + padding
   var x = week * size + padding + 30
-  var hw = size - padding
-  var value = parseInt(value)
-  if (isNaN(value)) { value = 0 }
+  // var hw = size - padding
+  var value
+  // console.log(data)
+  if (data != undefined) {
+    value = data['words']
+  }
+  else {
+    value = 0
+  }
+  // var value = parseInt(data['words'])
+  // if (isNaN(value)) { value = 0 }
 
   var css_class; var level;
   switch (true) {
@@ -41,8 +49,8 @@ function drawDay(ns, date, value) {
   day.setAttributeNS(null, 'data-date', date.toISOString().split('T')[0])
   day.setAttributeNS(null, 'data-count', value)
   day.setAttributeNS(null, 'data-level', level)
-  day.setAttributeNS(null, 'width', hw)
-  day.setAttributeNS(null, 'height', hw)
+  day.setAttributeNS(null, 'width', 10)
+  day.setAttributeNS(null, 'height', 10)
   day.setAttributeNS(null, 'x', x)
   day.setAttributeNS(null, 'y', y)
   day.setAttributeNS(null, 'rx', 2)
@@ -66,8 +74,6 @@ function processHeatmap(data) {
   rect.setAttributeNS(null, 'rx', padding * 3)
   rect.setAttributeNS(null, 'ry', padding * 3)
   rect.setAttributeNS(null, "fill-opacity", "0")
-  rect.setAttributeNS(null, "stroke", "#888");
-  rect.setAttributeNS(null, "stroke-width", "1")
   svg.appendChild(rect)
 
   const eoy = new Date();
@@ -100,7 +106,6 @@ function processHeatmap(data) {
   div.appendChild(svg)
   document.querySelectorAll('.heatmap-day').forEach(function (day) {
     if (day.dataset.count > 0) {
-
       day.addEventListener('mouseover', createTip);
       day.addEventListener('mouseout', cancelTip);
     }
@@ -109,7 +114,7 @@ function processHeatmap(data) {
 function createTip(ev) {
   const padding = 6;
   const linkProps = this.getBoundingClientRect();
-  const msg = "Wrote " + this.dataset.count + " words on " + this.dataset.date
+  const msg = this.dataset.count + " words on " + this.dataset.date
 
   const tooltip = document.createElement("div"); //creates div
   tooltip.className = 'tooltip'; //adds class
