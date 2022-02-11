@@ -8,17 +8,6 @@ aliases:
 - "/tools/2a42a84a"
 ---
 <!-- https://jsonbin.io/61c07f9a4359822986117df4 -->
-
-<section>
-  <div class="p-2 card">
-    <div class="w-full border rounded-full border-brand dark:bg-shade-dark bg-shade-light dark:border-brand-light">
-      <div
-        class="p-1 font-sans text-xs leading-none text-center rounded-l-full bg-brand dark:bg-brand-light dark:text-shade-darker text-shade-light"
-        id="progress-bar">
-      </div>
-    </div>
-  </div>
-</section>
 <section class="flex gap-3 font-sans text-sm">
   <div class="flex-1 py-4 text-center card">
     <span id="earned-value" class="block text-2xl">88,888</span>
@@ -41,52 +30,45 @@ aliases:
   <span class='flex-1' for="last_date">As of&nbsp;</span>
   <span id="last_date" class='font-sans'>{{<spinner>}}</span>
 </div>
-
-<div class="mt-4 shadow bordered has-tooltip bg-shade-lighter dark:bg-shade-dark">
+<section class="mt-4 shadow bordered has-tooltip bg-shade-lighter dark:bg-shade-dark">
   <div id="heatmap"></div>
-  <div id="tip"></div>
-  <div class="px-2 font-sans text-xs text-right"
-    title="A summary of pull requests, issues opened, and commits to the default and gh-pages branches.">
-    Less
-    <svg width="10" height="10" class="inline-block">
-      <rect width="10" height="10" class="heatmap-1 heatmap-day" rx="2" ry="2" data-level="0"></rect>
-    </svg>
-    <svg width="10" height="10" class="inline-block">
-      <rect width="10" height="10" class="heatmap-2 heatmap-day" rx="2" ry="2" data-level="1"></rect>
-    </svg>
-    <svg width="10" height="10" class="inline-block">
-      <rect width="10" height="10" class="heatmap-3 heatmap-day" rx="2" ry="2" data-level="2"></rect>
-    </svg>
-    <svg width="10" height="10" class="inline-block">
-      <rect width="10" height="10" class="heatmap-4 heatmap-day" rx="2" ry="2" data-level="3"></rect>
-    </svg>
-    <svg width="10" height="10" class="inline-block">
-      <rect width="10" height="10" class="heatmap-5 heatmap-day" rx="2" ry="2" data-level="4"></rect>
-    </svg>
-    More
+  <div class="flex">
+    <div id="msg" class="flex-1 h-5 px-4 font-sans text-sm">HERE</div>
+    <div class="flex-1 px-2 font-sans text-xs text-right"
+      title="A summary of pull requests, issues opened, and commits to the default and gh-pages branches.">
+      Less
+      <svg width="10" height="10" class="inline-block">
+        <rect width="10" height="10" class="heatmap-1 heatmap-day" rx="2" ry="2" data-level="0"></rect>
+      </svg>
+      <svg width="10" height="10" class="inline-block">
+        <rect width="10" height="10" class="heatmap-2 heatmap-day" rx="2" ry="2" data-level="1"></rect>
+      </svg>
+      <svg width="10" height="10" class="inline-block">
+        <rect width="10" height="10" class="heatmap-3 heatmap-day" rx="2" ry="2" data-level="2"></rect>
+      </svg>
+      <svg width="10" height="10" class="inline-block">
+        <rect width="10" height="10" class="heatmap-4 heatmap-day" rx="2" ry="2" data-level="3"></rect>
+      </svg>
+      <svg width="10" height="10" class="inline-block">
+        <rect width="10" height="10" class="heatmap-5 heatmap-day" rx="2" ry="2" data-level="4"></rect>
+      </svg>
+      More
+    </div>
   </div>
-</div>
+</section>
+<section>
+  <div class="p-2 card">
+    <div class="w-full border rounded-full border-brand dark:bg-shade-dark bg-shade-light dark:border-brand-light">
+      <div
+        class="p-1 font-sans text-xs leading-none text-center rounded-l-full bg-brand dark:bg-brand-light dark:text-shade-darker text-shade-light"
+        id="progress-bar">
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
-<div class="hidden p-4 font-sans card dark:text-shade-light">
-  <div class='flex my-2'>
-    <label class='flex-1' for="prior_value">Previously Completed Work</label>
-    <input class='font-sans text-right rounded dark:text-shade-darker dark:bg-shade dark:text-shade-light'
-      onkeyup="calculateProgress()" type="number" id='prior_value' class="rounded" value="25619" />
-  </div>
-  <div class='flex my-2'>
-    <label class='flex-1' for="value_completion">Target for Completion</label>
-    <input class='font-sans text-right rounded dark:text-shade-darker dark:bg-shade dark:text-shade-light'
-      onkeyup="calculateProgress()" type="number" id='value_completion' class="rounded" value='150000' />
-  </div>
-  <div class='flex my-2'>
-    <label class='flex-1' for="daily_target">Daily Target</label>
-    <input class='font-sans text-right rounded dark:text-shade-darker dark:bg-shade dark:text-shade-light'
-      onkeyup="calculateProgress()" type="number" id='daily_target' class="rounded" value='1000' />
-  </div>
-
-</div>
 <section class="flex gap-3">
   <div class="grid w-36 card place-items-center">
     <div>
@@ -102,8 +84,26 @@ aliases:
     </div>
   </div>
 </section>
+<section class="hidden p-4 font-sans card dark:text-shade-light">
+  <div class='flex my-2'>
+    <label class='flex-1' for="prior_value">Previously Completed Work</label>
+    <input class='font-sans text-right rounded dark:text-shade-darker dark:bg-shade dark:text-shade-light'
+      onkeyup="calculateProgress()" type="number" id='prior_value' class="rounded" value="25619" />
+  </div>
+  <div class='flex my-2'>
+    <label class='flex-1' for="value_completion">Target for Completion</label>
+    <input class='font-sans text-right rounded dark:text-shade-darker dark:bg-shade dark:text-shade-light'
+      onkeyup="calculateProgress()" type="number" id='value_completion' class="rounded" value='150000' />
+  </div>
+  <div class='flex my-2'>
+    <label class='flex-1' for="daily_target">Daily Target</label>
+    <input class='font-sans text-right rounded dark:text-shade-darker dark:bg-shade dark:text-shade-light'
+      onkeyup="calculateProgress()" type="number" id='daily_target' class="rounded" value='1000' />
+  </div>
+</section>
 <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
 <script src='papa-parse.min.js'></script>
 <script src='gauge.min.js'></script>
+<script src='tooltip.js'></script>
 <script src='writing-heatmap.js'></script>
 <script src='writing-progress.js'></script>
