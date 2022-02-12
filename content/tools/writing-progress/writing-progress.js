@@ -98,9 +98,9 @@ function generateGauge(words) {
       color: '#000000' // Fill color
     },
     staticZones: [
-      { strokeStyle: "#863A32", min: 0, max: 1000 }, // Red from 100 to 130
-      { strokeStyle: "#378632", min: 1000, max: 1250 }, // Green
-      { strokeStyle: "#3A3286", min: 1250, max: 3000 }, // Yellow
+      { strokeStyle: "#a34136", min: 0, max: 1000 }, // Red from 100 to 130
+      { strokeStyle: "#348843", min: 1000, max: 1250 }, // Green
+      { strokeStyle: "#4057b2", min: 1250, max: 3000 }, // Yellow
     ],
     limitMax: false,     // If false, max value increases automatically if value > maxValue
     limitMin: false,     // If true, the min value of the gauge will be fixed
