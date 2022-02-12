@@ -45,7 +45,7 @@ Papa.parse(SHEET_URL, {
         // Build Heatmap data
         heatmap[day_label] = { 'words': parseInt(row.words) }
 
-        earned_value = parseInt(row.cumulative);
+        earned_value = parseInt(row.progress);
         total_hours = total_hours + parseFloat(row.hours);
         hours.push(parseFloat(row.hours))
 
@@ -98,9 +98,9 @@ function generateGauge(words) {
       color: '#000000' // Fill color
     },
     staticZones: [
-      { strokeStyle: "#f97316", min: 0, max: 1000 }, // Red from 100 to 130
-      { strokeStyle: "#10b981", min: 1000, max: 1250 }, // Green
-      { strokeStyle: "#3b82f6", min: 1250, max: 3000 }, // Yellow
+      { strokeStyle: "#863A32", min: 0, max: 1000 }, // Red from 100 to 130
+      { strokeStyle: "#378632", min: 1000, max: 1250 }, // Green
+      { strokeStyle: "#3A3286", min: 1250, max: 3000 }, // Yellow
     ],
     limitMax: false,     // If false, max value increases automatically if value > maxValue
     limitMin: false,     // If true, the min value of the gauge will be fixed
