@@ -13,7 +13,7 @@ photo:
   creator: PublicDomainPictures
   creator_url: https://pixabay.com/users/publicdomainpictures-14/
   image: abstract-2207_1920.jpg
-  license: CC0
+  license: pixabay
   source_url: https://pixabay.com/photos/abstract-background-black-design-2207/
 tag:
 - Audible

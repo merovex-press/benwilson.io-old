@@ -21,7 +21,7 @@ photo:
   creator: succo
   creator_url: https://pixabay.com/users/succo-96729/
   image: first-aid-850489-feature.jpg
-  license: CC0
+  license: pixabay
   others:  PD RR BY BY-SA BY-ND
   source_url: https://pixabay.com/photos/first-aid-rescue-victim-savior-850489/
 ---

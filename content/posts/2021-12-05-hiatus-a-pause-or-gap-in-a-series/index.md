@@ -20,7 +20,7 @@ photo:
   creator: Solart
   creator_url: https://pixabay.com/users/solart-621401/
   image: bright-sun-768939.jpg
-  license: CC0
+  license: pixabay
   others:  PD RR BY BY-SA BY-ND
   source_url: https://pixabay.com/photos/bright-sun-sand-beach-sea-water-768939/
 ---

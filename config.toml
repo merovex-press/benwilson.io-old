@@ -33,6 +33,10 @@ audible = "fab fa-audible"
 paperback = "far fa-book"
 noble = "fas fa-typewriter"
 
+[params.licenses.pixabay]
+tag = "Pixabay License"
+url = "https://pixabay.com/service/license/"
+
 [params.licenses.CC0]
 tag = "CC0"
 url = "https://creativecommons.org/share-your-work/public-domain/cc0/"
