@@ -1,0 +1,57 @@
+---
+author: Ben Wilson
+title: Anthem
+date: "2021-04-29T04:47:33-04:00"
+---
+
+<p>I chose my thoughts.
+  I know that doing my best starts with thinking my best.
+  Like laying down a path for an adventure, these thoughts set the course for my actions.
+</p>
+
+<p>I am confident in what I think matters.
+  I am excited to see what happens next.
+  I am disciplined and dedicated to stick with it.</p>
+
+<p>Here are 10 things I know:</p>
+
+<ol class="leading-tight">
+  <li>Today is brand new. Tomorrow is, too.</li>
+  <li>I have a gift worth giving (I have a voice and a right to be heard)</li>
+  <li>The only person standing in my way is me. I quit doing that yesterday</li>
+  <li>God is my boss, and he is the best boss.</li>
+  <li>Winning is contagious. When I help others win, I win, too.</li>
+  <li>Feeling uncomfortable is just a sign that my old comfort zone is having a hard time keeping up with me.</li>
+  <li>Momentum is messy. Progress is the goal. Complexity the bridge. Simplicity the destination.</li>
+  <li>All things work together for good to those who love God.</li>
+  <li>I am my biggest fan.</li>
+  <li>The best response to obstacles is to do it anyway.</li>
+</ol>
+
+<p id="morning">
+  I've pulled the slingshot back.
+  I am not <em>leaving</em> this room.
+  I am <em>launching</em> from it, ready for a day full of untold opportunities.
+  I've packed honesty, generosity, laughter and bravery for the road ahead.
+</p>
+<p id="evening">
+  What a day.
+  The best part is I left myself a lot of fun things to work on tomorrow.
+  WHen my head hits that pillow, I'm off the clock, storing up energy and excitement for a brand-new day.
+</p>
+<script>
+  function timeToggle() {
+    if (new Date().getHours() > 12) {
+      document.getElementById('morning').classList.add('hidden')
+      document.getElementById('evening').classList.remove('hidden')
+    }
+    else {
+      document.getElementById('morning').classList.remove('hidden')
+      document.getElementById('evening').classList.add('hidden')
+    }
+    setTimeout(function () {
+      timeToggle()
+    }, 60000);
+  }
+  timeToggle()
+</script>
