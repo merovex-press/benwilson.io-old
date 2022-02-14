@@ -10,8 +10,8 @@ tag:
 - Writing Progress
 - Retrospective
 - Goals
-date: 2022-02-18T10:08:23-05:00
-draft: true
+date: 2022-02-14T10:05:30-05:00
+draft: false
 description: In the past six weeks, I have written 22,000 words and nearly finished the third book in the first Postal Marines quartet.
 
 photo:
@@ -34,4 +34,4 @@ If you are curious to see how things are going, I [track my progress](/tools/wri
 
 **What do you read?** I will wrap up the first quartet of the Postal Marines this year. After that, I have 12 more in the series I could write. I am also looking for a new author or series to read. Let me know what you are interested in, and I'll give it a look.
 
-Thank you for continuing to follow. I'll see you again in late March.
+I'll see you again in late March.
