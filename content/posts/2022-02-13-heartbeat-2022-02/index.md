@@ -10,7 +10,7 @@ tag:
 - Writing Progress
 - Retrospective
 - Goals
-date: 2022-02-14T10:05:30-05:00
+date: 2022-02-13T10:05:30-05:00
 draft: false
 description: In the past six weeks, I have written 22,000 words and nearly finished the third book in the first Postal Marines quartet.
 
