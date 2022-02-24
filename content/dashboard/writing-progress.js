@@ -20,12 +20,17 @@ var remaining = 0;
 var days_writing = 1;
 
 var start_date = new Date();
+function checkRow(row) {
+  if (row.date == "") return false;
+  if (row.date == "") return false;
+  return true
+}
 
 Papa.parse(SHEET_URL, {
   download: true,
   header: true,
   complete: function (results) {
-    results.data.forEach(row => {
+    results.data.filter(checkRow).forEach(row => {
       var date = new Date(row.date + 'T06:20:30Z')
       var day_label = date.toISOString().split('T')[0]
       var week_label = date.getMonday().toISOString().split('T')[0]
@@ -120,7 +125,7 @@ function generateGauge(words) {
 }
 function setProgressBar(percent) {
   var bar = document.getElementById("progress-bar")
-  bar.innerHTML = percent + "%"
+  bar.innerHTML = "WIP " + percent + "%"
   bar.setAttribute('style', 'width: ' + percent + '%;')
 }
 function calculateProgress(data) {

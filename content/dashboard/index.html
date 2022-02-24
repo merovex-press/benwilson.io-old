@@ -6,41 +6,50 @@ permalink: /tools/progress/
 summary: "Tracking my weekly writing progress."
 aliases:
 - "/tools/2a42a84a"
+- "/tools/writing-progress"
 ---
 <!-- https://jsonbin.io/61c07f9a4359822986117df4 -->
 <section class="flex gap-3 font-sans text-sm">
   <div class="flex-1 py-4 text-center card bg-purple text-shade-lighter">
-    <span id="earned-value" class="block text-2xl font-bold">88,888</span>
-    Words Drafted
+    <span id="earned-value" class="block text-2xl font-bold">------</span>
+    WIP Wordcount
+  </div>
+
+  <div class="flex-1 py-4 text-center card bg-green text-shade-lighter">
+    <span id="annual-wordcount" class="block text-2xl font-bold">TBD</span>
+    Annual Wordcount
   </div>
   <div class="flex-1 py-4 text-center card bg-red text-shade-lighter">
-    <span id="total-days" class="block text-2xl font-bold">88</span>
-    Days Done
-  </div>
-  <div class="flex-1 py-4 text-center card bg-green text-shade-lighter">
-    <span id="days-remaining" class="block text-2xl font-bold">88</span>
-    Days Left
+    <div>
+      <span id="days-remaining" class="text-2xl font-bold ">--</span> /
+      <span id="total-days" class="text-2xl font-bold ">--</span>
+    </div>
+    Days (left/done)
   </div>
   <div class="flex-1 py-4 text-center card bg-[#4057b2] text-shade-lighter">
-    <span id="tracking-date" class="block text-2xl font-bold">Oct 1</span>
+    <span id="tracking-date" class="block text-2xl font-bold">------</span>
     Expected Completion
   </div>
 </section>
-<div class="flex py-2">
-  <div class="flex-initial w-3/4">
-    <div
-      class="flex-1 border rounded-full border-[#4057b2] dark:bg-shade-dark bg-shade-lighter dark:border-brand-light">
+<section class="py-2">
+  <div class="flex">
+    <div class="flex-initial w-3/4">
       <div
-        class="p-1 font-sans text-xs leading-none text-center rounded-l-full fill-zebra dark:bg-brand-light dark:text-shade-lighter text-shade-light"
-        id="progress-bar">
+        class="flex-1 border rounded-full border-[#4057b2] dark:bg-shade-dark bg-shade-lighter dark:border-brand-light">
+        <div
+          class="p-1 font-sans text-xs leading-none text-center rounded-full fill-zebra dark:bg-brand-light dark:text-shade-lighter text-shade-light"
+          id="progress-bar">
+        </div>
       </div>
     </div>
+    <div class='flex flex-1 my-2 font-sans text-xs text-right'>
+      <span class='flex-1 pr-1' for="last_date">As of</span>
+      <span id="last_date" class='font-sans'>{{<spinner>}}</span>
+    </div>
   </div>
-  <div class='flex flex-1 my-2 font-sans text-xs text-right'>
-    <span class='flex-1 pr-1' for="last_date">As of</span>
-    <span id="last_date" class='font-sans'>{{<spinner>}}</span>
-  </div>
-</div>
+
+</section>
+
 
 <section class="mt-4 shadow bordered has-tooltip bg-shade-lighter dark:bg-shade-dark">
   <div id="heatmap"></div>
@@ -68,7 +77,7 @@ aliases:
     </div>
   </div>
 </section>
-
+<div class="text-hint">Daily Consistency Heatmap. Hover over squares for details.</div>
 <section class="flex gap-3">
   <div class="grid w-36 card place-items-center">
     <div>
@@ -101,6 +110,44 @@ aliases:
       onkeyup="calculateProgress()" type="number" id='daily_target' class="rounded" value='1000' />
   </div>
 </section>
+<section>
+  <div class="mb-12">
+    <h2 class="h2">Want to use this Dashboard?</h2>
+    <p>I did not expect a simple dashboard to be of interest to my fellow authors.
+      It was just something I cobbled together to motivate myself.
+      However, if there is enough interest, I might carve some writing time to make this available to a wider audience.
+      My first inkling was to put a MailerLite subscribe form and invite you to join a waitlist.
+      A little too impersonal at this stage.
+    </p>
+
+    <p>I am keenly interested in what you like about it. What features do you find most appealing? What's missing?
+      Would you embed this dashboard in your site? If so, are you using Wordpress or another content management
+      tool?
+      Or would you prefer this as a standalone site you can refer to?
+    </p>
+    <p>
+      Answers to these questions and any other feedback are welcome. They help give me a better idea of how to approach
+      serving your interest.
+      Email me directly at
+      <SCRIPT LANGUAGE="JavaScript">
+        user = 'ben';
+        site = 'merovex.com';
+        document.write('<a href=\"mailto:' + user + '@' + site + '?subject=Dashboard%20Feedback\">');
+        document.write(user + '@' + site + '</a>');
+      </SCRIPT> with your feedback.
+    </p>
+    <p>If you email me, I will manually add you to a mailing list so I can share status easily.
+      If you don't want to join the mailing list, just mention that in your email to me.
+    </p>
+  </div>
+  <div class="hidden ml-form-embed" xdata-account="1258812:k1h2v4j6g9" xdata-form="5520854:x2r9v9">
+  </div>
+  <p>Um, the call to action below is <em>not/not</em> for the dashboard. I don't want you to sign up for my author's
+    newsletter by
+    accident.</p>
+</section>
+
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
 <script src='papa-parse.min.js'></script>
 <script src='gauge.min.js'></script>
