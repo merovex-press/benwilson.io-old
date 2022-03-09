@@ -14,6 +14,7 @@ var total_hours = 0;
 var monthly_words = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var progress = 0;
 var percent_complete = 0;
+var annual_progress = 0;
 
 var target_length = 0;
 var remaining = 0;
@@ -58,11 +59,14 @@ Papa.parse(SHEET_URL, {
         target_length = parseInt(row.target)
         remaining = parseInt(row.remaining)
         row.monday = week_label
+        annual_progress = row.annual_progress
 
         percent_complete = parseFloat(row.percentComplete) * 100
+        console.log(row.days_writing, row)
+        days_writing = parseInt(row.days_writing) || 1;
       }
     })
-    days_writing = Object.values(heatmap).length
+    // days_writing = Object.values(heatmap).length
     // console.log(days_writing)
 
     setProgressBar(percent_complete)
@@ -86,6 +90,7 @@ Papa.parse(SHEET_URL, {
     generateGauge(session_average)
     calculateProgress({
       average: session_average,
+      annual_progress: annual_progress || 0,
       remaining: remaining,
       count: days_writing,
       words: earned_value
@@ -125,16 +130,18 @@ function generateGauge(words) {
 }
 function setProgressBar(percent) {
   var bar = document.getElementById("progress-bar")
+  var width = (percent < 15) ? 15 : percent;
   bar.innerHTML = "WIP " + percent + "%"
-  bar.setAttribute('style', 'width: ' + percent + '%;')
+  bar.setAttribute('style', 'width: ' + width + '%;')
 }
 function calculateProgress(data) {
   const days_pace = Math.ceil(data.remaining / data.average); // At current writing pace, how many days will it take?
   const target_date = today.addDays(days_pace) // Based on this, when will I likely finish?
   const words_per_hour = parseInt(data.words / data.count)
+  console.log(data.remaining, words_per_hour, [data.words, data.count])
   const days_remaining = data.remaining / words_per_hour;
-
-  document.getElementById("earned-value").innerHTML = data.words.formatted();
+  document.getElementById("earned-value").innerHTML = parseInt(data.words).formatted();
+  document.getElementById("annual-wordcount").innerHTML = parseInt(data.annual_progress).formatted();
   document.getElementById("tracking-date").innerHTML = target_date.toLocaleDateString('en-us', { month: "short", day: "numeric" });
   document.getElementById("total-days").innerHTML = data.count.rounded().toString()
   document.getElementById("days-remaining").innerHTML = days_remaining.rounded().toString();
