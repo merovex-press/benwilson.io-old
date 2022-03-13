@@ -48,15 +48,10 @@ aliases:
       <span id="last_date" class='font-sans'>{{<spinner>}}</span>
     </div>
   </div>
-
 </section>
-
-
-<section class="mt-4 shadow bordered has-tooltip bg-shade-lighter dark:bg-shade-dark">
-  <div id="heatmap"></div>
-</section>
-<section class="overflow-scroll card">
-  <div id="heatmap-exp" class="overflow-scroll"></div>
+<section class="mt-4 has-tooltip bg-shade-lighter dark:bg-shade-dark">
+  <div id="heatmap" class="rounded shadow"></div>
+  <div id="heatmap-exp"></div>
 </section>
 <div class="text-hint">Daily Consistency Heatmap. Hover over squares for details.</div>
 <section class="flex gap-3">
@@ -77,7 +72,7 @@ aliases:
 <section class="hidden p-4 font-sans card dark:text-shade-light">
   <div class='flex my-2'>
     <label class='flex-1' for="prior_value">Previously Completed Work</label>
-    <input class='font-sans text-right rounded dark:text-shade-darker dark:bg-shade dark:text-shade-light'
+    <input class='font-sans text-right rounded dark:bg-shade dark:text-shade-light'
       onkeyup="calculateProgress()" type="number" id='prior_value' class="rounded" value="25619" />
   </div>
   <div class='flex my-2'>
