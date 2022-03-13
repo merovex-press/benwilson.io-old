@@ -1,0 +1,47 @@
+---
+title: "Concept generator"
+---
+
+<div id="plotline" class="text-center card">
+
+</div>
+
+<div class="flex flex-col text-center card">
+  <label for="genre" class="h2">Select Genre</label>
+  <select id="genre" class="w-1/2 mx-auto text-center dark:bg-shade-dark" onchange="generate();">
+    <option value="apocalypse">Apocalypse</option>
+    <option value="cradle of civilization">Cradle of Civilization</option>
+    <option value="to the stars" selected>to the stars</option>
+  </select>
+  <div>
+    <button class="w-20 button" onclick="generate();">
+      Generate
+    </button>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+  var oracles;
+  var impact;
+  var element_a;
+  var element_b;
+  var trend;
+  function getRandom(arr) {
+    var idx = Math.floor(Math.random() * arr.length);
+    return arr[idx];
+  }
+  function generate() {
+    const key = document.getElementById("genre").value;
+    console.log(key)
+    $.getJSON("./oracles.json", function (data) {
+      // console.log(data)
+      trend = getRandom(data[key]["trends"]);
+      impact = getRandom(data[key]["impacts"]);
+      element_a = getRandom(data[key]["elements"][Math.floor(Math.random() * 6)]);
+      element_b = getRandom(data[key]["elements"][Math.floor(Math.random() * 6) + 2]);
+      document.getElementById('plotline').innerHTML = [trend, element_a, impact, element_b].join(" ") + "."
+    });
+  }
+  generate();
+</script>

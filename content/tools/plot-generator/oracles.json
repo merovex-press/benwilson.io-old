@@ -1,0 +1,241 @@
+{
+  "to the stars": {
+    "trends": [
+      "Creation of",
+      "Decline of",
+      "Discovery of",
+      "Destruction of",
+      "Corruption of",
+      "Rejection of"
+    ],
+    "impacts": [
+      "strengthens",
+      "rebuilds",
+      "creates",
+      "destroys",
+      "divides"
+    ],
+    "elements":[
+      [
+        "star",
+      "dead world",
+      "black hole",
+      "warp gates",
+      "plague",
+      "space monstors"
+      ],
+      [
+        "spores",
+      "unintelligent lifeform",
+      "expansionism",
+      "isolationism",
+      "imperialism",
+      "spirit of exploration"
+      ],
+      [
+        "space travel",
+      "vital energy source",
+      "medical technology",
+      "superior alien civilization",
+      "inferior alien civilization",
+      "rival alien civilization"
+      ],
+      [
+        "artificial intelligence",
+      "synthetic people",
+      "artificial life",
+      "alien artifacts",
+      "hostile ecosystem",
+      "psi talents"
+      ],
+      [
+        "primitive civilization",
+      "splinter race",
+      "human augmentations",
+      "mutations",
+      "empire",
+      "federation"
+      ],
+      [
+        "habitable world",
+      "corporation",
+      "galactic patrol",
+      "a religion",
+      "secret society",
+      "political party"
+      ],
+      [
+        "cosmic weapons",
+      "armada",
+      "an institute",
+      "space pirates",
+      "artificial world",
+      "sentient star / planet"
+      ],
+      [
+        "drug",
+      "xenophobia",
+      "human exceptionalism",
+      "social equality",
+      "fear of change",
+      "naturalism"
+      ]
+      
+    ]
+  },
+  "cradle of civilization": {
+    "trends": [
+      "Invention of",
+      "Advances of",
+      "Failure of",
+      "Desire for",
+      "Abandoning",
+      "Spread of"
+    ],
+    "impacts": [
+      "makes obsolete",
+      "undermines",
+      "impedes",
+      "accelerates",
+      "creates"
+    ],
+    "elements": [
+      [
+        "astrology",
+      "calendar",
+      "graven idols",
+      "philosophy",
+      "dance",
+      "singing & storytelling"
+      ],
+      [
+        "burial customs",
+      "architecture",
+      "roads",
+      "irrigation",
+      "gunpowder"
+      ],
+      [
+        "priests",
+      "chiefs / rulers",
+      "hunters",
+      "farmers",
+      "craftsmen",
+      "monarchy"
+      ],
+      [
+        "democracy",
+      "tyranny",
+      "slavery",
+      "swords",
+      "medicine",
+      "trade"
+      ],
+      [
+        "chariots",
+      "wheel",
+      "religion",
+      "supersititon",
+      "marriage",
+      "writing"
+      ],
+      [
+        "foreign crop",
+      "fertile land",
+      "mining",
+      "hospitality customs",
+      "domesticated animals",
+      "seamanship"
+      ],
+      [
+        "division of labor",
+      "cartography",
+      "armor",
+      "games",
+      "tournaments",
+      "sanitation"
+      ]
+    ]
+  },
+  "apocalypse": {
+    "trends" : [
+      "Sudden appearance of",
+      "Slow rise of",
+      "Changes of",
+      "Spread of",
+      "Exploiting",
+      "Ignoring"
+    ],
+    "impacts": [
+      "destroys",
+      "threatens",
+      "undermines",
+      "corrupts",
+      "gives false hope to",
+      "overextends"
+    ],
+    "elements": [
+      [
+        "crime",
+        "disease",
+        "pollution",
+        "sterility",
+        "over-population",
+        "fanaticism"
+      ],
+      [
+        "drug",
+        "climate change",
+        "quakes",
+        "meteors",
+        "monstors",
+        "zombies"
+      ],
+      ["energy source",
+        "food source",
+        "ecosystem",
+        "weather",
+        "atmosphere",
+        "sun"
+      ],
+      ["war",
+        "invaders",
+        "a species",
+        "mutations",
+        "offshoots of humanity",
+        "artifical life"
+      ],
+      [
+        "machines",
+        "aliens",
+        "economy",
+        "industry",
+        "technology",
+        "medicine"
+      ],
+      ["gods",
+        "religion",
+        "renaissance",
+        "tyranny",
+        "capitalism",
+        "individualism"
+      ],
+      [
+        "settlers",
+        "refugees",
+        "city",
+        "kingdom",
+        "tribe",
+        "primative civilization"
+      ],
+      [
+        "galactic federation",
+        "colony world",
+        "isolated society",
+        "third world country",
+        "developing medicine",
+        "advanced civilization"
+      ]
+    ]
+  }
+}

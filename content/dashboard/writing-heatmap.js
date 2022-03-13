@@ -1,8 +1,8 @@
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 const word_days = ['Tue', 'Thu', 'Sat']
 const target = parseInt(document.getElementById('daily_target').value)
-const padding = 4
-const size = 12
+const padding = 2
+const size = 13
 const height = 10 * size
 const width = 53 * size + 30
 var last_week = 0;
@@ -29,10 +29,10 @@ function drawDay(ns, date, data) {
     case value > target:
       css_class = 'heatmap-4'
       break;
-    case value > (target * 0.8):
+    case value > (target * 0.6):
       css_class = 'heatmap-3'
       break;
-    case value > (target * 0.4):
+    case value > 0:
       css_class = 'heatmap-2'
       break;
     default:
