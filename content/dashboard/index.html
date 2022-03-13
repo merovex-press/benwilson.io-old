@@ -54,29 +54,9 @@ aliases:
 
 <section class="mt-4 shadow bordered has-tooltip bg-shade-lighter dark:bg-shade-dark">
   <div id="heatmap"></div>
-  <div class="flex">
-    <div id="msg" class="flex-1 h-5 px-4 font-sans text-sm"></div>
-    <div class="flex-1 px-2 font-sans text-xs text-right"
-      title="A summary of pull requests, issues opened, and commits to the default and gh-pages branches.">
-      Less
-      <svg width="10" height="10" class="inline-block">
-        <rect width="10" height="10" class="heatmap-1 heatmap-day" rx="2" ry="2" data-level="0"></rect>
-      </svg>
-      <svg width="10" height="10" class="inline-block">
-        <rect width="10" height="10" class="heatmap-2 heatmap-day" rx="2" ry="2" data-level="1"></rect>
-      </svg>
-      <svg width="10" height="10" class="inline-block">
-        <rect width="10" height="10" class="heatmap-3 heatmap-day" rx="2" ry="2" data-level="2"></rect>
-      </svg>
-      <svg width="10" height="10" class="inline-block">
-        <rect width="10" height="10" class="heatmap-4 heatmap-day" rx="2" ry="2" data-level="3"></rect>
-      </svg>
-      <svg width="10" height="10" class="inline-block">
-        <rect width="10" height="10" class="heatmap-5 heatmap-day" rx="2" ry="2" data-level="4"></rect>
-      </svg>
-      More
-    </div>
-  </div>
+</section>
+<section class="overflow-scroll card">
+  <div id="heatmap-exp" class="overflow-scroll"></div>
 </section>
 <div class="text-hint">Daily Consistency Heatmap. Hover over squares for details.</div>
 <section class="flex gap-3">
@@ -153,5 +133,5 @@ aliases:
 <script src='papa-parse.min.js'></script>
 <script src='gauge.min.js'></script>
 <script src='tooltip.js'></script>
-<script src='writing-heatmap.js'></script>
+<script src='calendar-graph.js'></script>
 <script src='writing-progress.js'></script>

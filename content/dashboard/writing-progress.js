@@ -62,7 +62,7 @@ Papa.parse(SHEET_URL, {
         annual_progress = row.annual_progress
 
         percent_complete = parseFloat(row.percentComplete) * 100
-        console.log(row.days_writing, row)
+        // console.log(row.days_writing, row)
         days_writing = parseInt(row.days_writing) || 1;
       }
     })
@@ -72,7 +72,12 @@ Papa.parse(SHEET_URL, {
     setProgressBar(percent_complete)
 
     generateChart(weekly)
-    processHeatmap(heatmap)
+    // Made Heatmap independent
+    const heatmap_graph = new CalendarGraph({
+      data: heatmap,
+      target: parseInt(document.getElementById('daily_target').value)
+    })
+    heatmap_graph.render();
 
     var session_average = 0;
     if (Object.keys(heatmap).length > 10) {
