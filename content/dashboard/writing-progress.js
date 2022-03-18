@@ -134,6 +134,7 @@ function generateGauge(words) {
   gauge.set(words); // set actual value
 }
 function setProgressBar(percent) {
+  percent = Math.round(percent);
   var bar = document.getElementById("progress-bar")
   var width = (percent < 15) ? 15 : percent;
   bar.innerHTML = "WIP " + percent + "%"
