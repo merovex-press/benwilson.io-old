@@ -12,10 +12,10 @@ image: luctation.jpg
 photo:
   caption: Bophendze in Luctation.
   creator: Ben Wilson
-  creator_url: https://benwilsonwrites.com
+  creator_url: https://benwilson.io
   image: luctation.jpg
   license: RR
-  url: https://benwilsonwrites.com
+  source_url: https://benwilson.io
 tag:
 - Postal Marines Series
 - Writing Progress

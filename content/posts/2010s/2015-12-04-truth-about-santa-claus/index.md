@@ -12,7 +12,7 @@ photo:
   creator_url: https://www.flickr.com/photos/10368024@N04/
   image: 3137198786_896818213a_o.jpg
   license: BY
-  url: https://www.flickr.com/photos/10368024@N04/3137198786/
+  source_url: https://www.flickr.com/photos/10368024@N04/3137198786/
 tag:
 - Truth
 - Christmas

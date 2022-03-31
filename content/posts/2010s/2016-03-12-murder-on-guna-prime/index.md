@@ -9,10 +9,10 @@ description: On the live-fire training planet of Gunio, Keius Minjen witnesses t
 photo:
   caption: Bophendze in Luctation.
   creator: Ben Wilson
-  creator_url: https://benwilsonwrites.com
+  creator_url: https://benwilson.io
   image: luctation.jpg
   license: RR
-  url: https://benwilsonwrites.com
+  source_url: https://benwilson.io
 tag:
 - Forbearance
 title: Murder on Gunio Prime

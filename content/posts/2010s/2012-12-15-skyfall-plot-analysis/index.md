@@ -15,7 +15,7 @@ photo:
   creator_url: http://sony.com
   image: skyfall.jpg
   license: RR
-  url: http://sony.com
+  source_url: http://sony.com
 tag:
 - Review
 - Plot Analysis

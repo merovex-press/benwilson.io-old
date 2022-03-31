@@ -18,7 +18,7 @@ This Privacy Policy (our "Privacy Policy") describes the types of information we
 
 * [https://dausha.net](https://dausha.net)
 * [https://merovex.com](https://merovex.com)
-* [https://benwilsonwrites.com](https://benwilsonwrites.com)
+* [https://benwilson.io](https://benwilson.io)
 
 We use third-party cookies on our website. Insofar as those cookies are not strictly necessary for the provision of Websites, we will ask you to consent to our use of cookies when you first visit our website.
 

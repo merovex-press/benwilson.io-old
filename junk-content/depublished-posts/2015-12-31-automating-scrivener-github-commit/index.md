@@ -15,7 +15,7 @@ photo:
   creator_url: https://en.wikipedia.org/wiki/The_Turk#/media/File:Kempelen_chess1.jpg
   image: Kempelen_chess1.jpg
   license: BY-SA
-  url: https://en.wikipedia.org/wiki/The_Turk#/media/File:Kempelen_chess1.jpg
+  source_url: https://en.wikipedia.org/wiki/The_Turk#/media/File:Kempelen_chess1.jpg
 sharing: true
 sidebar: true
 tag:

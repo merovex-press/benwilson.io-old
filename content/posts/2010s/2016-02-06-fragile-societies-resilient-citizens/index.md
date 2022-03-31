@@ -11,7 +11,7 @@ photo:
   creator: Daquella manera/Flickr
   creator_url: https://www.flickr.com/photos/62518311@N00/
   image: 14552700184_d0e048446f_o.jpg
-  license: BY
+  license: CC0
   source_url: https://www.flickr.com/photos/62518311@N00/14552700184/
 subtitle: My notes on David Brin's Lecture
 tag:

@@ -14,7 +14,7 @@ photo:
   creator_url: http://www.flickr.com/photos/jblyberg/3394121594/
   image: 3394121594_6bdb342e15_k.jpg
   license: BY
-  url: http://www.flickr.com/photos/jblyberg/3394121594/sizes/m/
+  source_url: http://www.flickr.com/photos/jblyberg/3394121594/sizes/m/
 published_at: 2011-01-28 15:21
 tag:
 - Amazon

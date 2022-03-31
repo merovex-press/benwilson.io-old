@@ -16,7 +16,7 @@ photo:
   creator_url: http://www.flickr.com/photos/tambako/
   image: 8401726003_e980bab730.jpg
   license: BY-ND
-  url: http://www.flickr.com/photos/tambako/8401726003/sizes/m/
+  source_url: http://www.flickr.com/photos/tambako/8401726003/sizes/m/
 published_at: 2012-07-03 15:36
 sidebar: true
 tag:

@@ -14,7 +14,7 @@ photo:
   creator_url: https://www.flickr.com/photos/7609887@N08/
   image: 25920352670_031a14c13b_b.jpg
   license: BY
-  url: https://www.flickr.com/photos/7609887@N08/25920352670/
+  source_url: https://www.flickr.com/photos/7609887@N08/25920352670/
 tag:
 - Audible
 - Listening Experience

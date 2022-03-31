@@ -11,10 +11,10 @@ image: scintilla-wallpaper.jpg
 photo:
   caption: Scintilla Cover
   creator: DHM Designs
-  creator_url: https://benwilsonwrites.com
+  creator_url: https://benwilson.io
   image: scintilla-wallpaper.jpg
   license: RR
-  url: https://benwilsonwrites.com
+  source_url: https://benwilson.io
 tag:
 - Postal Marines Series
 title: A Little About the Core Series

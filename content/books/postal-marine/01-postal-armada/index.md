@@ -19,18 +19,18 @@ series:
   - Postal Marines
 characters:
   - 
-    url: /danel-bophendze/
+    source_url: /danel-bophendze/
     name: Danel Bophendze
 praise:
   - text: "Indicabo tibi, o homo, quid sit bonum, et quid Dominus requirat a te: utique facere judicium, et diligere misericordiam, et sollicitum ambulare cum Deo"
     person: Fred
-    url: http://example.org
+    source_url: http://example.org
   - text: "Indicabo tibi, o homo, quid sit bonum, et quid Dominus requirat a te: utique facere judicium, et diligere misericordiam, et sollicitum ambulare cum Deo"
     person: Fred
-    url: http://example.org
+    source_url: http://example.org
   - text: "Indicabo tibi, o homo, quid sit bonum, et quid Dominus requirat a te: utique facere judicium, et diligere misericordiam, et sollicitum ambulare cum Deo"
     person: Fred
-    url: http://example.org
+    source_url: http://example.org
 ---
 
 Bophendze felt nauseous not long after they landed on Guna Prime. “Angel, how long does it take to contract a local dise

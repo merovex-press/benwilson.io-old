@@ -18,7 +18,7 @@ photo:
   creator_url: http://www.flickr.com/photos/69275268@N00/
   image: 5705122218_550e9d5f83-Heroes.jpg
   license: BY
-  url: http://www.flickr.com/photos/69275268@N00/5705122218/
+  source_url: http://www.flickr.com/photos/69275268@N00/5705122218/
 published_at: 2011-09-17 14:51
 sidebar: true
 tag:

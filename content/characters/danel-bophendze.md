@@ -4,11 +4,11 @@ title: Danel Bophendze
 date: "2021-04-29T04:47:33-04:00"
 books:
   - 
-    url: "postal-marine/01-postal-armada"
+    source_url: "postal-marine/01-postal-armada"
     title: "Bellicose"
     tagline: "In space, nobody hears you ooah!"
   - 
-    url: "postal-marine/03-maltuseblon-gambit"
+    source_url: "postal-marine/03-maltuseblon-gambit"
     title: "Luctation"
     tagline: "In space, nobody hears you ooah!"
 ---

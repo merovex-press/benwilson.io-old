@@ -12,7 +12,7 @@ photo:
   creator_url: http://www.istockphoto.com/stock-photo-6257367-praying-really-hard.php
   image: iStock_000006257367_PrayingTooHard.jpg
   license: RR
-  url: http://www.istockphoto.com/stock-photo-6257367-praying-really-hard.php
+  source_url: http://www.istockphoto.com/stock-photo-6257367-praying-really-hard.php
 tag:
 - Bad Advice
 title: How to Beat Stress

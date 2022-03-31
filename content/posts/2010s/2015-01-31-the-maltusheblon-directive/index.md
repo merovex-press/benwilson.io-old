@@ -12,10 +12,10 @@ modified_at: 2015-01-31 11:22
 photo:
   caption: Bellicose Novel Cover
   creator: DHM Designs
-  creator_url: https://benwilsonwrites.com
+  creator_url: https://benwilson.io
   image: bellicose-redo-wallpaper.jpg
   license: RR
-  url: https://benwilsonwrites.com
+  source_url: https://benwilson.io
 published_at: 2015-01-31 11:22
 tag:
 - Postal Marines Series

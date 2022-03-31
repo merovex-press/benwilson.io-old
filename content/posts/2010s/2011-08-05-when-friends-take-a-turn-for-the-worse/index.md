@@ -14,7 +14,7 @@ photo:
   creator_url: http://www.flickr.com/photos/49512158@N00/
   image: 503020765_94aa31f8aa_o.jpg
   license: BY
-  url: http://www.flickr.com/photos/49512158@N00/503020765/
+  source_url: http://www.flickr.com/photos/49512158@N00/503020765/
 tag:
 - Writing
 - Postal Marines Series

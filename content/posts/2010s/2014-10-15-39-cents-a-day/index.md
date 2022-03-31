@@ -16,7 +16,7 @@ photo:
   hidden: true
   image: snl_39_cents.jpg
   license: RR
-  url: https://nbc.com
+  source_url: https://nbc.com
 published_at: 2014-10-15 17:36
 tag:
 - Humor

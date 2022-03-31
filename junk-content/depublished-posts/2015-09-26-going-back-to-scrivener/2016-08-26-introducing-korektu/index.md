@@ -11,10 +11,10 @@ modified_at: "2016-08-26 10:31:07"
 photo:
   caption: Screenshot of GitHub Issues List
   creator: Ben Wilson
-  creator_url: https://benwilsonwrites.com
+  creator_url: https://benwilson.io
   image: korektu_screenshot.png
   license: RR
-  url: https://benwilsonwrites.com
+  source_url: https://benwilson.io
 
 tag:
 - GitHub as an Author

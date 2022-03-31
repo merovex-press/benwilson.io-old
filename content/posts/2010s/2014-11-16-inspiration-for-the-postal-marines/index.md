@@ -12,10 +12,10 @@ keywords: writing, plan, goals
 photo:
   caption: Bellicose Novel Cover
   creator: DHM Designs
-  creator_url: https://benwilsonwrites.com
+  creator_url: https://benwilson.io
   image: bellicose-redo-wallpaper.jpg
   license: RR
-  url: https://benwilsonwrites.com
+  source_url: https://benwilson.io
 tag:
 - Postal Marines Series
 title: Inspiration for the Postal Marines
