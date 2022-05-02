@@ -1,8 +1,8 @@
 ---
-title: "Bophendze's Discovery"
+title: "Bellicose"
 homelink: "/series/"
 seo:
-  title: "Postal Marines: Discovery"
+  title: "Postal Marines: Bellicose"
 weight: 3
 featured: false
 series:

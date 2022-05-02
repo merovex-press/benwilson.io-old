@@ -1,8 +1,8 @@
 ---
-title: "Maltuseblan Gambit"
+title: "Gambit"
 homelink: "/series/"
 seo:
-  title: "Postal Marines: Maltuseblan Gambit"
+  title: "Postal Marines: Gambit"
 weight: 2
 hook-1: Maltuseblan agent gets involved in the Imperial Election while struggling his past failures.
 hook: Would you use your least effective agent on a critical mission? When Jonaldy Ammonett is its last choice, that's just what the Maltuseblan does.
