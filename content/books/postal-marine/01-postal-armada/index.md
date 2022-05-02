@@ -1,5 +1,5 @@
 ---
-title: "Postal Armada"
+title: "Armada"
 homelink: "/series/"
 seo:
   title: "Postal Marines: Armada"
