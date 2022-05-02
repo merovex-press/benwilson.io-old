@@ -93,7 +93,7 @@ Keius hesitated. He looked at his cards, then at Sablaroki’s. “Fold.”
 
 *That’s cheating.*
 
-`$- If you’re not cheating, you’re not trying in this game or in life. Come on. This will be fun. Just play a few hands and make a few dozen quid and we can get out of here.` 
+`$- If you’re not cheating, you’re not trying in this game or in life. Come on. This will be fun. Just play a few hands and make a few dozen quid and we can get out of here.`
 
 Bophendze weighed the options in his mind. *Fine, but if I end up losing my shirt, you won’t hear the end.* “Mind if I join in?”
 

@@ -1,15 +1,15 @@
 ---
-title: "Bellicose"
+title: "Rediscovery"
 homelink: "/series/"
 seo:
-  title: "Postal Marines: Bellicose"
+  title: "Postal Marines: Rediscovery"
 weight: 3
 featured: false
 series:
   - Postal Marines
-hook-1: Bophendze discovers how the Maltuseblan are always two steps ahead of everyone else.
+hook-1: Bophendze discovers technology so powerful it could change the Core Imperium forever.
 hook: How do the Maltuseblan stay one step ahead of everyone else? Bophendze risks death to discover the critical piece of their secret weapon.
-summary: This is a summary. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet venenatis dolor. Suspendisse eu justo elit. Cras lacinia turpis nulla, nec lobortis sem varius eu. Sed viverra turpis malesuada est aliquet, ac laoreet Leo convallis. Vivamus pretium aliquam finibus. Mauris dictum, eros eu malesuada imperdiet, nisl mauris scelerisque diam, nec fringilla nisl libero in nulla. Mauris eget massa lacinia sapien faucibus consequat.
+summary: "Danel Bophendze has survived many engagements. He is tired. Tired of fighting. Tired of corruption. Tired of the Postal Service. When things could not get worse, he winds up abandoned in a remote and hostile system. Refusing to give up, he discovers technology so powerful it could change the structure of the Core Imperium."
 tagline: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet venenatis dolor.
 date: 2021-04-12T06:58:06+05:00
 cta:
