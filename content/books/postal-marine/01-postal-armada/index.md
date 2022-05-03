@@ -1,8 +1,8 @@
 ---
-title: "Armada"
+title: "Postal Armada"
 homelink: "/series/"
 seo:
-  title: "Postal Marines: Armada"
+  title: "Postal Marines: Postal Armada"
 weight: 1
 featured: true
 hook-1: Novice Postal Marine gets into a battle of wits with the AI embedded in his brain on the eve of the largest Postal Service battle in history.
