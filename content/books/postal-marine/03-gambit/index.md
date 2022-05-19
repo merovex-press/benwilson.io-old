@@ -4,11 +4,11 @@ homelink: "/series/"
 seo:
   title: "Postal Marines: Gambit"
 weight: 2
-hook-1: Maltuseblan agent gets involved in the Imperial Election while struggling his past failures.
-hook: Would you use your least effective agent on a critical mission? When Jonaldy Ammonett is its last choice, that's just what the Maltuseblan does.
+hook-1: Dekumo agent gets involved in the Imperial Election while struggling his past failures.
+hook: Would you use your least effective agent on a critical mission? When Jonaldy Ammonett is its last choice, that's just what the Dekumo does.
 series:
   - Postal Marines
-summary: Sometimes your only choice is the worst one. During the tense moments of the Imperial Election, the Maltuseblon calls operative Jonaldy Ammonett into action. Except, he has failed every assignment they gave him. He partners with Bophendze in what becomes a suicide mission to correct the balance of power. Can Jonaldy succeed once in his life?
+summary: Sometimes your only choice is the worst one. During the tense moments of the Imperial Election, the Dekumo calls operative Jonaldy Ammonett into action. Except, he has failed every assignment they gave him. He partners with Bophendze in what becomes a suicide mission to correct the balance of power. Can Jonaldy succeed once in his life?
 date: 2021-04-12T06:58:06+05:00
 ---
 
