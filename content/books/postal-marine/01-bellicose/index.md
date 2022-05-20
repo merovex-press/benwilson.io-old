@@ -1,8 +1,8 @@
 ---
-title: "Postal Armada"
+title: "Bellicose"
 homelink: "/series/"
 seo:
-  title: "Postal Marines: Postal Armada"
+  title: "Postal Marines: Bellicose"
 weight: 1
 featured: true
 hook-1: Novice Postal Marine gets into a battle of wits with the AI embedded in his brain on the eve of the largest Postal Service battle in history.
