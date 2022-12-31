@@ -8,7 +8,7 @@ require 'json'
 
 TODAY = Date.today.to_s
 json_file = '/Users/merovex/Code/merovex.com/data/wordcount/writingHistory.json'
-text_file = '/Users/merovex/Code/merovex.com/data/wordcount/today.txt'
+text_file = '/Users/merovex/Code/merovex.com/today.log'
 
 history = {}
 
