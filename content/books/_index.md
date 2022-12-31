@@ -1,4 +1,4 @@
 ---
-title: Books
+title: Books by Ben Wilson
 shownav: true
 ---
