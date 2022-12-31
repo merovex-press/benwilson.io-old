@@ -12,9 +12,8 @@ summary: Danel Bophendze is a freshly minted Postal Marine. Seeking success duri
 
 date: 2021-04-12T06:57:43+05:00
 cta:
-  amazon: http://amzn.to/1PpTfSi
-  noble: http://amzn.to/1K4jaYV
-price: "$2.99"
+  kindle: "http://amzn.to/1PpTfSi"
+price: "$1.99"
 series:
   - Postal Marines
 characters:

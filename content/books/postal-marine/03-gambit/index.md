@@ -10,6 +10,9 @@ series:
   - Postal Marines
 summary: "Sometimes your only option is the worst one. During the crucial moment of the Imperial Election, a clandestine organization gives operative Jonaldy Ammonett an assignment that will restore the balance of power. Problem? He has failed every operation so far. He partners with Bophendze in what becomes a suicide mission. Can Jonaldy succeed for once in his life?"
 date: 2021-04-12T06:58:06+05:00
+cta:
+  kindle: "https://amzn.to/3IcJGc3"
+price: "$2.99"
 ---
 
 “Why am I finding myself in postal brigs?” Jonaldy lay on his back on the top bunk, staring at the annoyingly bland paint.
