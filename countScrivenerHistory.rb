@@ -6,11 +6,38 @@ require 'date'
 # require 'awesome_print'
 require 'json'
 
+now = Date.parse('2022-12-25')
+
 TODAY = Date.today.to_s
-json_file = '/Users/merovex/Code/merovex.com/data/wordcount/writingHistory.json'
+YEAR_AGO = (Date.today - 364).to_s
+LAST_WEEK = [
+  now - (now.wday - 1) - 7,
+  now - (now.wday - 1) - 1
+]
+THIS_WEEK = [
+  now - (now.wday - 1),
+  now - (now.wday - 1) + 7,
+]
+
+dashboard_dir = '/Users/merovex/Code/merovex.com/content/dashboard'
+json_file = "#{dashboard_dir}/wordcount.json"
+dashboard_file = "#{dashboard_dir}/dashboard.json"
+heatmap_file = "#{dashboard_dir}/heatmap.json"
+annual_svg_file = "#{dashboard_dir}/annual.svg"
 text_file = '/Users/merovex/Code/merovex.com/today.log'
 
 history = {}
+dashboard = {
+  current_year: 0,
+  current_week: 0,
+  last_week: 0,
+  annual: {},
+  graph_last: {},
+  graph_current: {}
+}
+years = []
+heatmap = {'365d' => {}}
+# heatmap = {[]}
 
 def fnord; end
 
@@ -53,6 +80,7 @@ files.each do |file|
 
   parse_xml(file).each do |day|
     date = day[:date]
+    years << date[0..3]
     adwc = (day.key?(:dcc) ? (day[:dcc] / 5) : 0)
 
     unless history.key?(date)
@@ -93,8 +121,230 @@ history.each_key do |date|
   end
 end
 
+history.each do |date, wordcount|
+  if date >= LAST_WEEK[0].to_s && date <= LAST_WEEK[1].to_s
+    dashboard[:last_week] += wordcount[:totals][:dwc]
+  end
+  if date >= THIS_WEEK[0].to_s && date <= THIS_WEEK[1].to_s
+    
+    dashboard[:current_week] += wordcount[:totals][:dwc]
+  end
+  if date >= YEAR_AGO && date <= TODAY
+    dashboard[:current_year] += wordcount[:totals][:dwc]
+    heatmap['365d'][date] = wordcount[:level]
+  end
+end
+(Date.parse(YEAR_AGO)..Date.parse(TODAY)).each do |date|
+  dashboard[:annual][date.to_s] = (history[date.to_s].nil?) ? 0 : history[date.to_s][:totals][:dwc]
+end
+(LAST_WEEK[0]..LAST_WEEK[1]).each do |date|
+  dashboard[:graph_last][date.to_s] = (history[date.to_s].nil?) ? 0 : history[date.to_s][:totals][:dwc]
+end
+(THIS_WEEK[0]..THIS_WEEK[1]).each do |date|
+  dashboard[:graph_current][date.to_s] = (history[date.to_s].nil?) ? 0 : history[date.to_s][:totals][:dwc]
+end
+
+years.uniq.each do |year|
+  dashboard[year.to_sym] = 0
+  history.each do |date, wordcount|
+    heatmap[date[0..3]] = {} unless heatmap.key?(date[0..3])
+    heatmap[date[0..3]][date] = wordcount[:level]
+
+    if date[0..3] == year
+      dashboard[year.to_sym] += wordcount[:totals][:dwc]
+    end
+  end
+end
+# ap heatmap
+# ap dashboard
+
 # Save the writing history to a file
-# File.open(json_file, 'w').write(JSON.pretty_generate(history.sort.to_h))
+File.open(dashboard_file, 'w').write(JSON.pretty_generate(dashboard))
+File.open(heatmap_file, 'w').write(JSON.pretty_generate(heatmap))
 File.open(json_file, 'w').write(JSON.generate(history.sort.to_h))
-File.open(text_file, 'w').write(history[TODAY][:totals][:dwc].to_i)
+# File.open(text_file, 'w').write(history[TODAY][:totals][:dwc].to_i)
 puts (history.key?(TODAY)) ? history[TODAY][:totals][:dwc].to_i : 'N/A'
+
+def make_graph(points)
+  start = calculateXY(points[0])
+  result = "M #{start[:x]},#{start[:y]}\n"
+  catmullRom2bezier(points).each do |point|
+    result += "C #{point[0][:x]},#{point[0][:y]} #{point[1][:x]},#{point[1][:y]} #{point[2][:x]},#{point[2][:y]}\n"
+  end
+  result
+end
+
+def calculateXY(point, index = 0)
+  point = [0,0] if point.nil?
+  ans = { x: (index * @svg_x) + @pad[:x], y: @height - (point[1] * @svg_y) - @pad[:y] }
+  ans
+end
+
+def catmullRom2bezier(punkte = [])
+  points = [] # Convert punkte to x,y points
+  puntos = [] # Create bezier points, points in Spanish
+  punkte.each_with_index { |h, i| points << calculateXY(h, i) }
+
+  j = punkte.length - 1
+
+  points.each_with_index do |_point, i|
+    p = [
+      { x: points[[i - 1, 0].max][:x], y: points[[i - 1, 0].max][:y] },
+      { x: points[i][:x], y: points[i][:y] },
+      { x: points[[i + 1, j].min][:x], y: points[[i + 1, j].min][:y] },
+      { x: points[[i + 1, j].min][:x], y: points[[i + 1, j].min][:y] }
+    ]
+    # Catmull-Rom to Cubic Bezier conversion matrix
+    #    0       1       0       0
+    #  -1/6      1      1/6      0
+    #    0      1/6      1     -1/6
+    #    0       0       1       0
+    puntos << [
+      { x: ((-p[0][:x] + 6 * p[1][:x] + p[2][:x]) / 6), y: ((-p[0][:y] + 6 * p[1][:y] + p[2][:y]) / 6) },
+      { x: ((p[1][:x] + 6 * p[2][:x] - p[3][:x]) / 6), y: ((p[1][:y] + 6 * p[2][:y] - p[3][:y]) / 6) },
+      { x: p[2][:x], y: p[2][:y] }
+    ]
+  end
+
+  puntos
+end
+
+def buildGraphSvg(dictionary, color)
+  @width = 200
+  @height = 20
+  @svg_x = (@width.to_f) / (dictionary.length * 1.1)
+  @svg_y = (@height.to_f) / (dictionary.values.max * 1.1)
+  @pad = { x: @svg_x, y: @svg_y }
+  graph = <<-GRAPH
+  <svg id="graph" xmlns="http://www.w3.org/2000/svg" class='w-full' width='200' height='30' viewbox="0 0 #{ @width * 1.5 } #{ @height }">
+  <path fill="none" class='stroke-2 stroke-#{color}-900 dark:stroke-#{color}-300' d="#{ make_graph(dictionary) }" ></path>
+  </svg>
+  GRAPH
+end
+
+File.open("#{dashboard_dir}/last_week.svg",'w').write(buildGraphSvg(dashboard[:graph_last], 'purple'))
+File.open("#{dashboard_dir}/current_week.svg",'w').write(buildGraphSvg(dashboard[:graph_current], 'blue'))
+File.open("#{dashboard_dir}/annual.svg",'w').write(buildGraphSvg(dashboard[:annual], 'sky'))
+
+def initialize_heatmap(data, start_date, end_date, terms = 'words', title = 'title', key = 'year')
+    @terms = terms
+    # @title = title
+
+    @start_date = (start_date.is_a? String) ? Date.parse(start_date) : start_date
+    @end_date = (end_date.is_a? String) ? Date.parse(end_date) : end_date
+    @week_index = 0
+    @title = "#{title} #{key == 'year' ? "in #{@end_date.year}" : 'in the past 365 days'}"
+
+    @years = (@start_date..@end_date).to_a.map { |date| date.strftime('%Y') }.uniq
+
+    @total_count = 0  # should be the total annual count...
+
+    @size = 10 
+    @padding = 2
+    @offset = [25, 15]
+    @height = ((@size + @padding) * 10 + (@offset[1])).to_i
+    @width = ((@size + @padding) * 54 + (@offset[0])).to_i
+    @data = set_heatmap_data(data)
+  end
+
+  def draw_day_cells
+    (@start_date..@end_date).to_a.enum_for(:each_with_index).map do |date, idx|
+      key = date.strftime('%Y-%m-%d')
+      # Rails.logger.debug "day cell: #{@data[key]}" if @data[key]
+      data = { date: key, count: 0 }
+      data[:count] = @data[key][:count] if @data[key]
+      data[:level] = @data[key][:level] if @data[key]
+      data[:tooltip] = "#{data[:count]} #{data[:terms]} on #{date.strftime('%d %B %Y')}" if (data[:count]).positive?
+      day_rectangle(date, data, idx)
+    end.join("\n")
+  end
+
+  def draw_axes
+    # months = %w[Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec]
+    months = (@start_date..@end_date).to_a.map { |date| date.strftime('%b') }.uniq
+    days = %w[Tue Thu Sat]
+    month_axis = "<g class='calgraph-text calgraph-month-axis'>"
+
+    month_axis += months.map do |m|
+       "<text x='#{(@width / 13) * (months.index(m) + 1)}' y='20' text-anchor='middle' font-size='#{@size}'>#{m}</text>"
+      end.join("\n")
+    month_axis += "</g>"
+
+    position = [4, 6, 8]
+    week_axis = "<g class='calgraph-text calgraph-week-axis'>"
+    week_axis += days.map do |d|
+      "<text x='10' y='#{position[days.index(d)] * (@size + @padding)}' text-anchor='middle' font-size='#{@size}'>#{d}</text>"
+      # tag.text(d, x: 10, y: position[days.index(d)] * (@size + @padding), "text-anchor": 'middle', "font-size": @size)
+    end.join("\n")
+    week_axis += "</g>"
+
+    heatmap_key = <<-KEY
+    <g class='calgraph-text calgraph-key'>
+      <text x='#{@width - (@size + @padding) * 9}' y='#{@height - (5 + @padding)}' text-anchor='middle' font-size='#{@size}'>Less</text>
+      <rect x='#{@width - (@size + @padding) * 8}' y='#{@height - (15 + @padding)}' rx='1' ry='1' width='#{@size}' height='#{@size}' stroke-width='1' class='calgraph-1'></rect>
+      <rect x='#{@width - (@size + @padding) * 7}' y='#{@height - (15 + @padding)}' rx='1' ry='1' width='#{@size}' height='#{@size}' stroke-width='1' class='calgraph-2'></rect>
+      <rect x='#{@width - (@size + @padding) * 6}' y='#{@height - (15 + @padding)}' rx='1' ry='1' width='#{@size}' height='#{@size}' stroke-width='1' class='calgraph-3'></rect>
+      <rect x='#{@width - (@size + @padding) * 5}' y='#{@height - (15 + @padding)}' rx='1' ry='1' width='#{@size}' height='#{@size}' stroke-width='1' class='calgraph-4'></rect>
+      <rect x='#{@width - (@size + @padding) * 4}' y='#{@height - (15 + @padding)}' rx='1' ry='1' width='#{@size}' height='#{@size}' stroke-width='1' class='calgraph-5'></rect>
+      <text x='#{@width - (@size + @padding) * 2}' y='#{@height - (5 + @padding)}' text-anchor='middle' font-size='#{@size}'>More</text>
+    </g>
+KEY
+
+    [month_axis, week_axis, heatmap_key].join("\n")
+  end
+
+  def day_rectangle(date, data, _idx = nil)
+    css_class = case data[:level]
+                when 5 then 'calgraph-5'
+                when 4 then 'calgraph-4'
+                when 3 then 'calgraph-3'
+                when 2 then 'calgraph-2'
+                else 'calgraph-1'
+                end
+
+    # woy = date.strftime('%W').to_i
+
+    dow = date.strftime('%u').to_i
+    @week_index += 1 if dow == 1
+    woy = @week_index
+    # Rails.logger.debug "-- data: #{data}" if (data[:count]).positive?
+    # tag.rect(
+    rectangle = <<~HEREDOC
+      <rect rx="#{2}" ry="#{2}" width="#{@size}" height="#{@size}"
+      stroke-width="#{1}" class="#{"#{css_class} calgraph-day"}"
+      x="#{woy * (@size + @padding) + @offset[0]}" y="#{dow * (@size + @padding) + @offset[1]}"
+      data-date="#{date.strftime('%Y-%m-%d')}"
+      data-level="#{data[:level]}"
+      data-count="#{data[:count]}"
+      data-terms="#{@terms}"
+      data-title="#{@title}"
+      data-tooltip="#{data[:tooltip]}"
+       />
+HEREDOC
+      rectangle.gsub("\n", ' ')
+  end
+
+  def set_heatmap_data(entries = [])
+    days = {}
+    # heatmap['365d'].each do |date,level|
+    entries.each do |day,level|
+      # day = entry[:day].strftime('%Y-%m-%d')
+      # title = entry[:title] || 'title'
+      # level = entry[:level] || 0
+      title = 'title'
+      days[day] = { count: 0, target: 1000, title:, level: } if days[day].nil?
+    end
+    days
+  end
+  def drawHeatmap(data,start_date,end_date)
+    # ap data
+    initialize_heatmap(data, start_date, end_date)
+    graph = <<-GRAPH
+    <svg id='' xmlns="http://www.w3.org/2000/svg" style='object-fit: contain' class='heatmap w-full' overflow="hidden" viewbox="0 0 #{@width} #{@height}">
+      #{ draw_day_cells() }
+      #{ draw_axes() }
+    </svg>
+GRAPH
+  end
+  # ap 
+  File.open("#{dashboard_dir}/heatmap.svg",'w').write(drawHeatmap(heatmap['365d'],YEAR_AGO,TODAY ).gsub("\n", ' '))

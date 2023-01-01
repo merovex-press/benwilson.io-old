@@ -1,188 +1,73 @@
-var uData;
-// var cumulative 
-const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTLRpcIxa0g_05ihkg8dAa796YSqKW-hsIbj8KNyG-yveb7LMhKl-9NVivzPf64ejc7bRdnwwyLl-cx/pub?gid=0&single=true&output=csv"
-const WRITING_DAYS = 6;
-const MAX_RANGE = 366;
-const today = new Date();
+var tries = 5;
 
-var weekly = {}
-var heatmap = {}
-var hours = []
-var earned_value = 0; // Words from the earlier draft
-var days_writing = 0;
-var total_hours = 0;
-var monthly_words = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-var progress = 0;
-var percent_complete = 0;
-var annual_progress = 0;
+var data;
 
-var target_length = 0;
-var remaining = 0;
-var days_writing = 1;
+fetch('dashboard.json')
+  .then(res => res.json())
+  .then(json => {
+    console.log('fetch', json);
+    data = json;
+  })
+  .catch(err => console.log('err', err));
 
-var start_date = new Date();
-function checkRow(row) {
-  if (row.date == "") return false;
-  if (row.date == "") return false;
-  return true
-}
-
-Papa.parse(SHEET_URL, {
-  download: true,
-  header: true,
-  complete: function (results) {
-    results.data.filter(checkRow).forEach(row => {
-      var date = new Date(row.date + 'T06:20:30Z')
-      var day_label = date.toISOString().split('T')[0]
-      var week_label = date.getMonday().toISOString().split('T')[0]
-
-      if (date < start_date) { start_date = date; }
-
-      if (parseInt(row.words) > 0 && today.between(date) < MAX_RANGE) {
-
-        // Build monthly report
-        var month_ixs = date.getMonth();
-        monthly_words[month_ixs] += parseInt(row.words)
-
-        // Build weekly chart data
-        if (!(week_label in weekly)) { weekly[week_label] = 0 }
-        weekly[week_label] = weekly[week_label] + parseInt(row.words);
-
-        // Build Heatmap data
-        heatmap[day_label] = { 'words': parseInt(row.words) }
-
-        earned_value = parseInt(row.progress);
-        total_hours = total_hours + parseFloat(row.hours);
-        hours.push(parseFloat(row.hours))
-
-        document.getElementById('last_date').innerHTML = date
-        target_length = parseInt(row.target)
-        remaining = parseInt(row.remaining)
-        row.monday = week_label
-        annual_progress = row.annual_progress
-
-        percent_complete = parseFloat(row.percentComplete) * 100
-        // console.log(row.days_writing, row)
-        days_writing = parseInt(row.days_writing) || 1;
-      }
-    })
-    // days_writing = Object.values(heatmap).length
-    // console.log(days_writing)
-
-    setProgressBar(percent_complete)
-
-    generateChart(weekly)
-    // Made Heatmap independent
-    const heatmap_graph = new CalendarGraph({
-      data: heatmap,
-      target: parseInt(document.getElementById('daily_target').value)
-    })
-    heatmap_graph.render();
-
-    var session_average = 0;
-    if (Object.keys(heatmap).length > 10) {
-      var slice = Object.values(heatmap).splice(-10, 10)
-    }
-    else {
-      var slice = Object.values(heatmap)
-    }
-    slice.forEach(value => {
-      session_average += parseInt(value['words'])
-    })
-    session_average = parseInt(session_average / slice.length)
-
-    document.getElementById('session-average').innerHTML = session_average.formatted()
-    generateGauge(session_average)
-    calculateProgress({
-      average: session_average,
-      annual_progress: annual_progress || 0,
-      remaining: remaining,
-      count: days_writing,
-      words: earned_value
-    })
+function checkWordcount() {
+  // if wordcount is undefined, wait a second and check again before continuing
+  if (data === undefined) {
+    setTimeout(function () { checkWordcount(); }, 100);
+  } else {
+    updateDashboard(data);
   }
-})
-function generateGauge(words) {
-  var opts = {
-    angle: 0.15, // The span of the gauge arc
-    lineWidth: 0.44, // The line thickness
-    radiusScale: 1, // Relative radius
-    pointer: {
-      length: 0.6, // // Relative to gauge radius
-      strokeWidth: 0.035, // The thickness
-      color: '#000000' // Fill color
-    },
-    staticZones: [
-      { strokeStyle: "#D07C73", min: 0, max: 1000 }, // Red from 100 to 130
-      { strokeStyle: "#69C67A", min: 1000, max: 1250 }, // Green
-      { strokeStyle: "#9CA8DB", min: 1250, max: 3000 }, // Yellow
-    ],
-    limitMax: false,     // If false, max value increases automatically if value > maxValue
-    limitMin: false,     // If true, the min value of the gauge will be fixed
-    // colorStart: '#6FADCF',   // Colors
-    // colorStop: '#8FC0DA',    // just experiment with them
-    strokeColor: '#E0E0E0',  // to see which ones work best for you
-    generateGradient: true,
-    highDpiSupport: true,     // High resolution support
-
-  };
-  var target = document.getElementById('gauge'); // your canvas element
-  var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
-  gauge.maxValue = 3000; // set max gauge value
-  gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
-  gauge.animationSpeed = 32; // set animation speed (32 is default value)
-  gauge.set(words); // set actual value
-}
-function setProgressBar(percent) {
-  percent = Math.round(percent);
-  var bar = document.getElementById("progress-bar")
-  var width = (percent < 15) ? 15 : percent;
-  bar.innerHTML = "WIP " + percent + "%"
-  bar.setAttribute('style', 'width: ' + width + '%;')
-}
-function calculateProgress(data) {
-  const days_pace = Math.ceil(data.remaining / data.average); // At current writing pace, how many days will it take?
-  const target_date = today.addDays(days_pace) // Based on this, when will I likely finish?
-  const words_per_hour = parseInt(data.words / data.count)
-  console.log(data.remaining, words_per_hour, [data.words, data.count])
-  const days_remaining = data.remaining / words_per_hour;
-  document.getElementById("earned-value").innerHTML = parseInt(data.words).formatted();
-  document.getElementById("annual-wordcount").innerHTML = parseInt(data.annual_progress).formatted();
-  document.getElementById("tracking-date").innerHTML = target_date.toLocaleDateString('en-us', { month: "short", day: "numeric" });
-  document.getElementById("total-days").innerHTML = data.count.rounded().toString()
-  document.getElementById("days-remaining").innerHTML = days_remaining.rounded().toString();
 }
 
-function generateChart(data) {
-  const ctx = document.getElementById('weekly-progress').getContext('2d');
-  const options = {
-    options: {
-      maintainAspectRatio: false,
-      scales: { y: { ticks: { beginAtZero: true } } }
-    },
-    data: {
-      datasets: [{
-        type: 'bar',
-        label: 'Words per Week',
-        borderWidth: 3,
-        borderColor: ['RGBA(64, 110, 166, 1)'],
-        backgroundColor: ['RGBA(64, 110, 166, 0.7)'],
-        data: Object.values(data),
+function updateDashboard(data) {
+  console.log('d', data);
+  // do stuff
+  // document.getElementById("annual-wordcount").innerHTML = parseInt(data.annual_progress).formatted();
+  document.getElementById("annual-wordcount").innerHTML = parseInt(data.current_year).formatted();
+  document.getElementById("current-week").innerHTML = parseInt(data.current_week).formatted();
+  document.getElementById("last-week").innerHTML = parseInt(data.last_week).formatted();
+}
 
-      }],
-      options: {
-        plugins: {
-          legend: {
-            display: false,
-          }
+const openSVG = (id, svgUrl) => {
+  const placeholder = document.getElementById(id);
+
+  const request = new XMLHttpRequest();
+  request.open('GET', svgUrl, true);
+  request.send();
+
+  request.onreadystatechange = () => {
+    if (request.readyState === 4) {
+      try {
+        const svg = request.responseXML.documentElement;
+        placeholder.parentNode.replaceChild(svg, placeholder);
+        // do something with the SVG
+      } catch (error) {
+        if (error instanceof TypeError) {
+          console.error('Failed to retrieve SVG:', error, tries);
+        } else {
+          throw error;
         }
-      },
-      labels: Object.keys(data)
+        tries -= 1;
+        if (tries > 0) {
+          setTimeout(() => openSVG(id, svgUrl), 1000);
+        }
+
+      }
+      // console.log("request", svgUrl)
+      // const svg = request.responseXML.documentElement;
+      // console.log(svgUrl, svg);
     }
   }
-  // console.log(options);
-  new Chart(ctx, options);
 }
+
+window.onload = () => {
+  checkWordcount();
+  openSVG('heatmap-svg', './heatmap.svg');
+  openSVG('annual-svg', './annual.svg');
+  openSVG('this-week-svg', './current_week.svg');
+  openSVG('last-week-svg', './last_week.svg');
+}
+
 
 Date.prototype.getWeek = function (dowOffset) {
   /*getWeek() was developed by Nick Baicoianu at MeanFreePath: http://www.meanfreepath.com */

@@ -1,5 +1,4 @@
 ---
-layout: tools
 title: "Writing Progress"
 date: 2014-02-15 15:36
 permalink: /dashboard/
@@ -10,123 +9,40 @@ aliases:
 - "/tools/progress"
 ---
 <!-- https://jsonbin.io/61c07f9a4359822986117df4 -->
-<section class="flex gap-3 font-sans text-sm">
-  <div class="flex-1 py-4 text-center card border-[#696aaa] border-2 bg-[#51528f] text-shade-lighter">
-    <span id="earned-value" class="block text-2xl font-bold">------</span>
-    WIP Wordcount
+<section class="panel grid grid-cols-3 lg:grid-cols-3 gap-2 font-sans text-sm z-0 [&>*]:rounded [&>*]:border-2 ">
+  <div
+    class="h-24 flex flex-col px-2 text-center card text-purple-900 bg-purple-200 border-purple-500 dark:bg-purple-700 dark:border-purple-500 dark:text-purple-300">
+    <span id="last-week" class="block text-4xl font-bold">------</span>
+    <span class='block mx-auto' id="last-week-svg">SVG</span>
+    Last Week's Wordcount
+  </div>
+  <div
+    class="h-24 flex flex-col px-2 text-center card text-blue-900 bg-blue-200 border-blue-500 dark:bg-blue-700 dark:border-blue-500 dark:text-blue-300">
+    <span id="current-week" class="block text-4xl font-bold">------</span>
+    <span class='block mx-auto' id="this-week-svg">SVG</span>
+    This Week's Wordcount
   </div>
 
-  <div class="flex-1 py-4 text-center card border-[#6aaa69] border-2 bg-[#528f51] text-shade-lighter">
-    <span id="annual-wordcount" class="block text-2xl font-bold">TBD</span>
+  <div
+    class="h-24 flex flex-col px-2 text-center card text-sky-900 bg-sky-200 border-sky-500 dark:bg-sky-700 dark:border-sky-500 dark:text-sky-300">
+    <span id="annual-wordcount" class="text-4xl font-semibold tracking-tight">TBD</span>
+    <span class='block mx-auto' id="annual-svg">SVG</span>
     Annual Wordcount
   </div>
-  <div class="flex-1 py-4 text-center card border-[#aa696a] border-2 bg-[#8f5152] text-shade-lighter">
-    <div>
-      <span id="days-remaining" class="text-2xl font-bold ">--</span> /
-      <span id="total-days" class="text-2xl font-bold ">--</span>
-    </div>
-    Days (left/done)
-  </div>
-  <div class="flex-1 py-4 text-center card border-[#698baa] border-2 bg-[#51718f] text-shade-lighter">
-    <span id="tracking-date" class="block text-2xl font-bold">------</span>
-    Expected Completion
-  </div>
 </section>
-<section class="py-2">
-  <div class="flex">
-    <div class="flex-initial w-3/4">
-      <div
-        class="flex-1 border rounded-full border-[#4057b2] dark:bg-shade-dark bg-shade-lighter dark:border-brand-light">
-        <div
-          class="p-1 font-sans text-xs leading-none text-center rounded-full fill-zebra dark:bg-brand-light dark:text-shade-lighter text-shade-light"
-          id="progress-bar">
-        </div>
-      </div>
-    </div>
-    <div class='flex flex-1 my-2 font-sans text-xs text-right'>
-      <span class='flex-1 pr-1' for="last_date">As of</span>
-      <span id="last_date" class='font-sans'>{{<spinner>}}</span>
-    </div>
-  </div>
-</section>
+
 <section class="mt-4 has-tooltip bg-shade-lighter dark:bg-shade-dark">
   <div id="heatmap" class="overflow-x-scroll rounded shadow"> </div>
-  <div id="heatmap-exp"></div>
+  <div class="card">
+    <div id="heatmap-svg" class="border">SVG</div>
+  </div>
+  <div id="msg"></div>
 </section>
 <div class="text-hint">Daily Consistency Heatmap. Hover over squares for details.</div>
-<section class="flex gap-3">
-  <div class="grid w-36 card place-items-center">
-    <div>
-      <div class="font-sans text-2xl text-center" id="session-average"></div>
-      <canvas id="gauge" class="mx-auto w-28"></canvas>
-      <div class="font-sans text-sm text-center">Words per Day</div>
-      <div class="font-sans text-xs text-center">(rolling 10-day average)</div>
-    </div>
-  </div>
-  <div class="flex items-center justify-center flex-1 w-2/3 h-48 p-4 card">
-    <div style="width: 100%; height: 100%; margin: 0 auto" id='canvas'>
-      <canvas id="weekly-progress"></canvas>
-    </div>
-  </div>
-</section>
-<section class="hidden p-4 font-sans card dark:text-shade-light">
-  <div class='flex my-2'>
-    <label class='flex-1' for="prior_value">Previously Completed Work</label>
-    <input class='font-sans text-right rounded dark:bg-shade dark:text-shade-light' onkeyup="calculateProgress()"
-      type="number" id='prior_value' class="rounded" value="25619" />
-  </div>
-  <div class='flex my-2'>
-    <label class='flex-1' for="value_completion">Target for Completion</label>
-    <input class='font-sans text-right rounded dark:text-shade-darker dark:bg-shade dark:text-shade-light'
-      onkeyup="calculateProgress()" type="number" id='value_completion' class="rounded" value='150000' />
-  </div>
-  <div class='flex my-2'>
-    <label class='flex-1' for="daily_target">Daily Target</label>
-    <input class='font-sans text-right rounded dark:text-shade-darker dark:bg-shade dark:text-shade-light'
-      onkeyup="calculateProgress()" type="number" id='daily_target' class="rounded" value='1000' />
-  </div>
-</section>
-<section>
-  <div class="mb-12">
-    <h2 class="h2">Want to use this Dashboard?</h2>
-    <p>I did not expect a simple dashboard to be of interest to my fellow authors.
-      It was just something I cobbled together to motivate myself.
-      However, if there is enough interest, I might carve some writing time to make this available to a wider audience.
-      My first inkling was to put a MailerLite subscribe form and invite you to join a waitlist.
-      A little too impersonal at this stage.
-    </p>
 
-    <p>I am keenly interested in what you like about it. What features do you find most appealing? What's missing?
-      Would you embed this dashboard in your site? If so, are you using Wordpress or another content management
-      tool?
-      Or would you prefer this as a standalone site you can refer to?
-    </p>
-    <p>
-      Answers to these questions and any other feedback are welcome. They help give me a better idea of how to approach
-      serving your interest.
-      Email me directly at
-      <SCRIPT LANGUAGE="JavaScript">
-        user = 'ben';
-        site = 'merovex.com';
-        document.write('<a href=\"mailto:' + user + '@' + site + '?subject=Dashboard%20Feedback\">');
-        document.write(user + '@' + site + '</a>');
-      </SCRIPT> with your feedback.
-    </p>
-    <p>If you email me, I will manually add you to a mailing list so I can share status easily.
-      If you don't want to join the mailing list, just mention that in your email to me.
-    </p>
-  </div>
-  <div class="hidden ml-form-embed" xdata-account="1258812:k1h2v4j6g9" xdata-form="5520854:x2r9v9">
-  </div>
-  <p>Um, the call to action below is <em>not/not</em> for the dashboard. I don't want you to sign up for my author's
-    newsletter by
-    accident.</p>
-</section>
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script> -->
 
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
-<script src='papa-parse.min.js'></script>
-<script src='gauge.min.js'></script>
+<!-- <script src='gauge.min.js'></script> -->
 <script src='tooltip.js'></script>
-<script src='calendar-graph.js'></script>
+<!-- <script src='calendar-graph.js'></script> -->
 <script src='writing-progress.js'></script>
