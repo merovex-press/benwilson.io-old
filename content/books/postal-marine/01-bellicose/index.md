@@ -15,7 +15,7 @@ cta:
   kindle: "http://amzn.to/1PpTfSi"
 price: "$1.99"
 series:
-  - Postal Marines
+  - Stranded
 characters:
   - 
     source_url: /danel-bophendze/
