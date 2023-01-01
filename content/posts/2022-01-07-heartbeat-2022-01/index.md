@@ -12,7 +12,7 @@ tag:
 date: 2022-01-03T09:47:13+0400
 seo:
   title: "Heartbeat: January 2022"
-draft: false
+
 description: This first heartbeat shares good progress toward finishing 4 books in 2022.
 # images: [first-aid-850489.jpg]
 socialshare: true

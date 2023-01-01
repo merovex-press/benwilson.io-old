@@ -7,7 +7,7 @@ created_at: "2019-09-11T06:33:50-04:00"
 date: "2019-11-11T06:33:50Z"
 description: What have I been listening to over in the 3 years since I last shared
   my audiobook list?
-draft: false
+
 photo:
   caption: Time for an Audible close up.
   creator: PublicDomainPictures

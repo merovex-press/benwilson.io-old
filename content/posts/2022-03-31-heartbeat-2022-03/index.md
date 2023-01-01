@@ -11,7 +11,7 @@ tag:
 - Retrospective
 - Goals
 date: 2022-03-31T10:08:23-05:00
-draft: false
+
 description: In the past six weeks, I have written 19,000 words and finished the third book in the first Postal Marines quartet.
 
 photo:

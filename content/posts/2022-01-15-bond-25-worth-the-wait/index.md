@@ -9,7 +9,7 @@ tag:
 - Retrospective
 - Goals
 date: 2021-12-06T10:06:44-05:00
-draft: true
+
 description: "No Time to Die capstones 15 years of Daniel Craig as James Bond. Was the era worth it?"
 
 photo:
