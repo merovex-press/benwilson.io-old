@@ -6,7 +6,7 @@ require 'date'
 # require 'awesome_print'
 require 'json'
 
-now = Date.parse('2022-12-25')
+now = Date.today
 
 TODAY = Date.today.to_s
 YEAR_AGO = (Date.today - 364).to_s
@@ -16,8 +16,9 @@ LAST_WEEK = [
 ]
 THIS_WEEK = [
   now - (now.wday - 1),
-  now - (now.wday - 1) + 7,
+  now - (now.wday - 1) + 6,
 ]
+# ap [LAST_WEEK, THIS_WEEK]
 
 dashboard_dir = '/Users/merovex/Code/merovex.com/content/dashboard'
 json_file = "#{dashboard_dir}/wordcount.json"
@@ -163,7 +164,7 @@ File.open(dashboard_file, 'w').write(JSON.pretty_generate(dashboard))
 File.open(heatmap_file, 'w').write(JSON.pretty_generate(heatmap))
 File.open(json_file, 'w').write(JSON.generate(history.sort.to_h))
 # File.open(text_file, 'w').write(history[TODAY][:totals][:dwc].to_i)
-puts (history.key?(TODAY)) ? history[TODAY][:totals][:dwc].to_i : 'N/A'
+puts (history.key?(TODAY)) ? history[TODAY][:totals][:dwc].to_i : 'Get to work, slug. Zero'
 
 def make_graph(points)
   start = calculateXY(points[0])
@@ -222,30 +223,28 @@ def buildGraphSvg(dictionary, color)
   GRAPH
 end
 
-File.open("#{dashboard_dir}/last_week.svg",'w').write(buildGraphSvg(dashboard[:graph_last], 'purple'))
-File.open("#{dashboard_dir}/current_week.svg",'w').write(buildGraphSvg(dashboard[:graph_current], 'blue'))
-File.open("#{dashboard_dir}/annual.svg",'w').write(buildGraphSvg(dashboard[:annual], 'sky'))
+
 
 def initialize_heatmap(data, start_date, end_date, terms = 'words', title = 'title', key = 'year')
-    @terms = terms
-    # @title = title
+  @terms = terms
+  # @title = title
 
-    @start_date = (start_date.is_a? String) ? Date.parse(start_date) : start_date
-    @end_date = (end_date.is_a? String) ? Date.parse(end_date) : end_date
-    @week_index = 0
-    @title = "#{title} #{key == 'year' ? "in #{@end_date.year}" : 'in the past 365 days'}"
+  @start_date = (start_date.is_a? String) ? Date.parse(start_date) : start_date
+  @end_date = (end_date.is_a? String) ? Date.parse(end_date) : end_date
+  @week_index = 0
+  @title = "#{title} #{key == 'year' ? "in #{@end_date.year}" : 'in the past 365 days'}"
 
-    @years = (@start_date..@end_date).to_a.map { |date| date.strftime('%Y') }.uniq
+  @years = (@start_date..@end_date).to_a.map { |date| date.strftime('%Y') }.uniq
 
-    @total_count = 0  # should be the total annual count...
+  @total_count = 0  # should be the total annual count...
 
-    @size = 10 
-    @padding = 2
-    @offset = [25, 15]
-    @height = ((@size + @padding) * 10 + (@offset[1])).to_i
-    @width = ((@size + @padding) * 54 + (@offset[0])).to_i
-    @data = set_heatmap_data(data)
-  end
+  @size = 10 
+  @padding = 2
+  @offset = [25, 15]
+  @height = ((@size + @padding) * 10 + (@offset[1])).to_i
+  @width = ((@size + @padding) * 54 + (@offset[0])).to_i
+  @data = set_heatmap_data(data)
+end
 
   def draw_day_cells
     (@start_date..@end_date).to_a.enum_for(:each_with_index).map do |date, idx|
@@ -347,4 +346,8 @@ HEREDOC
 GRAPH
   end
   # ap 
-  File.open("#{dashboard_dir}/heatmap.svg",'w').write(drawHeatmap(heatmap['365d'],YEAR_AGO,TODAY ).gsub("\n", ' '))
+
+File.open("#{dashboard_dir}/last_week.svg",'w').write(buildGraphSvg(dashboard[:graph_last], 'purple'))
+File.open("#{dashboard_dir}/current_week.svg",'w').write(buildGraphSvg(dashboard[:graph_current], 'blue'))
+File.open("#{dashboard_dir}/annual.svg",'w').write(buildGraphSvg(dashboard[:annual], 'amber'))
+File.open("#{dashboard_dir}/heatmap.svg",'w').write(drawHeatmap(heatmap['365d'],YEAR_AGO,TODAY ).gsub("\n", ' '))

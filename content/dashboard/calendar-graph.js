@@ -151,7 +151,7 @@ class CalendarGraph {
     svg.setAttributeNS(null, 'width', this.svgsize[0])
     svg.setAttributeNS(null, 'height', this.svgsize[1])
     svg.setAttributeNS(null, 'id', 'calgraph');
-    svg.setAttributeNS(null, 'class', 'bg-shade-lighter dark:bg-shade-darker rounded mx-auto');
+    svg.setAttributeNS(null, 'class', 'bg-gray-50 dark:bg-gray-900 rounded mx-auto');
     svg.setAttributeNS(null, 'overflow', 'hidden')
     svg.setAttributeNS(this.ns, 'viewbox', '0 0 ' + this.svgsize[0] + ' ' + this.svgsize[1] + ' 200')
 
