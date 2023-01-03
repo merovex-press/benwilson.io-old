@@ -5,6 +5,7 @@ require 'date'
 # require 'rubygems'
 # require 'awesome_print'
 require 'json'
+require 'securerandom'
 
 now = Date.today
 
@@ -21,7 +22,7 @@ THIS_WEEK = [
 # ap [LAST_WEEK, THIS_WEEK]
 
 dashboard_dir = '/Users/merovex/Code/merovex.com/content/dashboard'
-json_file = "#{dashboard_dir}/wordcount.json"
+scrivener_json = "#{dashboard_dir}/scrivener.json"
 dashboard_file = "#{dashboard_dir}/dashboard.json"
 heatmap_file = "#{dashboard_dir}/heatmap.json"
 annual_svg_file = "#{dashboard_dir}/annual.svg"
@@ -122,7 +123,17 @@ history.each_key do |date|
   end
 end
 
+wc_json = [
+
+]
 history.each do |date, wordcount|
+  wc_json << {
+    _id: SecureRandom.uuid,
+    date: date,
+    wordcount: wordcount[:totals][:dwc],
+    target: (wordcount[:totals][:s].zero?) ? 1250 : wordcount[:totals][:s],
+    level: wordcount[:level]
+  }
   if date >= LAST_WEEK[0].to_s && date <= LAST_WEEK[1].to_s
     dashboard[:last_week] += wordcount[:totals][:dwc]
   end
@@ -160,9 +171,13 @@ end
 # ap dashboard
 
 # Save the writing history to a file
-File.open(dashboard_file, 'w').write(JSON.pretty_generate(dashboard))
-File.open(heatmap_file, 'w').write(JSON.pretty_generate(heatmap))
-File.open(json_file, 'w').write(JSON.generate(history.sort.to_h))
+# pretty_generate
+File.open(dashboard_file, 'w').write(JSON.generate(dashboard))
+File.open(heatmap_file, 'w').write(JSON.generate(heatmap))
+File.open(scrivener_json, 'w').write(JSON.generate(history.sort.to_h))
+File.open("#{dashboard_dir}/wordcount.json",'w').write(JSON.generate(wc_json))
+
+
 # File.open(text_file, 'w').write(history[TODAY][:totals][:dwc].to_i)
 puts (history.key?(TODAY)) ? history[TODAY][:totals][:dwc].to_i : 'Get to work, slug. Zero'
 
