@@ -1,3 +1,6 @@
 [submodule "themes/hugo-merovex-2021"]
 	path = themes/hugo-merovex-2021
 	url = https://github.com/merovex-press/hugo-merovex-2021.git
+[submodule "sveltekit-author-dashboard"]
+	path = sveltekit-author-dashboard
+	url = https://github.com/verkilo/sveltekit-author-dashboard.git
