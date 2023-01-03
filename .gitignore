@@ -5,3 +5,4 @@ hugo_stats.json
 phases.yml
 package-lock.json
 .DS_Store
+/content/svd
