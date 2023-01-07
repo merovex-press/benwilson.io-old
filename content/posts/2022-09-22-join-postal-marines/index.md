@@ -1,6 +1,9 @@
 ---
 author: Ben Wilson
 title: Join Postal Marines
+aliases: [
+  'join-the-postal-marines-bellicose-is-re-released-390921d0'
+]
 categories:
 - Diary
 tag:

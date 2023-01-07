@@ -1,6 +1,9 @@
 ---
 author: Ben Wilson
 title: 'Scrivnomatic, for the Win'
+aliases: [
+  'scrivomatic-for-point-perfect-paperbacks-aced7adb'
+]
 categories:
 - Diary
 tag:
