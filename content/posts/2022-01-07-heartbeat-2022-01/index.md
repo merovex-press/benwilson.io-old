@@ -1,5 +1,5 @@
 ---
-aliases: ['/p/2a3b22c6']
+aliases: ['/p/2a3b22c6', 'heartbeat-january-2022-rnyvlGWg']
 author: Ben Wilson
 title: "Heartbeat: January 2022"
 subtitle: "A New Year"

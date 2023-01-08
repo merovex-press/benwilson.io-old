@@ -4,6 +4,7 @@ title: "Heartbeat: February 2022"
 subtitle: "Third Book Almost Complete!"
 aliases: 
 - '/p/2a42a84a'
+- 'heartbeat-february-2022-vDjGr'
 categories:
 - Heartbeat
 tag:

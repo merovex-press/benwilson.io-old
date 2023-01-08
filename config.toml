@@ -4,6 +4,11 @@ title = "Ben Wilson"
 theme = "hugo-merovex-2021"
 paginate = 6
 
+[sitemap]
+changefreq = 'monthly'
+filename = 'sitemap.xml'
+priority = 0.5
+
 [permalinks]
 post = "/post/:slug"
 

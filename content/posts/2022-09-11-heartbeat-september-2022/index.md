@@ -1,6 +1,9 @@
 ---
 author: Ben Wilson
 title: 'Heartbeat: September 2022'
+aliases: [
+  'heartbeat-september-2022-i-reached-my-goal-4d52d481'
+]
 categories:
 - Diary
 tag:
