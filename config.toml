@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "Ben Wilson"
 theme = "hugo-merovex-2021"
 paginate = 6
+copyright = 'This work is Copyright, All Rights Reserved.'
+author = 'Ben Wilson'
 
 [sitemap]
 changefreq = 'monthly'
@@ -24,6 +26,7 @@ categories = "categories"
 cdn_url = "https://d1czp97ry8if6j.cloudfront.net"
 venue = "Virginia"
 photo = "ben-wilson-2021-square.jpg"
+author = 'Ben Wilson'
 
 [params.social.share]
 facebook = true
