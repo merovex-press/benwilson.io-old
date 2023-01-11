@@ -33,6 +33,7 @@ dashboard = {
   current_year: 0,
   current_week: 0,
   last_week: 0,
+  weekly_annual: {},
   annual: {},
   graph_last: {},
   graph_current: {}
@@ -138,7 +139,6 @@ history.each do |date, wordcount|
     dashboard[:last_week] += wordcount[:totals][:dwc]
   end
   if date >= THIS_WEEK[0].to_s && date <= THIS_WEEK[1].to_s
-    
     dashboard[:current_week] += wordcount[:totals][:dwc]
   end
   if date >= YEAR_AGO && date <= TODAY
@@ -146,7 +146,14 @@ history.each do |date, wordcount|
     heatmap['365d'][date] = wordcount[:level]
   end
 end
+# Year at a glance linegraph.
 (Date.parse(YEAR_AGO)..Date.parse(TODAY)).each do |date|
+  # Create key which is first day of the week.
+  key = Date.commercial(date.year, date.cweek, 1).to_s
+  dashboard[:weekly_annual][key] = 0 unless dashboard[:weekly_annual].key?(key)
+  dashboard[:weekly_annual][key] += (history[date.to_s].nil?) ? 0 : history[date.to_s][:totals][:dwc]
+
+  # Build annual linegraph
   dashboard[:annual][date.to_s] = (history[date.to_s].nil?) ? 0 : history[date.to_s][:totals][:dwc]
 end
 (LAST_WEEK[0]..LAST_WEEK[1]).each do |date|
@@ -237,8 +244,6 @@ def buildGraphSvg(dictionary, color)
   </svg>
   GRAPH
 end
-
-
 
 def initialize_heatmap(data, start_date, end_date, terms = 'words', title = 'title', key = 'year')
   @terms = terms
@@ -365,4 +370,5 @@ GRAPH
 File.open("#{dashboard_dir}/last_week.svg",'w').write(buildGraphSvg(dashboard[:graph_last], 'purple'))
 File.open("#{dashboard_dir}/current_week.svg",'w').write(buildGraphSvg(dashboard[:graph_current], 'blue'))
 File.open("#{dashboard_dir}/annual.svg",'w').write(buildGraphSvg(dashboard[:annual], 'amber'))
+File.open("#{dashboard_dir}/weekly_annual.svg",'w').write(buildGraphSvg(dashboard[:weekly_annual], 'amber'))
 File.open("#{dashboard_dir}/heatmap.svg",'w').write(drawHeatmap(heatmap['365d'],YEAR_AGO,TODAY ).gsub("\n", ' '))

@@ -24,6 +24,7 @@ function updateDashboard(data) {
   // do stuff
   // document.getElementById("annual-wordcount").innerHTML = parseInt(data.annual_progress).formatted();
   document.getElementById("annual-wordcount").innerHTML = parseInt(data.current_year).formatted();
+  document.getElementById("weekly-annual-wordcount").innerHTML = parseInt(data.current_year).formatted();
   document.getElementById("current-week").innerHTML = parseInt(data.current_week).formatted();
   document.getElementById("last-week").innerHTML = parseInt(data.last_week).formatted();
 }
@@ -64,6 +65,7 @@ window.onload = () => {
   checkWordcount();
   openSVG('heatmap-svg', './heatmap.svg');
   openSVG('annual-svg', './annual.svg');
+  openSVG('weekly-annual-svg', './weekly_annual.svg');
   openSVG('this-week-svg', './current_week.svg');
   openSVG('last-week-svg', './last_week.svg');
 }
