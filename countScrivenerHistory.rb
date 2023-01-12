@@ -172,7 +172,7 @@ td_average = []
   # ten_day_average
 end
 td_average.compact!
-# raise td_average.inspect
+td_average.pop unless td_average.last > 100
 dashboard[:ten_day_average] = td_average.sum / td_average.size
 # raise td_average.compact.inspect
 
