@@ -25,6 +25,7 @@ function updateDashboard(data) {
   // document.getElementById("annual-wordcount").innerHTML = parseInt(data.annual_progress).formatted();
   document.getElementById("annual-wordcount").innerHTML = parseInt(data.current_year).formatted();
   document.getElementById("weekly-annual-wordcount").innerHTML = parseInt(data.current_year).formatted();
+  document.getElementById("ten-day-average").innerHTML = parseInt(data.ten_day_average).formatted();
   document.getElementById("current-week").innerHTML = parseInt(data.current_week).formatted();
   document.getElementById("last-week").innerHTML = parseInt(data.last_week).formatted();
 }

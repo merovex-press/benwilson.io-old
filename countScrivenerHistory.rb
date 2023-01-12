@@ -10,6 +10,7 @@ require 'securerandom'
 now = Date.today
 
 TODAY = Date.today.to_s
+TEN_DAYS_AGO = (Date.today - 10).to_s
 YEAR_AGO = (Date.today - 364).to_s
 LAST_WEEK = [
   now - (now.wday - 1) - 7,
@@ -35,6 +36,7 @@ dashboard = {
   last_week: 0,
   weekly_annual: {},
   annual: {},
+  ten_day_average: 0,
   graph_last: {},
   graph_current: {}
 }
@@ -162,6 +164,17 @@ end
 (THIS_WEEK[0]..THIS_WEEK[1]).each do |date|
   dashboard[:graph_current][date.to_s] = (history[date.to_s].nil?) ? 0 : history[date.to_s][:totals][:dwc]
 end
+td_average = []
+(Date.parse(TEN_DAYS_AGO)..Date.parse(TODAY)).each do |date|
+  c = (history[date.to_s].nil?) ? nil : history[date.to_s][:totals][:dwc]
+  # next if c < 100
+  td_average << c
+  # ten_day_average
+end
+td_average.compact!
+# raise td_average.inspect
+dashboard[:ten_day_average] = td_average.sum / td_average.size
+# raise td_average.compact.inspect
 
 years.uniq.each do |year|
   dashboard[year.to_sym] = 0
