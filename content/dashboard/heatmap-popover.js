@@ -26,7 +26,7 @@ const heatmapPopover = (function () {
       // Create the pop-over
       var popover = document.createElement("div");
       popover.classList.add("popover");
-      var content = `<span>${count.toLocaleString()} on ${formatter.format(new Date(date))}</span>`
+      var content = `<span>${count.toLocaleString()} words on ${formatter.format(new Date(date))}</span>`
       // console.log('content', content)
       popover.innerHTML = content;
 
