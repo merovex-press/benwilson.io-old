@@ -372,7 +372,7 @@ HEREDOC
     # ap data
     initialize_heatmap(data, start_date, end_date)
     graph = <<-GRAPH
-    <svg id='' xmlns="http://www.w3.org/2000/svg" style='object-fit: contain' class='heatmap w-full' overflow="hidden" viewbox="0 0 #{@width} #{@height}">
+    <svg id='' xmlns="http://www.w3.org/2000/svg" style='object-fit: contain' class='w-full heatmap' overflow="hidden" viewbox="0 0 #{@width} #{@height}">
       #{ draw_day_cells() }
       #{ draw_axes() }
     </svg>

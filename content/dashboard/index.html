@@ -11,38 +11,38 @@ aliases:
 <!-- https://jsonbin.io/61c07f9a4359822986117df4 -->
 <section class="panel grid grid-cols-3 lg:grid-cols-3 gap-2 font-sans text-sm z-0 [&>*]:rounded [&>*]:border-2 ">
   <div
-    class="h-24 flex flex-col px-2 text-center card text-purple-900 bg-purple-200 border-purple-500 dark:bg-purple-700 dark:border-purple-500 dark:text-purple-300">
+    class="flex flex-col h-24 px-2 text-center text-purple-900 bg-purple-200 border-purple-500 card dark:bg-purple-700 dark:border-purple-500 dark:text-purple-300">
     <span id="last-week" class="block text-4xl font-bold">------</span>
     <span class='block mx-auto' id="last-week-svg">SVG</span>
     Last Week's Wordcount
   </div>
   <div
-    class="h-24 flex flex-col px-2 text-center card text-blue-900 bg-blue-200 border-blue-500 dark:bg-blue-700 dark:border-blue-500 dark:text-blue-300">
+    class="flex flex-col h-24 px-2 text-center text-blue-900 bg-blue-200 border-blue-500 card dark:bg-blue-700 dark:border-blue-500 dark:text-blue-300">
     <span id="current-week" class="block text-4xl font-bold">------</span>
     <span class='block mx-auto' id="this-week-svg">SVG</span>
     This Week's Wordcount
   </div>
 
   <div
-    class="h-24 flex flex-col px-2 text-center card text-amber-900 bg-amber-200 border-amber-500 dark:bg-amber-700 dark:border-amber-500 dark:text-amber-300">
+    class="flex flex-col h-24 px-2 text-center card text-amber-900 bg-amber-200 border-amber-500 dark:bg-amber-700 dark:border-amber-500 dark:text-amber-300">
     <span id="annual-wordcount" class="text-4xl font-semibold tracking-tight">TBD</span>
     <span class='block mx-auto' id="annual-svg">SVG</span>
     Annual Wordcount
   </div>
   <div
-    class="h-24 flex flex-col px-2 text-center card text-amber-900 bg-amber-200 border-amber-500 dark:bg-amber-700 dark:border-amber-500 dark:text-amber-300">
+    class="flex flex-col h-24 px-2 text-center card text-amber-900 bg-amber-200 border-amber-500 dark:bg-amber-700 dark:border-amber-500 dark:text-amber-300">
     <span id="weekly-annual-wordcount" class="text-4xl font-semibold tracking-tight">TBD</span>
     <span class='block mx-auto' id="weekly-annual-svg">SVG</span>
     Weekly Wordcount
   </div>
   <div
-    class="h-24 flex justify-between flex-col px-2 text-center card text-green-900 bg-green-200 border-green-500 dark:bg-green-700 dark:border-green-500 dark:text-green-300">
+    class="flex flex-col justify-between h-24 px-2 text-center text-green-900 bg-green-200 border-green-500 card dark:bg-green-700 dark:border-green-500 dark:text-green-300">
     <span id="ten-day-average" class="text-4xl font-semibold tracking-tight">TBD</span>
     10-Day Running Average
   </div>
 </section>
 
-<section class="mt-4 has-tooltip bg-dove-gray-50 dark:bg-dove-gray-800 bordered rounded">
+<section class="mt-4 rounded has-tooltip bg-dove-gray-50 dark:bg-dove-gray-800 bordered">
   <div id="heatmap" class="overflow-x-scroll rounded shadow"> </div>
   <div id="heatmap-svg" class="border">SVG</div>
   <div id="msg"></div>

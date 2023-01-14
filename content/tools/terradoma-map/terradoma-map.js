@@ -16,7 +16,7 @@ String.prototype.template = function (data) {
 }
 
 const EMPTY_TEMPLATE = `
-  <tr class='striped text-center text-shade text-sm'>
+  <tr class='text-sm text-center striped text-shade'>
     <td>{orbit}</td>
     <td>&mdash; Empty &mdash;</td>
     <td>{distance}</td>
