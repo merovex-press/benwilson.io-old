@@ -40,7 +40,7 @@ If you have some use for my content that is not covered here, please email me at
 
 ## Registered Trademark
 
-The Merovex mark and the Merovex logo (<img src="/assets/logo.svg" width="20px" height="20px" alt="">®) are registered trademarks owned by the site owner. Only Owner and its authorized licensees may use the Merovex Logo in advertising, promotional, and sales materials. When you are a licensee of this trademark, you: 1) may only use the mark to advertize Merovex, and include an attribution of my ownership of the trademark within the credit notice section of your publication.
+The Merovex mark and the Merovex logo ({{< svg "/content/merovex-logo.svg" >}}) are registered trademarks owned by the site owner. Only Owner and its authorized licensees may use the Merovex Logo in advertising, promotional, and sales materials. When you are a licensee of this trademark, you may only use the mark to advertize Merovex, and include an attribution of my ownership of the trademark within the credit notice section of your publication.
 
 When distributing inside the United States, include the registration symbol (®). When distributing outside the United States, do not include the registration mark, and use the phrase "is a trademark of Merovex, registered in the United States." This logo may not be used by other parties in marketing as this may create a perception that we endorse or sponsor the product, service or promotion.
 
