@@ -145,7 +145,7 @@ history.each do |date, wordcount|
   end
   if date >= YEAR_AGO && date <= TODAY
     dashboard[:current_year] += wordcount[:totals][:dwc]
-    heatmap['365d'][date] = wordcount[:level]
+    heatmap['365d'][date] = {level: wordcount[:level], count: wordcount[:totals][:dwc]}
   end
 end
 # Year at a glance linegraph.
@@ -279,17 +279,18 @@ def initialize_heatmap(data, start_date, end_date, terms = 'words', title = 'tit
   @data = set_heatmap_data(data)
 end
 
-  def draw_day_cells
-    (@start_date..@end_date).to_a.enum_for(:each_with_index).map do |date, idx|
-      key = date.strftime('%Y-%m-%d')
-      # Rails.logger.debug "day cell: #{@data[key]}" if @data[key]
-      data = { date: key, count: 0 }
-      data[:count] = @data[key][:count] if @data[key]
-      data[:level] = @data[key][:level] if @data[key]
-      data[:tooltip] = "#{data[:count]} #{data[:terms]} on #{date.strftime('%d %B %Y')}" if (data[:count]).positive?
-      day_rectangle(date, data, idx)
-    end.join("\n")
-  end
+def draw_day_cells
+  (@start_date..@end_date).to_a.enum_for(:each_with_index).map do |date, idx|
+    key = date.strftime('%Y-%m-%d')
+    # Rails.logger.debug "day cell: #{@data[key]}" if @data[key]
+    puts @data[key].inspect
+    data = { date: key, count: 0 }
+    data[:count] = @data[key][:count] if @data[key]
+    data[:level] = @data[key][:level] if @data[key]
+    data[:tooltip] = "#{data[:count]} #{data[:terms]} on #{date.strftime('%d %B %Y')}" if (data[:count]).positive?
+    day_rectangle(date, data, idx)
+  end.join("\n")
+end
 
   def draw_axes
     # months = %w[Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec]
@@ -358,13 +359,9 @@ HEREDOC
 
   def set_heatmap_data(entries = [])
     days = {}
-    # heatmap['365d'].each do |date,level|
-    entries.each do |day,level|
-      # day = entry[:day].strftime('%Y-%m-%d')
-      # title = entry[:title] || 'title'
-      # level = entry[:level] || 0
+    entries.each do |day,data|
       title = 'title'
-      days[day] = { count: 0, target: 1000, title:, level: } if days[day].nil?
+      days[day] = data if days[day].nil?
     end
     days
   end

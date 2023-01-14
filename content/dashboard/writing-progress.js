@@ -69,6 +69,7 @@ window.onload = () => {
   openSVG('weekly-annual-svg', './weekly_annual.svg');
   openSVG('this-week-svg', './current_week.svg');
   openSVG('last-week-svg', './last_week.svg');
+  heatmapPopover();
 }
 
 
