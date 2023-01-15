@@ -2,25 +2,39 @@
 # frozen_string_literal: true
 
 require 'date'
-# require 'rubygems'
 # require 'awesome_print'
 require 'json'
 require 'securerandom'
 
+class Date
+  def beginning_of_week
+    date = self - (self.wday - 1)
+    date -= 7 if self.wday == 0
+    date
+  end
+
+  def end_of_week
+    date = self.beginning_of_week + 6
+  end
+end 
+
 now = Date.today
 
-TODAY = Date.today.to_s
-TEN_DAYS_AGO = (Date.today - 10).to_s
-YEAR_AGO = (Date.today - 364).to_s
+TODAY = now.to_s
+TEN_DAYS_AGO = (now - 10).to_s
+YEAR_AGO = (now - 364).to_s
+
 LAST_WEEK = [
-  now - (now.wday - 1) - 7,
-  now - (now.wday - 1) - 1
+  now.beginning_of_week - 7,
+  now.end_of_week - 7,
 ]
 THIS_WEEK = [
-  now - (now.wday - 1),
-  now - (now.wday - 1) + 6,
+  now.beginning_of_week,
+  now.end_of_week,
 ]
 # ap [LAST_WEEK, THIS_WEEK]
+# puts 'good'
+# exit
 
 dashboard_dir = '/Users/merovex/Code/merovex.com/content/dashboard'
 scrivener_json = "#{dashboard_dir}/scrivener.json"
@@ -283,7 +297,7 @@ def draw_day_cells
   (@start_date..@end_date).to_a.enum_for(:each_with_index).map do |date, idx|
     key = date.strftime('%Y-%m-%d')
     # Rails.logger.debug "day cell: #{@data[key]}" if @data[key]
-    puts @data[key].inspect
+    # puts @data[key].inspect
     data = { date: key, count: 0 }
     data[:count] = @data[key][:count] if @data[key]
     data[:level] = @data[key][:level] if @data[key]
