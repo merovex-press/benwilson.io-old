@@ -39,12 +39,12 @@ permalink: /funclock/
     <circle cx="450" cy="250" r="550" fill="url(#blackVignette)" />
 
     <!-- Minute Hand -->
-    <circle class="clockCircle minute" cx="450" cy="250" r="100" stroke-width="8" />
+    <circle class="clockCircle minute" cx="450" cy="250" r="120" stroke-width="8" />
     <path id="arcMinute" class="clockArc minute" stroke-width="8" stroke-linecap="round" filter="url(#glow)" />
     <circle id="minuteDot" class="clockDot" r="6" filter="url(#glow)" />
 
     <!-- Hour Hand -->
-    <circle class="clockCircle hour" cx="450" cy="250" r="120" stroke-width="10" />
+    <circle class="clockCircle hour" cx="450" cy="250" r="150" stroke-width="10" />
     <path id="arcHour" class="clockArc hour" stroke-width="10" stroke-linecap="round" filter="url(#glow)" />
     <circle id="hourDot" class="clockDot" r="8" filter="url(#glow)" />
 
@@ -53,22 +53,22 @@ permalink: /funclock/
       alignment-baseline="middle" filter="url(#shadow)"></text>
 
     <!-- DoW & Date -->
-    <text id="day" class="caption dayText" x="300" y="220" stroke-width="0" text-anchor="end"
+    <text id="day" class="caption dayText" x="270" y="210" stroke-width="0" text-anchor="end"
       alignment-baseline="middle" filter="url(#shadow)"></text>
-    <text id="date" class="caption dateText" x="300" y="250" stroke-width="0" text-anchor="end"
+    <text id="date" class="caption dateText" x="270" y="250" stroke-width="0" text-anchor="end"
       alignment-baseline="middle" filter="url(#shadow)"></text>
 
     <!-- WoY and DoY -->
-    <text id="woy" class="caption daysText" x="300" y="280" stroke-width="0" text-anchor="end"
+    <text id="woy" class="caption daysText" x="270" y="290" stroke-width="0" text-anchor="end"
       alignment-baseline="middle" filter="url(#shadow)"></text>
 
     <!-- Weather -->
-    <text id='temp' class='caption dateText' x="600" y="250" alignment-baseline="middle" filter="url(#shadow)">
+    <text id='temp' class='caption dateText' x="630" y="250" alignment-baseline="middle" filter="url(#shadow)">
       ---°</text>
-    <text id='hi_lo' class='caption weatherText' x="600" y="280" alignment-baseline="middle" filter="url(#shadow)">H:
+    <text id='hi_lo' class='caption weatherText' x="630" y="290" alignment-baseline="middle" filter="url(#shadow)">H:
       ---° L:
       ---°</text>
-    <text id="weather" class="caption dayText" style='text-transform: capitalize' x="600" y="220" stroke-width="0"
+    <text id="weather" class="caption dayText" style='text-transform: capitalize' x="630" y="210" stroke-width="0"
       text-anchor="start" alignment-baseline="middle" filter="url(#shadow)"></text>
     <text id="suntime" class="caption daysText" x="450" y="300" stroke-width="0" text-anchor="middle"
       alignment-baseline="middle" filter="url(#shadow)"></text>
@@ -179,10 +179,11 @@ permalink: /funclock/
     const hourArc = (date.getHours() * 60 + date.getMinutes()) / (24 * 60) * 360;
     const minArc = date.getMinutes() / 60 * 360; // percentage times 360 degrees
     const offset = -180; // subtract 180 to start at 6 o'clock
-    setClockDots('#hourDot', 120, hourArc + offset);
-    setClockDots('#minuteDot', 100, minArc + offset);
-    $('#arcHour').setAttribute('d', describeArc(450, 250, 120, -180, hourArc + offset));
-    $('#arcMinute').setAttribute('d', describeArc(450, 250, 100, -180, minArc + offset));
+    setClockDots('#minuteDot', 120, minArc + offset);
+    $('#arcMinute').setAttribute('d', describeArc(450, 250, 120, -180, minArc + offset));
+    setClockDots('#hourDot', 150, hourArc + offset);
+    $('#arcHour').setAttribute('d', describeArc(450, 250, 150, -180, hourArc + offset));
+
   }
   setInterval(updateTime, 1000);
   getWeather(true);
