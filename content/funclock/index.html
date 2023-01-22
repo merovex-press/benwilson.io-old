@@ -176,13 +176,15 @@ permalink: /funclock/
     $('#clock-gradient').style.background = `linear-gradient(130deg, hsl(${hue + 0}, 11%, 20%), hsl(${hue + 0}, 50%, 20%)`;
 
     // Set the Arcs
-    const hourArc = (date.getHours() * 60 + date.getMinutes()) / (24 * 60) * 360;
-    const minArc = date.getMinutes() / 60 * 360; // percentage times 360 degrees
-    const offset = -180; // subtract 180 to start at 6 o'clock
+    const offset = -120; // subtract 180 to start at 6 o'clock
+    const arcLength = 240; // 360 degrees
+    const hourArc = (date.getHours() * 60 + date.getMinutes()) / (24 * 60) * arcLength;
+    const minArc = date.getMinutes() / 60 * arcLength; // percentage times arcLength in degrees
+
     setClockDots('#minuteDot', 120, minArc + offset);
-    $('#arcMinute').setAttribute('d', describeArc(450, 250, 120, -180, minArc + offset));
+    $('#arcMinute').setAttribute('d', describeArc(450, 250, 120, offset, minArc + offset));
     setClockDots('#hourDot', 150, hourArc + offset);
-    $('#arcHour').setAttribute('d', describeArc(450, 250, 150, -180, hourArc + offset));
+    $('#arcHour').setAttribute('d', describeArc(450, 250, 150, offset, hourArc + offset));
 
   }
   setInterval(updateTime, 1000);
