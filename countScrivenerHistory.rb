@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 require 'date'
+require 'csv'
 # require 'awesome_print'
 require 'json'
 require 'securerandom'
@@ -145,11 +146,12 @@ wc_json = [
 ]
 history.each do |date, wordcount|
   wc_json << {
-    _id: SecureRandom.uuid,
+    # _id: SecureRandom.uuid,
     date: date,
-    wordcount: wordcount[:totals][:dwc],
+    count: wordcount[:totals][:dwc],
     target: (wordcount[:totals][:s].zero?) ? 1250 : wordcount[:totals][:s],
-    level: wordcount[:level]
+    level: wordcount[:level],
+    comment: ''
   }
   if date >= LAST_WEEK[0].to_s && date <= LAST_WEEK[1].to_s
     dashboard[:last_week] += wordcount[:totals][:dwc]
@@ -210,6 +212,16 @@ File.open(dashboard_file, 'w').write(JSON.generate(dashboard))
 File.open(heatmap_file, 'w').write(JSON.generate(heatmap))
 File.open(scrivener_json, 'w').write(JSON.generate(history.sort.to_h))
 File.open("#{dashboard_dir}/wordcount.json",'w').write(JSON.generate(wc_json))
+# File.open("#{dashboard_dir}/wordcount.csv",'w').write(JSON.generate(wc_json))
+CSV.open("#{dashboard_dir}/wordcount.csv", "w") do |csv|
+  # Write the header row
+  csv << wc_json.first.keys
+
+  # Write the data rows
+  wc_json.each do |row|
+    csv << row.values
+  end
+end
 
 
 # File.open(text_file, 'w').write(history[TODAY][:totals][:dwc].to_i)
