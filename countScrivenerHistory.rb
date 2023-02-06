@@ -64,6 +64,7 @@ def fnord; end
 def parse_xml(file)
   File.readlines(file).map do |line|
     # <Day dwc="1877" dcc="10370" dtwc="6498" owc="0" occ="0" dtcc="35983" s="1250" st="w">2022-12-17</Day>
+    # <Day dwc="1345" dcc="7789" dtwc="50634" owc="4" occ="24" dtcc="285774" s="1250" st="w">2023-02-04</Day>
     # puts "line: #{line}"
     next unless line.include?('<Day')
 
@@ -94,11 +95,15 @@ files = Dir.glob('/Users/merovex/Documents/**/writing.history').map do |f|
   f unless f.include?('NOCOUNT')
 end.compact
 
+mersk = {}
+
 # puts 'Parsing Files'
 files.each do |file|
   project = File.basename(file.gsub('Files/writing.history', '')).gsub('.scriv', '')
+  mersk[project] = [] unless mersk.key?(project)
 
   parse_xml(file).each do |day|
+    mersk[project] << day
     date = day[:date]
     years << date[0..3]
     adwc = (day.key?(:dcc) ? (day[:dcc] / 5) : 0)
@@ -210,7 +215,8 @@ end
 # pretty_generate
 File.open(dashboard_file, 'w').write(JSON.generate(dashboard))
 File.open(heatmap_file, 'w').write(JSON.generate(heatmap))
-File.open(scrivener_json, 'w').write(JSON.generate(history.sort.to_h))
+File.open(scrivener_json, 'w').write(JSON.pretty_generate(history.sort.to_h))
+File.open("#{dashboard_dir}/mersk.json", 'w').write(JSON.pretty_generate(mersk))
 File.open("#{dashboard_dir}/wordcount.json",'w').write(JSON.generate(wc_json))
 # File.open("#{dashboard_dir}/wordcount.csv",'w').write(JSON.generate(wc_json))
 CSV.open("#{dashboard_dir}/wordcount.csv", "w") do |csv|
