@@ -8,12 +8,12 @@ featured: true
 hook-1: Novice Postal Marine gets into a battle of wits with the AI embedded in his brain on the eve of the largest Postal Service battle in history.
 hook-2: Never fight a battle of wits with an AI embedded in your brain. That's what Postal Marine Bophendze must do to keep sane.
 hook: Could you win a battle of wits with the AI wired into your brain? That's just what Postal Marine Danel Bophendze must do to keep sane.
-summary: Danel Bophendze is a freshly minted Postal Marine. Seeking success during his faltering first deployment, he installs an AI with a mind of its own into his brain. Aristocratic Ambrose Litovio abandoned a promising career in the Navy to join the Postal Service. He must serve the first-ever Postal admiral as open war looms between the Service and the Navy. Bophendze and Litovio struggle to survive the epic Battle of Tanhusio Gate. But for Bophendze, the real fight is in his head.
+summary: Desperate to prove himself, the struggling Postal Marine Danel Bophendze makes a bold move and implants an unpredictable AI into his brain. Meanwhile, the dashing Ambrose Litovio leaves behind a promising Navy career to serve under an untested Postal admiral. As the Postal Service and Navy collide in the explosive Battle of Tanhusio Gate, Bophendze and Litovio fight for their lives. But little do they know, the real fight is all in Bophendze's head.
 
 date: 2021-04-12T06:57:43+05:00
 cta:
   kindle: "https://amzn.to/3kIQDaQ"
-price: "$1.99"
+price: "$2.99"
 series:
   - Stranded
 characters:

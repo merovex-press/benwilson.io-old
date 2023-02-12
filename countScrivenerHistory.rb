@@ -62,21 +62,10 @@ heatmap = {'365d' => {}}
 def fnord; end
 
 def parse_xml(file)
+  # <Day dwc="1877" dcc="10370" dtwc="6498" owc="0" occ="0" dtcc="35983" s="1250" st="w">2022-12-17</Day>
   File.readlines(file).map do |line|
-    # <Day dwc="1877" dcc="10370" dtwc="6498" owc="0" occ="0" dtcc="35983" s="1250" st="w">2022-12-17</Day>
-    # <Day dwc="1345" dcc="7789" dtwc="50634" owc="4" occ="24" dtcc="285774" s="1250" st="w">2023-02-04</Day>
-    # puts "line: #{line}"
     next unless line.include?('<Day')
-
-    day = { date: line.match(%r{>(?<date>\d{4}-\d{2}-\d{2})</Day>})['date'] }
-    m = line.match(/st="(?<st>\w+)"/)
-    day[:st] = m.nil? ? 'w' : m['st']
-
-    %i[dwc dcc dtwc owc occ dtcc s].each do |key|
-      m = line.match(/#{key}="(?<#{key}>\d+)"/)
-      day[key] = m.nil? ? 0 : m[key.to_s].to_i
-    end
-    day
+    {date: line.match(/>([\w-]+)<\//)[1]}.merge(line.scan(/(\w+)="([\w-]+)"/).map { |k, v| [k.to_sym, v.to_i] }.to_h)
   end.compact
 end
 def populate_hash(day)
