@@ -1744,7 +1744,7 @@
     <circle cx='460.0' cy='762.08' r='5' />
     <text class='base-code' x='460.0' y='782.08'>A</text>
     <text x='460.0' y='792.85'>A73A68A-A</text>
-    <text x='460.0' y='743.03'>Kaihapa</text>
+    <text x='460.0' y='743.03'>Kaihapio</text>
     <path class='lowsec' d='M 450.0 747.7942857142857 a 20 20 0 1 0 20 0' />
     <g><!-- Has Gas Giant -->
       <ellipse stroke-width='1' cx='482.22' cy='775.08' rx='6.15' ry='0.9' />
@@ -1880,7 +1880,7 @@
     <circle cx='460.0' cy='831.36' r='5' />
     <text class='base-code' x='460.0' y='851.36'>C</text>
     <text x='460.0' y='862.13'>C474555-8</text>
-    <text x='460.0' y='812.31'>Arrakis</text>
+    <text x='460.0' y='812.31'>Krepuskio</text>
 <!-- Pirates --><text class='faction' x='447.0967741935484' y='836.36'>p</text>
     <text x='484.22' y='821.36'>F5</text>
     <text x='487.22' y='828.36'>DB</text>

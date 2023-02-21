@@ -2605,7 +2605,7 @@ volumes:
       :law: '8'
       :tek: '8'
   '0811':
-    :name: Kaihapa
+    :name: Kaihapio
     :location: '0811'
     :uwp: A73A68A-A
     :temp: F
@@ -3142,7 +3142,7 @@ volumes:
       :law: '6'
       :tek: '6'
   '0812':
-    :name: Arrakis
+    :name: Krepuskio
     :location: '0812'
     :uwp: C474555-8
     :temp: T

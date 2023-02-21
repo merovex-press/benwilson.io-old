@@ -12469,17 +12469,30 @@
   },
   "2023-02-12": {
     "totals": {
-      "dwc": 870,
-      "dcc": 4902,
-      "adwc": 980,
+      "dwc": 871,
+      "dcc": 4908,
+      "adwc": 981,
       "owc": 0,
       "occ": 0,
-      "dtwc": 0,
-      "dtcc": 0,
+      "dtwc": 57318,
+      "dtcc": 323124,
       "s": 1250,
       "st": "w"
     },
     "level": 3,
+    "Stranded-Discovery": {
+      "project": "Stranded-Discovery",
+      "file": "/Users/merovex/Documents/Merovex-Press/Strand Series/Stranded-Discovery.scriv/Files/writing.history",
+      "st": "0",
+      "adwc": 1,
+      "dwc": 1,
+      "dcc": 6,
+      "owc": 0,
+      "occ": 0,
+      "dtwc": 0,
+      "dtcc": 0,
+      "s": 1000
+    },
     "Trove": {
       "project": "Trove",
       "file": "/Users/merovex/Documents/Merovex-Press/Strand Series/Trove.scriv/Files/writing.history",
@@ -12489,9 +12502,251 @@
       "dcc": 4902,
       "owc": 0,
       "occ": 0,
+      "dtwc": 57318,
+      "dtcc": 323124,
+      "s": 1250
+    }
+  },
+  "2023-02-13": {
+    "totals": {
+      "dwc": 3,
+      "dcc": 18,
+      "adwc": 3,
+      "owc": 951,
+      "occ": 6233,
+      "dtwc": 3,
+      "dtcc": 18,
+      "s": 1250,
+      "st": "w"
+    },
+    "level": 1,
+    "Bellicose-2e - 220925 - Finished": {
+      "project": "Bellicose-2e - 220925 - Finished",
+      "file": "/Users/merovex/Documents/Merovex-Press/Postal Marine Series/Bophendze Quartet/Bellicose-2e - 220925 - Finished.scriv/Files/writing.history",
+      "st": "0",
+      "adwc": 0,
+      "dwc": 0,
+      "dcc": 0,
+      "owc": -1,
+      "occ": -2,
       "dtwc": 0,
       "dtcc": 0,
       "s": 1250
+    },
+    "PMS-Ameliorate": {
+      "project": "PMS-Ameliorate",
+      "file": "/Users/merovex/Documents/Merovex-Press/Postal Marine Series/Navy Quartet/PMS-Ameliorate.scriv/Files/writing.history",
+      "st": "0",
+      "adwc": 3,
+      "dwc": 3,
+      "dcc": 18,
+      "owc": 954,
+      "occ": 6251,
+      "dtwc": 3,
+      "dtcc": 18,
+      "s": 1250
+    },
+    "Trove": {
+      "project": "Trove",
+      "file": "/Users/merovex/Documents/Merovex-Press/Strand Series/Trove.scriv/Files/writing.history",
+      "st": "0",
+      "adwc": 0,
+      "dwc": 0,
+      "dcc": 0,
+      "owc": -2,
+      "occ": -16,
+      "dtwc": 0,
+      "dtcc": 0,
+      "s": 1250
+    }
+  },
+  "2023-02-14": {
+    "totals": {
+      "dwc": 0,
+      "dcc": 0,
+      "adwc": 0,
+      "owc": 124,
+      "occ": 768,
+      "dtwc": 3,
+      "dtcc": 18,
+      "s": 1250,
+      "st": "w"
+    },
+    "level": 0,
+    "PMS-Ameliorate": {
+      "project": "PMS-Ameliorate",
+      "file": "/Users/merovex/Documents/Merovex-Press/Postal Marine Series/Navy Quartet/PMS-Ameliorate.scriv/Files/writing.history",
+      "st": "0",
+      "adwc": 0,
+      "dwc": 0,
+      "dcc": 0,
+      "owc": 124,
+      "occ": 768,
+      "dtwc": 3,
+      "dtcc": 18,
+      "s": 1250
+    }
+  },
+  "2023-02-16": {
+    "totals": {
+      "dwc": 0,
+      "dcc": 0,
+      "adwc": 0,
+      "owc": 1628,
+      "occ": 10012,
+      "dtwc": 3,
+      "dtcc": 18,
+      "s": 1250,
+      "st": "w"
+    },
+    "level": 0,
+    "PMS-Ameliorate": {
+      "project": "PMS-Ameliorate",
+      "file": "/Users/merovex/Documents/Merovex-Press/Postal Marine Series/Navy Quartet/PMS-Ameliorate.scriv/Files/writing.history",
+      "st": "0",
+      "adwc": 0,
+      "dwc": 0,
+      "dcc": 0,
+      "owc": 1628,
+      "occ": 10012,
+      "dtwc": 3,
+      "dtcc": 18,
+      "s": 1250
+    }
+  },
+  "2023-02-17": {
+    "totals": {
+      "dwc": 0,
+      "dcc": 0,
+      "adwc": 0,
+      "owc": 23,
+      "occ": 241,
+      "dtwc": 3,
+      "dtcc": 18,
+      "s": 1250,
+      "st": "w"
+    },
+    "level": 0,
+    "PMS-Ameliorate": {
+      "project": "PMS-Ameliorate",
+      "file": "/Users/merovex/Documents/Merovex-Press/Postal Marine Series/Navy Quartet/PMS-Ameliorate.scriv/Files/writing.history",
+      "st": "0",
+      "adwc": 0,
+      "dwc": 0,
+      "dcc": 0,
+      "owc": 23,
+      "occ": 241,
+      "dtwc": 3,
+      "dtcc": 18,
+      "s": 1250
+    }
+  },
+  "2023-02-18": {
+    "totals": {
+      "dwc": 873,
+      "dcc": 5223,
+      "adwc": 1044,
+      "owc": 259,
+      "occ": 1764,
+      "dtwc": 876,
+      "dtcc": 5241,
+      "s": 1250,
+      "st": "w"
+    },
+    "level": 3,
+    "PMS-Ameliorate": {
+      "project": "PMS-Ameliorate",
+      "file": "/Users/merovex/Documents/Merovex-Press/Postal Marine Series/Navy Quartet/PMS-Ameliorate.scriv/Files/writing.history",
+      "st": "0",
+      "adwc": 1044,
+      "dwc": 873,
+      "dcc": 5223,
+      "owc": 259,
+      "occ": 1764,
+      "dtwc": 876,
+      "dtcc": 5241,
+      "s": 1250
+    }
+  },
+  "2023-02-19": {
+    "totals": {
+      "dwc": 4,
+      "dcc": 29,
+      "adwc": 5,
+      "owc": 0,
+      "occ": 0,
+      "dtwc": 0,
+      "dtcc": 0,
+      "s": 1250,
+      "st": "w"
+    },
+    "level": 1,
+    "PMS-Ameliorate": {
+      "project": "PMS-Ameliorate",
+      "file": "/Users/merovex/Documents/Merovex-Press/Postal Marine Series/Navy Quartet/PMS-Ameliorate.scriv/Files/writing.history",
+      "st": "0",
+      "adwc": 5,
+      "dwc": 4,
+      "dcc": 29,
+      "owc": 0,
+      "occ": 0,
+      "dtwc": 0,
+      "dtcc": 0,
+      "s": 1250
+    }
+  },
+  "2023-02-20": {
+    "totals": {
+      "dwc": 581,
+      "dcc": 3333,
+      "adwc": 666,
+      "owc": 7,
+      "occ": 51,
+      "dtwc": 2824,
+      "dtcc": 16500,
+      "s": 1450,
+      "st": "w"
+    },
+    "level": 2,
+    "PMS-Ameliorate": {
+      "project": "PMS-Ameliorate",
+      "file": "/Users/merovex/Documents/Merovex-Press/Postal Marine Series/Navy Quartet/PMS-Ameliorate.scriv/Files/writing.history",
+      "st": "0",
+      "adwc": 666,
+      "dwc": 581,
+      "dcc": 3333,
+      "owc": 7,
+      "occ": 51,
+      "dtwc": 2824,
+      "dtcc": 16500,
+      "s": 1450
+    }
+  },
+  "2023-02-21": {
+    "totals": {
+      "dwc": -2,
+      "dcc": -7,
+      "adwc": -2,
+      "owc": 0,
+      "occ": 0,
+      "dtwc": 0,
+      "dtcc": 0,
+      "s": 1450,
+      "st": "w"
+    },
+    "level": 0,
+    "PMS-Ameliorate": {
+      "project": "PMS-Ameliorate",
+      "file": "/Users/merovex/Documents/Merovex-Press/Postal Marine Series/Navy Quartet/PMS-Ameliorate.scriv/Files/writing.history",
+      "st": "0",
+      "adwc": -2,
+      "dwc": -2,
+      "dcc": -7,
+      "owc": 0,
+      "occ": 0,
+      "dtwc": 0,
+      "dtcc": 0,
+      "s": 1450
     }
   }
 }
