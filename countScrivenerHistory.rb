@@ -3,6 +3,7 @@
 
 require 'date'
 require 'csv'
+require 'yaml'
 # require 'awesome_print'
 require 'json'
 require 'securerandom'
@@ -206,6 +207,8 @@ File.open(dashboard_file, 'w').write(JSON.generate(dashboard))
 File.open(heatmap_file, 'w').write(JSON.generate(heatmap))
 File.open(scrivener_json, 'w').write(JSON.pretty_generate(history.sort.to_h))
 File.open("#{dashboard_dir}/mersk.json", 'w').write(JSON.pretty_generate(mersk))
+File.open("#{dashboard_dir}/mersk.min.json", 'w').write(JSON.generate(mersk))
+File.open("#{dashboard_dir}/mersk.yaml", 'w').write(mersk.to_yaml)
 File.open("#{dashboard_dir}/wordcount.json",'w').write(JSON.generate(wc_json))
 # File.open("#{dashboard_dir}/wordcount.csv",'w').write(JSON.generate(wc_json))
 CSV.open("#{dashboard_dir}/wordcount.csv", "w") do |csv|

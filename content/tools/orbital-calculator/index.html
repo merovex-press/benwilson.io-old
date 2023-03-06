@@ -1,6 +1,6 @@
 ---
 title: Orbital Calculator
-layout: tools
+xlayout: tools
 date: 2021-12-21T05:47:27+05:00
 permalink: /tools/travel-calculator/
 aliases:
@@ -166,14 +166,14 @@ summary: "Calculates synchronous orbit of a planet."
   function calculateStationaryOrbit() {
     const FOUR_PI_SQ = 39.4784176044
     const G_CONSTANT = 6.67430 * Math.pow(10, -11)
-    
+
     const diameter = document.getElementById("planet_size").value;
     const hours = document.getElementById("rotation_period").value;
-    
+
     const time = hours * 3600; // Calculation is in seconds
     const mass = document.getElementById("mass").value * 10.0 ** 24;
     const height = Math.round(Math.cbrt(G_CONSTANT * mass * (time ** 2) / FOUR_PI_SQ) / 1000) - (diameter / 2.0);
-    
+
     document.getElementById("altitude").value = height.toLocaleString('en-us');
   }
   calculateStationaryOrbit()
