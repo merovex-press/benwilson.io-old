@@ -3133,10 +3133,39 @@ PMS-Ameliorate:
   :s: 1450
   :st: 0
 - :date: '2023-03-05'
-  :dwc: 4
-  :dcc: 29
+  :dwc: 18
+  :dcc: 113
+  :dtwc: 5306
   :owc: 0
   :occ: 0
+  :dtcc: 31039
+  :s: 1450
+  :st: 0
+- :date: '2023-03-06'
+  :dwc: 559
+  :dcc: 3413
+  :dtwc: 5865
+  :owc: 0
+  :occ: 25
+  :dtcc: 34452
+  :s: 1450
+  :st: 0
+- :date: '2023-03-07'
+  :dwc: 635
+  :dcc: 3832
+  :dtwc: 6500
+  :owc: 0
+  :occ: 0
+  :dtcc: 38284
+  :s: 1450
+  :st: 0
+- :date: '2023-03-12'
+  :dwc: 1088
+  :dcc: 6309
+  :dtwc: 7588
+  :owc: 0
+  :occ: 0
+  :dtcc: 44593
   :s: 1450
   :st: 0
 Postal Marines Canon:
