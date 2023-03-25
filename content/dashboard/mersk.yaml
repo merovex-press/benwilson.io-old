@@ -771,6 +771,22 @@ Bellicose-2e - 220925 - Finished:
   :occ: -2
   :s: 1250
   :st: 0
+- :date: '2023-03-22'
+  :dwc: 0
+  :dcc: 0
+  :dtwc: 76445
+  :owc: 1977
+  :occ: 12668
+  :dtcc: 432969
+  :s: 1250
+  :st: 0
+- :date: '2023-03-23'
+  :dwc: 0
+  :dcc: 0
+  :owc: 1472
+  :occ: 9399
+  :s: 1250
+  :st: 0
 Gambit - 220925 - Finished:
 - :date: '2020-11-14'
   :dwc: 1193
@@ -3166,6 +3182,94 @@ PMS-Ameliorate:
   :owc: 0
   :occ: 0
   :dtcc: 44593
+  :s: 1450
+  :st: 0
+- :date: '2023-03-13'
+  :dwc: 1009
+  :dcc: 5932
+  :dtwc: 8597
+  :owc: 89
+  :occ: 527
+  :dtcc: 50525
+  :s: 1450
+  :st: 0
+- :date: '2023-03-14'
+  :dwc: 568
+  :dcc: 3272
+  :dtwc: 9165
+  :owc: 12
+  :occ: 76
+  :dtcc: 53797
+  :s: 1450
+  :st: 0
+- :date: '2023-03-15'
+  :dwc: 1041
+  :dcc: 5966
+  :dtwc: 10206
+  :owc: 373
+  :occ: 2240
+  :dtcc: 59763
+  :s: 1450
+  :st: 0
+- :date: '2023-03-16'
+  :dwc: 857
+  :dcc: 4997
+  :dtwc: 11063
+  :owc: 30
+  :occ: 170
+  :dtcc: 64760
+  :s: 1450
+  :st: 0
+- :date: '2023-03-17'
+  :dwc: 26
+  :dcc: 138
+  :dtwc: 11089
+  :owc: 0
+  :occ: 0
+  :dtcc: 64898
+  :s: 1450
+  :st: 0
+- :date: '2023-03-18'
+  :dwc: 110
+  :dcc: 654
+  :dtwc: 11199
+  :owc: 0
+  :occ: 0
+  :dtcc: 65552
+  :s: 1450
+  :st: 0
+- :date: '2023-03-20'
+  :dwc: 1031
+  :dcc: 6059
+  :dtwc: 12230
+  :owc: -13
+  :occ: -66
+  :dtcc: 71611
+  :s: 1450
+  :st: 0
+- :date: '2023-03-21'
+  :dwc: 145
+  :dcc: 820
+  :dtwc: 12375
+  :owc: 135
+  :occ: 1103
+  :dtcc: 72431
+  :s: 1450
+  :st: 0
+- :date: '2023-03-22'
+  :dwc: 346
+  :dcc: 2020
+  :dtwc: 12721
+  :owc: 95
+  :occ: 636
+  :dtcc: 74451
+  :s: 1450
+  :st: 0
+- :date: '2023-03-23'
+  :dwc: 17
+  :dcc: 104
+  :owc: 0
+  :occ: 0
   :s: 1450
   :st: 0
 Postal Marines Canon:

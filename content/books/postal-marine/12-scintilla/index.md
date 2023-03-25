@@ -8,7 +8,7 @@ series:
   - Postal Marines
 hook-1: A young aristocrat realizes his planet's hypocracy while a Maltuseblan agent tries to turn him to the Core.
 hook: Could you remain loyal knowing there are deep flaws in your society? Jonaldy helps Aristocrat Mondennio choose between the Clinate and the Core.
-summary: Jonaldy is back, pursuing his mission to destabilize the Copan planetary government. Mondennio Rowenzal is his latest target. While Jonaldy pushes the young aristocrat to the edge, Mondennio finds support with new compatriots and the enigmatic Janhas Klocards. With the fate of his planet at stake, can Mondennio overcome Jonaldy's efforts? Or will he become a pawn for the Imperium?
+summary: "Jonaldy is back, hellbent on destabilizing the Copan planetary government. Young aristocrat Mondennio Rowenzal becomes his target, but finds an unlikely mentor in enigmatic Janhas Klocards, once Danel Bophendze. As Bophendze races to unlock a dormant technology, Mondennio faces his own battles. With factions rising and the fate of a planet at stake, can they outmaneuver Jonaldy and change the course of history?""
 date: 2021-04-12T06:58:06+05:00
 cta:
   kindle: 'https://amzn.to/3vwrQsM'

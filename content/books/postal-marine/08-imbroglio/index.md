@@ -9,7 +9,7 @@ series:
   - Postal Marines
 hook-1: Bophendze discovers technology so powerful it could change the Core Imperium forever.
 hook: How does Dekumo stay one step ahead of everyone else? Bophendze risks death to discover the critical piece of their secret weapon.
-summary: "Danel Bophendze is tired after surviving countless engagements. Tired of fighting. Tired of corruption. Tired of the Postal Service. When things could not get worse, he is abandoned in a remote and hostile system. Refusing to give up, he discovers technology so powerful it could change the structure of the Core Imperium. But, what could he do about it?"
+summary: "Battle-hardened and weary, Danel Bophendze has had enough of endless skirmishes, pervasive corruption, and the unyielding demands of the Postal Service. Fate deals him a cruel blow as he finds himself stranded in a dangerous, far-flung star system. But instead of succumbing to despair, he stumbles upon a game-changing technology with the potential to transform the Core Imperium. With the weight of this discovery on his shoulders, Bophendze must decide whether to wield its power for his own ends or forge a new path in the treacherous realm of interstellar conflict."
 date: 2021-04-12T06:58:06+05:00
 cta:
   kindle: 'https://amzn.to/3Z384CJ'
