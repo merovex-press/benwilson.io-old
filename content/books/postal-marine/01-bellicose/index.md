@@ -9,6 +9,7 @@ hook-1: Novice Postal Marine gets into a battle of wits with the AI embedded in 
 hook-2: Never fight a battle of wits with an AI embedded in your brain. That's what Postal Marine Bophendze must do to keep sane.
 hook: Could you win a battle of wits with the AI wired into your brain? That's just what Postal Marine Danel Bophendze must do to keep sane.
 summary: Inept and eager to prove his worth, rookie Postal Marine Danel Bophendze takes a perilous leap of faith, incorporating an unstable AI into his brain. The audacious Ambrose Litovio abandons a promising Navy career to follow a raw Postal admiral into the fray. As the Postal Service and Navy forces clash in the cataclysmic Battle of Tanhusio Gate, Bophendze and Litovio engage in a relentless struggle for survival. Unbeknownst to them, the real battle rages within Bophendze's head.
+taglines: "Unstable AI, unproven warriors: survival hangs in the balance. A suicide mission, a chance at redemption: will failure be their legacy? Stranded and desperate, a groundbreaking discovery alters the course of war. New alliances and hidden power: can they outwit an enemy and save a world?"
 
 date: 2021-04-12T06:57:43+05:00
 cta:
