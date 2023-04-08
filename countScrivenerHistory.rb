@@ -44,6 +44,7 @@ dashboard_file = "#{dashboard_dir}/dashboard.json"
 heatmap_file = "#{dashboard_dir}/heatmap.json"
 annual_svg_file = "#{dashboard_dir}/annual.svg"
 text_file = '/Users/merovex/Code/merovex.com/today.log'
+veriklo_file = '/Users/merovex/Code/vk-dashboard/journal.yaml'
 
 history = {}
 dashboard = {
@@ -86,6 +87,18 @@ files = Dir.glob('/Users/merovex/Documents/**/writing.history').map do |f|
 end.compact
 
 mersk = {}
+verkilo = []
+
+def slug(date)
+  characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+  timestamp = Date.parse(date).strftime('%s').to_i.to_s(16)
+  random_chars = ''
+  5.times do
+    random_chars += characters[rand(characters.length)]
+  end
+  slug = timestamp + random_chars
+  return slug
+end
 
 # puts 'Parsing Files'
 files.each do |file|
@@ -93,10 +106,17 @@ files.each do |file|
   mersk[project] = [] unless mersk.key?(project)
 
   parse_xml(file).each do |day|
+    
     mersk[project] << day
     date = day[:date]
     years << date[0..3]
     adwc = (day.key?(:dcc) ? (day[:dcc] / 5) : 0)
+    verki = {
+      'date' => DateTime.parse(date).new_offset(0).strftime('%Y-%m-%dT%H:%M:%S.%LZ'),
+      'count' => 0,
+      'comment' => project,
+      'slug' => slug(date),
+    }
 
     unless history.key?(date)
       history[date] = {
@@ -113,7 +133,10 @@ files.each do |file|
     }
     %i[dwc dcc owc occ dtwc dtcc s].each do |key|
       history[date][project][key] = day.key?(key) ? day[key] : 0
+      verki['count'] += day[key] if key == :dwc
     end
+    # puts verki.inspect
+    verkilo << verki unless verki['count'].zero?
   end
 end
 
@@ -209,6 +232,7 @@ File.open(scrivener_json, 'w').write(JSON.pretty_generate(history.sort.to_h))
 File.open("#{dashboard_dir}/mersk.json", 'w').write(JSON.pretty_generate(mersk))
 File.open("#{dashboard_dir}/mersk.min.json", 'w').write(JSON.generate(mersk))
 File.open("#{dashboard_dir}/mersk.yaml", 'w').write(mersk.to_yaml)
+File.open(veriklo_file, 'w').write(verkilo.to_yaml)
 File.open("#{dashboard_dir}/wordcount.json",'w').write(JSON.generate(wc_json))
 # File.open("#{dashboard_dir}/wordcount.csv",'w').write(JSON.generate(wc_json))
 CSV.open("#{dashboard_dir}/wordcount.csv", "w") do |csv|
@@ -226,9 +250,11 @@ end
 puts (history.key?(TODAY)) ? history[TODAY][:totals][:dwc].to_i : 'Get to work, slug. Zero'
 
 def make_graph(points)
+  
   start = calculateXY(points[0])
   result = "M #{start[:x]},#{start[:y]}\n"
   catmullRom2bezier(points).each do |point|
+    
     result += "C #{point[0][:x]},#{point[0][:y]} #{point[1][:x]},#{point[1][:y]} #{point[2][:x]},#{point[2][:y]}\n"
   end
   result
