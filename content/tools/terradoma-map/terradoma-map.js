@@ -48,7 +48,7 @@ const ROUTE_TEMPLATE = `
 `;
 const PLANET_CLASSES = {
   'W': " italic bg-accent-lightest dark:bg-accent-dark",
-  'S': " bg-warning dark:bg-warning-dark"
+  'S': " bg-secondary-300 dark:bg-secondary-600 text-black"
 }
 const PLANET_TYPES = {
   'W': 'Mainworld',

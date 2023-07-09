@@ -1,6 +1,5 @@
 ---
 title: Orbital Calculator
-xlayout: tools
 date: 2021-12-21T05:47:27+05:00
 permalink: /tools/travel-calculator/
 aliases:
@@ -11,26 +10,28 @@ summary: "Calculates synchronous orbit of a planet."
 <section class="p-4 space-y-2 toolkit card">
   {{<planetary-sizes>}}
     <div class='flex space-y-2'>
-      <label for="rotation_period">Rotational Period: (hours 24h=1d)</label>
-      <input name="rotation_period" id="rotation_period" type="number" value="24" onchange="calculateStationaryOrbit()"
-        onkeyup="calculateStationaryOrbit()">
+      <label class="flex-1" for="rotation_period">Rotational Period: (hours 24h=1d)</label>
+      <div class="flex-1">
+        <input class="form-input" name="rotation_period" id="rotation_period" type="number" value="24"
+          onchange="calculateStationaryOrbit()" onkeyup="calculateStationaryOrbit()">
+      </div>
     </div>
     <div class='hidden space-y-2'>
-      <label for="gravity">Gravity:</label>
-      <input name="gravity" id="gravity" type="number" value="1" onchange="calculateStationaryOrbit()"
+      <label class="flex-1" for="gravity">Gravity:</label>
+      <input class="" name="gravity" id="gravity" type="number" value="1" onchange="calculateStationaryOrbit()"
         onkeyup="calculateStationaryOrbit()">
     </div>
     <div class='flex space-y-2'>
-      <label for="mass">Mass:</label>
-      <div><input name="mass" id="mass" type="number" value="5.9736" onchange="calculateStationaryOrbit()"
-          onkeyup="calculateStationaryOrbit()">
+      <label class="flex-1" for="mass">Mass:</label>
+      <div class="flex-1"><input name="mass" id="mass" type="number" value="5.9736"
+          onchange="calculateStationaryOrbit()" onkeyup="calculateStationaryOrbit()">
         <span class='hint'>kg in 10<sup>24</sup>. (Earth is 5.9736)</span>
       </div>
     </div>
     <div class='flex space-y-2'>
-      <label for="altitude">Altitude (in Km):</label>
-      <div><input name="altitude" id="altitude" type="text" disabled value="0" onchange="calculateStationaryOrbit()"
-          onkeyup="calculateStationaryOrbit()">
+      <label class="flex-1" for="altitude">Altitude (in Km):</label>
+      <div class="flex-1"><input name="altitude" id="altitude" type="text" disabled value="0"
+          onchange="calculateStationaryOrbit()" onkeyup="calculateStationaryOrbit()">
       </div>
     </div>
 </section>

@@ -15,14 +15,16 @@ summary: "A haiku-based name generator in English and Esperanto."
     than 34 permutations when including the number range from 1000 to 9999.
   </p>
 </aside>
+<div class="my-4">
+  <p id="terms" class='p-4 card'>
+    <span id="heroku" class='table mx-auto text-2xl font-code'></span>
+    <br>
+    <span id="heroko" class='table mx-auto text-2xl font-code'></span>
+  </p>
+  <input type="button" id="generate-button" class='border rounded py-1 px-2 bg-primary-500 my-2 inline-block'
+    value="generate another one" onclick="updateTargetWithHaiku();" style="display:table; margin:0 auto;" />
 
-<p id="terms" class='p-4 card'>
-  <span id="heroku" class='table mx-auto text-2xl font-code'></span>
-  <br>
-  <span id="heroko" class='table mx-auto text-2xl font-code'></span>
-</p>
-<input type="button" id="generate-button" class='button' value="generate another one" onclick="updateTargetWithHaiku();"
-  style="display:table; margin:0 auto;" />
+</div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js">
 </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"

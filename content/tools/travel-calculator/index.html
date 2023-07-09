@@ -21,35 +21,35 @@ summary: "Calculates travel time in space with a given distance and acceleration
   {{<planetary-sizes>}}
 
     <div class='flex space-y-2'>
-      <label for="distance">Distance (km):</label>
-      <input name="distance" id="distance" type="number" value="1000000" onchange="setDistanceFromKM()"
-        onkeyup="setDistanceFromKM()">
+      <label class="flex-1" for="distance">Distance (km):</label>
+      <div class="flex-1"><input class="dark:bg-grey-950 rounded" name="distance" id="distance" type="number"
+          value="1000000" onchange="setDistanceFromKM()" onkeyup="setDistanceFromKM()"></div>
     </div>
     <div class='flex space-y-2'>
-      <label for="distanceAU">Distance (AU):</label>
-      <input name="distanceAU" id="distanceAU" type="number" value="0" onchange="setDistanceFromAU()"
-        onkeyup="setDistanceFromAU()">
+      <label class="flex-1" for="distanceAU">Distance (AU):</label>
+      <div class="flex-1"><input class="dark:bg-grey-950 rounded" name="distanceAU" id="distanceAU" type="number"
+          value="0" onchange="setDistanceFromAU()" onkeyup="setDistanceFromAU()"></div>
     </div>
     <div class='flex hidden space-y-2'>
-      <label for="acceleration">Travel Time (minutes):</label>
-      <input name="travel_time" id="travel_time" type="number" value="1" min="1" max="9"
-        onkeyup="calcDistanceFromAcceleration()">
+      <label class="flex-1" for="acceleration">Travel Time (minutes):</label>
+      <div class="flex-1"><input class="dark:bg-grey-950 rounded" name="travel_time" id="travel_time" type="number"
+          value="1" min="1" max="9" onkeyup="calcDistanceFromAcceleration()"></div>
     </div>
     <div class='flex space-y-2'>
-      <label for="acceleration">Accelleration (G's):</label>
-      <input name="acceleration" id="acceleration" type="number" value="1" min="1" max="9" onchange="calculate()"
-        onkeyup="calculate()">
+      <label class="flex-1" for="acceleration">Accelleration (G's):</label>
+      <div class="flex-1"><input class="dark:bg-grey-950 rounded" name="acceleration" id="acceleration" type="number"
+          value="1" min="1" max="9" onchange="calculate()" onkeyup="calculate()"></div>
     </div>
     <div class='flex space-y-2'>
-      <label for="spaceship_mass">Mass (tons):</label>
-      <input name="spaceship_mass" id="spaceship_mass" type="number" value="200" min="1" max="999999"
-        onchange="calculate()" onkeyup="calculate()">
+      <label class="flex-1" for="spaceship_mass">Mass (tons):</label>
+      <div class="flex-1"><input class='rounded flex-1 dark:bg-grey-950' name="spaceship_mass" id="spaceship_mass"
+          type="number" value="200" min="1" max="999999" onchange="calculate()" onkeyup="calculate()"></div>
     </div>
     <div class="flex space-y-2">
-      <label for="fuel_conversion_rate">Drive
+      <label class="flex-1" for="fuel_conversion_rate">Drive
         Type:</label>
       <select name="fuel_conversion_rate" id="fuel_conversion_rate"
-        class="flex-1 rounded-lg shade-text dark:bg-gray-800" onchange="calculate()">
+        class="flex-1 rounded-lg shade-text dark:bg-grey-950" onchange="calculate()">
         <option value="0.00125" selected="selected">HEPlaR</option>
         <option value="0.0025">M-Drive / Thruster Plates</option>
       </select>
@@ -64,7 +64,7 @@ summary: "Calculates travel time in space with a given distance and acceleration
           <!-- path -->
           <div class="h-5 rounded-full shadow-inner bg-shade toggle-path w-9"></div>
           <!-- crcle -->
-          <div class="absolute inset-y-0 left-0 w-3.5 h-3.5 rounded-full shadow toggle-circle bg-gray-800"></div>
+          <div class="absolute inset-y-0 left-0 w-3.5 h-3.5 rounded-full shadow toggle-circle bg-grey-800"></div>
         </div>
       </label>
     </div>

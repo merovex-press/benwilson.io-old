@@ -10,7 +10,8 @@ summary: "A comprehensive map of humanity in space during the period of the Post
 <section class=''>
   <div class='text-center space-y-2 toolkit'>
     <label for="coordinate">Coordinate:</label>
-    <input name="coordinate" id="coordinate" type="number" onkeyup="showVolumeDetails()" class='w-16'>
+    <input name="coordinate" id="coordinate" type="number" onkeyup="showVolumeDetails()"
+      class='w-20 rounded form-input'>
   </div>
   <aside class="">
     <h3>Contents</h3>
@@ -51,12 +52,12 @@ summary: "A comprehensive map of humanity in space during the period of the Post
       <h3>Orbits</h3>
       <a href="#coordinate">back to top</a>
       <table>
-        <thead class="">
+        <thead class="dark:text-white">
           <tr>
-            <th class="text-center">#</th>
-            <th class="text-center">Type</th>
-            <th class="text-center">Distance</th>
-            <th class="text-center">UWP</th>
+            <th class="text-center dark:text-white">#</th>
+            <th class="text-center dark:text-white">Type</th>
+            <th class="text-center dark:text-white">Distance</th>
+            <th class="text-center dark:text-white">UWP</th>
           </tr>
         </thead>
         <tbody id="orbits" class='text-medium'>
@@ -71,10 +72,10 @@ summary: "A comprehensive map of humanity in space during the period of the Post
     <table class="">
       <thead>
         <tr class='text-base text-center'>
-          <th>Coord</th>
-          <th>UWP</th>
-          <th>Distance</th>
-          <th>Name</th>
+          <th class="dark:text-white">Coord</th>
+          <th class="dark:text-white">UWP</th>
+          <th class="dark:text-white">Distance</th>
+          <th class="dark:text-white">Name</th>
         </tr>
       </thead>
       <tbody id='routable_volumes'>
