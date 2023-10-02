@@ -44,7 +44,7 @@ dashboard_file = "#{dashboard_dir}/dashboard.json"
 heatmap_file = "#{dashboard_dir}/heatmap.json"
 annual_svg_file = "#{dashboard_dir}/annual.svg"
 text_file = '/Users/merovex/Code/merovex.com/today.log'
-veriklo_file = '/Users/merovex/Code/vk-dashboard/journal.yaml'
+veriklo_file = '/Users/merovex/Code/verkilo-editor/journal.yaml'
 
 history = {}
 dashboard = {
